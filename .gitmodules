@@ -1,0 +1,4 @@
+[submodule "slides/2015-09-paraunit-pugmi"]
+	path = slides/2015-09-paraunit-pugmi
+	url = git@github.com:Jean85/reveal.js.git
+	branch = paraunit_pugmi
