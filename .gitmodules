@@ -4,5 +4,5 @@
 	branch = paraunit_pugmi
 [submodule "slides/2015-10-paraunit-symfonyday"]
 	path = slides/2015-10-paraunit-symfonyday
-	url = git@github.com:Jean85/reveal.js.git
+	url = https://github.com/Jean85/reveal.js.git
 	branch = paraunit_symfonyday2015
