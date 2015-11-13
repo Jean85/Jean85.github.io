@@ -6,3 +6,7 @@
 	path = slides/2015-10-paraunit-symfonyday
 	url = https://github.com/Jean85/reveal.js.git
 	branch = paraunit_symfonyday2015
+[submodule "slides/2015-11-unica"]
+	path = slides/2015-11-unica
+	url = https://github.com/Jean85/reveal.js.git
+	branch = 1511_unica
