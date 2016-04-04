@@ -10,3 +10,7 @@
 	path = slides/2015-11-unica
 	url = https://github.com/Jean85/reveal.js.git
 	branch = 1511_unica
+[submodule "slides/2016-03-hexagonal-lightning-talk"]
+	path = slides/2016-03-hexagonal
+	url = https://github.com/Jean85/reveal.js.git
+	branch = hexagonal_lightning_talk
