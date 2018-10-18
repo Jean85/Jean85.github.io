@@ -15,6 +15,7 @@ Storage for personal stuff
    * ![][eng] [Talk @PHPDay 2018](http://jean85.github.io/slides/2018-05-event-sourcing-phpday/index.html) (2018-05-12)
  * Symfony + Docker, dall'ambiente di sviluppo alla produzione
    * ![][ita] [Talk @PUG-Milano](http://jean85.github.io/slides/2018-09-symfony-docker-pugmi/index.html) (2018-09-20)
+   * ![][ita] [Talk @SymfonyDay](http://jean85.github.io/slides/2018-10-symfony-docker-symfonyday/index.html) (2018-10-19)
 
 [ita]: https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/22px-Flag_of_Italy.svg.png
 [eng]: https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/22px-Flag_of_the_United_Kingdom.svg.png
