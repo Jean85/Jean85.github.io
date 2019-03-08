@@ -1,15 +1,24 @@
 baseURL = "http://jean85.github.io/"
 languageCode = "en-us"
 title = "Alessandro Lai"
-theme = "hugo-lamp"
+theme = "mainroad"
 # googleAnalytics = "UA-XXXXXXXX-X"       # Google Analytics UA number
 
-[params]
-  subtitle = "Lead project developer at Facile.it, PHP-FIG secretary, PHP UG Milano coordinator"
+[Author] # Used in authorbox
+  name = "Alessandro Lai"
+  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP UG Milano coordinator"
+  avatar = "images/avatar-alessandro-lai.jpg"
+
+[Params]
   author = "Alessandro Lai"
-  logo = "/img/avatar.jpg"
-  description = "A light responsive Hugo AMP theme for blogger"
+  logo = "images/avatar-alessandro-lai.jpg"
+  description = "Personal blog, slide storage, rant box"
   paginate = 5
+  authorbox = true
+  twitter_cards = true
+  readmore = true
+  post_navigation = true
+  postSections = ["post", "release"]
 
   # Publisher
   ## adsensePublisher = "ca-pub-XXX"    # Required if you want to include Google Adsense
@@ -31,6 +40,27 @@ theme = "hugo-lamp"
   instagram = "instagram_username"
   youtube = "youtube_username"
   dribbble = "dribbble_username"
+
+[Params.sidebar]
+  home = "right" # Configure layout for home page
+  list = "right"  # Configure layout for list pages
+  single = "right" # Configure layout for single pages
+  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+
+[Params.widgets]
+  recent_num = 5 # Set the number of articles in the "Recent articles" widget
+  tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
+
+[Params.widgets.social]
+  # Enable parts of social widget
+  facebook = "username"
+  twitter = "username"
+  instagram = "username"
+  linkedin = "username"
+  telegram = "username"
+  github = "username"
+  gitlab = "username"
+  email = "example@example.com"
 
 [taxonomies]
   tag = "tags"

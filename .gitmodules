@@ -1,3 +1,9 @@
 [submodule "themes/hugo-lamp"]
 	path = themes/hugo-lamp
 	url = git@github.com:huyb1991/hugo-lamp.git
+[submodule "mainroad"]
+	path = mainroad
+	url = https://github.com/vimux/mainroad
+[submodule "themes/mainroad"]
+	path = themes/mainroad
+	url = https://github.com/vimux/mainroad
