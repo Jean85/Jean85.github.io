@@ -1,13 +1,13 @@
 baseURL = "http://jean85.github.io/"
 languageCode = "en-us"
 title = "Alessandro Lai"
-theme = "hugo-lamp"
+theme = "hugo-nuo"
 # googleAnalytics = "UA-XXXXXXXX-X"       # Google Analytics UA number
 
 [params]
   subtitle = "Lead project developer at Facile.it, PHP-FIG secretary, PHP UG Milano coordinator"
   author = "Alessandro Lai"
-  logo = "/img/avatar.jpg"
+  avatar = "images/avatar-alessandro-lai.jpg"
   description = "A light responsive Hugo AMP theme for blogger"
   paginate = 5
 

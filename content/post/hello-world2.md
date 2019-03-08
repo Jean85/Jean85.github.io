@@ -1,9 +1,9 @@
 ---
-title: "Hello World"
+title: "Hello World 2"
 author: "Author Name"
 cover: "/img/cover.jpg"
 tags: ["tagA", "tagB"]
-date: 2019-03-08T15:19:05+01:00
+date: 2019-03-08T15:19:06+01:00
 draft: true
 ---
 
