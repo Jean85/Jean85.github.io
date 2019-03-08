@@ -1,3 +1,57 @@
-baseURL = "http://example.org/"
+baseURL = "http://jean85.github.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Alessandro Lai"
+theme = "hugo-lamp"
+# googleAnalytics = "UA-XXXXXXXX-X"       # Google Analytics UA number
+
+[params]
+  subtitle = "Lead project developer at Facile.it, PHP-FIG secretary, PHP UG Milano coordinator"
+  author = "Alessandro Lai"
+  logo = "/img/avatar.jpg"
+  description = "A light responsive Hugo AMP theme for blogger"
+  paginate = 5
+
+  # Publisher
+  ## adsensePublisher = "ca-pub-XXX"    # Required if you want to include Google Adsense
+  adsenseSlot = "XXX"                   # Required slot to display ads
+  adsenseSlotSticky = "XXX"             # Enables sticky ads feature, value maybe the same with adsenseSlot, remove if you don't want display sticky ads
+
+  # SEO configs
+  seotitle = "Hugo Blog Title (SEO Version)"
+  googleSiteVerification = "google_site_verification_code"    # Google Webmaster
+  msValidate = "bing_site_verification_code"                  # Bing Webmaster
+
+  # Social networks
+  email = "name@domain.com"
+  github = "huyb1991"
+  twitter = "twitter_username"
+  linkedin = "linkedin_username"
+  facebook = "facebook_username"
+  google = "googleplus_id_number"
+  instagram = "instagram_username"
+  youtube = "youtube_username"
+  dribbble = "dribbble_username"
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  identifier = "post"
+  url = "/blog/"
+[[menu.main]]
+  name = "Slides"
+  weight = 2
+  url = "/slides/"
+[[menu.main]]
+  name = "Categories"
+  weight = 3
+  identifier = "categories"
+  url = "/categories/"
+[[menu.main]]
+  name = "Tags"
+  weight = 4
+  identifier = "tags"
+  url = "/tags/"
