@@ -1,29 +1,34 @@
 baseURL = "http://jean85.github.io/"
-languageCode = "en-us"
 title = "Alessandro Lai"
+languageCode = "en-us"
+paginate = "5"
 theme = "mainroad"
+# disqusShortname = "" # Enable comments by entering your Disqus shortname
 # googleAnalytics = "UA-XXXXXXXX-X"       # Google Analytics UA number
 
 [Author] # Used in authorbox
   name = "Alessandro Lai"
-  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. I love working with PHP, Symfony, Docker and Kubernetes."
+  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes."
   avatar = "images/avatar-alessandro-lai.jpg"
 
 [Params]
-  author = "Alessandro Lai"
-  logo = "images/avatar-alessandro-lai.jpg"
-  description = "Personal blog, slide storage, rant box"
-  paginate = 5
-  authorbox = true
+  logo = "images/logo-alessandro-lai.jpg"
+  subtitle = "Personal site, blog, slide storage, rant box"
+  description = "Alessandro Lai's personal site, blog, slide storage, rant box"
+  #copyright = "John Doe" # copyright holder, otherwise will use site title
+  opengraph = true
   twitter_cards = true
   readmore = true
+  authorbox = true
+  toc = false # Disabled by default, enabled in some posts
   post_navigation = true
+  # post_meta = ["date", "categories", "translations"] # Order of post meta information. Use ["none"] to turn off completely.
   postSections = ["post", "release"]
-
-  # SEO configs
-  seotitle = "Alessandro Lai - Personal site"
-  #googleSiteVerification = "google_site_verification_code"    # Google Webmaster
-  #msValidate = "bing_site_verification_code"                  # Bing Webmaster
+  #dateformat = "2006-01-02" # change the format of dates
+  #mathjax = true # Enable MathJax
+  #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" # Specify MathJax path
+  #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
+  customCSS = ["css/custom.css"] # Include custom CSS files
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
