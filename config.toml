@@ -6,7 +6,7 @@ theme = "mainroad"
 
 [Author] # Used in authorbox
   name = "Alessandro Lai"
-  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP UG Milano coordinator"
+  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. I love working with PHP, Symfony, Docker and Kubernetes."
   avatar = "images/avatar-alessandro-lai.jpg"
 
 [Params]
@@ -20,47 +20,26 @@ theme = "mainroad"
   post_navigation = true
   postSections = ["post", "release"]
 
-  # Publisher
-  ## adsensePublisher = "ca-pub-XXX"    # Required if you want to include Google Adsense
-  adsenseSlot = "XXX"                   # Required slot to display ads
-  adsenseSlotSticky = "XXX"             # Enables sticky ads feature, value maybe the same with adsenseSlot, remove if you don't want display sticky ads
-
   # SEO configs
-  seotitle = "Hugo Blog Title (SEO Version)"
-  googleSiteVerification = "google_site_verification_code"    # Google Webmaster
-  msValidate = "bing_site_verification_code"                  # Bing Webmaster
-
-  # Social networks
-  email = "name@domain.com"
-  github = "huyb1991"
-  twitter = "twitter_username"
-  linkedin = "linkedin_username"
-  facebook = "facebook_username"
-  google = "googleplus_id_number"
-  instagram = "instagram_username"
-  youtube = "youtube_username"
-  dribbble = "dribbble_username"
+  seotitle = "Alessandro Lai - Personal site"
+  #googleSiteVerification = "google_site_verification_code"    # Google Webmaster
+  #msValidate = "bing_site_verification_code"                  # Bing Webmaster
 
 [Params.sidebar]
   home = "right" # Configure layout for home page
   list = "right"  # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  widgets = ["search", "recent", "categories", "taglist", "social", "languages"]
+  widgets = ["search", "recent", "taglist", "social"]
 
 [Params.widgets]
   recent_num = 5 # Set the number of articles in the "Recent articles" widget
   tags_counter = true # Enable counter for each tag in "Tags" widget (disabled by default)
 
 [Params.widgets.social]
-  # Enable parts of social widget
-  facebook = "username"
-  twitter = "username"
-  instagram = "username"
-  linkedin = "username"
-  telegram = "username"
-  github = "username"
-  gitlab = "username"
-  email = "example@example.com"
+  twitter = "AlessandroLai"
+  github = "Jean85"
+  gitlab = "Alessandro.Lai"
+  linkedin = "alessandro-lai-09440922"
 
 [taxonomies]
   tag = "tags"
