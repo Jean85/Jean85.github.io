@@ -3,7 +3,7 @@ set -o errexit #abort if any command fails
 me=$(basename "$0")
 
 rm -rf ./public/* # cleanup of previouses generations
-./hugo # generation of the static version of the site
+bin/hugo # generation of the static version of the site
 
 help_message="\
 Usage: $me [-c FILE] [<options>]
