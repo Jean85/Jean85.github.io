@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Alessandro Lai</title>
+    <link>http://jean85.github.io/tags/</link>
+    <description>Recent content in Tags on Alessandro Lai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://jean85.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Continuous Deployment</title>
+      <link>http://jean85.github.io/tags/continuous-deployment/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/continuous-deployment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Continuous Integration</title>
+      <link>http://jean85.github.io/tags/continuous-integration/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/continuous-integration/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Database</title>
+      <link>http://jean85.github.io/tags/database/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>http://jean85.github.io/tags/docker/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Doctrine</title>
+      <link>http://jean85.github.io/tags/doctrine/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/doctrine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gitlab</title>
+      <link>http://jean85.github.io/tags/gitlab/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes</title>
+      <link>http://jean85.github.io/tags/kubernetes/</link>
+      <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>http://jean85.github.io/tags/mysql/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Open Source</title>
+      <link>http://jean85.github.io/tags/open-source/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paraunit</title>
+      <link>http://jean85.github.io/tags/paraunit/</link>
+      <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/paraunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Php</title>
+      <link>http://jean85.github.io/tags/php/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Software Testing</title>
+      <link>http://jean85.github.io/tags/software-testing/</link>
+      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/software-testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony</title>
+      <link>http://jean85.github.io/tags/symfony/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/symfony/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tdd</title>
+      <link>http://jean85.github.io/tags/tdd/</link>
+      <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/tags/tdd/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
