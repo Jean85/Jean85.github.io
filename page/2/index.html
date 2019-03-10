@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://jean85.github.io/" />
 
-<meta property="og:updated_time" content="2017-12-13T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-02-06T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Alessandro Lai"/>
@@ -49,6 +49,9 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/">Home</a>
+		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
@@ -75,7 +78,58 @@
 <main class="main list" role="main"><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.11/" rel="bookmark">
+			<a href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" rel="bookmark">
+			Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-02-06T00:00:00">February 06, 2018</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
+After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/pretty-package-versions/1.1.0/" rel="bookmark">
+			Pretty Package Versions 1.1.0
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-01-21T00:00:00">January 21, 2018</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This time around we have a minor version bump, due to a new feature!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/pretty-package-versions/1.1.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/paraunit/0.11.0/" rel="bookmark">
 			Paraunit 0.11: add Symfony 4 support, some refactoring and a fix
 			</a>
 		</h3>
@@ -92,12 +146,35 @@
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed.
-Here&rsquo;s the full changelog:
-Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration from YAML to PHP Require at least jean85/pretty-package-versions 1.
+		<p>This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more <code>symfony/yaml</code>) and support for Symfony 4 has been added; also, a small bug has been fixed.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.11/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.11.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/pretty-package-versions/1.0.3/" rel="bookmark">
+			Pretty Package Versions 1.0.3
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-11-30T00:00:00">November 30, 2017</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Another bump is needed to the sub-package constraint. Also, a known issue with Composer has been discovered.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/pretty-package-versions/1.0.3/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -119,95 +196,17 @@ Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 With this release, Paraunit replaces the suggestion of facile-it/paraunit-testcase with dama/doctrine-test-bundle; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.
-Here&rsquo;s the full changelog:
-Added  Add support for deprecation warnings found by symfony/phpunit-bridge: failures and tests output are now reported  Changed  Start suggesting dama/doctrine-test-bundle instead of facile-it/paraunit-testcase, since it has been abandoned.  
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/post/phpunit-upgrade-namespace/" rel="bookmark">
-			How to gradually upgrade toward PHPUnit 6 with namespaced classes
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-09-12T00:00:00">September 12, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
-This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.
+		<p>With this release, Paraunit replaces the suggestion of <code>facile-it/paraunit-testcase</code> with <code>dama/doctrine-test-bundle</code>; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/phpunit-upgrade-namespace/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.10/" rel="bookmark">
-			Paraunit 0.10: small fixes and improvements
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-09-06T00:00:00">September 06, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the --debug option and the --text-to-console coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.
-Here&rsquo;s the full changelog:
-Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed tests counter at the end of each line in output (#91)  Changed  The Shark logo is now optional; to show it at the top, use the --logo option The --debug output has been completely rewritten and now is more useful than ever!
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.10/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.9.1/" rel="bookmark">
-			Paraunit 0.9.1: a small fix in the header
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-07-06T00:00:00">July 06, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Paraunit 0.9.1 has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&rsquo; package to do it, but it didn&rsquo;t provide that feature, and he was adamant about not implementing it in the future.
-So I decided to release an OSS package for this usage, Jean85/pretty-package-versions, available here: https://github.com/Jean85/pretty-package-versions/. Feel free to use it in your projects, as I&rsquo;ve done inside Paraunit.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.9.1/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.10.1/">Read more…</a>
 	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/">«</a>
-	<span class="pagination__item pagination__item--current">2/6</span>
+	<span class="pagination__item pagination__item--current">2/7</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/3/">»</a>
 </div>
 
@@ -226,31 +225,32 @@ So I decided to release an OSS package for this usage, Jean85/pretty-package-ver
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">

@@ -4,22 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines - Alessandro Lai</title>
+	<title>Paraunit 0.12: PHPUnit 7 support and coverage text summary option - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.54.0" />
-	<meta property="og:title" content="Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines" />
-<meta property="og:description" content="After a long time and a lot of work, Paraunit 0.9 has been released. This release is a big step ahead: now Paraunit runs with PHPUnit 6, and support to older versions is dropped; this also means that the minimum supported PHP version is now 7.0, and the minimum version of the Symfony components is bumped to 2.7, since older versions are out of support since may.
-All these changes brought along a lot of refactoring, and I took the occasion to sprinkle scalar and return types everywhere in the code (see #93); this was also behind a blog post of mine that I wrote in response to the &ldquo;visual debt&rdquo; controversy." />
+	<meta property="og:title" content="Paraunit 0.12: PHPUnit 7 support and coverage text summary option" />
+<meta property="og:description" content="With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jean85.github.io/release/paraunit/0.9/" />
-<meta property="article:published_time" content="2017-07-05T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-07-05T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://jean85.github.io/release/paraunit/0.12.0/" />
+<meta property="article:published_time" content="2018-04-05T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-04-05T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines"/>
-<meta name="twitter:description" content="After a long time and a lot of work, Paraunit 0.9 has been released. This release is a big step ahead: now Paraunit runs with PHPUnit 6, and support to older versions is dropped; this also means that the minimum supported PHP version is now 7.0, and the minimum version of the Symfony components is bumped to 2.7, since older versions are out of support since may.
-All these changes brought along a lot of refactoring, and I took the occasion to sprinkle scalar and return types everywhere in the code (see #93); this was also behind a blog post of mine that I wrote in response to the &ldquo;visual debt&rdquo; controversy."/>
+<meta name="twitter:title" content="Paraunit 0.12: PHPUnit 7 support and coverage text summary option"/>
+<meta name="twitter:description" content="With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -51,6 +49,9 @@ All these changes brought along a lot of refactoring, and I took the occasion to
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
 		<li class="menu__item">
@@ -76,11 +77,11 @@ All these changes brought along a lot of refactoring, and I took the occasion to
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines</h1>
+			<h1 class="post__title">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-07-05T00:00:00">July 05, 2017</time>
+	<time class="meta__text" datetime="2018-04-05T00:00:00">April 05, 2018</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -89,43 +90,33 @@ All these changes brought along a lot of refactoring, and I took the occasion to
 </div>
 </div>
 		</header><div class="content post__content clearfix">
-			
-
-<p>After a long time and a lot of work, <a href="https://github.com/facile-it/paraunit/releases/tag/0.9">Paraunit 0.9</a> has been released. This release is a big step ahead: now Paraunit runs with <strong>PHPUnit 6</strong>, and support to older versions is dropped; this also means that the <strong>minimum supported PHP version is now 7.0</strong>, and the minimum version of the <strong>Symfony components is bumped to 2.7</strong>, since older versions are out of support since may.</p>
-
-<p>All these changes brought along a lot of refactoring, and I took the occasion to sprinkle scalar and return types everywhere in the code (see <a href="https://github.com/facile-it/paraunit/pull/93">#93</a>); this was also behind <a href="https://engineering.facile.it/blog/eng/visual-debt-typehints/">a blog post of mine</a> that I wrote in response to the &ldquo;visual debt&rdquo; controversy.</p>
-
-<p>But the biggest change of all is the new <strong>pipeline system</strong>: now every test is run in a pipeline collection, where each pipe is numbered. This number is the injected in the test as an environment variable, meaning that Paraunit itself can be leveraged to achieve separation in resource access while testing your application. More details on this feature are available in the <a href="https://engineering.facile.it/paraunit/documentation/">documentation</a>.</p>
+			<p>With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.</p>
 
 <p>Here&rsquo;s the full changelog:</p>
+
+<h3 id="added">Added</h3>
+
+<ul>
+<li>Added support for PHPUnit 7 and <code>phpunit/php-code-coverage</code> 6</li>
+</ul>
 
 <h3 id="changed">Changed</h3>
 
 <ul>
-<li>Implement pipelines: now every single test process has an environment variable called <code>PARAUNIT_PIPELINE_NUMBER</code> injected which is a number that identifies the pipeline in which the test is executed; it can be used as a discriminator to access a different set of resources (i.e. a different copy of a test DB). See the <a href="https://engineering.facile.it/paraunit/documentation/">documentation</a> for more details.</li>
-<li>Support for PHPUnit 6</li>
-<li>Drop support for PHPUnit 4 &amp; 5</li>
-<li>Minimum PHP version required: 7.0</li>
-<li>Improvement to the whole codebase (scalar and return type hints, strict types enforced, see <a href="https://github.com/facile-it/paraunit/pull/93">#93</a>)</li>
-<li>Realign options passed through to PHPUnit:
+<li>The coverage text output options have changed:
 
 <ul>
-<li>Added <code>--strict-coverage</code></li>
-<li>Added <code>--disallow-resource-usage</code></li>
-<li>Added <code>--no-coverage</code></li>
-<li>Added <code>--no-extensions</code></li>
-<li>Changed <code>--report-useless-tests</code> to <code>--dont-report-useless-tests</code></li>
-<li>Changed <code>--no-globals-backup</code> to <code>--globals-backup</code></li>
+<li>The <code>--text</code> option now accepts a filename as an argument, and defaults to the console as output (replacing <code>--text-to-console</code>)</li>
+<li>The new <code>--text-summary</code> option behaves in the same way, but it writes only the summary part</li>
 </ul></li>
 </ul>
 
-<h3 id="fixed">Fixed</h3>
+<h3 id="removed">Removed</h3>
 
 <ul>
-<li>The <code>--repeat</code> option now works correctly (see <a href="https://github.com/facile-it/paraunit/issues/92">#92</a>)</li>
-<li>The PHPUnit configuration is no longer copied temporarily in the current working folder, it&rsquo;s no longer needed</li>
+<li>Removed support for PHP 7.0 (needed to support PHPUnit 7 correctly)</li>
+<li>Dropped the <code>--text-to-console</code> coverage option in favor of the new behavior</li>
 </ul>
-
 		</div>
 		
 <div class="post__tags tags clearfix">
@@ -152,10 +143,10 @@ All these changes brought along a lot of refactoring, and I took the occasion to
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/release/paraunit/0.8.2/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Paraunit 0.8.2: avoid failures due to warnings</p></a>
+		<a class="post-nav__link" href="/release/pretty-package-versions/1.1.0/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Pretty Package Versions 1.1.0</p></a>
 	</div>
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/release/paraunit/0.9.2/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Paraunit 0.9.2 and 0.8.3: missing dependencies</p></a>
+		<a class="post-nav__link" href="/release/paraunit/0.12.1/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Paraunit 0.12.1: a small fix</p></a>
 	</div>
 </nav>
 
@@ -174,31 +165,32 @@ All these changes brought along a lot of refactoring, and I took the occasion to
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">

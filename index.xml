@@ -6,10 +6,19 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 01 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Pretty Package Versions 1.2.0</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.2.0/</link>
+      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.2.0/</guid>
+      <description>&lt;p&gt;Another minor version bump, another new feature!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paraunit 0.12.3: allow phpunit/php-file-iterator 2</title>
@@ -17,9 +26,7 @@
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.12.3/</guid>
-      <description> Today I released a new small patch for Paraunit, fixing the support for a hidden dependency (phpunit/php-file-iterator) which broke Paraunit with its 2.0 release.
-Here&amp;rsquo;s the full changelog:
-Fixed  Allow explicitly phpunit/php-file-iterator 2 #126  </description>
+      <description>&lt;p&gt;Today I released a new small patch for Paraunit, fixing the support for a hidden dependency (&lt;code&gt;phpunit/php-file-iterator&lt;/code&gt;) which broke Paraunit with its 2.0 release.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -28,9 +35,7 @@ Fixed  Allow explicitly phpunit/php-file-iterator 2 #126  </description>
       <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.12.2/</guid>
-      <description> Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.
-Here&amp;rsquo;s the full changelog:
-Fixed  Allow multiple, comma-separated values with the --testsuite option, like with PHPUnit 6+ #122 Avoid letting the colored console output blink (dots, errors) #124 thanks to @elegos Add a new exception about MySQL savepoint to the retryable ones #125  </description>
+      <description>&lt;p&gt;Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -39,20 +44,16 @@ Fixed  Allow multiple, comma-separated values with the --testsuite option, like 
       <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.12.1/</guid>
-      <description> I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the --text and --text-summary options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a PR to the Symfony Docs too!
-Here&amp;rsquo;s the full changelog:
-Fixed  Fix the behavior of the new --text and --text-summary options (#121)  </description>
+      <description>&lt;p&gt;I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the &lt;code&gt;--text&lt;/code&gt; and &lt;code&gt;--text-summary&lt;/code&gt; options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a &lt;a href=&#34;https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560&#34;&gt;PR to the Symfony Docs&lt;/a&gt; too!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Paraunit 0.12: PHPUnit 7 support and coverage text summary option</title>
-      <link>http://jean85.github.io/release/paraunit/0.12/</link>
+      <link>http://jean85.github.io/release/paraunit/0.12.0/</link>
       <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.12/</guid>
-      <description>With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&amp;rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.
-Here&amp;rsquo;s the full changelog:
-Added  Added support for PHPUnit 7 and phpunit/php-code-coverage 6  Changed  The coverage text output options have changed:  The --text option now accepts a filename as an argument, and defaults to the console as output (replacing --text-to-console) The new --text-summary option behaves in the same way, but it writes only the summary part   Removed  Removed support for PHP 7.</description>
+      <guid>http://jean85.github.io/release/paraunit/0.12.0/</guid>
+      <description>&lt;p&gt;With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&amp;rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -66,14 +67,30 @@ After, I decided to start migrating a previous, internal project of mine to the 
     </item>
     
     <item>
+      <title>Pretty Package Versions 1.1.0</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.1.0/</link>
+      <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.1.0/</guid>
+      <description>&lt;p&gt;This time around we have a minor version bump, due to a new feature!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Paraunit 0.11: add Symfony 4 support, some refactoring and a fix</title>
-      <link>http://jean85.github.io/release/paraunit/0.11/</link>
+      <link>http://jean85.github.io/release/paraunit/0.11.0/</link>
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.11/</guid>
-      <description>This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed.
-Here&amp;rsquo;s the full changelog:
-Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration from YAML to PHP Require at least jean85/pretty-package-versions 1.</description>
+      <guid>http://jean85.github.io/release/paraunit/0.11.0/</guid>
+      <description>&lt;p&gt;This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more &lt;code&gt;symfony/yaml&lt;/code&gt;) and support for Symfony 4 has been added; also, a small bug has been fixed.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pretty Package Versions 1.0.3</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.0.3/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.3/</guid>
+      <description>&lt;p&gt;Another bump is needed to the sub-package constraint. Also, a known issue with Composer has been discovered.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -82,9 +99,7 @@ Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.10.1/</guid>
-      <description> With this release, Paraunit replaces the suggestion of facile-it/paraunit-testcase with dama/doctrine-test-bundle; also there&amp;rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.
-Here&amp;rsquo;s the full changelog:
-Added  Add support for deprecation warnings found by symfony/phpunit-bridge: failures and tests output are now reported  Changed  Start suggesting dama/doctrine-test-bundle instead of facile-it/paraunit-testcase, since it has been abandoned.  </description>
+      <description>&lt;p&gt;With this release, Paraunit replaces the suggestion of &lt;code&gt;facile-it/paraunit-testcase&lt;/code&gt; with &lt;code&gt;dama/doctrine-test-bundle&lt;/code&gt;; also there&amp;rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -99,13 +114,29 @@ This means that any usage of those classes in your project needs to be updated. 
     
     <item>
       <title>Paraunit 0.10: small fixes and improvements</title>
-      <link>http://jean85.github.io/release/paraunit/0.10/</link>
+      <link>http://jean85.github.io/release/paraunit/0.10.0/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.10/</guid>
-      <description>With this release, I&amp;rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&amp;rsquo;ve fixed the --debug option and the --text-to-console coverage output. Also, now the logo is optional, and at the end of each line it&amp;rsquo;s printed a partial count of executed tests.
-Here&amp;rsquo;s the full changelog:
-Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed tests counter at the end of each line in output (#91)  Changed  The Shark logo is now optional; to show it at the top, use the --logo option The --debug output has been completely rewritten and now is more useful than ever!</description>
+      <guid>http://jean85.github.io/release/paraunit/0.10.0/</guid>
+      <description>&lt;p&gt;With this release, I&amp;rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&amp;rsquo;ve fixed the &lt;code&gt;--debug&lt;/code&gt; option and the &lt;code&gt;--text-to-console&lt;/code&gt; coverage output. Also, now the logo is optional, and at the end of each line it&amp;rsquo;s printed a partial count of executed tests.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pretty Package Versions 1.0.2</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.0.2/</link>
+      <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.2/</guid>
+      <description>&lt;p&gt;Another small issue solved with a small patch, and PHP 7.2 support comes along!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pretty Package Versions 1.0.1</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.0.1/</link>
+      <pubDate>Thu, 06 Jul 2017 00:01:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.1/</guid>
+      <description>&lt;p&gt;Same day of the first release, a small patch follows!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -114,8 +145,7 @@ Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed 
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.9.1/</guid>
-      <description>Paraunit 0.9.1 has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&amp;rsquo; package to do it, but it didn&amp;rsquo;t provide that feature, and he was adamant about not implementing it in the future.
-So I decided to release an OSS package for this usage, Jean85/pretty-package-versions, available here: https://github.com/Jean85/pretty-package-versions/. Feel free to use it in your projects, as I&amp;rsquo;ve done inside Paraunit.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.1&#34;&gt;Paraunit 0.9.1&lt;/a&gt; has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&amp;rsquo; package to do it, but it didn&amp;rsquo;t provide that feature, and he was adamant about not implementing it in the future.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -124,20 +154,25 @@ So I decided to release an OSS package for this usage, Jean85/pretty-package-ver
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.9.2/</guid>
-      <description> Paraunit 0.9.2 and Paraunit 0.8.3 has been released to fix a nasty little bug that I got reported to me: two dependencies were missing and the CI missed that due to the fact that both were required by dev dependencies.
-I fixed that and backported the fix to the 0.8 series, since it was very easy to do.
-Here&amp;rsquo;s the full changelog:
-Fixed  Add missing dependencies: symfony/yaml and symfony/stopwatch  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.2&#34;&gt;Paraunit 0.9.2&lt;/a&gt; and &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.3&#34;&gt;Paraunit 0.8.3&lt;/a&gt; has been released to fix a nasty little bug that I got reported to me: two dependencies were missing and the CI missed that due to the fact that both were required by dev dependencies.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pretty Package Versions 1.0</title>
+      <link>http://jean85.github.io/release/pretty-package-versions/1.0.0/</link>
+      <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.0/</guid>
+      <description>&lt;p&gt;This is the first release of this package!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines</title>
-      <link>http://jean85.github.io/release/paraunit/0.9/</link>
+      <link>http://jean85.github.io/release/paraunit/0.9.0/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.9/</guid>
-      <description>After a long time and a lot of work, Paraunit 0.9 has been released. This release is a big step ahead: now Paraunit runs with PHPUnit 6, and support to older versions is dropped; this also means that the minimum supported PHP version is now 7.0, and the minimum version of the Symfony components is bumped to 2.7, since older versions are out of support since may.
-All these changes brought along a lot of refactoring, and I took the occasion to sprinkle scalar and return types everywhere in the code (see #93); this was also behind a blog post of mine that I wrote in response to the &amp;ldquo;visual debt&amp;rdquo; controversy.</description>
+      <guid>http://jean85.github.io/release/paraunit/0.9.0/</guid>
+      <description>&lt;p&gt;After a long time and a lot of work, &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9&#34;&gt;Paraunit 0.9&lt;/a&gt; has been released. This release is a big step ahead: now Paraunit runs with &lt;strong&gt;PHPUnit 6&lt;/strong&gt;, and support to older versions is dropped; this also means that the &lt;strong&gt;minimum supported PHP version is now 7.0&lt;/strong&gt;, and the minimum version of the &lt;strong&gt;Symfony components is bumped to 2.7&lt;/strong&gt;, since older versions are out of support since may.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -146,8 +181,7 @@ All these changes brought along a lot of refactoring, and I took the occasion to
       <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.8.2/</guid>
-      <description> Paraunit 0.8.2 has been released to fix an issued caused by an unwanted overwrite of the write() method in the LogWriter class. Full changelog:
-Fixed  Fix the signature of LogPrinter, to avoid warnings (this would lead to no test execution when considering warnings as test failures)  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.2&#34;&gt;Paraunit 0.8.2&lt;/a&gt; has been released to fix an issued caused by an unwanted overwrite of the &lt;code&gt;write()&lt;/code&gt; method in the &lt;code&gt;LogWriter&lt;/code&gt; class.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -156,18 +190,17 @@ Fixed  Fix the signature of LogPrinter, to avoid warnings (this would lead to no
       <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.8.1/</guid>
-      <description> Paraunit 0.8.1 has been released to fix a small regression that happens when running functional tests in a Symfony project:
-Fixed  Fix #88: write the temporary configuration file in the same dir of the original, to avoid issue with Symfony when it guesses its kernel dir  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.2&#34;&gt;Paraunit 0.8.1&lt;/a&gt; has been released to fix a small regression that happens when running functional tests in a Symfony project.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Paraunit 0.8: PHAR continuous delivery</title>
-      <link>http://jean85.github.io/release/paraunit/0.8/</link>
+      <link>http://jean85.github.io/release/paraunit/0.8.0/</link>
       <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.8/</guid>
-      <description>Paraunit 0.8 has been released! With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&amp;rsquo;s PHAR. Thanks to Andreas Heigl that made this not only possible, but very straightforward to implement.
-Next phase will be the 1.0 stable release milestone, which is probably just a little away. This release paved the way to the PHPUnit 6 support, with the new LogPrinter brought from PHPUnit.</description>
+      <guid>http://jean85.github.io/release/paraunit/0.8.0/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8&#34;&gt;Paraunit 0.8&lt;/a&gt; has been released!
+With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&amp;rsquo;s PHAR. Thanks to &lt;a href=&#34;https://andreas.heigl.org/2017/01/19/encrypt-a-build-result-automaticaly/&#34;&gt;Andreas Heigl&lt;/a&gt; that made this not only possible, but very straightforward to implement.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -176,9 +209,7 @@ Next phase will be the 1.0 stable release milestone, which is probably just a li
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.7.4/</guid>
-      <description> Paraunit 0.7.4 has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.
-Full changelog text:
-Changed  Add optional argument to both commands to filter tests filenames; the filter is case insensitive and doesn&amp;rsquo;t rely on paths, so it doesn&amp;rsquo;t have to be a full or relative path; it can also be used in conjunction with the --testsuite option  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.4&#34;&gt;Paraunit 0.7.4&lt;/a&gt; has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -187,9 +218,7 @@ Changed  Add optional argument to both commands to filter tests filenames; the f
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.7.3/</guid>
-      <description> Paraunit 0.7.3 has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the latest GitHub release page.
-Full changelog text:
-Changed  Add PHAR generation tools (thanks @taueres for the previous PR); from now on, Paraunit is released as a PHAR too!  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.4&#34;&gt;Paraunit 0.7.3&lt;/a&gt; has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/latest&#34;&gt;latest GitHub release page&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -198,8 +227,7 @@ Changed  Add PHAR generation tools (thanks @taueres for the previous PR); from n
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.7.1/</guid>
-      <description>Paraunit 0.7.1 has just been released; this is just a minor release that adds a new useful feature: the text format for the coverage. You can either use it on screen as an integration tool (see Jenkins, GitLab), or save it as a file. Since there is a small limitation in CLI options handling by the Symfony component, this feature is implemented through two separate options.
-In the next versions, I will work to implement the other missing formats, PHP and Crap4j.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.1&#34;&gt;Paraunit 0.7.1&lt;/a&gt; has just been released; this is just a minor release that adds a new useful feature: the &lt;strong&gt;text format&lt;/strong&gt; for the coverage. You can either use it on screen as an integration tool (see Jenkins, GitLab), or save it as a file. Since there is a small limitation in CLI options handling by the Symfony component, this feature is implemented through two separate options.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -208,20 +236,23 @@ In the next versions, I will work to implement the other missing formats, PHP an
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.7.2/</guid>
-      <description> Paraunit 0.7.2 has just been released with a minor fix: colored output has been disabled from text coverage output to console, since it may cause incompatibilities. I will think of a way to re-enable it if possible in later releases.
-Full changelog text:
-Fixed  Disable colored output in text coverage to console, to avoid issues with GitLab integration.
-  </description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.2&#34;&gt;Paraunit 0.7.2&lt;/a&gt; has just been released with a minor fix: colored output has been disabled from text coverage output to console, since it may cause incompatibilities. I will think of a way to re-enable it if possible in later releases.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Paraunit 0.7: test coverage in parallel</title>
-      <link>http://jean85.github.io/release/paraunit/0.7/</link>
+      <link>http://jean85.github.io/release/paraunit/0.7.0/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.7/</guid>
-      <description>Finally, Paraunit 0.7 has been released! This version includes the long awaited coverage feature: now you can collect your test coverage running your tests in parallel!
-Along with this new huge feature, here comes a lot of new fixes and changes: for example, now a lot of default PHPUnit options can be used and they will be passed along to the single PHPUnit processes that Paraunit spawns; also, now we officially support Windows, and we added an Appveyor CI build to do that.</description>
+      <guid>http://jean85.github.io/release/paraunit/0.7.0/</guid>
+      <description>&lt;p&gt;Finally, &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7&#34;&gt;Paraunit 0.7&lt;/a&gt; has been released!
+This version includes the long awaited &lt;strong&gt;coverage feature&lt;/strong&gt;: now you can collect your test coverage running your tests
+in parallel!&lt;/p&gt;
+
+&lt;p&gt;Along with this new huge feature, here comes a lot of new fixes and changes: for example, now a lot of default PHPUnit
+options can be used and they will be passed along to the single PHPUnit processes that Paraunit spawns; also, now we
+&lt;strong&gt;officially support Windows&lt;/strong&gt;, and we added an &lt;a href=&#34;https://ci.appveyor.com/project/Jean85/paraunit&#34;&gt;Appveyor CI build&lt;/a&gt; to
+do that.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -230,9 +261,9 @@ Along with this new huge feature, here comes a lot of new fixes and changes: for
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.6.2/</guid>
-      <description>Paraunit 0.6.2 has been released! This version include a fix in the choice of the dir for the partial test results, that caused issues while on non-Linux systems. Some minor fix are present too, and now Paraunit shows the right version when launched.
-Also, since this release, all commits by me will be GPG signed!
-Unfortunately, the coverage feature is still in the works, but it&amp;rsquo;s slowly going on; the feature is working, but release 0.</description>
+      <description>&lt;p&gt;Paraunit 0.6.2 has been released! This version include a fix in the choice of the dir for the partial test results, that
+caused issues while on non-Linux systems. Some minor fix are present too, and now Paraunit shows the right version when
+launched.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -241,9 +272,9 @@ Unfortunately, the coverage feature is still in the works, but it&amp;rsquo;s sl
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.6.1/</guid>
-      <description>Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint, to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it this summer.
-Here&amp;rsquo;s the full 0.6.1 changelog:
-Changed  Symfony compatibility has been extended to &amp;lt;4.0, since Symfony 3.1 has been released; we will rely on their BC promise A new approach for dockerfiles, now they will be based on the standard Docker PHP library.</description>
+      <description>&lt;p&gt;Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint,
+to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it
+this summer.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -259,23 +290,21 @@ My experience On my day job, I do all this mental juggling on a pretty big proje
     
     <item>
       <title>Paraunit 0.6</title>
-      <link>http://jean85.github.io/release/paraunit/0.6/</link>
+      <link>http://jean85.github.io/release/paraunit/0.6.0/</link>
       <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.6/</guid>
-      <description>Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have it working soon and release it in 0.7.
-Here&amp;rsquo;s what&amp;rsquo;s changed in 0.6:
-Changed  MASSIVE refactoring of the result output parsing (#31, #33) and the result printing (#37): now Paraunit fetches the tests&amp;rsquo; results using PHPUnit&amp;rsquo;s --log-json option (thanks to @taueres for the idea). This grants a lot of new features:  Parsing of tests results is more robust, it should never fail!</description>
+      <guid>http://jean85.github.io/release/paraunit/0.6.0/</guid>
+      <description>&lt;p&gt;Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
+it working soon and release it in 0.7.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Paraunit 0.5</title>
-      <link>http://jean85.github.io/release/paraunit/0.5/</link>
+      <link>http://jean85.github.io/release/paraunit/0.5.0/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/paraunit/0.5/</guid>
-      <description> Paraunit 0.5 has been released! Here&amp;rsquo;s what&amp;rsquo;s changed:
-Changed  SQLite is now supported in the deadlock-recognition fase (issue #26, thanks @Algatux) Travis is testing on PHP 7.0, no more nightlies or allowed failures Symfony 3.0 components are now supported and compatible with Paraunit Retry parsing and management is improved  Fixed  Removed double generation of MD5 hash of process  </description>
+      <guid>http://jean85.github.io/release/paraunit/0.5.0/</guid>
+      <description>&lt;p&gt;Paraunit 0.5 has been released!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -284,8 +313,7 @@ Changed  SQLite is now supported in the deadlock-recognition fase (issue #26, th
       <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.4.4/</guid>
-      <description> Paraunit 0.4.4 has been released! Here&amp;rsquo;s what&amp;rsquo;s changed:
-Fixed  Merged previous v0.4 branch, there were missing fixes in previous release  </description>
+      <description>&lt;p&gt;Paraunit 0.4.4 has been released!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -294,8 +322,7 @@ Fixed  Merged previous v0.4 branch, there were missing fixes in previous release
       <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.4.3/</guid>
-      <description> Paraunit 0.4.3 has been released! Here&amp;rsquo;s what&amp;rsquo;s changed:
-Changed  --configuration behaviour is now identical to the same option in PHPUnit: it can accept also a path without a filename, and has a -c shortcut (default filename is phpunit.xml.dist) (#19) Added -c shortcut to README  </description>
+      <description>&lt;p&gt;Paraunit 0.4.3 has been released!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -304,8 +331,7 @@ Changed  --configuration behaviour is now identical to the same option in PHPUni
       <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.4.2/</guid>
-      <description> Paraunit 0.4.2 has been released! Here&amp;rsquo;s what&amp;rsquo;s changed:
-Changed  Unlocked supporto for PHPUnit &amp;gt;= 5.x README changed to suggest stable version of package in composer.json example  Fixed  Fixed: test stub for fatal errors fixed for HHVM &amp;amp; PHP7  </description>
+      <description>&lt;p&gt;Paraunit 0.4.2 has been released!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -314,8 +340,7 @@ Changed  Unlocked supporto for PHPUnit &amp;gt;= 5.x README changed to suggest s
       <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>http://jean85.github.io/release/paraunit/0.4.1/</guid>
-      <description> Paraunit 0.4.1 has been released! Here&amp;rsquo;s what&amp;rsquo;s changed:
-Changed  Improved: --configuration parameter now has the -c shortcut  Fixed  Fixed: test with fatal errors are not mistaken (and printed twice) for unknown results in the final results  </description>
+      <description>&lt;p&gt;Paraunit 0.4.1 has been released!&lt;/p&gt;</description>
     </item>
     
   </channel>

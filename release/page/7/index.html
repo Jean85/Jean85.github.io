@@ -4,27 +4,24 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Paraunit 0.10: small fixes and improvements - Alessandro Lai</title>
+	<title>Releases - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.54.0" />
-	<meta property="og:title" content="Paraunit 0.10: small fixes and improvements" />
-<meta property="og:description" content="With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the --debug option and the --text-to-console coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.
-Here&rsquo;s the full changelog:
-Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed tests counter at the end of each line in output (#91)  Changed  The Shark logo is now optional; to show it at the top, use the --logo option The --debug output has been completely rewritten and now is more useful than ever!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://jean85.github.io/release/paraunit/0.10/" />
-<meta property="article:published_time" content="2017-09-06T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2017-09-06T00:00:00&#43;00:00"/>
+	<meta property="og:title" content="Releases" />
+<meta property="og:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://jean85.github.io/release/" />
+
+<meta property="og:updated_time" content="2015-10-19T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Paraunit 0.10: small fixes and improvements"/>
-<meta name="twitter:description" content="With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the --debug option and the --text-to-console coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.
-Here&rsquo;s the full changelog:
-Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed tests counter at the end of each line in output (#91)  Changed  The Shark logo is now optional; to show it at the top, use the --logo option The --debug output has been completely rewritten and now is more useful than ever!"/>
+<meta name="twitter:title" content="Releases"/>
+<meta name="twitter:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box"/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="alternate" type="application/rss+xml" href="/release/index.xml" title="Alessandro Lai">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/custom.css">
@@ -53,6 +50,9 @@ Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed 
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
 		<li class="menu__item">
@@ -75,14 +75,20 @@ Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed 
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.10: small fixes and improvements</h1>
-			<div class="post__meta meta">
+<main class="main list" role="main">
+	<header class="main__header">
+		<h1 class="main__title">Releases</h1>
+	</header><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/paraunit/0.4.2/" rel="bookmark">
+			Paraunit 0.4.2
+			</a>
+		</h3>
+		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-09-06T00:00:00">September 06, 2017</time>
+	<time class="meta__text" datetime="2015-10-19T00:00:00">October 19, 2015</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -90,69 +96,50 @@ Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed 
 	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
 </div>
 </div>
-		</header><div class="content post__content clearfix">
-			
-
-<p>With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the <code>--debug</code> option and the <code>--text-to-console</code> coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.</p>
-
-<p>Here&rsquo;s the full changelog:</p>
-
-<h3 id="added">Added</h3>
-
-<ul>
-<li>Add official support to PHP 7.2 (added to Travis CI matrix)</li>
-<li>Add executed tests counter at the end of each line in output (#91)</li>
-</ul>
-
-<h3 id="changed">Changed</h3>
-
-<ul>
-<li>The Shark logo is now optional; to show it at the top, use the <code>--logo</code> option</li>
-<li>The <code>--debug</code> output has been completely rewritten and now is more useful than ever!</li>
-</ul>
-
-<h3 id="fixed">Fixed</h3>
-
-<ul>
-<li>Fix the <code>--text-to-console</code> coverage option (#99)</li>
-</ul>
-
-		</div>
-		
-<div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
-	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/paraunit/" rel="tag">Paraunit</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a></li>
-	</ul>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Paraunit 0.4.2 has been released!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.4.2/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/paraunit/0.4.1/" rel="bookmark">
+			Paraunit 0.4.1
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2015-09-23T00:00:00">September 23, 2015</time>
 </div>
-	</article>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Paraunit 0.4.1 has been released!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.4.1/">Read more…</a>
+	</div>
+</article>
 </main>
 
-<div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About Alessandro Lai</span>
-	</div>
-	<div class="authorbox__description">
-		Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
-	</div>
+<div class="pagination">
+	<a class="pagination__item pagination__item--prev btn" href="/release/page/6/">«</a>
+	<span class="pagination__item pagination__item--current">7/7</span>
 </div>
-
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/release/paraunit/0.9.1/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Paraunit 0.9.1: a small fix in the header</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/release/paraunit/0.10.1/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Paraunit 0.10.1: report deprecations</p></a>
-	</div>
-</nav>
 
 
 			</div>
-			<aside class="sidebar"><div class="widget-search widget">
+			
+<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
@@ -165,31 +152,32 @@ Added  Add official support to PHP 7.2 (added to Travis CI matrix) Add executed 
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">

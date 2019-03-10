@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://jean85.github.io/" />
 
-<meta property="og:updated_time" content="2016-10-24T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2017-01-24T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Alessandro Lai"/>
@@ -49,6 +49,9 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
+		<li class="menu__item menu__item--active">
+			<a class="menu__link" href="/">Home</a>
+		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
@@ -75,14 +78,14 @@
 <main class="main list" role="main"><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.6.2/" rel="bookmark">
-			Paraunit 0.6.2
+			<a href="/release/paraunit/0.8.0/" rel="bookmark">
+			Paraunit 0.8: PHAR continuous delivery
 			</a>
 		</h3>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-10-24T00:00:00">October 24, 2016</time>
+	<time class="meta__text" datetime="2017-01-24T00:00:00">January 24, 2017</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -92,24 +95,23 @@
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Paraunit 0.6.2 has been released! This version include a fix in the choice of the dir for the partial test results, that caused issues while on non-Linux systems. Some minor fix are present too, and now Paraunit shows the right version when launched.
-Also, since this release, all commits by me will be GPG signed!
-Unfortunately, the coverage feature is still in the works, but it&rsquo;s slowly going on; the feature is working, but release 0.
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.8">Paraunit 0.8</a> has been released!
+With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&rsquo;s PHAR. Thanks to <a href="https://andreas.heigl.org/2017/01/19/encrypt-a-build-result-automaticaly/">Andreas Heigl</a> that made this not only possible, but very straightforward to implement.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.6.2/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.8.0/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.6.1/" rel="bookmark">
-			Paraunit 0.6.1
+			<a href="/release/paraunit/0.7.4/" rel="bookmark">
+			Paraunit 0.7.4: PHAR release
 			</a>
 		</h3>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-06-10T00:00:00">June 10, 2016</time>
+	<time class="meta__text" datetime="2017-01-11T00:00:00">January 11, 2017</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -119,51 +121,22 @@ Unfortunately, the coverage feature is still in the works, but it&rsquo;s slowly
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint, to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it this summer.
-Here&rsquo;s the full 0.6.1 changelog:
-Changed  Symfony compatibility has been extended to &lt;4.0, since Symfony 3.1 has been released; we will rely on their BC promise A new approach for dockerfiles, now they will be based on the standard Docker PHP library.
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.4">Paraunit 0.7.4</a> has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.6.1/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.4/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/how-php-7-tdd-helped-me-sleep-better/" rel="bookmark">
-			How PHP 7 &amp; TDD helped me sleep better
+			<a href="/release/paraunit/0.7.3/" rel="bookmark">
+			Paraunit 0.7.3: PHAR release
 			</a>
 		</h3>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-06-07T00:00:00">June 07, 2016</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
-Maybe we fear only one thing more than that: being interrupted.  While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.
-My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/how-php-7-tdd-helped-me-sleep-better/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.6/" rel="bookmark">
-			Paraunit 0.6
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-03-20T00:00:00">March 20, 2016</time>
+	<time class="meta__text" datetime="2016-12-30T00:00:00">December 30, 2016</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -173,24 +146,22 @@ My experience On my day job, I do all this mental juggling on a pretty big proje
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have it working soon and release it in 0.7.
-Here&rsquo;s what&rsquo;s changed in 0.6:
-Changed  MASSIVE refactoring of the result output parsing (#31, #33) and the result printing (#37): now Paraunit fetches the tests&rsquo; results using PHPUnit&rsquo;s --log-json option (thanks to @taueres for the idea). This grants a lot of new features:  Parsing of tests results is more robust, it should never fail!
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.4">Paraunit 0.7.3</a> has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the <a href="https://github.com/facile-it/paraunit/releases/latest">latest GitHub release page</a>.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.6/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.3/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.5/" rel="bookmark">
-			Paraunit 0.5
+			<a href="/release/paraunit/0.7.1/" rel="bookmark">
+			Paraunit 0.7.1: coverage in text format
 			</a>
 		</h3>
 		<div class="list__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2015-12-08T00:00:00">December 08, 2015</time>
+	<time class="meta__text" datetime="2016-12-28T00:00:00">December 28, 2016</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -200,15 +171,42 @@ Changed  MASSIVE refactoring of the result output parsing (#31, #33) and the res
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Paraunit 0.5 has been released! Here&rsquo;s what&rsquo;s changed:
-Changed  SQLite is now supported in the deadlock-recognition fase (issue #26, thanks @Algatux) Travis is testing on PHP 7.0, no more nightlies or allowed failures Symfony 3.0 components are now supported and compatible with Paraunit Retry parsing and management is improved  Fixed  Removed double generation of MD5 hash of process  
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.1">Paraunit 0.7.1</a> has just been released; this is just a minor release that adds a new useful feature: the <strong>text format</strong> for the coverage. You can either use it on screen as an integration tool (see Jenkins, GitLab), or save it as a file. Since there is a small limitation in CLI options handling by the Symfony component, this feature is implemented through two separate options.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.1/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/release/paraunit/0.7.2/" rel="bookmark">
+			Paraunit 0.7.2: coverage in text format
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-12-28T00:00:00">December 28, 2016</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.2">Paraunit 0.7.2</a> has just been released with a minor fix: colored output has been disabled from text coverage output to console, since it may cause incompatibilities. I will think of a way to re-enable it if possible in later releases.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.2/">Read more…</a>
 	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/4/">«</a>
-	<span class="pagination__item pagination__item--current">5/6</span>
+	<span class="pagination__item pagination__item--current">5/7</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/6/">»</a>
 </div>
 
@@ -227,31 +225,32 @@ Changed  SQLite is now supported in the deadlock-recognition fase (issue #26, th
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">

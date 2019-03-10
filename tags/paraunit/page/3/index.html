@@ -50,6 +50,9 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
 		<li class="menu__item">
@@ -95,8 +98,10 @@
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Paraunit 0.8.2 has been released to fix an issued caused by an unwanted overwrite of the write() method in the LogWriter class. Full changelog:
-Fixed  Fix the signature of LogPrinter, to avoid warnings (this would lead to no test execution when considering warnings as test failures)  
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.8.2">Paraunit 0.8.2</a> has been released to fix an issued caused by an unwanted overwrite of the <code>write()</code> method in the <code>LogWriter</code> class.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.8.2/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -118,13 +123,15 @@ Fixed  Fix the signature of LogPrinter, to avoid warnings (this would lead to no
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Paraunit 0.8.1 has been released to fix a small regression that happens when running functional tests in a Symfony project:
-Fixed  Fix #88: write the temporary configuration file in the same dir of the original, to avoid issue with Symfony when it guesses its kernel dir  
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.8.2">Paraunit 0.8.1</a> has been released to fix a small regression that happens when running functional tests in a Symfony project.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.8.1/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.8/" rel="bookmark">
+			<a href="/release/paraunit/0.8.0/" rel="bookmark">
 			Paraunit 0.8: PHAR continuous delivery
 			</a>
 		</h3>
@@ -141,11 +148,11 @@ Fixed  Fix #88: write the temporary configuration file in the same dir of the or
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Paraunit 0.8 has been released! With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&rsquo;s PHAR. Thanks to Andreas Heigl that made this not only possible, but very straightforward to implement.
-Next phase will be the 1.0 stable release milestone, which is probably just a little away. This release paved the way to the PHPUnit 6 support, with the new LogPrinter brought from PHPUnit.
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.8">Paraunit 0.8</a> has been released!
+With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&rsquo;s PHAR. Thanks to <a href="https://andreas.heigl.org/2017/01/19/encrypt-a-build-result-automaticaly/">Andreas Heigl</a> that made this not only possible, but very straightforward to implement.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.8/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.8.0/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -167,9 +174,10 @@ Next phase will be the 1.0 stable release milestone, which is probably just a li
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Paraunit 0.7.4 has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.
-Full changelog text:
-Changed  Add optional argument to both commands to filter tests filenames; the filter is case insensitive and doesn&rsquo;t rely on paths, so it doesn&rsquo;t have to be a full or relative path; it can also be used in conjunction with the --testsuite option  
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.4">Paraunit 0.7.4</a> has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.4/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -191,9 +199,10 @@ Changed  Add optional argument to both commands to filter tests filenames; the f
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Paraunit 0.7.3 has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the latest GitHub release page.
-Full changelog text:
-Changed  Add PHAR generation tools (thanks @taueres for the previous PR); from now on, Paraunit is released as a PHAR too!  
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.4">Paraunit 0.7.3</a> has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the <a href="https://github.com/facile-it/paraunit/releases/latest">latest GitHub release page</a>.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.7.3/">Read more…</a>
 	</div>
 </article>
 </main>
@@ -220,31 +229,32 @@ Changed  Add PHAR generation tools (thanks @taueres for the previous PR); from n
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">

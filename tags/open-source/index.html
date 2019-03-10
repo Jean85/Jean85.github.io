@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://jean85.github.io/tags/open-source/" />
 
-<meta property="og:updated_time" content="2018-06-01T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2018-06-13T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Open Source"/>
@@ -50,6 +50,9 @@
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
 		<li class="menu__item">
@@ -78,6 +81,31 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/release/pretty-package-versions/1.2.0/" rel="bookmark">
+			Pretty Package Versions 1.2.0
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2018-06-13T00:00:00">June 13, 2018</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Another minor version bump, another new feature!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/pretty-package-versions/1.2.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/release/paraunit/0.12.3/" rel="bookmark">
 			Paraunit 0.12.3: allow phpunit/php-file-iterator 2
 			</a>
@@ -95,9 +123,10 @@
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Today I released a new small patch for Paraunit, fixing the support for a hidden dependency (phpunit/php-file-iterator) which broke Paraunit with its 2.0 release.
-Here&rsquo;s the full changelog:
-Fixed  Allow explicitly phpunit/php-file-iterator 2 #126  
+		<p>Today I released a new small patch for Paraunit, fixing the support for a hidden dependency (<code>phpunit/php-file-iterator</code>) which broke Paraunit with its 2.0 release.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.12.3/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -119,9 +148,10 @@ Fixed  Allow explicitly phpunit/php-file-iterator 2 #126
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.
-Here&rsquo;s the full changelog:
-Fixed  Allow multiple, comma-separated values with the --testsuite option, like with PHPUnit 6+ #122 Avoid letting the colored console output blink (dots, errors) #124 thanks to @elegos Add a new exception about MySQL savepoint to the retryable ones #125  
+		<p>Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.12.2/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
@@ -143,14 +173,15 @@ Fixed  Allow multiple, comma-separated values with the --testsuite option, like 
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		 I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the --text and --text-summary options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a PR to the Symfony Docs too!
-Here&rsquo;s the full changelog:
-Fixed  Fix the behavior of the new --text and --text-summary options (#121)  
+		<p>I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the <code>--text</code> and <code>--text-summary</code> options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a <a href="https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560">PR to the Symfony Docs</a> too!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.12.1/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.12/" rel="bookmark">
+			<a href="/release/paraunit/0.12.0/" rel="bookmark">
 			Paraunit 0.12: PHPUnit 7 support and coverage text summary option
 			</a>
 		</h3>
@@ -167,45 +198,16 @@ Fixed  Fix the behavior of the new --text and --text-summary options (#121)
 </div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.
-Here&rsquo;s the full changelog:
-Added  Added support for PHPUnit 7 and phpunit/php-code-coverage 6  Changed  The coverage text output options have changed:  The --text option now accepts a filename as an argument, and defaults to the console as output (replacing --text-to-console) The new --text-summary option behaves in the same way, but it writes only the summary part   Removed  Removed support for PHP 7.
+		<p>With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.</p>
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.12/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/release/paraunit/0.11/" rel="bookmark">
-			Paraunit 0.11: add Symfony 4 support, some refactoring and a fix
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2017-12-13T00:00:00">December 13, 2017</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/release" rel="category">Release</a></span>
-</div>
-</div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed.
-Here&rsquo;s the full changelog:
-Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration from YAML to PHP Require at least jean85/pretty-package-versions 1.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/release/paraunit/0.11/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/release/paraunit/0.12.0/">Read more…</a>
 	</div>
 </article>
 </main>
 
 <div class="pagination">
-	<span class="pagination__item pagination__item--current">1/6</span>
+	<span class="pagination__item pagination__item--current">1/7</span>
 	<a class="pagination__item pagination__item--next btn" href="/tags/open-source/page/2/">»</a>
 </div>
 
@@ -225,31 +227,32 @@ Added  Added support for Symfony 4  Changed  Migrated the whole DI configuration
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
-			<li class="widget__item"><a class="widget__link" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</a></li>
+			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source (27)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit (26)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php (3)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing (2)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony (1)</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd (1)</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
 	</div>
 </div>
 <div class="widget-social widget">
