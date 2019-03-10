@@ -23,7 +23,7 @@ theme = "mainroad"
   toc = false # Disabled by default, enabled in some posts
   post_navigation = true
   # post_meta = ["date", "categories", "translations"] # Order of post meta information. Use ["none"] to turn off completely.
-  postSections = ["post", "release"]
+  postSections = ["posts", "releases"]
   #dateformat = "2006-01-02" # change the format of dates
   #mathjax = true # Enable MathJax
   #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" # Specify MathJax path
@@ -63,8 +63,8 @@ theme = "mainroad"
 [[menu.main]]
   name = "Blog"
   weight = 10
-  identifier = "post"
-  url = "/post/"
+  identifier = "posts"
+  url = "/posts/"
 [[menu.main]]
   name = "Talks"
   weight = 20
