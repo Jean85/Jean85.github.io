@@ -103,7 +103,7 @@ L'unico limite di questo approccio è che le transazioni sono disponibili solo c
 #### La rapidità di esecuzione
 Per darvi un'idea di quanto possa essere veloce Paraunit rispetto alla normale esecuzione con PHPUnit, ho misurato il tempo di esecuzione della nostra test suite funzionale, che è sufficientemente ampia (261 classi, 1568 metodi):
 
-![Grafico](grafico.png)
+![Grafico](/images/paraunit-grafico.png)
 
 
 Come potete vedere, Paraunit esegue l'intera test suite in soli **6 minuti e 6 secondi**, mentre PHPUnit ci metterebbe **oltre 40 minuti!**

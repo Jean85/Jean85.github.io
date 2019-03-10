@@ -4,7 +4,7 @@ draft: false
 categories: [Republished]
 tags: [PHP, OOP, Software testing]
 title: "Why type hints and interfaces are not visual debt"
-
+type: posts
 languageCode: "en-EN"
 toc: false
 republished:
@@ -220,7 +220,7 @@ I would admit that this is a matter of personal preference, and I would not sugg
 
 But even in this little use case, [it lead to discover a small issue](https://travis-ci.org/facile-it/paraunit/jobs/236293288) with an outdated test code, were I was **passing an empty string instead of a boolean**: that happened because I refactored a constructor some time ago, and I forgot to update the tests, and I missed it since the **tests were not failing**. The error was even well highlighted by my IDE now, but before it was casted silently to a bool, and it matched the expected behavior by sheer luck!
  
-![The error highlighted in PHPStorm](/images/visual-debt-typehints/phpstorm-error-highlight.png) 
+![The error highlighted in PHPStorm](/images/phpstorm-error-highlight.png) 
 
 ## Conclusions
 
