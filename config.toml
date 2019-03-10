@@ -61,9 +61,9 @@ theme = "mainroad"
   identifier = "post"
   url = "/post/"
 [[menu.main]]
-  name = "Slides"
+  name = "Talks"
   weight = 20
-  url = "/slides/"
+  url = "/talks/"
 [[menu.main]]
   name = "Categories"
   weight = 30

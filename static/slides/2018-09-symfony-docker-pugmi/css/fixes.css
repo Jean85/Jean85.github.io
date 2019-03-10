@@ -1,0 +1,48 @@
+.reveal section img {
+    border: 0;
+    box-shadow: none;
+}
+
+.reveal section img.avatar {
+    border-radius: 0.5em;
+    text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+img#logo-engineering {
+    position: absolute;
+    height: 12%;
+    bottom: 10px;
+    left: 10px;
+}
+
+div.credit.white a,
+.reveal section.white h1,
+.reveal section.white h2,
+.reveal section.white h3,
+.reveal section.white h4,
+.reveal section.white p,
+.reveal section.white li,
+.reveal section.white span,
+.reveal section.white div {
+    text-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    color: white;
+}
+
+span.grey {
+    color: grey;
+}
+
+.reveal ul,
+.reveal ul.fa-ul {
+    list-style-type: none;
+}
+
+.reveal section div.smaller,
+.reveal section span.smaller {
+    font-size: smaller;
+}
+
+.no-wrap {
+    white-space: nowrap;
+    text-wrap: none;
+}
