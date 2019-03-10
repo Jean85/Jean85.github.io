@@ -51,8 +51,13 @@ theme = "mainroad"
   category = "categories"
 
 [[menu.main]]
-  name = "Who am I"
+  name = "Home"
   weight = 1
+  identifier = "home"
+  url = "/"
+[[menu.main]]
+  name = "Who am I"
+  weight = 2
   identifier = "who-am-i"
   url = "/who-am-i/"
 [[menu.main]]
