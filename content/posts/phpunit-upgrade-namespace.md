@@ -7,6 +7,9 @@ title: "How to gradually upgrade toward PHPUnit 6 with namespaced classes"
 
 languageCode: "en-EN"
 toc: false
+
+republished:
+  facile: https://engineering.facile.it/blog/eng/phpunit-upgrade-namespace/
 ---
 In the latest months I wrote multiple times, in different projects, code migrating **PHPUnit** toward major **version 6**. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: **all classes got (finally!) namespaced**.
 

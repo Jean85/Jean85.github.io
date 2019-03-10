@@ -15,12 +15,14 @@
 			<img src="{{ .Params.thumbnail | relURL }}" alt="{{ .Title }}">
 		</figure>
 		{{- end }}
-		<blockquote>
-			<p>
-				This is a republished tag announcement for <code>{{ .Params.release.name }}</code>.
-				You can find the release <a href="https://github.com/{{ .Params.release.name }}/releases/tag/{{ .Params.release.tag }}" target="_blank">here</a>.
-			</p>
-		</blockquote>
+		<div class="content clearfix">
+            <blockquote>
+                <p>
+                    This is a republished tag announcement for <code>{{ .Params.release.name }}</code>.
+                    You can find the release <a href="https://github.com/{{ .Params.release.name }}/releases/tag/{{ .Params.release.tag }}" target="_blank">here</a>.
+                </p>
+    		</blockquote>
+        </div>
 		{{- partial "post_toc.html" . -}}
 		<div class="content post__content clearfix">
 			{{ .Content }}

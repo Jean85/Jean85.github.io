@@ -7,6 +7,8 @@ title: "Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docke
 type: "post"
 languageCode: "en-EN"
 toc: true
+republished:
+  facile: https://engineering.facile.it/blog/eng/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/
 ---
 
 In the last month, I'm working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt **GitLab CI** for the build, since we use GitLab CE for our Git repositories; I then created a **continuous deployment pipeline** for the staging environment, directly to a **Kubernetes cluster**, leveraging **Docker Compose** to make the configuration easier.
