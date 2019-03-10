@@ -3,182 +3,187 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.2.0/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.2.0/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.12.3/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.12.3/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.12.2/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.12.2/</loc>
     <lastmod>2018-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.12.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.12.1/</loc>
     <lastmod>2018-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.12.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.12.0/</loc>
     <lastmod>2018-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</loc>
+    <loc>http://jean85.github.io/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.1.0/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.11.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.11.0/</loc>
     <lastmod>2017-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.0.3/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.3/</loc>
     <lastmod>2017-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.10.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.10.1/</loc>
     <lastmod>2017-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/post/phpunit-upgrade-namespace/</loc>
+    <loc>http://jean85.github.io/posts/phpunit-upgrade-namespace/</loc>
     <lastmod>2017-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.10.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.10.0/</loc>
     <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.0.2/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.2/</loc>
     <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.0.1/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.1/</loc>
     <lastmod>2017-07-06T00:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.9.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.9.1/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.9.2/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.9.2/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/pretty-package-versions/1.0.0/</loc>
+    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.0/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.9.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.9.0/</loc>
     <lastmod>2017-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.8.2/</loc>
+    <loc>http://jean85.github.io/posts/visual-debt-typehints/</loc>
+    <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/releases/paraunit/0.8.2/</loc>
     <lastmod>2017-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.8.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.8.1/</loc>
     <lastmod>2017-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.8.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.8.0/</loc>
     <lastmod>2017-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.7.4/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.7.4/</loc>
     <lastmod>2017-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.7.3/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.7.3/</loc>
     <lastmod>2016-12-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.7.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.7.1/</loc>
     <lastmod>2016-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.7.2/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.7.2/</loc>
     <lastmod>2016-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.7.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.7.0/</loc>
     <lastmod>2016-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.6.2/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.6.2/</loc>
     <lastmod>2016-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.6.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.6.1/</loc>
     <lastmod>2016-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/post/how-php-7-tdd-helped-me-sleep-better/</loc>
+    <loc>http://jean85.github.io/posts/how-php-7-tdd-helped-me-sleep-better/</loc>
     <lastmod>2016-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.6.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.6.0/</loc>
     <lastmod>2016-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.5.0/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.5.0/</loc>
     <lastmod>2015-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.4.4/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.4.4/</loc>
     <lastmod>2015-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.4.3/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.4.3/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.4.2/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.4.2/</loc>
     <lastmod>2015-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/post/paraunit/</loc>
+    <loc>http://jean85.github.io/posts/paraunit/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/paraunit/0.4.1/</loc>
+    <loc>http://jean85.github.io/releases/paraunit/0.4.1/</loc>
     <lastmod>2015-09-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -242,6 +247,12 @@
   </url>
   
   <url>
+    <loc>http://jean85.github.io/tags/oop/</loc>
+    <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://jean85.github.io/tags/open-source/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -260,7 +271,7 @@
   </url>
   
   <url>
-    <loc>http://jean85.github.io/post/</loc>
+    <loc>http://jean85.github.io/posts/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -272,13 +283,13 @@
   </url>
   
   <url>
-    <loc>http://jean85.github.io/categories/release/</loc>
+    <loc>http://jean85.github.io/releases/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/release/</loc>
+    <loc>http://jean85.github.io/categories/releases/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>

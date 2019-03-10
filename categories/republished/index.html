@@ -56,7 +56,7 @@
 			<a class="menu__link" href="/who-am-i/">Who am I</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/post/">Blog</a>
+			<a class="menu__link" href="/posts/">Blog</a>
 		</li>
 		<li class="menu__item">
 			<a class="menu__link" href="/talks/">Talks</a>
@@ -81,7 +81,7 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" rel="bookmark">
+			<a href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" rel="bookmark">
 			Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker
 			</a>
 		</h3>
@@ -102,12 +102,12 @@
 After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/phpunit-upgrade-namespace/" rel="bookmark">
+			<a href="/posts/phpunit-upgrade-namespace/" rel="bookmark">
 			How to gradually upgrade toward PHPUnit 6 with namespaced classes
 			</a>
 		</h3>
@@ -128,12 +128,40 @@ After, I decided to start migrating a previous, internal project of mine to the 
 This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/phpunit-upgrade-namespace/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/phpunit-upgrade-namespace/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/how-php-7-tdd-helped-me-sleep-better/" rel="bookmark">
+			<a href="/posts/visual-debt-typehints/" rel="bookmark">
+			Why type hints and interfaces are not visual debt
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2017-05-31T00:00:00">May 31, 2017</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
+</div>
+</div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
+Scalar type hints &amp; return types vs no scalar type hints &amp; return types is #PHP&#39;s new spaces vs tabs
+&mdash; Cees-Jan 🔊 Kiewiet (@WyriHaximus) 19 maggio 2017 
+After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading).
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/visual-debt-typehints/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
+			<a href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="bookmark">
 			How PHP 7 &amp; TDD helped me sleep better
 			</a>
 		</h3>
@@ -155,12 +183,12 @@ Maybe we fear only one thing more than that: being interrupted.  While writing c
 My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/how-php-7-tdd-helped-me-sleep-better/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/how-php-7-tdd-helped-me-sleep-better/">Read more…</a>
 	</div>
 </article><article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
-			<a href="/post/paraunit/" rel="bookmark">
+			<a href="/posts/paraunit/" rel="bookmark">
 			Paraunit: test paralleli, Doctrine e le fixture
 			</a>
 		</h3>
@@ -181,7 +209,7 @@ My experience On my day job, I do all this mental juggling on a pretty big proje
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.
 	</div>
 	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/post/paraunit/">Read more…</a>
+		<a class="list__footer-readmore btn" href="/posts/paraunit/">Read more…</a>
 	</div>
 </article>
 </main>
@@ -202,11 +230,11 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/release/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
-			<li class="widget__item"><a class="widget__link" href="/release/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
 		</ul>
 	</div>
 </div>
@@ -221,6 +249,7 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oop" title="Oop">Oop</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>

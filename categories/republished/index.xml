@@ -13,30 +13,42 @@
     
     <item>
       <title>Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</title>
-      <link>http://jean85.github.io/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</link>
+      <link>http://jean85.github.io/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/post/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</guid>
+      <guid>http://jean85.github.io/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</guid>
       <description>In the last month, I&amp;rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
 After, I decided to start migrating a previous, internal project of mine to the same approach, since it&amp;rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!</description>
     </item>
     
     <item>
       <title>How to gradually upgrade toward PHPUnit 6 with namespaced classes</title>
-      <link>http://jean85.github.io/post/phpunit-upgrade-namespace/</link>
+      <link>http://jean85.github.io/posts/phpunit-upgrade-namespace/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/post/phpunit-upgrade-namespace/</guid>
+      <guid>http://jean85.github.io/posts/phpunit-upgrade-namespace/</guid>
       <description>In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
 This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp;amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&amp;rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.</description>
     </item>
     
     <item>
+      <title>Why type hints and interfaces are not visual debt</title>
+      <link>http://jean85.github.io/posts/visual-debt-typehints/</link>
+      <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/posts/visual-debt-typehints/</guid>
+      <description>A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
+Scalar type hints &amp;amp; return types vs no scalar type hints &amp;amp; return types is #PHP&amp;#39;s new spaces vs tabs
+&amp;mdash; Cees-Jan 🔊 Kiewiet (@WyriHaximus) 19 maggio 2017 
+After asking references about this, someone alluded to this very short video: &amp;ldquo;PHP Bits: Visual Debt&amp;rdquo; (it&amp;rsquo;s only 3 minutes, please watch it before continue reading).</description>
+    </item>
+    
+    <item>
       <title>How PHP 7 &amp; TDD helped me sleep better</title>
-      <link>http://jean85.github.io/post/how-php-7-tdd-helped-me-sleep-better/</link>
+      <link>http://jean85.github.io/posts/how-php-7-tdd-helped-me-sleep-better/</link>
       <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/post/how-php-7-tdd-helped-me-sleep-better/</guid>
+      <guid>http://jean85.github.io/posts/how-php-7-tdd-helped-me-sleep-better/</guid>
       <description>The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
 Maybe we fear only one thing more than that: being interrupted.  While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&amp;hellip; fatigue and interruptions are the main enemies of those in this line of work.
 My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.</description>
@@ -44,10 +56,10 @@ My experience On my day job, I do all this mental juggling on a pretty big proje
     
     <item>
       <title>Paraunit: test paralleli, Doctrine e le fixture</title>
-      <link>http://jean85.github.io/post/paraunit/</link>
+      <link>http://jean85.github.io/posts/paraunit/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/post/paraunit/</guid>
+      <guid>http://jean85.github.io/posts/paraunit/</guid>
       <description>Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&amp;rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&amp;rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&amp;rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.</description>
     </item>

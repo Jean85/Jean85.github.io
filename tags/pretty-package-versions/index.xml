@@ -13,55 +13,55 @@
     
     <item>
       <title>Pretty Package Versions 1.2.0</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.2.0/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.2.0/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.2.0/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.2.0/</guid>
       <description>&lt;p&gt;Another minor version bump, another new feature!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty Package Versions 1.1.0</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.1.0/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.1.0/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</guid>
       <description>&lt;p&gt;This time around we have a minor version bump, due to a new feature!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty Package Versions 1.0.3</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.0.3/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.0.3/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.3/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.0.3/</guid>
       <description>&lt;p&gt;Another bump is needed to the sub-package constraint. Also, a known issue with Composer has been discovered.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty Package Versions 1.0.2</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.0.2/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.0.2/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.2/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.0.2/</guid>
       <description>&lt;p&gt;Another small issue solved with a small patch, and PHP 7.2 support comes along!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty Package Versions 1.0.1</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.0.1/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.0.1/</link>
       <pubDate>Thu, 06 Jul 2017 00:01:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.1/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.0.1/</guid>
       <description>&lt;p&gt;Same day of the first release, a small patch follows!&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Pretty Package Versions 1.0</title>
-      <link>http://jean85.github.io/release/pretty-package-versions/1.0.0/</link>
+      <link>http://jean85.github.io/releases/pretty-package-versions/1.0.0/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
-      <guid>http://jean85.github.io/release/pretty-package-versions/1.0.0/</guid>
+      <guid>http://jean85.github.io/releases/pretty-package-versions/1.0.0/</guid>
       <description>&lt;p&gt;This is the first release of this package!&lt;/p&gt;</description>
     </item>
     

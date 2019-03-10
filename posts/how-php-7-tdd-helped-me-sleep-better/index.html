@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-us">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>How PHP 7 &amp; TDD helped me sleep better - Alessandro Lai</title>
+	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
+	<meta name="description" content="">
+	<meta name="generator" content="Hugo 0.54.0" />
+	<meta property="og:title" content="How PHP 7 &amp; TDD helped me sleep better" />
+<meta property="og:description" content="The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
+Maybe we fear only one thing more than that: being interrupted.  While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.
+My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://jean85.github.io/posts/how-php-7-tdd-helped-me-sleep-better/" />
+<meta property="article:published_time" content="2016-06-07T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2016-06-07T00:00:00&#43;00:00"/>
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How PHP 7 &amp; TDD helped me sleep better"/>
+<meta name="twitter:description" content="The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
+Maybe we fear only one thing more than that: being interrupted.  While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.
+My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5."/>
+
+	<link rel="dns-prefetch" href="//fonts.googleapis.com">
+	<link rel="dns-prefetch" href="//fonts.gstatic.com">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="shortcut icon" href="/favicon.ico">
+		
+</head>
+<body class="body">
+	<div class="container container--outer">
+		<header class="header">
+	<div class="container">
+		<a class="logo flex" href="/" title="Alessandro Lai" rel="home">
+			
+			<div>
+				<img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
+			</div>
+			
+			<div class="logo__text">
+				<div class="logo__title">Alessandro Lai</div>
+				<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+			</div>
+		</a>
+		
+<nav class="menu">
+	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
+		<span class="menu__btn-title" tabindex="-1">Menu</span>
+	</button>
+	<ul class="menu__list">
+		<li class="menu__item">
+			<a class="menu__link" href="/">Home</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/who-am-i/">Who am I</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/posts/">Blog</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/talks/">Talks</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/categories/">Categories</a>
+		</li>
+		<li class="menu__item">
+			<a class="menu__link" href="/tags/">Tags</a>
+		</li>
+	</ul>
+</nav>
+
+	</div>
+</header>
+		<div class="wrapper flex">
+			<div class="primary">
+			
+<main class="main" role="main">
+    <article class="post">
+        <header class="post__header">
+            <h1 class="post__title">How PHP 7 &amp; TDD helped me sleep better</h1>
+            <div class="post__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
+	<time class="meta__text" datetime="2016-06-07T00:00:00">June 07, 2016</time>
+</div>
+
+<div class="meta__item-categories meta__item">
+	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
+</div>
+</div>
+        </header>
+        <div class="content clearfix">
+            <blockquote>
+                <p>
+                    This post was originally published on the
+                    <a href="https://engineering.facile.it/blog/eng/how-php-7-tdd-helped-me-sleep-better/" target="_blank">Facile.it Engineering blog</a>.
+                </p>
+            </blockquote>
+        </div><div class="content post__content clearfix">
+            
+
+<h1 id="the-enemies-of-programming">The enemies of programming</h1>
+
+<p>As many of you will agree with me, <strong>sleep deprivation</strong> is the enemy of programming.<br />
+Maybe we fear only one thing more than that: <strong>being interrupted</strong>.
+<p style="text-align: center;">
+    <a href="http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/"><img src="/images/how-php-7-tdd-helped-me-sleep-better/interruption.png" alt="Why you shouldn't interrupt a programmer (by Jason Heeris)" /></a>
+</p></p>
+
+<p>While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.</p>
+
+<h1 id="my-experience">My experience</h1>
+
+<p>On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.5, Symfony 2.8, Doctrine etc.; luckily, in this project we use a good deal of <strong>good practices</strong>, and <strong>automated software testing</strong> is one of those. I actually switched to this job to learn about doing automatic testing, continuous integration and other best practices.</p>
+
+<p>Almost half a year ago <strong>I became a dad</strong>. It has been great, and you also get some unexpected perks! For example, my colleagues got me this gift for my son:
+<p style="text-align: center;">
+    <img src="/images/how-php-7-tdd-helped-me-sleep-better/blue-elephpant.jpg" alt="A blue elePHPant!" />
+</p></p>
+
+<p>So, we can say that his future is pretty clear&hellip; But don&rsquo;t say this to my wife!</p>
+
+<p>During the pregnancy, many of my friends and fellow parents warned me half jokingly about one thing: <em>&ldquo;sleep now, you&rsquo;ll be deadly tired after!&rdquo;</em>. Now I can say that they were a bit exaggerating, but I can&rsquo;t deny that, having a child takes a toll on your sleep schedule&hellip; Even if, as in my case having a 9 to 6 office job, my wonderful wife does all the parenting heavy lifting (and I consider myself pretty lucky for having her!).</p>
+
+<p>A few months after my son was born I also had the opportunity to start <strong>a new, fresh project</strong>. To be completely honest, it was not actually fresh: it was a <strong>complete rewrite</strong> of an internal service that&rsquo;s used to manage the invoices for multiple business units inside our company. I knew pretty well that the old system had to be replaced, so I was put in charge of redoing it from scratch.</p>
+
+<p>One of the issue with the old system (and the main reason behind the rewrite) was <strong>maintainability</strong>: we had no tests, we had no proper development environment, and its design wasn&rsquo;t that great; also, bureaucracy and invoicing are the core domain of the system, so it was inherently complex. It was the perfect environment to witness the <a href="https://en.wikipedia.org/wiki/Broken_windows_theory">broken windows theory</a> in action: the code base got worse over time, one patch, copy paste or quick fix at a time.</p>
+
+<p>Obviously, as anyone that&rsquo;s passionate in technology would do, I took the opportunity to use a lot of new shiny tools: I picked <strong>PHP 7</strong>, which had just been released, and started the project with something familiar to me but still pretty new and cool, <strong>Symfony 3.0</strong>.</p>
+
+<h1 id="what-i-found-to-be-useful">What I found to be useful</h1>
+
+<p>I rambled and thought about this project a lot in the past months with my colleagues, because the old system was costing us a lot of overhead in usage and maintenance, and we had a pretty clear idea of what its problems were, so I didn&rsquo;t need to study a lot before starting to write the first classes.</p>
+
+<p>Thus, I had to spend <em>some</em> time thinking about an object oriented design for my project, but I was rapidly able to start writing code with confidence. In the end, most of this confidence came from a few choices that I pursued during the development of this project.</p>
+
+<h2 id="tdd-and-high-coverage">TDD and high coverage</h2>
+
+<p>The first choice that I am pretty satisfied about is <strong>automatic testing</strong>: I already knew the advantages of doing tests and Test Driven Development, but in the previous project that practice was not introduced from the start, so not all the codebase was covered, and we couldn&rsquo;t (or wouldn&rsquo;t?) do TDD 100% of the time.</p>
+
+<p>In this case instead <strong>I wanted to write nearly everything with TDD</strong>, and keep a <strong>very high threshold for the minimum coverage</strong> achieved through automatic testing. Right now I&rsquo;m sitting on a ~92% test coverage, and I feel proud about it. This wasn&rsquo;t a mere &ldquo;let&rsquo;s hit 100%!&rdquo; mindless goal (<a href="https://engineering.facile.it/blog/ita/software-testing-coverage-vs-efficacia/">since it&rsquo;s pointless</a>), but it fueled <strong>a positive feedback cycle</strong> instead: the more I used TDD in writing new classes, the more the coverage rose and stayed high; at the same time, I found myself inspecting the coverage reports to find missing spots, and that allowed me to discover many edge-cases that I didn&rsquo;t test and should have been.</p>
+
+<p>Of course, I still left some parts without coverage or specific tests, since it was pointless to test them (e.g. Doctrine entities), while I covered some parts multiple times, since they were <strong>critical paths</strong> inside my application.</p>
+
+<h2 id="unit-tests-to-the-rescue">Unit tests to the rescue!</h2>
+
+<p>Last but not least, the main critical advantage that TDD gave me was <strong>focus even on strained days</strong>: I wrote the classes starting from unit tests, giving all my effort to one piece of code at a time, without having to keep in mind the entire project with its complexities.</p>
+
+<p>I then wrote some functional tests to assure that the <strong>collaboration between my unit-tested objects</strong> was fine, and this later step was also useful in delaying the definition of the classes as services inside the Symfony DI container. I was also <strong>able to change my mind</strong> a few times on some details of the design without having to suffer mental confusion or rewrite too much code.</p>
+
+<h2 id="php-7-scalar-and-return-types-declarations">PHP 7: scalar and return types declarations</h2>
+
+<p>The second good choice was <strong>PHP 7</strong>: among the reasons behind it as the language version of choice for this project were the <a href="http://php.net/manual/en/migration70.new-features.php">two main new features</a> introduced: <strong>scalar types</strong> and <strong>return type declarations</strong>.
+<p style="text-align: center;">
+    <img src="/images/how-php-7-tdd-helped-me-sleep-better/return-types-everywhere-meme.jpg" alt="Return types, return types everywhere!" />
+</p></p>
+
+<p>Before Facile.it, I worked as C++ developer, and oh boy! did I miss scalars and return types!</p>
+
+<p><em>&ldquo;I came onboard of the PHP community right on time&rdquo;</em>, I thought&hellip; So I took advantage of the situation to start using all these new features. I enjoyed having again the possibility to typehint strings and integers; I discovered how return types declaration enforces the cohesion of your objects really well, making it <strong>rightly painful to return different things</strong>: it became impossible to return <em>something</em> OR <em>null</em>, for example.</p>
+
+<p>Interestingly, in my tests I found myself writing a lot of this kind of code:</p>
+
+<pre><code>$result = $testClass-&gt;method();
+$this-&gt;assertInstanceOf(SomeClass::class, $result);
+</code></pre>
+
+<p>I did this more than once, just to realize that I was wasting my time! This was normally the first TDD step on PHP 5.x code, but now this kinds of assertion were futile, because the return type was already checked at a language level! Great!</p>
+
+<p>Return types also proved themselves to be a <strong>double-edged sword</strong> in some cases, especially on Doctrine entities: they are really useful to enforce consistency in your values, since they trigger a <code>\TypeError</code> each time you call a getter method on a erroneously empty property, but <strong>you can&rsquo;t use them on nullable fields</strong>, since it will break your application at any time during execution.</p>
+
+<p>On the other hand, having return types declared on your business-logic classes it&rsquo;s pretty useful, even more when used in conjunction with TDD: every time you define a mock you are forced to declare expectations and predictions with the right types, so it <strong>indirectly helps maintaining the collaboration contract between objects</strong>, without too much hassle. If I changed a method&rsquo;s signature that was mocked somewhere, the mock would break the test, <strong>highlighting the issue and making the tests</strong> (and an high coverage) <strong>even more valuable</strong>.</p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<p>At the end of the day, these and other <strong>good practices are helpful</strong> for both your job and your personal life: you can go a long way in being fit and in the best shape while working, but stressful and (good) distracting events are unavoidable: you&rsquo;ll often have to fight stress, fatigue or distractions, and there will be days where you can&rsquo;t be at the top of your game, for any number of reasons.</p>
+
+<p>Since programming is a mental job, I think that having instruments and good practices in your toolset is invaluable, being them the <strong>essential tools of our craft</strong>. Thus, I hope that those little life/programming lessons I learned in these months will be useful to other people like me.</p>
+
+        </div>
+        
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/tdd/" rel="tag">TDD</a></li>
+		<li class="tags__item"><a class="tags__link btn" href="/tags/php/" rel="tag">PHP</a></li>
+	</ul>
+</div>
+    </article>
+</main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Alessandro Lai</span>
+	</div>
+	<div class="authorbox__description">
+		Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+	</div>
+</div>
+
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--prev">
+		<a class="post-nav__link" href="/posts/paraunit/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Paraunit: test paralleli, Doctrine e le fixture</p></a>
+	</div>
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/posts/visual-debt-typehints/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Why type hints and interfaces are not visual debt</p></a>
+	</div>
+</nav>
+
+
+			</div>
+			<aside class="sidebar"><div class="widget-search widget">
+	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+		<label>
+			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+		</label>
+		<input class="widget-search__submit" type="submit" value="Search">
+		<input type="hidden" name="sitesearch" value="http://jean85.github.io/" />
+	</form>
+</div>
+<div class="widget-recent widget">
+	<h4 class="widget__title">Recent Posts</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/1.2.0/">Pretty Package Versions 1.2.0</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.3/">Paraunit 0.12.3: allow phpunit/php-file-iterator 2</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.2/">Paraunit 0.12.2: two more fixes</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.1/">Paraunit 0.12.1: a small fix</a></li>
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/0.12.0/">Paraunit 0.12: PHPUnit 7 support and coverage text summary option</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oop" title="Oop">Oop</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
+	</div>
+</div>
+<div class="widget-social widget">
+	<h4 class="widget-social__title widget__title">Social</h4>
+	<div class="widget-social__content widget__content">
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/AlessandroLai" target="_blank">
+				<svg class="widget-social__link-icon icon-twitter" viewBox="0 0 384 312" width="24" height="24" fill="#fff"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<span>Twitter</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/alessandro-lai-09440922" target="_blank">
+				<svg class="widget-social__link-icon icon-linkedin" viewBox="0 0 352 352" width="24" height="24" fill="#fff"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<span>LinkedIn</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/Jean85" target="_blank">
+				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<span>GitHub</span>
+			</a>
+		</div>
+		<div class="widget-social__item widget__item">
+			<a class="widget-social__link widget__link btn" title="GitLab" rel="noopener noreferrer" href="https://gitlab.com/Alessandro.Lai" target="_blank">
+				<svg class="widget-social__link-icon icon-gitlab" viewBox="0 0 265 265" width="24" height="24" fill="#fff"><path d="M128.075 236.075l47.104-144.97H80.97l47.104 144.97z M14.956 91.104L.642 135.16a9.752 9.752 0 0 0 3.542 10.903l123.891 90.012-113.12-144.97z M14.956 91.105H80.97L52.601 3.79c-1.46-4.493-7.816-4.492-9.275 0l-28.37 87.315z M241.194 91.104l14.314 44.056a9.752 9.752 0 0 1-3.543 10.903l-123.89 90.012 113.119-144.97z M241.194 91.105h-66.015l28.37-87.315c1.46-4.493 7.816-4.492 9.275 0l28.37 87.315z"/></svg>
+				<span>GitLab</span>
+			</a>
+		</div>
+	</div>
+</div>
+</aside>
+		</div>
+		<footer class="footer">
+	<div class="container footer__container flex">
+		
+		<div class="footer__copyright">
+			&copy; 2019 Alessandro Lai.
+			<span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span>
+		</div>
+	</div>
+</footer>
+	</div>
+<script async defer src="/js/menu.js"></script></body>
+</html>
