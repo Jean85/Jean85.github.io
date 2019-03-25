@@ -20,6 +20,8 @@ This is a list of the slides that are hosted on this site.
  * Symfony + Docker, dall'ambiente di sviluppo alla produzione
    * ![][ita] [Talk @PUG-Milano](/slides/2018-09-symfony-docker-pugmi/) (2018-09-20)
    * ![][ita] [Talk @SymfonyDay 2018](/slides/2018-10-symfony-docker-symfonyday/) (2018-10-19)
+ * Kubernetes ❤ PHP
+   * ![][ita] [Lightning talk @CloudConf 2019](/slides/2019-03-k8s-loves-php-cloudconf/) (2019-03-28)
 
 [ita]: https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/22px-Flag_of_Italy.svg.png
 [eng]: https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/22px-Flag_of_the_United_Kingdom.svg.png
