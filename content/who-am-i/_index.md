@@ -1,6 +1,6 @@
 ---
 title: "Who am I"
-draft: true
+draft: false
 ---
 I've been a professional developer since 2010, after graduating with a [masters degree in CS at UniCA](http://informatica.unica.it/), the University of Cagliari, but I was always involved with computers, writing my first lines of code at the age of twelve, and assembling PCs for years after that.
 
