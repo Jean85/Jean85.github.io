@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Paraunit: test paralleli, Doctrine e le fixture</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Alessandro Lai">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="css/fixes.css">
+        <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="lib/font/font-awesome-4.4.0/css/font-awesome.min.css">
+        <style>
+            .reveal ul {
+                list-style-type: none;
+            }
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <img id="logo-engineering" src="img/logo_engineering.png" style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section id="title">
+                    <h1>Paraunit</h1>
+                    <h3>Test paralleli, Doctrine e le fixture</h3>
+                    <p>
+                        <small>By <a href="https://github.com/Jean85">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a></small>
+                    </p>
+                </section>
+                <section id="spoiler">
+                    <aside class="notes">[0:20]</aside>
+                    <h1>
+                        <i class="fa fa-exclamation-triangle"></i>
+                        Spoiler alert
+                        <i class="fa fa-exclamation-triangle"></i>
+                    </h1>
+                    <p>
+                        Talk in anteprima dal SymfonyDay <br>
+                        e (forse) dal CodeMotion Milano
+                    </p>
+                </section>
+
+                <section id="presentazione">
+                    <aside class="notes">[1:10]</aside>
+                    <section>
+                        <h2>Mi presento</h2>
+                        <img class="stretch" src="img/github_avatar.jpg" style="border-radius: 0.5em; border: none; margin-right: 1em; text-shadow: 0 0 6px rgba(0, 0, 0, 0.2); vertical-align: middle">
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-user"></i>Alessandro Lai</li>
+                            <li><i class="fa-li fa fa-pencil-square"></i>PHP developer ...</li>
+                            <li class="fragment" style="padding-top: 1.5em">... da meno di un anno e mezzo</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <aside class="notes">[1:45]</aside>
+                        <h2>Perché ho cambiato?</h2>
+
+                        <p>Non facevo e volevo provare:</p>
+
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-check-square-o"></i>Test automatici & TDD</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Continuous Integration</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Automatizzazione deploy</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Etc. ...</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <aside class="notes">[2:30]</aside>
+                        <h2>I fondamentali</h2>
+                        <img src="img/php-best-practices-cover.jpg" style="border: none; height: 10em; float:right;">
+
+                        <p>
+                            Prima di iniziare mi consigliarono un libro:<br><br>
+                            <i class="fa fa-book"></i>
+                            <a href="http://www.phpbestpractices.it/">PHP Best Practices</a>
+                        </p>
+                        <blockquote class="fragment" cite="http://www.phpbestpractices.it/" style="margin: 20px;">
+                            &ldquo;
+                            Una build che impiega un'ora ad essere eseguita non è particolarmente utile [...]
+                            &rdquo;
+                        </blockquote>
+                        <p class="fragment" style="margin-top: 1em">
+                            Nella pratica il limite è molto più stretto: <br><br>
+
+                            <strong class="fragment current-visible" style="font-size: larger">10 minuti</strong>
+                        </p>
+                    </section>
+
+                    <section>
+                        <aside class="notes">[5:40]</aside>
+                        <h2>Gli inizi...</h2>
+                        <p>
+                            La nostra build era molto lenta <br>
+                            (fino a 25 minuti!!) per tre motivi combinati:
+                        </p>
+                        <p class="fragment"><span style="text-decoration: line-through">Vagrant</span> + NFS + Symfony2 (cache)</p>
+                        <div class="fragment">
+                            <p>
+                                <i class="fa fa-long-arrow-down"></i>
+                            </p>
+                            <p>
+                                Docker! (&lt;15 minuti)<br>
+                                <span style="font-size: smaller">Ma
+                                    <span style="font-size: smaller">servirebbe
+                                        <span style="font-size: smaller">un altro
+                                            <span style="font-size: smaller">talk...
+                                            </span>
+                                        </span>
+                                    </span>
+                                </span>
+                            </p>
+                        </div>
+                        <p class="fragment">
+                            Inoltre, la dimensione (e la durata) di una suite di test<br>
+                            può solo aumentare...
+                        </p>
+                    </section>
+                </section>
+
+                <section id="la-concorrenza">
+                    <aside class="notes">[8:00]</aside>
+                    <h2>Primi tentativi</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment">
+                            <i class="fa-li fa fa-question-circle"></i>
+                            <strong><a href="https://github.com/brianium/paratest">brianium/paratest</a></strong>
+                            <ul class="fragment">
+                                <li>Va configurato con precisione (batch size)</li>
+                                <li>
+                                    Non risolve problemi di concorrenza <br>
+                                    (solo la globale <code>TEST_TOKEN</code>)
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <i class="fa-li fa fa-question-circle"></i>
+                            <strong><a href="https://github.com/liuggio/fastest">liuggio/fastest</a></strong>
+                            <ul class="fragment">
+                                <li>Semplice lancio di comandi paralleli</li>
+                                <li>Diventato tool generico</li>
+                                <li>Un processo/database per core</li>
+                            </ul>
+                        </li>
+                        <li class="fragment" style="font-size: smaller">
+                            <i class="fa-li fa fa-question-circle"></i>
+                            <strong><a href="https://github.com/jlipps/paraunit">jlipps/paraunit</a> <span style="font-size: smaller">(ouch!)</span></strong>
+                            <ul class="fragment">
+                                <li>Abbandonato da 3 anni (v0.1.5)</li>
+                                <li>Anche qui, solo <code>TEST_TOKEN</code></li>
+                                <li>Nessun supporto testsuite</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <section id="features">
+                        <aside class="notes">[11:50]</aside>
+                        <h2>facile-it/paraunit</h2>
+                        <h3>Features:</h3>
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>PHP >= 5.3, PHPUnit >= 4.6</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Creato con componenti Symfony</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Supporto testsuite da configurazione XML</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Parsing e aggregazione dei risultati</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Gestione dei fatal error</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Affidabile: controllo degli exit code</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Utilizzo ottimizzato della memoria</li>
+                        </ul>
+                    </section>
+
+                    <section id="unit">
+                        <aside class="notes">[4:40]</aside>
+                        <h2>Testsuite unitarie</h2>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-check-square-o"></i>Nessun problema di concorrenza</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Ottima parallelizzazione</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Utilizzo risorse 100%</li>
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Ultime versioni di PHPUnit hanno ottime performance</li>
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Overhead bootstrap (XDebug)</li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-square-o"></i>Migliorabile con workers?<br>
+                                <span style="font-size: smaller">(v. <a href="https://dzone.com/articles/parallel-phpunit">https://dzone.com/articles/parallel-phpunit</a> )</span>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="functional">
+                        <aside class="notes">[17:25]</aside>
+                        <h2>Testsuite funzionali</h2>
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-check-square-o"></i>Overhead bootstrap poco importante</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Utilizzo risorse 100%</li>
+                            <li><i class="fa-li fa fa-check-square-o"></i>Niente problemi di memoria</li>
+                            <li class="fragment" style="margin-top: 1.5em; font-size: larger"><i class="fa-li fa fa-times" style="color: red"></i>Problemi di concorrenza sul DB</li>
+                        </ul>
+                    </section>
+
+                    <section id="db-problems">
+                        <aside class="notes">[19:00]</aside>
+                        <h2>Problemi di accesso al database</h2>
+                        <p>Principali cause dei problemi</p>
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Fixtures di dimensione ridotta</li>
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Test che usano sempre le stesse fixtures</li>
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Letture seguite da scritture: deadlocks</li>
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>Alterazione dei dati</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section id="features-testcase">
+                        <aside class="notes">[22:00]</aside>
+                        <h2>facile-it/paraunit-testcase</h2>
+                        <p>Per test funzionali di Symfony2 + Doctrine</p>
+                        <p style="font-size: smaller">Il trucco?</p>
+                        <p class="fragment" style="font-size: larger">
+                            <i class="fa fa-check" style="color: green;"></i>
+                            Accesso transazionale al database
+                        </p>
+                        <p class="fragment" style="font-size: smaller">
+                            Unico limite: funziona solo con l'<code>EntityManager</code>
+                        </p>
+                    </section>
+
+                    <section id="setup-function">
+                        <aside class="notes">[23:00]</aside>
+                        <h2>setUp()</h2>
+                        <pre style="width: 100%"><code class="php">
+    public function setUp()
+    {
+        parent::setUp();
+
+        $this
+            ->getEM()
+            ->getConnection()
+            ->setTransactionIsolation(Connection::TRANSACTION_READ_COMMITTED);
+
+        $this->getEM()->beginTransaction();
+    }
+                        </code></pre>
+                    </section>
+
+                    <section id="teardown-function">
+                        <h2>tearDown()</h2>
+                        <pre><code class="php">
+    public function tearDown()
+    {
+        parent::tearDown();
+
+        if ($this->getEm()) {
+            $this->getEm()->rollback();
+
+            $conn = $this->getEm()->getConnection();
+            $conn->close();
+        }
+    }
+                        </code></pre>
+                    </section>
+
+                    <section id="vantaggi">
+                        <aside class="notes">[24:30]</aside>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Massimo isolamento del database</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Possibilità cambiare/creare fixtures al volo</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Il database di test rimane sempre pulito</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Impossibile avere test interdipendenti</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <aside class="notes">[26:30]</aside>
+                        <h2>Ancora fallimenti??</h2>
+                        <p>
+                            Si verificavano ancora fallimenti casuali...<br><br>
+
+                            Le cause erano due:
+                        </p>
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-times" style="color: red"></i>I deadlock possono sempre succedere</li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-times" style="color: red"></i>
+                                I controller non mantengono la transazione<br>
+                                tra una chiamata e l'altra
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <aside class="notes">[28:00]</aside>
+                        <h2>Risolvere definitivamente i deadlock</h2>
+                        <p>Il parser di Paraunit sa individuare i fallimenti per deadlock</p>
+                        <pre><code class="nohighlight" style="background-color: #dd0000; color: white; font-weight: bolder">
+    SQLSTATE[HY000]:
+        General error: 1205 Lock wait timeout exceeded;
+        try restarting transaction
+                        </code></pre>
+                        <img src="img/paraunit-attempt.png" style="height: 8em; float: left">
+                        <p>
+                            <br>
+                            Quando li individua,<br>
+                            riporta il test tra quelli<br>
+                            ancora non eseguiti,<br>
+                            e stampa una "A" (attempt)
+                        </p>
+                    </section>
+
+                    <section>
+                        <aside class="notes">[28:50]</aside>
+                        <h2>Client HTTP di test</h2>
+                        <p>
+                            Per risolvere il problema dei controller,<br>
+                            abbiamo fatto 2 modifiche al TestCase:
+                        </p>
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Avviamo il kernel una volta sola nel costruttore</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Passiamo la connessione all'<code>EntityManager</code> manualmente:</li>
+                        </ul>
+                        <pre class="fragment"><code class="php">
+protected function doRequest($request)
+{
+    $em = $this->getContainer()->get('doctrine.orm.entity_manager');
+    $newEm = $em->create(
+                $em->getConnection(),
+                $em->getConfiguration(),
+                $em->getEventManager()
+            );
+    $this->getContainer()->set('doctrine.orm.entity_manager', $newEm);
+
+    return $this->kernel->handle($request);
+}
+                        </code></pre>
+                    </section>
+                </section>
+
+                <section id="comparazione-prestazioni">
+                    <aside class="notes">[30:40]</aside>
+                    <h2>Comparazione</h2>
+                    <p>Suite funzionale SharkDev: 261 classi, 1568 metodi</p>
+                    <div id="chart-performance" class="stretch" style="height: 100%"></div>
+                    <div id="chart-trigger" class="fragment"></div>
+                </section>
+
+                <section id="live-demo">
+                    <aside class="notes">[33:20 => 35:00]</aside>
+                    <h2>Live demo!</h2>
+                </section>
+
+                <section>
+                    <aside class="notes">[35:00]</aside>
+                    <h2>Nuova funzionalità: coverage</h2>
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check-square-o"></i>Feature ancora in sviluppo (milestone 0.5)</li>
+                        <li><i class="fa-li fa fa-check-square-o"></i>Sfrutta l'opzione <code>--coverage-php</code> di PHPUnit</li>
+                        <li><i class="fa-li fa fa-check-square-o"></i>Esecuzione parallelizzata</li>
+                        <li><i class="fa-li fa fa-check-square-o"></i>Merge successivo dei risultati</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <aside class="notes">[36:30]</aside>
+                    <h2>Prossimi sviluppi</h2>
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-caret-right"></i>Migliorare feature coverage</li>
+                        <ul>
+                            <li>Migliorare strategia di merging</li>
+                            <li>Profiling per trovare colli di bottiglia</li>
+                        </ul>
+                        <li><i class="fa-li fa fa-caret-right"></i>Prioritizzazione test lenti</li>
+                        <li><i class="fa-li fa fa-caret-right"></i>Altre opzioni di selezione test</li>
+                        <li><i class="fa-li fa fa-caret-right"></i>Evitare overhead bootstrap</li>
+                        <li><i class="fa-li fa fa-caret-right"></i>Supportare altri framework/ORM</li>
+                        <li><i class="fa-li fa fa-caret-right"></i>NoSQL?</li>
+                        <li><i class="fa-li fa fa-caret-right"></i>Milestone v1.0: PHP >= 5.6, PHPUnit >= 5.0</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <aside class="notes">[39:10]</aside>
+                    <h2>Contatti</h2>
+                    <ul class="fa-ul">
+                        <li>
+                            <i class="fa-li fa fa-twitter"></i>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-github"></i>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-code-fork"></i>
+                            <a href="https://github.com/facile-it/paraunit/">facile-it/paraunit</a>
+                        </li>
+                        <li>
+                            <i class="fa-li fa fa-code-fork"></i>
+                            <a href="https://github.com/facile-it/paraunit-testcase/">facile-it/paraunit-testcase</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <aside class="notes">[40:00]</aside>
+                    <h2>In Facile.it...</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="margin-bottom: 0.8em">
+                            <i class="fa-li fa fa-rss"></i>
+                            <strong>Blog sviluppatori</strong><br>
+                            <a href="http://engineering.facile.it/">engineering.facile.it</a>
+                        </li>
+                        <li class="fragment">
+                            <i class="fa-li fa fa-calendar"></i>
+                            <strong>#FacileHack</strong><br>
+                            <span style="font-size: smaller">14-15 novembre 2015 (Milano)</span><br>
+                            <a href="http://hackathon.facile.it/">hackathon.facile.it</a>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>Fine!</h1>
+                    <p>Grazie per l'attenzione!</p>
+                </section>
+
+                <section>
+                    <h1>Domande?</h1>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script src="lib/js/amchart/amcharts.js"></script>
+        <script src="lib/js/amchart/serial.js"></script>
+        <script src="js/chart-performance-light.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                if (event.fragment.id == 'chart-trigger') {
+                    loadChartPerformance();
+                }
+            } );
+
+            Reveal.configure({
+                keyboard: {
+                    40: 'next', // go to the next slide when the DOWN key is pressed
+                }
+            });
+        </script>
+
+    </body>
+</html>

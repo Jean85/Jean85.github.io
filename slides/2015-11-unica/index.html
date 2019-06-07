@@ -1,0 +1,1035 @@
+<!doctype html>
+<html lang="it">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Test e Test Driven Development</title>
+
+        <meta name="description" content="Presentazione tecnica tirocini, UniCA">
+        <meta name="author" content="Alessandro Lai">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="css/fixes.css">
+        <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="lib/font/font-awesome-4.4.0/css/font-awesome.min.css">
+        <style>
+            .reveal ul {
+                list-style-type: none;
+            }
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <img id="logo-engineering" src="img/logo_engineering.png" style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="slides">
+                <section id="title">
+                    <h1>Test automatici e refactoring</h1>
+                    <h3>Come non aver paura del proprio codice</h3>
+                    <p>
+                        <small>By <a href="https://github.com/Jean85">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a></small>
+                    </p>
+                    <p>
+                        <small><a href="#">Presentazione Facile.it</a> - 13 novembre, UniCA</small>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Mi presento</h2>
+                        <img class="stretch" src="img/github_avatar.jpg" style="border-radius: 0.5em; border: none; margin-right: 1em; text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);">
+                        <ul class="fa-ul">
+                            <li><i class="fa-li fa fa-user"></i>Alessandro Lai</li>
+                            <li class="fragment"><i class="fa-li fa fa-graduation-cap"></i>Studente UniCA 2005-2010</li>
+                            <li class="fragment"><i class="fa-li fa fa-institution"></i>Lezioni AMM 2010 e 2011</li>
+                            <li class="fragment"><i class="fa-li fa fa-laptop"></i>C++ developer a Cagliari...</li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-industry"></i>
+                                PHP developer @ Facile.it<br>
+                                <small>da un anno e mezzo</small>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Perché ho cambiato?</h2>
+
+                        <p class="fragment">Volevo imparare:</p>
+
+                        <ul class="fa-ul">
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Test automatici</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Test Driven Development</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Continuous Integration</li>
+                            <li class="fragment"><i class="fa-li fa fa-check-square-o"></i>Etc. ...</li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Prima di iniziare...</h1>
+                        <h2>Un po' di presentazioni necessarie</h2>
+                    </section>
+                    <section>
+                        <h3>Chi conosce...</h3>
+                        <img src="img/logo_git.png" class="stretch no-shadow" style="border: none; padding: 2em">?
+                    </section>
+                    <section>
+                        <h3>Chi conosce...</h3>
+                        <img src="img/logo_github.png" class="stretch no-shadow" style="border: none"><br>
+                        ?
+                    </section>
+                    <section>
+                        <h3>Chi conosce...</h3>
+                        <img src="img/logo_symfony.png" class="stretch no-shadow" style="border: none"><br>
+                        ?
+                    </section>
+                    <section>
+                        <h3>Chi conosce...</h3>
+                        <img src="img/logo_phpunit.png" class="stretch no-shadow" style="border: none"><br>
+                        ?
+                    </section>
+                    <section>
+                        <h3>Chi conosce...</h3>
+                        <h1 style="font-size: 7em">S.O.L.I.D.</h1><br>
+                        ?
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Test automatici</h2>
+                        <p>Dovreste aver già visto qualcosa (JUnit?) in merito</p>
+                        <p>Perché testare il proprio codice?</p>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i> Per evitare bug stupidi
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i> Per "fidarci" di più
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Quando ci sfugge lo stesso un bug,<br>
+                                per avere un test di regressione
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-question-circle"></i>... e per fare TDD
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Test Driven Development</h2>
+                        <p>Argomento troppo vasto per stasera...</p>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>Metodologia di sviluppo (extreme programming)
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>Prima il test, poi il codice
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>Si basa su un ciclo
+                                <ol>
+                                   <li>Red (test che fallisce)</li>
+                                   <li>Green (test che passa)</li>
+                                   <li>Refactor</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Oggi vedremo...</h3>
+                        <h1>Object calisthenics</h1>
+                        <p>Metodi per scrivere del codice più "bello"</p>
+                    </section>
+                    <section>
+                        <h2>Cosa sono?</h2>
+                        <blockquote>Cal • is • then • ics - /ˌkaləsˈTHeniks/</blockquote>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-question-circle"></i>
+                                Dal greco, <i>"esercizi ginnici"</i>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square-o"></i>
+                                Esercizi di programmazione ripetibili, <br>
+                                piccole buone pratiche
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-list"></i>
+                                Formalizzati in "regole"
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Cosa sono?</h2>
+                        <blockquote>Cal • is • then • ics - /ˌkaləsˈTHeniks/</blockquote>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-book"></i>
+                                Inventati per il Java da Jeff Bay,<br>
+                                nel suo libro
+                                <a href="http://pragprog.com/book/twa/thoughtworks-anthology">
+                                    The ThoughWorks Anthology
+                                </a>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-microphone"></i>
+                                Adattati per il PHP da <a href="http://doh.ms/">Raphael Dohms</a>,<br>
+                                per il talk
+                                <a href="https://www.youtube.com/watch?v=H2AvoAzbGOE">
+                                    Your code sucks, let's fix it!
+                                </a>
+                            </li>
+
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square-o"></i>
+                                Anche la leggibilità è importante,<br>
+                                bastano piccoli trucchi
+                            </li>
+
+                            <li class="fragment">
+                                <i class="fa-li fa fa-book"></i>
+                                Altre aggiunte dal libro
+                                <a href="http://shop.oreilly.com/product/9780596802301.do">
+                                    The Art of Readable Code
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Perché usare i calisthenics?</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per avere codice <b>testabile</b>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per avere codice <b>leggibile</b>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per avere codice <b>manutenibile</b>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per avere codice <b>riutilizzabile</b><br>&nbsp;
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per avere un punto di partenza semplice<br>
+                                nello scrivere codice bello ed elegante
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Per sviluppare il vostro "sesto senso"
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h1>
+                            <i class="fa fa-warning"></i><br>
+                            Esercizi, non regole
+                        </h1>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #1</h1>
+                        <h1>Usare un solo livello di indentazione</h1>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre class="stretch"><code>
+function validateProducts($products)
+{
+    // Check to make sure that our valid fields are in there
+    $requiredFields = ['price', 'name', 'description', 'type'];
+
+    $valid = true;
+
+    foreach ($products as $rawProduct) {
+        $fields = array_keys($rawProduct);
+
+        foreach ($requiredFields as $requiredField) {
+            if (!in_array($requiredField, $fields)) {
+                $valid = false;
+            }
+        }
+    }
+
+    return $valid;
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <pre class="stretch"><code>
+function isValidProduct($product)
+{
+    $requiredFields = ['price', 'name', 'description', 'type'];
+
+    $fields = array_keys($rawProduct);
+
+    foreach ($requiredFields as $requiredField) {
+
+        if ( ! in_array($requiredField, $fields)) {
+            return false;
+        }
+
+    }
+
+    return true;
+}</code></pre>
+                        <pre class="fragment"><code>
+function validateProductList($products)
+{
+    $validProducts = array_filter($products, 'isValidProduct');
+
+    return (count($products) == count($validProducts));
+}
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Aumenta la frammentazione dei metodi
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Principio di "singola responsabilità"<br>
+                                (lettera S del <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID</a>)
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Facilita il riuso del codice
+                            </li>
+                        </ul>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #2</h1>
+                        <h1>Non usare l'else</h1>
+                    </section>
+
+                    <section>
+                        <pre class="stretch"><code>
+public function createPost($request)
+{
+    $entity = new Post();
+
+    $form = new MyForm($entity);
+    $form->bind($request);
+
+    if ($form->isValid()){
+        $repository = $this->getRepository('MyBundle:Post');
+
+        if (!$repository->exists($entity) ) {
+            $repository->save($entity);
+            return $this->redirect('create_ok');
+        } else {
+            $error = "Post Title already exists";
+            return array('form' => $form, 'error' => $error);
+        }
+
+    } else {
+        $error = "Invalid fields";
+        return array('form' => $form, 'error' => $error);
+    }
+}</code></pre>
+                        <span class="fragment" style="position: absolute; top: 2em; left: 3em; height: 80%; background-color:rgba(255, 255, 255, 0.8); padding: 0.2em">
+                            <img class="fragment fade-out no-shadow" src="img/multi-paths.png" style="border: none; height: 100%;">
+                            <img class="fragment no-shadow" src="img/happy-path.png" style="border: none; height: 100%;">
+                        </span>
+                    </section>
+
+                    <section>
+                        <pre class="stretch"><code>
+public function createPost($request)
+{
+    $entity = new Post();
+
+    $form = new MyForm($entity);
+    $form->bind($request);
+
+    if ($form->isValid()){
+        $repository = $this->getRepository('MyBundle:Post');
+
+        if (!$repository->exists($entity) ) {
+            $repository->save($entity);
+            return $this->redirect('create_ok');
+        } else {
+            $error = "Post Title already exists";
+            return array('form' => $form, 'error' => $error);
+        }
+
+    } else {
+        $error = "Invalid fields";
+        return array('form' => $form, 'error' => $error);
+    }
+}</code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <aside class="notes">
+                             - Esempio wall-text su Facebook<br>
+                             - Alternativa: \Exception
+                        </aside>
+                        <pre class="stretch"><code>public function createPost($request)
+{
+    $entity = new Post();
+    $repository = $this->getRepository('MyBundle:Post');
+
+    $form = new MyForm($entity);
+    $form->bind($request);
+
+    if ( ! $form->isValid()) {
+        return array('form' => $form, 'error' => 'Invalid fields');
+    }
+
+    if ($repository->exists($entity)) {
+        return array('form' => $form, 'error' => 'Duplicate post title');
+    }
+
+    $repository->save($entity);
+
+    return $this->redirect('create_ok');
+}</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Evita duplicazione del codice
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Migliore leggibilità ("happy path")
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Riduce complessità ciclomatica
+                            </li>
+                        </ul>
+                    </section>
+                    
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #3</h1>
+                        <h1>Incapsulare<br>primitive e stringhe</h1>
+                        <span class="note-adapted">(non sempre)</span>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre><code>
+$component->repaint(false);
+                        </code></pre>
+                        <pre class="fragment"><code>
+class UIComponent
+{
+//...
+    public function repaint($animate = true)
+    {
+        //...
+    }
+}
+                        </code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre class="stretch"><code>class UIComponent
+{
+//...
+    public function repaint( Animate $animate )
+    {
+        //...
+    }
+}
+
+class Animate
+{
+    public $animate;
+
+    public function __construct( $animate = true )
+    {
+        $this->animate = $animate;
+    }
+}
+
+$component->repaint( new Animate(false) );</code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Aiuta nell'individuare cosa deve diventare un oggetto
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Aiuta l'autocompletamento nell'IDE
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Incapsula le operazioni (ancora la S del SOLID)
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #4</h1>
+                        <h1>Una sola <span class="note-adapted">-&gt;</span> per linea</h1>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <aside class="notes">Legge di Demetra ("non parlate con gli sconosciuti")</aside>
+                        <pre style="width: 200%"><code>
+$this->base_url = $this->CI->config->site_url().'/'.$this->CI->uri->segment(1).$this->CI->uri->slash_segment(2, 'both');
+
+$this->base_uri = $this->CI->uri->segment(1).$this->CI->uri->slash_segment(2, 'leading');
+                        </code></pre>
+
+                        <pre class="fragment"><code>
+$this->getCI()->getUriBuilder()->getBaseUri(‘leading’);
+                        </code></pre>
+
+                        <h3 class="fragment">Eccezione: fluent interface</h3>
+                        <pre class="fragment"><code>
+    $box->setHeight(2.5)
+        ->setWidth(6.0)
+        ->setDepth(2.0)
+        ->setColor(new Color(255, 0, 0));
+                        </code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre><code>
+$this->get('security.context')->getToken()->getUser();
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Leggibilità
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Più facile scrivere test
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Più facile fare debug
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Legge di Demetra
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #5</h1>
+                        <h1>NON abbreviare</h1>
+                    </section>
+
+                    <section>
+                        <pre class="stretch"><code>
+if($sx >= $sy) {
+
+    if ($sx > $strSysMatImgW) {
+        $ny = $strSysMatImgW * $sy / $sx;
+        $nx = $strSysMatImgW;
+    }
+
+    if ($ny > $strSysMatImgH) {
+        $nx = $strSysMatImgH * $sx / $sy;
+        $ny = $strSysMatImgH;
+    }
+
+} else {
+
+    if ($sy > $strSysMatImgH) {
+        $nx = $strSysMatImgH * $sx / $sy;
+        $ny = $strSysMatImgH;
+    }
+
+    if($nx > $strSysMatImgW) {
+        $ny = $strSysMatImgW * $sy / $sx;
+        $nx = $strSysMatImgW;
+    }
+}
+                        </code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre style="width: 100%"><code>
+function processResponseHeadersAndDefineOutput($response) { ... }
+                        </code></pre>
+                        <pre class="fragment"><code>
+function getPage($data) { ... }
+                        </code></pre>
+                        <pre class="fragment"><code>
+function execute() { ... }
+                        </code></pre>
+                        <pre class="fragment"><code>
+$tr->process(“site.login”);
+                        </code></pre>
+                        <code class="fragment">$translatorService</code>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Comunicazione più completa tra programmatori
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Maggiore manutenibilità
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Indica spesso problemi sottostanti
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #6</h1>
+                        <h1>Mantenere le classi brevi</h1>
+                    </section>
+
+                    <section>
+                        <h2><span class="note-adapted">200</span> righe per classe</h2>
+                        <h2><span class="note-adapted">10</span> metodi per classe</h2>
+                        <h2><span class="note-adapted">15</span> classi per package\cartella</h2>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Singola responsabilità (si, ancora la S!)
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Metodi chiari e concisi
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Package\namespace di dimensioni ridotte
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Evita cartelle-calderone
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #7</h1>
+                        <h1>
+                            Usare solo<br>
+                            <span class="note-adapted">da</span> due <span class="note-adapted">a cinque</span><br>
+                            variabili d'istanza
+                        </h1>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre><code>
+    class MyRegistrationService
+    {
+
+        protected $userService;
+        protected $passwordService;
+        protected $logger;
+        protected $translator;
+        protected $entityManager;
+        protected $imageCropper;
+
+        // ...
+    }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Classi con meno dipendenze
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Test più facili (meno mock necessari)
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #8</h1>
+                        <h1>Usare collezioni "pure"</h1>
+                    </section>
+
+                    <section>
+                        <p>
+                            Una collezione di oggetti deve solo essere una collezione:
+                        </p>
+                        <ul class="fa-ul fragment">
+                            <li>
+                                <i class="fa-li fa fa-check-square"></i>
+                                Accesso sequenziale e/o a chiave
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-check-square"></i>
+                                Iteratore
+                            </li>
+                            <li>
+                                <i class="fa-li fa fa-check-square"></i>
+                                Funzioni aggiuntive (sort, map, filter...)
+                            </li>
+                        </ul>
+                        <p class="fragment">
+                            Alcuni linguaggi o librerie permettono di avere collezioni
+                            di oggetti della stessa classe
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Forniscono le operazioni sulle collezioni
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                In PHP abbiamo le classi SPL
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Diventa più facile unire collezioni tra loro
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #9</h1>
+                        <h1>
+                            Non usare accessors (getters/setters)<br>
+                            <span class="note-adapted">[non in PHP]</span>
+                        </h1>
+                    </section>
+
+                    <section>
+                        <pre class="stretch"><code>
+    class ScoreModel
+    {
+        private $score;
+
+        public getScore()
+        {
+            if ( ! is_null($this->score)) {
+                return $this->score;
+            } else {
+                return "Score not available";
+            }
+        }
+
+        public setScore($score)
+        {
+            if ($score < 0) {
+                throw new InvalidScoreException()
+            }
+
+            $this->score = $score;
+        }
+    }
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Operazioni iniettate
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Incapsulamento delle trasformazioni
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>OC #10 <span class="note-adapted">(bonus!)</span></h1>
+                        <h1>Documentare <br>il proprio codice</h1>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre class="stretch"><code>
+
+// controllo se $overall_pref è stata impostata a void
+if ($overall_pref == 'void')
+
+
+
+// implode l'array di selezioni del gruppo tre in una stringa,
+// così che poi possa essere successivamente trasferita in un
+// database alla fine della pagina
+$groupthree = implode($groupthree_array, "\n\r");
+
+                        </code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre class="stretch"><code>
+$priority = isset($event['priority']) ? $event['priority'] : 0;
+
+if (!isset($event['event'])) {
+    throw new \InvalidArgumentException(...));
+}
+
+if (!isset($event['method'])) {
+    $event['method'] = 'on'.preg_replace(array(
+        '/(?<=\b)[a-z]/ie',
+        '/[^a-z0-9]/i'
+    ), array('strtoupper("\\0")', ''), $event['event']);
+}
+
+$definition->addMethodCall(
+    'addListenerService',
+    array() // ...
+);
+                        </code></pre>
+                    </section>
+
+                    <section style="font-size: larger">
+                        <pre class="stretch"><code>
+
+
+/**
+ * Checks whether an element is contained in the collection.
+ * This is an O(n) operation, where n is the size of collection.
+ *
+ * @todo implement caching for better performance
+ * @param mixed $element The element to search for.
+ * @return boolean TRUE if the collection contains the element,
+ *                 or FALSE.
+ */
+
+function contains($element);
+                        </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Vantaggi</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Documentazione automatica delle API
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Trasmissione dei vostri ragionamenti
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Si evitano fraintendimenti
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Le "regole"</h2>
+                        <ol>
+                            <li>Usare un solo livello di indentazione</li>
+                            <li>Non usare l'else</li>
+                            <li>Incapsulare primitive e stringhe <span class="note-adapted">(non sempre)</span></li>
+                            <li>Una sola <span class="crossed">punto</span> <span class="note-adapted">-&gt;</span> per riga</li>
+                            <li>NON abbreviare</li>
+                            <li>Mantenere le classi brevi</li>
+                            <li>
+                                Usare solo da due <span class="note-adapted">a cinque</span><br>
+                                variabili d'istanza
+                            </li>
+                            <li>Usare collezioni "pure"</li>
+                            <li class="note-adapted crossed">Non usare accessors (getters/setters)</li>
+                            <li class="note-adapted">Documentare il proprio codice</li>
+                        </ol>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h1>Kata: <br>punteggi del tennis</h1>
+                        <p><a href="https://github.com/emilybache/Tennis-Refactoring-Kata">emilybache/Tennis-Refactoring-Kata</a></p>
+                    </section>
+
+                    <section>
+                        <h2>Regole del tennis</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Un <b>game</b> viene vinto dal primo che fa almeno <b>4 punti e due in più</b> dell'avversario
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                I nomi dei punti da 0 a 3 sono: <br>
+                                <b>"Love", "Fifteen", "Thirty" e "Forty"</b>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Se c'è un pareggio sotto i 3 punti, si aggiunge "-all"
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Se c'è un pareggio e sono stati fatti almeno 3 punti, si dice "Deuce"
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Dopo il "deuce", il primo che segna ottiene un "Advantage"
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Cosa abbiamo a disposizione</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa-li fa fa-github"></i>
+                                Il repository di oggi è disponibile in tanti linguaggi
+                                <br>&nbsp;
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-code"></i>
+                                Noi oggi ci eserciteremo sul PHP
+                                <br>&nbsp;
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-check-square"></i>
+                                Il repository contiene tre versioni funzionanti
+                                <br>&nbsp;
+                            </li>
+                            <li class="fragment">
+                                <i class="fa-li fa fa-cogs"></i>
+                                Abbiamo anche una suite di test!
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+        <script src="lib/js/amchart/amcharts.js"></script>
+        <script src="lib/js/amchart/serial.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                if (event.fragment.id == 'chart-trigger') {
+                    loadChartPerformance();
+                }
+            } );
+
+            Reveal.configure({
+                keyboard: {
+                    38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+                    40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+                }
+            });
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="it">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>A (small) Hexagonal architecture inside a Symfony application</title>
+
+        <meta name="description" content="Lightning talk">
+        <meta name="author" content="Alessandro Lai">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+        <!-- Code syntax highlighting -->
+        <link rel="stylesheet" href="css/fixes.css">
+        <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="lib/font/font-awesome-4.4.0/css/font-awesome.min.css">
+        <style>
+            .reveal ul {
+                list-style-type: none;
+            }
+        </style>
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+            <img id="logo-engineering" src="img/logo_engineering.png" style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="slides">
+                <section id="title">
+                    <h2>A (small) Hexagonal architecture<br>inside a Symfony application</h2>
+                    <p>
+                        <span style="font-size: smaller">By <a href="https://github.com/Jean85">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a></span>
+                    </p>
+                    <p>
+                        <span style="font-size: smaller"><a href="#">IT Meeting</a> - 18/03, Facile.it</span>
+                    </p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Hexagonal Architectures</h2>
+                        <ul class="fa-ul">
+                            <li>
+                                <i class="fa fa-li fa-lightbulb-o"></i>
+                                Concept created by <a href="http://alistair.cockburn.us/Hexagonal+architecture">Alistair Cockburn</a>
+                            </li>
+                        </ul>
+                        <blockquote class="fragment" style="font-size: smaller">
+                            <p>
+                                Hexagonal Architecture is an architecture defined by establishing a perimeter around the
+                                domain of your application and establishing adapters for input/output interactions.
+                            </p>
+                            <p>
+                                By establishing this isolation layer, the application becomes unaware of the nature of the
+                                things it's interacting with.
+                            </p>
+                        </blockquote>
+                    </section>
+
+                    <section>
+                        <h3>Scheme</h3>
+                        <img src="img/hex.gif" class="stretch">
+                    </section>
+
+                    <section>
+                        <h3>Hexagonal Architectures: TL;DR</h3>
+
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-gear"></i>
+                                The hexagon is the <strong>core</strong> of you app
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-briefcase"></i>
+                                The hexagon contains all the <strong>business domain logic</strong>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-plug"></i>
+                                The hexagon communicates <br>
+                                ONLY through <strong>ports</strong> and <strong>adapters</strong>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h3>So...</h3>
+
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-question-circle"></i>
+                                Why so popular right now?
+                                <ul class="fa-ul" style="list-style: none">
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-cube"></i>
+                                        Microservices!
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-question-circle"></i>
+                                Why don't we see it so much?
+                                <ul class="fa-ul" style="list-style: none">
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-exclamation-triangle"></i>
+                                        Complicated
+                                    </li>
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-exclamation-triangle"></i>
+                                        Hard to start with<br>
+                                        <span style="font-size: smaller">
+                                            <a href="http://martinfowler.com/bliki/MonolithFirst.html">MonolithFirst</a>
+                                            by Martin Fowler
+                                        </span>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>A little history...</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-question-circle"></i>
+                                Listened to a XPUG presentation about it
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-briefcase"></i>
+                                At the same time, I was nearly ready<br>
+                                to start a new project...
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Blaine</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-check-square-o"></i>
+                                Shiny new technologies
+                                <ul class="fa-ul" style="list-style: none">
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        PHP 7 (yay!)
+                                    </li>
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        Symfony 3
+                                    </li>
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        Docker & Docker-composer
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li class="fragment">
+                                <i class="fa fa-li fa-comments"></i>
+                                Looked like a microservice...
+                                <ul class="fa-ul" style="list-style: none">
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        Isolated
+                                    </li>
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        In charge of a single domain (invoices)
+                                    </li>
+                                    <li class="fragment">
+                                        <i class="fa fa-li fa-gear"></i>
+                                        Adapter from BU to accounting software
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2>Complications</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-thumbs-o-down"></i>
+                                A microservice is surrounded by other microservices
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-thumbs-o-down"></i>
+                                MVP was substitution of previous system<br>
+                                <span style="font-size: smaller">(Caronte)</span>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-thumbs-o-down"></i>
+                                Couldn't force all the clients to change immediately<br>
+                                <span style="font-size: smaller">(Shark, Cougar)</span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Change of plans</h2>
+                        <p>
+                            What if we use hexagons as a <strong style="text-transform: uppercase">design pattern</strong> <br>
+                            instead of an architectural one?
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2>Bundles as hexagons</h2>
+                        <ul class="fa-ul">
+                            <li class="fragment">
+                                <i class="fa fa-li fa-briefcase"></i>
+                                InvoiceBundle<br>
+                                <span style="font-size: smaller">core domain</span>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-plug"></i>
+                                ApiBundle<br>
+                                <span style="font-size: smaller">REST endpoints</span>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-file-pdf-o"></i>
+                                PDFBundle<br>
+                                <span style="font-size: smaller">invoice as files</span>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-globe"></i>
+                                WebPanelBundle<br>
+                                <span style="font-size: smaller">a simple web interface</span>
+                            </li>
+                            <li class="fragment">
+                                <i class="fa fa-li fa-bomb"></i>
+                                ESABundle<br>
+                                <span style="font-size: smaller">adapter to accounting software</span>
+                            </li>
+                        </ul>
+                    </section>
+                </section>
+
+                <section>
+                    <h2><i class="fa fa-briefcase"></i> InvoiceBundle</h2>
+                    <p>I used the technologies as adapters:</p>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-database"></i>
+                            Doctrine
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-archive"></i>
+                                    Entities as persistence and domain model
+                                </li>
+                                <li>
+                                    <i class="fa fa-li fa-object-group"></i>
+                                    Additional models and interfaces to avoid exposure of core
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-legal"></i>
+                            Symfony validator
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-lock"></i>
+                                    On entities to enforce business logic and reject errors
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <i class="fa fa-li fa-cogs"></i>
+                            Symfony services
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-plug"></i>
+                                    Adapters/ports from/to the hexagon or between bundles
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2><i class="fa fa-plug"></i> ApiBundle</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-sign-in"></i>
+                            POST: creation of new invoices
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-file-text"></i>
+                                    Should emulate same behaviour of previous API (Caronte)
+                                </li>
+                                <li>
+                                    <i class="fa fa-li fa-clone"></i>
+                                    POSTing is tested to ensure similarity
+                                </li>
+                                <li>
+                                    <i class="fa fa-li fa-frown-o"></i>
+                                    Some changes where required anyway...
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment">
+                            <i class="fa fa-li fa-file-pdf-o"></i>
+                            GET: fetch the invoice in PDF format
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li class="fragment">
+                                    <i class="fa fa-li fa-cog"></i>
+                                    PDFBuilder <span style="font-size: smaller">(adapter to hexagon)</span><br>
+                                    <i class="fa fa-arrow-down fragment"></i>
+                                </li>
+                                <li class="fragment">
+                                    <i class="fa fa-li fa-cog"></i>
+                                    InvoiceLocator <i class="fa fa-arrow-right"></i> Repositories
+                                    <span style="font-size: smaller">(adapter from Blaine to Caronte DB)</span><br>
+                                    <i class="fa fa-arrow-down fragment"></i>
+                                </li>
+                                <li class="fragment">
+                                    <i class="fa fa-li fa-cog"></i>
+                                    PrintableMappers <span style="font-size: smaller">(adapter to PDFBundle)</span>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2><i class="fa fa-file-pdf-o"></i> PDFBundle</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-sign-in"></i>
+                            PrintableModels
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-cog"></i>
+                                    Level of abstraction
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-map-signs"></i>
+                            PrintableMappers
+                            <ul class="fa-ul" style="list-style: none; font-size: smaller">
+                                <li>
+                                    <i class="fa fa-li fa-cog"></i>
+                                    Adapter from other bundles
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-file-text"></i>
+                            Internal rendering of PDF (Twig + PsPDF)
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-file-pdf-o"></i>
+                            Result is sent back as file content (string)
+                        </li>
+                    </ul>
+
+                </section>
+
+                <section>
+                    <h2><i class="fa fa-globe"></i> WebPanelBundle</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-paper-plane-o"></i>
+                            Bootstrap
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-desktop"></i>
+                            Simple web interface
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-plug"></i>
+                            Just an interface for the services of the bundles
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2><i class="fa fa-bomb"></i> ESABundle</h2>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-spinner fa-spin"></i>
+                            Work in progress...
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-desktop"></i>
+                            Internal models (isolation)
+                        </li>
+                        <li class="fragment" style="padding-bottom: 0.7em">
+                            <i class="fa fa-li fa-random"></i>
+                            Easy to replace
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h1>The End</h1>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+
+            // Full list of configuration options available at:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                // Optional reveal.js plugins
+                dependencies: [
+                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                    { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true }
+                ]
+            });
+
+            Reveal.addEventListener( 'fragmentshown', function( event ) {
+                if (event.fragment.id == 'chart-trigger') {
+                    loadChartPerformance();
+                }
+            } );
+
+            Reveal.configure({
+                keyboard: {
+                    38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+                    40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+                }
+            });
+        </script>
+
+    </body>
+</html>

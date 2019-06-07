@@ -1,0 +1,21 @@
+.reveal code {
+    background: rgba(200, 200, 200, 0.5);
+    border-radius: 0.1em;
+    padding: 0 0.22em 0.1em;
+    margin: 0 0.1em;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.reveal pre > code {
+    background: white;
+    color: inherit;
+    margin: 0;
+}
+
+a[title='JavaScript charts'] {
+    display: none !important;
+}
+
+table.center td {
+    text-align: center !important;
+}

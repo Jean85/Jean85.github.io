@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Kubernetes ❤ PHP</title>
+		<meta name="description" content="Kubernetes ❤ PHP">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico" />
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+    <!-- FontAwesome -->
+    <script defer src="lib/font/fontawesome-free-5.2.0-web/js/all.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+			var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <img id="logo-engineering" src="img/logo_pug.png" style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+    <div class="slides">
+        <section id="title">
+            <h1>Kubernetes ❤ PHP</h1>
+            <p>
+                <a href="https://alessandrolai.dev/">Alessandro Lai</a>
+            </p>
+            <small>
+                <a href="https://2019.cloudconf.it/schedule.html">CloudConf 2019</a> - 28 marzo 2019, Torino
+            </small>
+        </section>
+
+        <section id="intro">
+            <section>
+                <h2>Chi sono?</h2>
+                <img src="img/github_avatar.jpg" class="avatar stretch">
+                <div style="float: right">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            Project lead @ <img src="img/logo_engineering_full.png" style="height: 1.6em; box-shadow: none; vertical-align: middle; margin-bottom: 0; margin-top: -0.8em">
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-users"></i></span>
+                            Coordinatore PUG Milano
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <span class="fa-li fa-layers">
+                                <i class="fas fa-certificate"></i>
+                                <i class="fas fa-inverse fa-check" data-fa-transform="shrink-8"></i>
+                            </span>
+                            PHP-FIG Secretary
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section id="talk">
+            <section class="present" style="top: 193px; display: block;">
+
+                <h3>Ambiente speculare dev-prod</h3>
+                <p>
+                    <i class="fas fa-4x fa-laptop-code"></i>
+                    <i class="fas fa-2x fa-angle-double-right"></i>
+                    <i class="fab fa-4x fa-docker"></i>
+                    <i class="fas fa-2x fa-angle-double-right"></i>
+                    <i class="fas fa-4x fa-server"></i>
+                </p>
+            </section>
+
+            <section>
+                <img src="img/k8s_php.png" class="stretch" style="margin-left: 3.2em; box-shadow: none" alt="PHP + Kubernetes"/>
+            </section>
+
+            <section>
+                <h2>Comparazione</h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Java</th>
+                        <th>PHP</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>RAM</td>
+                        <td>8/16 Gb</td>
+                        <td>128/256Mb</td>
+                    </tr>
+                    <tr>
+                        <td>Startup</td>
+                        <td>Minuti</td>
+                        <td>< 1 sec</td>
+                    </tr>
+                    <tr>
+                        <td>Immagini</td>
+                        <td>1-2 Gigabytes</td>
+                        <td>300-500 Mb</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </section>
+        </section>
+
+        <section>
+            <h2>Domande...</h2>
+            <ul class="fa-ul">
+                <li>
+                    <span class="fa-li"><i class="fas fa-question-circle"></i></span>
+                    Ci sono altri <strong>vantaggi</strong>?
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-question-circle"></i></span>
+                    Che <strong>limiti</strong> o difficoltà ci sono?
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fas fa-question-circle"></i></span>
+                    Ha senso migrare <strong>applicazioni esistenti</strong>? <br />
+                    O è ideale solo per nuove applicazioni?
+                </li>
+            </ul>
+            <div style="font-size: smaller; margin-top: 1em">
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-bookmark"></i></span>
+                        <a href="https://alessandrolai.dev/">https://alessandrolai.dev/</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                        <a href="mailto:alessandro.lai85@gmail.com">alessandro.lai85@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                        <a href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>
+                        <small style="vertical-align: middle">(we are hiring!)</small>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/Jean85">@Jean85</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                        <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        keyboard: {
+            38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+            40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+        },
+        dependencies: [
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+    });
+</script>
+</body>
+</html>
