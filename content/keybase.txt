@@ -1,0 +1,61 @@
+alessandrolai
+Alessandro Lai
+Project Lead Developer @FacileIt_Engr, PHP-FIG secretary, @MilanoPHP UG coordinator, computer science passionate, retired netgaming nerd
+Milan, Italy
+==================================================================
+https://keybase.io/alessandrolai
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://alessandrolai.dev
+  * I am alessandrolai (https://keybase.io/alessandrolai) on keybase.
+  * I have a public key ASDSKaB2tH8lpFWBTc84rO-C74FdEOHr6olPW_avBYva_Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101b01459ea957d595e10345b1f81c71e03559f242b06bd22c305bb9f4f5e6d0e2e0a",
+      "host": "keybase.io",
+      "kid": "0120d229a076b47f25a455814dcf38acef82ef815d10e1ebea894f5bf6af058bdafc0a",
+      "uid": "75839432dfa2d02c458a07d44c799319",
+      "username": "alessandrolai"
+    },
+    "merkle_root": {
+      "ctime": 1560863736,
+      "hash": "f1b48677a856daa5f4903648057d27c8d6a693ae16ce1e6c0e40394dd9f6299140cd900dd364854dafa26dad18d1552dc9fd5936220e27691c2e46bfec013da4",
+      "hash_meta": "0f9b0cf09807aa0f6a194429915e8d46edec9d931251108d9405bacc4d40bed2",
+      "seqno": 5593072
+    },
+    "service": {
+      "entropy": "QkLSrJbPnW8BOTZ2mT9FTpsi",
+      "hostname": "alessandrolai.dev",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.1.0"
+  },
+  "ctime": 1560863752,
+  "expire_in": 504576000,
+  "prev": "7948f0fa26b134c695a15987184ed23fa6a5cee82342d795d2e822dbbb83b5b7",
+  "seqno": 25,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg0imgdrR/JaRVgU3POKzvgu+BXRDh6+qJT1v2rwWL2vwKp3BheWxvYWTESpcCGcQgeUjw+iaxNMaVoVmHGE7SP6alzugjQteV0ugi27uDtbfEIKjbglrWODxZt7WBZiexHYW2ynkN5aToabMxlI6gGttCAgHCo3NpZ8RAqAU4uE/1l+cO4nJQfUdDcfpTDtro83fEKb3v14ifZ2SQyXmZHTfXdzoPX1dPgVMt1aX3/ETo8YnZc15A0Lb8CKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICNXp6OUnUxum1+Hte4qT1+Gav8UbF6w0f/DEGMj0lofo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/alessandrolai
+
+==================================================================
+
