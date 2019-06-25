@@ -20,6 +20,14 @@
 		{{- end }}
 	</header>
 	<div class="content list__excerpt post__content clearfix">
+		Talk presented at
+		{{ with .Params.conferenceUrl }}
+		<a href="{{ . }}" target="_blank">
+		{{ end }}
+			{{ .Params.conference }} ({{ .Params.location }})
+		{{ with .Params.conferenceUrl }}
+		</a>
+		{{ end }}
 		{{ .Summary }}
 	</div>
 	<div class="list__footer clearfix">
