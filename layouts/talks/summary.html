@@ -51,6 +51,12 @@
 				{{ with .Params.conferenceUrl }}
 			</a>
 			{{ end }}
+
+			{{ with .Params.joindin }}
+			<br />
+			See talk comments on <a href="https://joind.in/talk/{{ . }}" target="_blank">Joind.in</a>.
+			{{ end }}
+			
 			{{ .Summary }}
 		</p>
 	</div>
