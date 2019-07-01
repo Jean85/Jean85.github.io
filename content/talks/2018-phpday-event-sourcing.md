@@ -6,4 +6,5 @@ conferenceUrl: https://2018.phpday.it/talks.html#alessandro-lai
 location: Verona
 slides: 2018-05-event-sourcing-phpday
 language: en
+youtube: H2MdGBfJtQA
 ---

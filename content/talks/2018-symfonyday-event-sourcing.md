@@ -6,4 +6,5 @@ conferenceUrl: https://2018.symfonyday.it/talks.html#alessandro-lai
 location: Verona
 slides: 2018-10-event-sourcing-symfonyday
 language: it
+youtube: qKn5LRAnchc
 ---

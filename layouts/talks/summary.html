@@ -20,15 +20,39 @@
 		{{- end }}
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		Talk presented at
-		{{ with .Params.conferenceUrl }}
-		<a href="{{ . }}" target="_blank">
+		{{ with .Params.youtube }}
+		<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
+			<iframe src="https://www.youtube-nocookie.com/embed/{{ . }}"
+					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+					width="560" height="349"
+					frameborder="0"
+					allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+			</iframe>
+		</div>
 		{{ end }}
-			{{ .Params.conference }} ({{ .Params.location }})
-		{{ with .Params.conferenceUrl }}
-		</a>
+		{{ with .Params.vimeo }}
+		<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
+			<iframe src="https://player.vimeo.com/video/{{ . }}"
+					style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+					width="640" height="360" 
+					frameborder="0" 
+					allow="autoplay; fullscreen" 
+					allowfullscreen>
+			</iframe>
+		</div>
 		{{ end }}
-		{{ .Summary }}
+		<p>
+			Talk presented at
+			{{ with .Params.conferenceUrl }}
+			<a href="{{ . }}" target="_blank">
+				{{ end }}
+				{{ .Params.conference }} ({{ .Params.location }})
+				{{ with .Params.conferenceUrl }}
+			</a>
+			{{ end }}
+			{{ .Summary }}
+		</p>
 	</div>
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" style="white-space: nowrap" target="_blank" href="/slides/{{ .Params.slides }}/">

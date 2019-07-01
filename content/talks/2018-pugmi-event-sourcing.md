@@ -6,4 +6,5 @@ conferenceUrl: https://www.meetup.com/it-IT/MilanoPHP/events/244650417/
 location: Milano
 slides: 2018-01-event-sourcing
 language: en
+youtube: f31gHqKG-0A
 ---

@@ -6,4 +6,5 @@ conferenceUrl: http://2015.symfonyday.it/#programma
 location: Reggio Emilia
 slides: 2015-09-paraunit-pugmi
 language: it
+vimeo: 144861400
 ---
