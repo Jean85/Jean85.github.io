@@ -6,10 +6,55 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Pretty Package Versions 1.2.0</title>
@@ -36,6 +81,15 @@
       
       <guid>http://jean85.github.io/releases/paraunit/0.12.2/</guid>
       <description>&lt;p&gt;Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-phpday-event-sourcing/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-phpday-event-sourcing/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -73,6 +127,15 @@ After, I decided to start migrating a previous, internal project of mine to the 
       
       <guid>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</guid>
       <description>&lt;p&gt;This time around we have a minor version bump, due to a new feature!&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -279,6 +342,15 @@ launched.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Bug hunting with Git Bisect</title>
+      <link>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</link>
+      <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Paraunit 0.6.1</title>
       <link>http://jean85.github.io/releases/paraunit/0.6.1/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
@@ -308,6 +380,15 @@ My experience On my day job, I do all this mental juggling on a pretty big proje
       <guid>http://jean85.github.io/releases/paraunit/0.6.0/</guid>
       <description>&lt;p&gt;Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
 it working soon and release it in 0.7.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A (small) Hexagonal architecture inside a Symfony application</title>
+      <link>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</guid>
+      <description></description>
     </item>
     
     <item>
@@ -347,6 +428,15 @@ it working soon and release it in 0.7.&lt;/p&gt;</description>
     </item>
     
     <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>http://jean85.github.io/talks/2015-symfonyday-paraunit/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2015-symfonyday-paraunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Paraunit: test paralleli, Doctrine e le fixture</title>
       <link>http://jean85.github.io/posts/paraunit/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
@@ -354,6 +444,15 @@ it working soon and release it in 0.7.&lt;/p&gt;</description>
       <guid>http://jean85.github.io/posts/paraunit/</guid>
       <description>Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&amp;rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&amp;rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&amp;rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.</description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>http://jean85.github.io/talks/2015-pugmi-paraunit/</link>
+      <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2015-pugmi-paraunit/</guid>
+      <description></description>
     </item>
     
     <item>

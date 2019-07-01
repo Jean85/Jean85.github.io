@@ -6,9 +6,109 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-phpday-event-sourcing/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-phpday-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bug hunting with Git Bisect</title>
+      <link>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</link>
+      <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A (small) Hexagonal architecture inside a Symfony application</title>
+      <link>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>http://jean85.github.io/talks/2015-symfonyday-paraunit/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2015-symfonyday-paraunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>http://jean85.github.io/talks/2015-pugmi-paraunit/</link>
+      <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2015-pugmi-paraunit/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

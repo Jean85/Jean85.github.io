@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</loc>
+    <lastmod>2019-03-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</loc>
+    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</loc>
+    <lastmod>2018-10-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</loc>
+    <lastmod>2018-09-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jean85.github.io/releases/pretty-package-versions/1.2.0/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
   </url>
@@ -15,6 +40,11 @@
   <url>
     <loc>http://jean85.github.io/releases/paraunit/0.12.2/</loc>
     <lastmod>2018-05-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2018-phpday-event-sourcing/</loc>
+    <lastmod>2018-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -35,6 +65,11 @@
   <url>
     <loc>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</loc>
+    <lastmod>2018-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -143,6 +178,11 @@
   </url>
   
   <url>
+    <loc>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</loc>
+    <lastmod>2016-08-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jean85.github.io/releases/paraunit/0.6.1/</loc>
     <lastmod>2016-06-10T00:00:00+00:00</lastmod>
   </url>
@@ -155,6 +195,11 @@
   <url>
     <loc>http://jean85.github.io/releases/paraunit/0.6.0/</loc>
     <lastmod>2016-03-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</loc>
+    <lastmod>2016-03-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -178,8 +223,18 @@
   </url>
   
   <url>
+    <loc>http://jean85.github.io/talks/2015-symfonyday-paraunit/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jean85.github.io/posts/paraunit/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jean85.github.io/talks/2015-pugmi-paraunit/</loc>
+    <lastmod>2015-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -189,7 +244,7 @@
   
   <url>
     <loc>http://jean85.github.io/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -320,6 +375,8 @@
   
   <url>
     <loc>http://jean85.github.io/talks/</loc>
+    <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
