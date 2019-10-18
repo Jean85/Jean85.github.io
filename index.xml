@@ -6,10 +6,19 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Symfony ❤︎ Kubernetes: dynamic feature-review environments</title>
+      <link>http://jean85.github.io/talks/2019-sfday-symfony-loves-k8s/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2019-sfday-symfony-loves-k8s/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Kubernetes ❤ PHP</title>
