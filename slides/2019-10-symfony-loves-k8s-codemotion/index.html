@@ -1,0 +1,574 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Symfony ❤ Kubernetes - Codemotion Milan 2019</title>
+    <meta name="description" content="Symfony ❤ Kubernetes: dynamic feature-review environments">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+    <!-- FontAwesome -->
+    <script defer src="lib/font/fontawesome-free-5.2.0-web/js/all.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <img id="logo-engineering" src="img/logo_engineering.png"
+         style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+    <div class="slides">
+        <section>
+            <section data-background="img/cover_slide_1.png"></section>
+            <section data-background="img/cover_slide_2.png"></section>
+        </section>
+
+        <section id="intro">
+            <section>
+                <h2>Who am I?</h2>
+                <img src="img/github_avatar.jpg" class="avatar stretch">
+                <div style="float: right">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            Project lead @ <img src="img/logo_engineering_full.png"
+                                                style="height: 1.6em; box-shadow: none; vertical-align: middle; margin-bottom: 0; margin-top: -0.8em">
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-users"></i></span>
+                            PHP UG Milan Coordinator
+                        </li>
+                        <li>
+                            <span class="fa-li fa-layers">
+                                <i class="fas fa-certificate"></i>
+                                <i class="fas fa-inverse fa-check" data-fa-transform="shrink-8"></i>
+                            </span>
+                            PHP-FIG Secretary
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <img src="img/k8s_php.png" class="stretch"/>
+            </section>
+            <section>
+                <h2>Kubernetes: where it came from</h2>
+                <p>
+                    Inspired by Google's Borg project (C++) 
+                    <a href="https://en.wikipedia.org/wiki/Kubernetes#History">https://en.wikipedia.org/wiki/Kubernetes#History</a>
+                </p>
+            </section>
+            <section>
+                <h2>Kubernetes: basic structure</h2>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-server"></i></span>
+                        Master node(s)
+                        <div class="font-smaller">
+                            etcd, API server, scheduler, controller manager
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-server"></i></span>
+                        Worker nodes
+                        <div class="font-smaller">
+                            kubelet, Kube-proxy & container runtime
+                        </div>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-terminal"></i></span>
+                        <code>kubectl</code>
+                        <div class="font-smaller">
+                            Installation: <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section id="demo-resources">
+            <section>
+                <h2>Main resources</h2>
+                <table id="table-schema">
+                    <tr class="fragment" data-fragment-index="1">
+                        <td width="33%"></td>
+                        <td width="33%">
+                            <span class="black-box">Pod</span>
+                        </td>
+                        <td width="33%"></td>
+                    </tr>
+                    <tr>
+                        <td class="fragment" data-fragment-index="3" style="font-size: smaller">
+                            <div>
+                                <span class="black-box">ConfigMap</span>
+
+                                <span class="black-box">Secret</span>
+                            </div>
+                        </td>
+                        <td class="fragment" data-fragment-index="2">
+                            <i class="fa fa-arrow-up"></i>
+                            <br/>
+                            <span class="black-box">Deployment</span>
+                        </td>
+                        <td class="fragment" data-fragment-index="4">
+                            <div style="text-align: left">
+                                <i class="fa fa-arrow-up" data-fa-transform="rotate--45"></i>
+                            </div>
+                            <span class="black-box">Job</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="fragment" data-fragment-index="6">
+                            <i class="fa fa-arrow-up"></i>
+                            <br/>
+                            <span class="black-box">Service</span>
+                        </td>
+                        <td class="fragment" data-fragment-index="5">
+                            <i class="fa fa-arrow-up"></i>
+                            <br/>
+                            <span class="black-box">CronJob</span>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="fragment" data-fragment-index="7">
+                            <i class="fa fa-arrow-up"></i>
+                            <br/>
+                            <span class="black-box">Ingress</span>
+                            <br/>
+                            <i class="fa fa-arrow-up"></i>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <span></span>
+            </section>
+            <section>
+                <h2>Ingress</h2>
+                <pre><code class="yaml stretch">apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-sf-demo
+spec:
+  rules:
+    - host: my-sf-demo.alessandrolai.dev
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: nginx
+              servicePort: 80
+  tls:
+    - hosts:
+        - my-sf-demo.alessandrolai.dev
+</code></pre>
+            </section>
+            <section>
+                <h2>Service</h2>
+                <pre><code class="yaml stretch">apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  ports:
+    - port: 80
+  selector:
+    app: my-sf-demo
+    tier: php
+</code></pre>
+            </section>
+            <section>
+                <h2>Deployment</h2>
+                <pre><code class="yaml stretch">apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php
+spec:
+  replicas: 2
+  template:
+    spec:
+      containers:
+      - image: docker.facile.it/facile/my-sf-demo-nginx:prod
+        name: nginx
+        ports:
+        - containerPort: 80
+      - image: docker.facile.it/facile/my-sf-demo-php:prod
+        name: php
+        env:
+          - name: DATABASE_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: my-database
+                key: password</code></pre>
+            </section>
+            <section>
+                <h2>Cron</h2>
+                <pre><code class="yaml stretch">apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: prod-cron-hello-world
+spec:
+  schedule: "0 23 * * *"
+  suspend: false
+  successfulJobsHistoryLimit: 3
+  jobTemplate:
+  template:
+    spec:
+      template:
+        spec:
+          containers:
+          - image: docker.facile.it/facile/my-sf-demo-nginx:prod
+            name: nginx
+            ports:
+            - containerPort: 80
+          - image: docker.facile.it/facile/my-sf-demo-php:prod
+            name: php
+            env:
+              - name: DATABASE_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: my-database
+                    key: password</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Objective: CI/CD pipeline</h2>
+                <img src="img/gitlab-pipeline.png" class="stretch" alt="Example of a build pipeline in GitLab CI"/>
+                <p class="font-smaller">
+                    <a href="">
+                        Last year's talk at SymfonyDay 2019
+                    </a>
+                    -
+                    <a href="https://www.youtube.com/watch?v=ULTvEB46f8E&t=1932">
+                        <i class="fab fa-youtube"></i>
+                        Video
+                    </a>
+                </p>
+            </section>
+            <section>
+                <h2>Deploy (?)</h2>
+                <pre><code class="yaml">Deploy:
+  stage: Deploy
+  script:
+  - kubectl set image deployment/very-simple-app php=$PHP_IMAGE 
+  - kubectl rollout status deployment/very-simple-app
+  only:
+  - master</code></pre>
+                <p>Result:</p>
+                <pre class="stretch shell"><code>$ kubectl set image deployment/very-simple-app php="${!PHP_IMAGE_VAR}"
+deployment "very-simple-app" images updated
+
+$ kubectl rollout status deployment/very-simple-app
+Waiting for rollout to finish: 1 old replicas are pending termination...
+Waiting for rollout to finish: 1 old replicas are pending termination...
+Waiting for rollout to finish: 5 of 6 updated replicas are available...
+deployment "very-simple-app" successfully rolled out</code></pre>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <div class="stretch">
+                    <img src="img/helm-logo.svg" width="100%" alt="Helm logo"/>
+                </div>
+                <div>
+                    <img src="img/cncf-logo.png" alt="Cloud Native Computing Foundation logo"/>
+                </div>
+            </section>
+            <section>
+                <h2>What Helm does:</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-paste"></i></span>
+                        Templating
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-box-open"></i></span>
+                        Package manager (charts)
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-shipping-fast"></i></span>
+                        Deployer
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Demo!</h2>
+            </section>
+            <section>
+                <h2>Chart folder</h2>
+                <img src="img/chart-folder.png" class="stretch" alt="Folder structure of an Helm chart from the demo"/>
+            </section>
+            <section>
+                <h2>Template example</h2>
+                <pre class="stretch yaml"><code>{{- $host := $.Values.app.url | trimPrefix "https://" | quote -}}
+
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: {{ $.Values.app.name }}-ingress
+spec:
+  rules:
+    - host: {{ $host }}
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: {{ $.Values.nginx.name }}
+              servicePort: {{ $.Values.nginx.port }}
+  tls:
+    - hosts:
+        - {{ $host }}
+</code></pre>
+            </section>
+            <section>
+                <h2>values.yaml</h2>
+                <pre class="stretch yaml"><code>app:
+  name: sfday-demo
+  env: ~
+  url: ~
+
+nginx:
+  port: 80
+  name: nginx
+  image: ~
+  resources:
+    requests:
+      memory: 16M
+      cpu: 10m
+    limits:
+      memory: 32M
+      cpu: 50m
+php:
+  name: php
+  image: ~
+  replicas: 2
+  resources:
+    requests:
+      memory: 63M
+      cpu: 25m
+    limits:
+      memory: 128M
+      cpu: 250m
+</code></pre>
+            </section>
+            <section>
+                <h2>Local dump/test</h2>
+                <pre class="stretch makefile"><code>helm-template: helm-template-prod helm-template-staging
+
+helm-template-prod:
+  rm -rf k8s/prod/*
+  @docker-compose run --rm helm /bin/sh -c "
+    helm template /var/www/sfday/charts/SFday-demo/ \
+      --output-dir /var/www/sfday/k8s/prod \
+      --set app.env=prod \
+      --set app.tag=prod-abcd1234 \
+      --set app.url=https://prod.example.com/ \
+      --set gitlabRegistrySecret=secret-sfday-prod \
+      --set php.image=registry.com/myproject/php \
+      --set nginx.image=registry.com/myproject/nginx"
+
+helm-template-staging:
+  rm -rf k8s/staging/*
+  @docker-compose run --rm helm /bin/sh -c "
+    helm template /var/www/sfday/charts/SFday-demo/ \
+      --output-dir /var/www/sfday/k8s/staging \
+      --set app.env=staging \
+      --set app.tag=staging-abcd1234 \
+      --set app.url=https://staging.example.com/ \
+      --set gitlabRegistrySecret=secret-sfday-staging \
+      --set php.image=registry.com/myproject/php \
+      --set nginx.image=registry.com/myproject/nginx"</code></pre>
+            </section>
+            <section>
+                <h2>Helm in action</h2>
+                <pre class="stretch yaml"><code>.helm_job:
+  image: $CI_REGISTRY_IMAGE/helm:2.14.3
+  before_script: []
+  cache: {}
+  services: []
+
+.deploy_template:
+  stage: Deploy
+  extends: .helm_job
+  script:
+    - >
+      helm init \
+        --upgrade \
+        --wait \
+        --tiller-namespace="$KUBE_NAMESPACE"
+    - >
+      helm upgrade \
+        --install \
+        --atomic \
+        --namespace="$KUBE_NAMESPACE" \
+        --tiller-namespace="$KUBE_NAMESPACE" \
+        --set app.env="$CI_ENVIRONMENT_SLUG" \
+        --set app.tag="$APP_ENV-$CI_COMMIT_SHORT_SHA" \
+        --set app.url="$CI_ENVIRONMENT_URL" \
+        --set gitlabRegistrySecret="gitlab-docker-registry" \
+        --set php.image=$PHP_IMAGE \
+        --set nginx.image=$NGINX_IMAGE \
+        --set dockerRegistry="$CI_REGISTRY_IMAGE" \
+        "sfday-demo-$CI_ENVIRONMENT_SLUG" \
+        charts/SFday-demo/
+</code></pre>
+            </section>
+            <section>
+                <h3>...and now, dynamic review environments!</h3>
+                <img src="img/gitlab-environments.png" alt="Environment listing in GitLab" class="stretch"/>
+            </section>
+            <section>
+                <pre class="stretch yaml"><code>Deploy review:
+  extends:
+    - .deploy_template
+    - .review_template
+  variables:
+    APP_ENV: review
+  environment:
+    url: http://$CI_ENVIRONMENT_SLUG.sfday.demo/
+    on_stop: Stop review
+
+Stop review:
+  stage: Stop
+  when: manual
+  extends:
+    - .review_template
+    - .helm_job
+  environment:
+    action: stop
+  script:
+    - >
+      helm delete \
+        --tiller-namespace="$KUBE_NAMESPACE" \
+        "sfday-demo-$CI_ENVIRONMENT_NAME"
+</code></pre>
+            </section>
+        </section>
+
+        <section id="ending">
+            <section>
+                <h2>Questions?</h2>
+                <h6>References</h6>
+                <ul class="fa-ul" style="font-size: smaller">
+                    <li>
+                        <span class="fa-li"><i class="fab fa-gitlab"></i></span>
+                        <a href="https://gitlab.com/Alessandro.Lai/symfony-k8s-demo/">Demo repository with CI/CD pipelines</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-terminal"></i></span>
+                        <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/">kubectl installation</a> <br/>
+                        <small>(remember to install autocomplete too!)</small>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        <a href="https://kubernetes.io/docs/home/">K8s docs</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        <a href="https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.16/">K8s API reference</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        <a href="https://helm.sh/docs/using_helm/#quickstart">Helm docs</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        <a href="https://github.com/Masterminds/sprig/tree/master/docs">Sprig (Go Template) docs</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        <a href="https://docs.gitlab.com/ee/ci/#getting-started">GitLab CI docs</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <p>
+                    Please rate my talk on the Codemotion app
+                </p>
+                <h2>Contacts</h2>
+                <div style="font-size: smaller">
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            <a href="https://alessandrolai.dev">https://alessandrolai.dev</a>
+                            <br>
+                            <small>(slides and previous talks are here!)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a href="mailto:alessandro.lai85@gmail.com">alessandro.lai85@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>
+                            <small style="vertical-align: middle">(we are hiring!)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        keyboard: {
+            38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+            40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+        },
+        dependencies: [
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
