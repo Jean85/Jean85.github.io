@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Code reviews - How-to, do & dont's</title>
+    <meta name="description" content="Internal presentation">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/beige.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <link rel="stylesheet" href="lib/css/highlight-js/idea.css">
+    <!-- FontAwesome -->
+    <script defer src="lib/font/fontawesome-free-5.11.2-web/js/all.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<li class="reveal">
+    <img id="logo-engineering" src="img/logo_engineering.png"
+         style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+    <div class="slides">
+        <section id="title">
+            <h1>Code reviews</h1>
+            <h3>How-to, do & dont's</h3>
+            <p>
+                <a href="https://alessandrolai.dev/">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a><br>
+            </p>
+            <small>
+                <p>
+                    <a href="https://engineering.facile.it/">Facile.it</a> - January 10th 2020,
+                    Milano
+                </p>
+            </small>
+        </section>
+        
+        <section>
+            <h3>Source material</h3>
+            <ul class="fa-ul">
+                <li>
+                    <span class="fa-li"><i class="fab fa-youtube"></i></span>
+                    <a href="https://www.youtube.com/watch?v=jXi8h44cbQA">
+                        Trisha Gee - Code Review Best Practices
+                    </a>
+                    <span style="display: block; font-size: smaller">SCLConf 2018</span>
+                </li>
+                <li>
+                    <span class="fa-li"><i class="fab fa-youtube"></i></span>
+                    <a href="https://www.youtube.com/watch?v=c_-maGEY2Ck">
+                        Dave Liddament - Effective Code Review
+                    </a>
+                    <span style="display: block; font-size: smaller">phpday 2018</span>
+                </li>
+            </ul>
+        </section>
+        
+        <section>
+            <section>
+                <h3>Formal definition</h3>
+                <blockquote>
+                    Code review is the systematic examination of source code, <br> 
+                    and is intended to find mistake overlooked in software development, <br> 
+                    improving the overall quality of software
+                </blockquote>
+                <div style="text-align: right">Wikipedia</div>
+            </section>
+
+            <section data-background="img/cost_of_a_bug.png"></section>
+            
+            <section data-background="img/bad_code.png"></section>
+            
+            <section>
+                <h2>But...</h2>
+                That code works as intended.
+            </section>
+            <section>
+                <h2>Everyone has an opinion</h2>
+            </section>
+            <section>
+                <h2>Are we harder on other people's code than our own?</h2>
+            </section>
+
+            <section>
+                <h3>We're harder on code while reading</h3>
+                <blockquote>
+                    The ratio of time spent <b>reading</b> code versus <b>writing</b>
+                    is well over 10 to 1. <br>
+                    We are constantly reading old code as part 
+                    of the effort to write new code...
+                    <br>
+                    [Therefore,] making it easy to read makes it easier to write.
+                </blockquote>
+                <div style="text-align: right">Robert C. Martin (Clean Code)</div>
+            </section>
+
+            <section>
+                <h2>So, what should we look for <br> in a code review?</h2>
+                <a href="https://leanpub.com/whattolookforinacodereview">
+                    https://leanpub.com/whattolookforinacodereview
+                </a>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Different workflows</h2>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-dungeon"></i></span>
+                        Gateway reviews
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        Knowledge sharing
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-pencil-ruler"></i></span>
+                        Early design feedback
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>So, again: <br> what should we look for <br> in a code review?</h2>
+                <p>It depends</p>
+                <aside class="notes">
+                    Non è dirgli "come io avrei scritto il codice"
+                </aside>
+            </section>
+            <section>
+                <h2>Code review anti-patterns</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-glasses"></i></span>
+                        Nit picking
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-object-group"></i></span>
+                        Design changes when code works
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-comments"></i></span>
+                        Inconsistent feedback
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-ghost"></i></span>
+                        The Ghost Reviewer
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-table-tennis"></i></span>
+                        Ping pong reviews
+                    </li>
+                </ul>
+                <aside class="notes">
+                    2) Dire "devi cambiare architettura" dopo 2 settimane di lavoro
+                </aside>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Developers hate code reviews</h2>
+                <aside class="notes">
+                    Developers hate being judged
+                    Code reviewers hate being rejected
+                    It's confrontational
+                </aside>
+            </section>
+            <section>
+                <h2>Code reviews are <br>a massive waste of time (?)</h2>
+                <aside class="notes">
+                    Come evitare che siano perdite di tempo
+                </aside>
+            </section>
+            <section>
+                <h2>Why (do you do reviews)?</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-medal"></i></span>
+                        Ensure code meets standards
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-bug"></i></span>
+                        Find bugs
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        Share knowledge
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-search"></i></span>
+                        Check code is understandable
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-check-double"></i></span>
+                        Ensure code does what it’s supposed to
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-users-cog"></i></span>
+                        Collaborate on design
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-rocket"></i></span>
+                        Evolve (refactor) application code
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>When (do you review)?</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-laptop-code"></i></span>
+                        During implementation?
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-code-branch"></i></span>
+                        When it's ready to merge?
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-history"></i></span>
+                        After it's been merged?
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>When (the review is complete)?</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-friends"></i></span>
+                        When everyone agrees?
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-gavel"></i></span>
+                        When a gatekeeper agrees?
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-comments"></i></span>
+                        When all comments are addressed?
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Who?</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-child"></i></span>
+                        Who reviews the code?
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-graduate"></i></span>
+                        Who signs it off?
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Where?</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-friends"></i></span>
+                        Pairing
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-laptop-code"></i></span>
+                        Showing code to a colleague at a computer
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        Mob reviewing
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-skype"></i></span>
+                        Remote screen sharing
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-microscope"></i></span>
+                        In the IDE, checking out a commit or branch
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-gitlab"></i></span>
+                        Using code review software
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What?</h2>
+                <p>Requires you know already:</p>
+                <ol>
+                    <li>Why</li>
+                    <li>When</li>
+                    <li>Who</li>
+                    <li>Where</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>What to look for (1/2)</h2>
+                <ul>
+                    <li>Fit with the overall architecture</li>
+                    <li>SOLID, DDD, Design Patterns or other paradigms</li>
+                    <li>New code follows team’s current practices</li>
+                    <li>Code is in the right place</li>
+                    <li>Code reuse</li>
+                    <li>Over-engineering</li>
+                    <li>Readable code and tests</li>
+                    <li>Testing the right things</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>What to look for (2/2)</h2>
+                <ul>
+                    <li>Exception error messages</li>
+                    <li>Subtle bugs</li>
+                    <li>Security</li>
+                    <li>Performance</li>
+                    <li>Documentation and/or help files been updated</li>
+                    <li>Spelling, punctuation & grammar on user messages</li>
+                </ul>
+                <p>
+                    <a href="https://blog.jetbrains.com/upsource/tag/what-to-look-for/">
+                        https://blog.jetbrains.com/upsource/tag/what-to-look-for/
+                    </a>
+                </p>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h1>How?</h1>
+            </section>
+
+            <section>
+                <h2>Human reviewers should be doing what cannot be automated</h2>
+            </section>
+
+            <section>
+                <h2>Understand the constraints</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-users"></i></span>
+                        <div style="font-weight: bolder">Why: Knowledge Sharing</div>
+                        <span>Purpose isn’t to reject the code</span>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-code-branch"></i></span>
+                        <div style="font-weight: bolder">Why: Before merging</div>
+                        <span>Focus is on how easy is to understand the code</span>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-terminal"></i></span>
+                        <div style="font-weight: bolder">When: at the end</div>
+                        Too late for design, but be specific
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Submitting for review</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-comments"></i></span>
+                        Annotate your code
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-scroll"></i></span>
+                        Reviews should be small<br>
+                        Commits should be smaller and consistent
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Reviewing</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-graduate"></i></span>
+                        Should be clear <b>Who</b> is reviewing
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-hourglass-end"></i></span>
+                        Respond in a timely fashion
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-check-double"></i></span>
+                        Checklist of <b>What</b> to look for
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Comments</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-question"></i></span>
+                        Bear in mind <b>Why</b>, <b>When</b> and <b>What</b>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-sad-tear"></i></span>
+                        Be constructive
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-hand-point-right"></i></span>
+                        Be specific
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Accept or Reject</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-edit"></i></span>
+                        Accept or <b>request changes</b>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-road"></i></span>
+                        Next steps should be clear
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Making changes</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-hourglass-end"></i></span>
+                        Respond in a timely fashion
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-thumbs-up"></i></span>
+                        Respond to comments (or not?)
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Resolving</h2>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-thumbs-up"></i></span>
+                        The goal is to accept the review (and merge?)
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-graduate"></i></span>
+                        Should be clear <b>Who</b> signs it off
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-hourglass-end"></i></span>
+                        ...and <b>When</b>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h2>Have clear ojectives</h2>
+                <p>Clarity comes from understanding</p>
+                <ul>
+                    <li>Why</li>
+                    <li>When</li>
+                    <li>Who</li>
+                    <li>Where</li>
+                    <li>What</li>
+                    <li>How</li>
+                </ul>
+            </section>
+            
+            <section>
+                <h2>The Goal Is To Ship The Code</h2>
+                <h3>Not to prove how clever you are</h3>
+            </section>
+        </section>
+        <section id="ending">
+            <section>
+                <h2>Questions?</h2>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        keyboard: {
+            38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+            40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+        },
+        dependencies: [
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
