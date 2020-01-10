@@ -6,10 +6,19 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/talks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Code reviews -  How-to, do &amp; dont&#39;s</title>
+      <link>http://jean85.github.io/talks/2020-01-facile-it-code-review/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/talks/2020-01-facile-it-code-review/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
