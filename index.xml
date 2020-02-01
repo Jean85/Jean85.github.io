@@ -57,6 +57,15 @@
     </item>
     
     <item>
+      <title>Paraunit 1.0.0-beta1: the first approach to a stable release</title>
+      <link>http://jean85.github.io/releases/paraunit/1.0.0-beta1/</link>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/releases/paraunit/1.0.0-beta1/</guid>
+      <description>&lt;p&gt;After a long hiatus, I decided to start working in the first stable release of Paraunit; the package is good and running smoothly for years, so we no longer have any reason to delay the 1.0 further. This will also be the occasion to force some static analysis onto the codebase.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Kubernetes ❤ PHP</title>
       <link>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>

@@ -6,10 +6,19 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 Jun 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/releases/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraunit 1.0.0-beta1: the first approach to a stable release</title>
+      <link>http://jean85.github.io/releases/paraunit/1.0.0-beta1/</link>
+      <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/releases/paraunit/1.0.0-beta1/</guid>
+      <description>&lt;p&gt;After a long hiatus, I decided to start working in the first stable release of Paraunit; the package is good and running smoothly for years, so we no longer have any reason to delay the 1.0 further. This will also be the occasion to force some static analysis onto the codebase.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Pretty Package Versions 1.2.0</title>
