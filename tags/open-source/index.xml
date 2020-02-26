@@ -6,10 +6,19 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 08 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraunit 1.0.0-beta2: Pcov support</title>
+      <link>http://jean85.github.io/releases/paraunit/1.0.0-beta2/</link>
+      <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/releases/paraunit/1.0.0-beta2/</guid>
+      <description>&lt;p&gt;I returned to develop some more on Paraunit in the last months, initially to add a few new compatibilities (PHP 7.4, Symfony 5), but then I spent some time to add support for Pcov as a coverage driver.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paraunit 1.0.0-beta1: the first approach to a stable release</title>

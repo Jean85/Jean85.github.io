@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://jean85.github.io/releases/paraunit/1.0.0-beta2/</loc>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jean85.github.io/talks/2020-01-facile-it-code-review/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
@@ -269,7 +274,7 @@
   
   <url>
     <loc>http://jean85.github.io/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -334,13 +339,13 @@
   
   <url>
     <loc>http://jean85.github.io/tags/open-source/</loc>
-    <lastmod>2019-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://jean85.github.io/tags/paraunit/</loc>
-    <lastmod>2019-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -364,13 +369,13 @@
   
   <url>
     <loc>http://jean85.github.io/releases/</loc>
-    <lastmod>2019-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://jean85.github.io/categories/releases/</loc>
-    <lastmod>2019-04-08T00:00:00+00:00</lastmod>
+    <lastmod>2020-02-26T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

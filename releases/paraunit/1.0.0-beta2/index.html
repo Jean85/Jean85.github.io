@@ -4,20 +4,20 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Paraunit 0.7.3: PHAR release - Alessandro Lai</title>
+	<title>Paraunit 1.0.0-beta2: Pcov support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.54.0" />
-	<meta property="og:title" content="Paraunit 0.7.3: PHAR release" />
-<meta property="og:description" content="Paraunit 0.7.3 has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the latest GitHub release page." />
+	<meta property="og:title" content="Paraunit 1.0.0-beta2: Pcov support" />
+<meta property="og:description" content="I returned to develop some more on Paraunit in the last months, initially to add a few new compatibilities (PHP 7.4, Symfony 5), but then I spent some time to add support for Pcov as a coverage driver." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jean85.github.io/releases/paraunit/0.7.3/" />
-<meta property="article:published_time" content="2016-12-30T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2016-12-30T00:00:00&#43;00:00"/>
+<meta property="og:url" content="http://jean85.github.io/releases/paraunit/1.0.0-beta2/" />
+<meta property="article:published_time" content="2020-02-26T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2020-02-26T00:00:00&#43;00:00"/>
 
 	<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Paraunit 0.7.3: PHAR release"/>
-<meta name="twitter:description" content="Paraunit 0.7.3 has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the latest GitHub release page."/>
+<meta name="twitter:title" content="Paraunit 1.0.0-beta2: Pcov support"/>
+<meta name="twitter:description" content="I returned to develop some more on Paraunit in the last months, initially to add a few new compatibilities (PHP 7.4, Symfony 5), but then I spent some time to add support for Pcov as a coverage driver."/>
 
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -77,11 +77,11 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.7.3: PHAR release</h1>
+			<h1 class="post__title">Paraunit 1.0.0-beta2: Pcov support</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2016-12-30T00:00:00">December 30, 2016</time>
+	<time class="meta__text" datetime="2020-02-26T00:00:00">February 26, 2020</time>
 </div>
 
 <div class="meta__item-categories meta__item">
@@ -94,18 +94,29 @@
             <blockquote>
                 <p>
                     This is a republished tag announcement for <code>facile-it/paraunit</code>.
-                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/0.7.3" target="_blank">here</a>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/1.0.0-beta2" target="_blank">here</a>.
                 </p>
     		</blockquote>
         </div><div class="content post__content clearfix">
-			<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.4">Paraunit 0.7.3</a> has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the <a href="https://github.com/facile-it/paraunit/releases/latest">latest GitHub release page</a>.</p>
+			<p>I returned to develop some more on Paraunit in the last months, initially to add a few new compatibilities (PHP 7.4, Symfony 5), but then I spent some time to add support for Pcov as a coverage driver.</p>
 
-<p>Full changelog text:</p>
+<p>This new addition is pretty interesting, since it speeds up test execution with coverage collection a lot, making it nearly as fast as without coverage. Try it out!</p>
+
+<p>This is the full changelog for this second beta release:</p>
+
+<h3 id="added">Added</h3>
+
+<ul>
+<li>Add support for PHP 7.4</li>
+<li>Add support for Symfony 5</li>
+<li>Add support for ext-pcov as a coverage driver <a href="https://github.com/facile-it/paraunit/pull/146">#146</a></li>
+</ul>
 
 <h3 id="changed">Changed</h3>
 
 <ul>
-<li>Add PHAR generation tools (thanks @taueres for the previous PR); from now on, Paraunit is released as a PHAR too!</li>
+<li>Update PHPStan to 0.12 <a href="https://github.com/facile-it/paraunit/pull/145">#145</a></li>
+<li>Prefer Pcov or Xdebug over PHPDBG as coverage driver <a href="https://github.com/facile-it/paraunit/pull/146">#146</a></li>
 </ul>
 		</div>
 		
@@ -133,10 +144,7 @@
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/releases/paraunit/0.7.1/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Paraunit 0.7.1: coverage in text format</p></a>
-	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/releases/paraunit/0.7.4/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Paraunit 0.7.4: PHAR release</p></a>
+		<a class="post-nav__link" href="/releases/paraunit/1.0.0-beta1/" rel="prev"><span class="post-nav__caption">«&thinsp;Previous</span><p class="post-nav__post-title">Paraunit 1.0.0-beta1: the first approach to a stable release</p></a>
 	</div>
 </nav>
 
