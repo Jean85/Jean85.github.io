@@ -17,6 +17,7 @@ theme = "mainroad"
   description = "Alessandro Lai's personal site, blog, slide storage, rant box"
   #copyright = "John Doe" # copyright holder, otherwise will use site title
   opengraph = true
+  images = ["images/avatar-alessandro-lai-square.jpg"] # for OpenGraph
   twitter_cards = true
   readmore = true
   authorbox = true
