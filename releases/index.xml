@@ -6,10 +6,20 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/releases/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraunit 1.0.0: the stable release</title>
+      <link>http://jean85.github.io/releases/paraunit/1.0.0/</link>
+      <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/releases/paraunit/1.0.0/</guid>
+      <description>Today I decided to release facile-it/paraunit 1.0.0! In reality the package was pretty stable and widely used at Facile.it for a long time, but right now I wanted to step forward and declare it officially stable.
+The main reason behind this is that I&amp;rsquo;m currently working on PHPUnit 9 support, and this will force me to release a new minor that will drop support for previous PHPUnit version altogether. This decision was in reality forced onto me due to the fact that PHUnit 9 drops support for the --printer CLI option and the relative extension point, which Paraunit was using as a way to extract test results.</description>
+    </item>
     
     <item>
       <title>Paraunit 1.0.0-beta2: Pcov support</title>
