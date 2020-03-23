@@ -6,10 +6,21 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Mar 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Mar 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://jean85.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraunit 1.0.1: two small fixes</title>
+      <link>http://jean85.github.io/releases/paraunit/1.0.1/</link>
+      <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://jean85.github.io/releases/paraunit/1.0.1/</guid>
+      <description> While I&amp;rsquo;m actively working on a big refactor toward supporting PHPUnit 9, I&amp;rsquo;ve found two small fixes that have to be released as the first stable patch since the 1.0 release.
+Here&amp;rsquo;s the changelog:
+Fixed  Fix handling of PHPUnit --stderr option #144, thanks @pczerkas Fix small issue in checking coverage data syntax 8f70c  </description>
+    </item>
     
     <item>
       <title>Paraunit 1.0.0: the stable release</title>
