@@ -8,4 +8,5 @@ slides: 2016-08-git-bisect
 language: en
 youtube: XPunFQutDDM
 joindin: 292d3
+categories: ["Talks"]
 ---

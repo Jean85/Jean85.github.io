@@ -8,4 +8,5 @@ slides: 2015-09-paraunit-pugmi
 language: it
 vimeo: 144861400
 joindin: 7bd9d
+categories: ["Talks"]
 ---

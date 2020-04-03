@@ -8,4 +8,5 @@ slides: 2018-10-event-sourcing-symfonyday
 language: it
 youtube: qKn5LRAnchc
 joindin: de1e0
+categories: ["Talks"]
 ---

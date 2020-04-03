@@ -8,4 +8,5 @@ slides: 2019-10-symfony-loves-k8s-sfday
 language: en
 youtube: CfbqEnrKxN0
 joindin: 910a4
+categories: ["Talks"]
 ---

@@ -6,4 +6,5 @@ conferenceUrl: https://amsterdam2019.symfony.com/speakers
 location: Amsterdam
 slides: 2019-11-event-sourcing-symfonycon
 language: en
+categories: ["Talks"]
 ---

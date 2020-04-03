@@ -5,4 +5,5 @@ conference: Facile.it
 location: internal meeting
 slides: 2016-03-hexagonal
 language: en
+categories: ["Talks"]
 ---

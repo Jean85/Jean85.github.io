@@ -5,4 +5,5 @@ conference: Facile.it IT meeting (internal)
 location: Milano
 slides: 2020-01-code-review-facile-it
 language: en
+categories: ["Talks"]
 ---

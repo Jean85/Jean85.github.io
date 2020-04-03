@@ -8,4 +8,5 @@ slides: 2018-05-event-sourcing-phpday
 language: en
 youtube: H2MdGBfJtQA
 joindin: 87e9e
+categories: ["Talks"]
 ---

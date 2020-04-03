@@ -6,4 +6,5 @@ conferenceUrl: https://events.codemotion.com/conferences/milan/2019/agenda/
 location: Milan
 slides: 2019-10-symfony-loves-k8s-codemotion
 language: en
+categories: ["Talks"]
 ---

@@ -6,4 +6,5 @@ conferenceUrl: https://www.meetup.com/it-IT/MilanoPHP/events/254345204/
 location: Milano
 slides: 2018-09-symfony-docker-pugmi
 language: it
+categories: ["Talks"]
 ---

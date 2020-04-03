@@ -8,4 +8,5 @@ slides: 2018-10-symfony-docker-symfonyday
 language: it
 youtube: ULTvEB46f8E
 joindin: fd59f
+categories: ["Talks"]
 ---

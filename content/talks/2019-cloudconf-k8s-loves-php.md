@@ -6,4 +6,5 @@ conferenceUrl: https://2019.cloudconf.it/
 location: Turin
 slides: 2019-03-k8s-loves-php-cloudconf
 language: it
+categories: ["Talks"]
 ---

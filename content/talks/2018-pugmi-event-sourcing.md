@@ -7,4 +7,5 @@ location: Milano
 slides: 2018-01-event-sourcing
 language: en
 youtube: f31gHqKG-0A
+categories: ["Talks"]
 ---
