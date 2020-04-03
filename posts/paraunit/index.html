@@ -7,19 +7,17 @@
 	<title>Paraunit: test paralleli, Doctrine e le fixture - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta name="generator" content="Hugo 0.54.0" />
 	<meta property="og:title" content="Paraunit: test paralleli, Doctrine e le fixture" />
 <meta property="og:description" content="Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://jean85.github.io/posts/paraunit/" />
-
-<meta property="og:image" content="http://jean85.github.io/images/avatar-alessandro-lai-square.jpg" />
-<meta property="article:published_time" content="2015-10-09T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2015-10-09T00:00:00&#43;00:00"/>
+<meta property="og:url" content="https://alessandrolai.dev/posts/paraunit/" />
+<meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+<meta property="article:published_time" content="2015-10-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2015-10-09T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="http://jean85.github.io/images/avatar-alessandro-lai-square.jpg"/>
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Paraunit: test paralleli, Doctrine e le fixture"/>
 <meta name="twitter:description" content="Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
@@ -29,54 +27,65 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/custom.css">
+	<link rel="stylesheet" href="/css/pr-66-fixes.css">
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-	<div class="container">
-		<a class="logo flex" href="/" title="Alessandro Lai" rel="home">
-			
-			<div>
-				<img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
-			</div>
-			
-			<div class="logo__text">
-				<div class="logo__title">Alessandro Lai</div>
-				<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
-			</div>
-		</a>
-		
+    <div class="container">
+        <a class="logo flex" href="/" title="Alessandro Lai" rel="home">
+        
+        <div>
+            <img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
+        </div>
+        
+        <div class="logo__text">
+            <div class="logo__title">Alessandro Lai</div>
+            <div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+        </div>
+        </a>
+        
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
 		<li class="menu__item">
-			<a class="menu__link" href="/">Home</a>
+			<a class="menu__link" href="/">
+				
+				<span class="menu__text">Home</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/who-am-i/">Who am I</a>
+			<a class="menu__link" href="/who-am-i/">
+				
+				<span class="menu__text">Who am I</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/posts/">Blog</a>
+			<a class="menu__link" href="/posts/">
+				
+				<span class="menu__text">Blog</span>
+				
+			</a>
 		</li>
 		<li class="menu__item">
-			<a class="menu__link" href="/talks/">Talks</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/categories/">Categories</a>
-		</li>
-		<li class="menu__item">
-			<a class="menu__link" href="/tags/">Tags</a>
+			<a class="menu__link" href="/talks/">
+				
+				<span class="menu__text">Talks</span>
+				
+			</a>
 		</li>
 	</ul>
 </nav>
 
-	</div>
+    </div>
 </header>
+
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -86,87 +95,52 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 			<h1 class="post__title">Paraunit: test paralleli, Doctrine e le fixture</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg>
-	<time class="meta__text" datetime="2015-10-09T00:00:00">October 09, 2015</time>
-</div>
-
-<div class="meta__item-categories meta__item">
-	<svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
-	<span class="meta__text"><a class="meta__link" href="/categories/republished" rel="category">Republished</a></span>
-</div>
-</div>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2015-10-09T00:00:00Z">October 09, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
+	</span>
+</div></div>
 		</header><div class="content post__content clearfix">
-			
-
-<p><em>Questo articolo è la sintesi di un talk presentato al <a href="http://2015.symfonyday.it/">SymfonyDay 2015</a>; potete trovare le slide <a href="http://jean85.github.io/slides/2015-10-paraunit-symfonyday/index.html">qui</a>.</em></p>
-
+			<p><em>Questo articolo è la sintesi di un talk presentato al <a href="http://2015.symfonyday.it/">SymfonyDay 2015</a>; potete trovare le slide <a href="http://jean85.github.io/slides/2015-10-paraunit-symfonyday/index.html">qui</a>.</em></p>
 <h4 id="i-test-e-la-loro-durata">I test e la loro durata</h4>
-
 <p>Sviluppare applicazioni scrivendo <strong>test</strong> e facendo <a href="https://it.wikipedia.org/wiki/Test_driven_development">Test Driven Development</a> è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa <strong>crescere la suite di test</strong> del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.</p>
-
 <p>L&rsquo;aumento della quantità di test però porta alla crescita (direttamente proporzionale) del <strong>tempo necessario</strong> ad eseguire i test stessi.
 Nel caso dei <strong>test unitari</strong> questo aumento è spesso trascurabile, poiché <strong>si limitano a caricare una singola classe</strong> e ad analizzarne il comportamento in completo isolamento, terminando la loro esecuzione nel giro di <strong>pochi millisecondi</strong>.</p>
-
 <p>Quando invece parliamo di <strong>test funzionali</strong>, il tempo di esecuzione non è più così limitato: vengono caricate <strong>molte più classi</strong>, spesso viene coinvolto anche il <strong>database</strong>, deve essere messa alla prova l&rsquo;interazione tra molti elementi; il tutto porta a test la cui durata è talvolta di <strong>quasi un secondo</strong>.</p>
-
-<p>Leggendo libri e blog sull&rsquo;argomento, e con l&rsquo;esperienza personale, ho imparato che c&rsquo;è una <strong>soglia critica</strong> che rappresenta il limite ideale oltre il quale una test suite diventa troppo lenta, e questa soglia è di <strong>circa dieci minuti</strong>.</p>
-
+<p>Leggendo libri e blog sull&rsquo;argomento, e con l&rsquo;esperienza personale, ho imparato che c'è una <strong>soglia critica</strong> che rappresenta il limite ideale oltre il quale una test suite diventa troppo lenta, e questa soglia è di <strong>circa dieci minuti</strong>.</p>
 <p>Ma perché proprio dieci minuti? Il motivo è molto semplice, e pratico: in dieci minuti, il programmatore può fare una pausa, prendersi un caffè o decidere di discutere brevemente una questione tecnica con un collega, e al suo ritorno troverà la suite completata e potrà procedere col lavoro. In caso contrario, possono succedere due cose:</p>
-
 <ul>
 <li>il programmatore <strong>rimane a fissare lo schermo</strong> mentre i test si eseguono, dando ragione ai detrattori dei test che affermano che fare TDD è una perdita di tempo;</li>
 <li>si <strong>smette di eseguire la test suite</strong>, o per lo meno di farla eseguire per intero.</li>
 </ul>
-
 <p>La seconda opzione può sembrare fattibile: si fanno girare solo i <strong>test strettamente necessari</strong> mentre si sviluppa, quelli che vengono scritti in quel momento o che coprono la parte di codice che si sta modificando, per poi eseguire il commit del proprio codice senza far girare l&rsquo;intera suite.</p>
-
 <p>In realtà <strong>questo approccio fa perdere valore ai test</strong> stessi, perché i test sono codice che non andrà mai in produzione, e che quindi può dare valore ai nostri progetti solo se viene eseguito ogni volta. Inoltre questo approccio nasconde <strong>una trappola</strong>, dato che i test, per essere davvero efficaci, vanno eseguiti tutti ogni volta: la loro forza sta proprio nell&rsquo;<strong>individuare gli effetti collaterali</strong> imprevisti delle nostre modifiche, i bug che possono presentarsi in punti inaspettati e apparentemente lontani del nostro progetto.</p>
-
 <h4 id="esecuzione-parallela-dei-test">Esecuzione parallela dei test</h4>
-
 <p>In Facile.it lavoro in un progetto basato su Symfony2 e Doctrine e mi sono trovato proprio davanti a questa problematica: avevamo una <strong>suite di test che stava crescendo</strong> a ritmo sostenuto e che a volte impiegava ad eseguirsi, tra build di preparazione ed esecuzione vera e propria, anche 25 minuti.</p>
-
 <p>Dopo aver ottimizzato le prestazioni del nostro ambiente di sviluppo (passando da Vagrant a Docker, ma questa è un&rsquo;altra storia), ci siamo resi conto di aver bisogno di una soluzione più drastica al nostro problema, e abbiamo pensato di <strong>eseguire in parallelo i nostri test</strong> per sfruttare al meglio le risorse hardware e ridurre così i tempi di esecuzione.</p>
-
 <p>Dopo un po&rsquo; di ricerche, abbiamo individuato alcuni tool esistenti che permettevano questo approccio:</p>
-
 <ul>
 <li><a href="https://github.com/brianium/paratest">brianium/paratest</a></li>
 <li><a href="https://github.com/liuggio/fastest">liuggio/fastest</a></li>
 </ul>
-
 <p>Entrambi i tool sono ben sviluppati e semplici da utilizzare e le prime prove sui <strong>test unitari</strong> sono state molto promettenti: grazie alla ridotta dimensione, la loro parallelizzazione è estremamente semplice.</p>
-
 <h4 id="i-problemi-di-concorrenza-nei-test-funzionali">I problemi di concorrenza nei test funzionali</h4>
-
 <p>Quando siamo passati a provare Paratest sui <strong>test funzionali</strong> abbiamo invece incontrato grossi problemi, che si concretizzavano in <strong>fallimenti casuali durante l&rsquo;esecuzione parallela</strong>. Questi fallimenti erano dati da un problema molto semplice: stavamo accedendo più volte e in parallelo al nostro database di test.</p>
-
 <p>Ma perché il nostro codice, che è lo stesso che viene eseguito in produzione (dove elabora centinaia, migliaia di richieste al minuto) ha così tanti <strong>problemi di accesso concorrente</strong> nell&rsquo;ambiente di test? I motivi sono semplici:</p>
-
 <ul>
 <li><strong>i dati di test sono pochi</strong>, mentre in produzione abbiamo tabelle da milioni di righe;</li>
 <li>per questo motivo <strong>i test tentano di accedere sempre alle stesse righe</strong> del database;</li>
 <li>la <strong>sequenza</strong> di operazioni di ogni test in genere è <strong>lettura - elaborazione - scrittura</strong>;</li>
 <li>i test hanno una <strong>rapidità di esecuzione</strong> superiore a quella di un utilizzatore umano.</li>
 </ul>
-
 <p>Tutti questi motivi contribuiscono a creare situazioni in cui <strong>si verificano dei <a href="https://it.wikipedia.org/wiki/Deadlock">deadlock</a></strong> e che il nostro database può risolvere solo bloccando uno dei due tentativi di accesso ai dati, facendo così fallire il test corrispondente.</p>
-
 <p>Un altro problema che può verificarsi è l&rsquo;<strong>alterazione dei dati</strong>: quando due test vengono eseguiti in contemporanea, uno dei due può modificare il database e, così facendo, può far mancare i giusti dati di partenza ad un altro test che si sta avviando nello stesso istante.</p>
-
 <p>Purtroppo <strong>Paratest non offre una soluzione</strong> a questo genere di problemi, mentre Fastest propone come approccio la creazione di un database di test differente per ogni core del proprio processore, per poi eseguire tanti test in parallelo quanti sono i database a disposizione.</p>
-
 <p>Sfortunatamente anche questo approccio non ci ha soddisfatto, in quanto la costruzione del nostro database di test era piuttosto lenta (avevamo molte migration da eseguire e altrettante fixture da caricare ogni volta) e rischiavamo di guadagnare tempo da una parte per perderlo dall&rsquo;altra, inoltre, avevamo avuto <strong>un&rsquo;idea nuova</strong>.</p>
-
-<h3 id="facile-it-paraunit">facile-it/paraunit</h3>
-
-<p><a href="https://packagist.org/packages/facile-it/paraunit"><img src="https://poser.pugx.org/facile-it/paraunit/version.svg" alt="Packagist" /></a>
-<a href="https://travis-ci.org/facile-it/paraunit"><img src="https://travis-ci.org/facile-it/paraunit.svg" alt="Travis build" /></a>
-<a href="https://codeclimate.com/github/facile-it/paraunit"><img src="https://codeclimate.com/github/facile-it/paraunit/badges/gpa.svg" alt="Codeclimate" /></a>
-<a href="https://coveralls.io/github/facile-it/paraunit?branch=master"><img src="https://coveralls.io/repos/facile-it/paraunit/badge.svg?branch=master&amp;service=github" alt="Coverage" /></a></p>
-
+<h3 id="facile-itparaunit">facile-it/paraunit</h3>
+<p><a href="https://packagist.org/packages/facile-it/paraunit"><img src="https://poser.pugx.org/facile-it/paraunit/version.svg" alt="Packagist"></a>
+<a href="https://travis-ci.org/facile-it/paraunit"><img src="https://travis-ci.org/facile-it/paraunit.svg" alt="Travis build"></a>
+<a href="https://codeclimate.com/github/facile-it/paraunit"><img src="https://codeclimate.com/github/facile-it/paraunit/badges/gpa.svg" alt="Codeclimate"></a>
+<a href="https://coveralls.io/github/facile-it/paraunit?branch=master"><img src="https://coveralls.io/repos/facile-it/paraunit/badge.svg?branch=master&amp;service=github" alt="Coverage"></a></p>
 <p>Abbiamo così deciso di sviluppare la nostra soluzione: <strong><a href="https://github.com/facile-it/paraunit">facile-it/paraunit</a></strong></p>
-
 <ul>
 <li>è sviluppato con i <strong>componenti Symfony</strong>;</li>
 <li><strong>sa leggere la configurazione XML di PHPUnit</strong> per individuare le test suite;</li>
@@ -175,22 +149,14 @@ Nel caso dei <strong>test unitari</strong> questo aumento è spesso trascurabile
 <li>sempre grazie ai processi, riesce ad <strong>ottimizzare l&rsquo;uso della memoria</strong>;</li>
 <li>risulta <strong>affidabile</strong> grazie al fatto che basa il suo responso sugli exit code dei singoli processi PHPUnit.</li>
 </ul>
-
 <p>La maggior parte di questi vantaggi sono ovviamente comuni a tutti gli approcci di parallelizzazione dei test, inoltre, grazie al parsing dei risultati, <strong>Paraunit sa riconoscere i casi di fallimento dovuti a deadlock</strong> e riesegue i test che falliscono per questo motivo.</p>
-
 <p>Questo però era solo un primo passo e ovviamente ci siamo concentrati sull&rsquo;implementare una <strong>soluzione radicale ai problemi di concorrenza</strong>.</p>
-
-<h3 id="facile-it-paraunit-testcase">facile-it/paraunit-testcase</h3>
-
-<p><a href="https://packagist.org/packages/facile-it/paraunit-testcase"><img src="https://poser.pugx.org/facile-it/paraunit-testcase/version.svg" alt="Packagist" /></a></p>
-
+<h3 id="facile-itparaunit-testcase">facile-it/paraunit-testcase</h3>
+<p><a href="https://packagist.org/packages/facile-it/paraunit-testcase"><img src="https://poser.pugx.org/facile-it/paraunit-testcase/version.svg" alt="Packagist"></a></p>
 <p>La soluzione che abbiamo trovato è molto semplice: <strong>le transazioni</strong>.
 Per realizzarla nella sua totalità, abbiamo sviluppato un test-case per PHPUnit, rilasciato col pacchetto <strong><a href="https://github.com/facile-it/paraunit-testcase">facile-it/paraunit-testcase</a></strong>; ovviamente il test-case è stato sviluppato in partenza per il nostro caso d&rsquo;uso, ovvero per il <strong>test di un&rsquo;applicazione basata su Symfony2 e Doctrine</strong>.</p>
-
 <p>Grazie a questo test-case, ogni test può accedere al database solo dentro una transazione e questa transazione non riceve mai il <em>commit</em>, ma sempre il <strong>rollback</strong> al termine. Questo significa che <strong>nulla verrà mai realmente scritto</strong> sul nostro database.</p>
-
 <p>I vantaggi di questo approccio sono molteplici:</p>
-
 <ul>
 <li><strong>nessun test può interferire</strong> con gli altri, visto che non possono alterare i dati;</li>
 <li>ogni test può permettersi di <strong>creare al volo un dato o di alterarne uno esistente</strong>, senza doversi preoccupare di ripulire il database al termine, con grande risparmio di tempo nella scrittura dei test;</li>
@@ -198,30 +164,18 @@ Per realizzarla nella sua totalità, abbiamo sviluppato un test-case per PHPUnit
 <li>anche se non viene mai realmente scritto nulla, <strong>il database esegue comunque le verifiche di integrità</strong>, quali vincoli di unicità o di chiavi esterne;</li>
 <li>diventa <strong>impossibile avere test interdipendenti</strong>, ovvero test che possono funzionare solo se prima ne vengono eseguiti altri, che modificano in modo ideale i dati di fixture.</li>
 </ul>
-
-<p>L&rsquo;unico limite di questo approccio è che le transazioni sono disponibili solo con alcuni database e all&rsquo;interno di Doctrine quindi solo con l&rsquo;<code>EntityManager</code>.</p>
-
+<p>L&rsquo;unico limite di questo approccio è che le transazioni sono disponibili solo con alcuni database e all&rsquo;interno di Doctrine quindi solo con l'<code>EntityManager</code>.</p>
 <h4 id="la-rapidità-di-esecuzione">La rapidità di esecuzione</h4>
-
 <p>Per darvi un&rsquo;idea di quanto possa essere veloce Paraunit rispetto alla normale esecuzione con PHPUnit, ho misurato il tempo di esecuzione della nostra test suite funzionale, che è sufficientemente ampia (261 classi, 1568 metodi):</p>
-
-<p><img src="/images/paraunit-grafico.png" alt="Grafico" /></p>
-
+<p><img src="/images/paraunit-grafico.png" alt="Grafico"></p>
 <p>Come potete vedere, Paraunit esegue l&rsquo;intera test suite in soli <strong>6 minuti e 6 secondi</strong>, mentre PHPUnit ci metterebbe <strong>oltre 40 minuti!</strong></p>
-
 <p>Ho usato il condizionale per un motivo specifico: il tempo di esecuzione di PHPUnit è in realtà una stima (in proiezione lineare) perché, circa al 12% dell&rsquo;esecuzione, il processo si è chiuso per <strong>esaurimento della memoria</strong> a disposizione, a riprova di un altro dei vantaggi nell&rsquo;uso di Paraunit.</p>
-
 <h4 id="test-coverage-in-parallelo">Test coverage in parallelo</h4>
-
 <p>Un&rsquo;altra caratteristica di Paraunit, attualmente in sviluppo, è la possibilità di <strong>parallelizzare l&rsquo;elaborazione della <a href="https://phpunit.de/manual/current/en/code-coverage-analysis.html">coverage</a></strong> dei test.</p>
-
 <p>Questo è possibile grazie all&rsquo;opzione <code>--coverage-php</code> di PHPUnit che salva in un file .php il risultato parziale ottenuto; dopo aver lanciato i singoli test come processi separati, Paraunit esegue l&rsquo;unione di tutti questi risultati.</p>
-
 <h4 id="sviluppi-futuri">Sviluppi futuri</h4>
-
 <p>Ovviamente questo è solo l&rsquo;inizio, il primo <strong>rilascio in open source</strong> della nostra soluzione.
 Tra gli sviluppi futuri spero di poter realizzare:</p>
-
 <ul>
 <li>la <strong>prioritizzazione dei test lenti</strong>, ovvero poter eseguire per primi i test noti per la loro lentezza, così da non rallentare l&rsquo;esecuzione complessiva della test suite;</li>
 <li>l&rsquo;aggiunta di <strong>altre opzioni</strong> di selezione test, come p.e. l&rsquo;opzione <code>--group</code> di PHPUnit;</li>
@@ -230,23 +184,38 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 <li>il miglioramento della funzionalità di test coverage parallela;</li>
 <li>una soluzione per i database non transazionali, come MongoDB.</li>
 </ul>
-
 <p>Vi invito quindi a partecipare allo sviluppo di Paraunit su <a href="https://github.com/facile-it/paraunit">GitHub</a>, proponendo pull request, aprendo issue per proporre nuove feature o anche semplicemente utilizzandolo per le vostre test suite, così da verificarne l&rsquo;efficacia e la compatibilità!</p>
 
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
-	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
-		<li class="tags__item"><a class="tags__link btn" href="/tags/software-testing/" rel="tag">Software Testing</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/php/" rel="tag">PHP</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/database/" rel="tag">Database</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/symfony/" rel="tag">Symfony</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/doctrine/" rel="tag">Doctrine</a></li>
-		<li class="tags__item"><a class="tags__link btn" href="/tags/mysql/" rel="tag">MySQL</a></li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/software-testing/" rel="tag">Software Testing</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/php/" rel="tag">PHP</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/database/" rel="tag">Database</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/symfony/" rel="tag">Symfony</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/doctrine/" rel="tag">Doctrine</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/mysql/" rel="tag">MySQL</a>
+		</li>
 	</ul>
 </div>
+		</footer>
 	</article>
 </main>
 
@@ -264,7 +233,10 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 
 <nav class="post-nav flex">
 	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">How PHP 7 &amp; TDD helped me sleep better</p></a>
+		<a class="post-nav__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="next">
+			<span class="post-nav__caption">Next&thinsp;»</span>
+			<p class="post-nav__post-title">How PHP 7 &amp; TDD helped me sleep better</p>
+		</a>
 	</div>
 </nav>
 
@@ -276,7 +248,7 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="http://jean85.github.io/" />
+		<input type="hidden" name="sitesearch" value="https://alessandrolai.dev/" />
 	</form>
 </div>
 <div class="widget-recent widget">
@@ -287,61 +259,62 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.0.1/">Paraunit 1.0.1: two small fixes</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.0.0/">Paraunit 1.0.0: the stable release</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.0.0-beta2/">Paraunit 1.0.0-beta2: Pcov support</a></li>
-			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.0.0-beta1/">Paraunit 1.0.0-beta1: the first approach to a stable release</a></li>
+			<li class="widget__item"><a class="widget__link" href="/talks/2020-01-facile-it-code-review/">Code reviews -  How-to, do &amp; dont&#39;s</a></li>
 		</ul>
 	</div>
 </div>
 <div class="widget-recent widget">
-	<h4 class="widget__title">Recent Talks</h4>
-	<div class="widget__content">
-		<ul class="widget__list">
-			<li class="widget__item"><a class="widget__link" href="/talks/2020-01-facile-it-code-review/">
-				Code reviews -  How-to, do &amp; dont&#39;s
-				<br>
-				<small>January 10 @ Facile.it IT meeting (internal)</small>
-			</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2019-symfonycon-event-sourcing/">
-				Adding Event Sourcing to an existing PHP project (for the right reasons)
-				<br>
-				<small>November 21 @ SymfonyCon Amsterdam 2019</small>
-			</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2019-codemotion-symfony-loves-k8s/">
-				Symfony ❤︎ Kubernetes: dynamic feature-review environments
-				<br>
-				<small>October 24 @ Codemotion Milan 2019</small>
-			</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2019-sfday-symfony-loves-k8s/">
-				Symfony ❤︎ Kubernetes: dynamic feature-review environments
-				<br>
-				<small>October 18 @ SFDay</small>
-			</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2019-pugmi-k8s-loves-php/">
-				Kubernetes ❤ PHP
-				<br>
-				<small>May 15 @ PUG MI</small>
-			</a></li>
-		</ul>
-	</div>
+    <h4 class="widget__title">Recent Talks</h4>
+    <div class="widget__content">
+        <ul class="widget__list">
+            <li class="widget__item"><a class="widget__link" href="/talks/2020-01-facile-it-code-review/">
+                Code reviews -  How-to, do &amp; dont&#39;s
+                <br>
+                <small>January 10 @ Facile.it IT meeting (internal)</small>
+            </a></li>
+            <li class="widget__item"><a class="widget__link" href="/talks/2019-symfonycon-event-sourcing/">
+                Adding Event Sourcing to an existing PHP project (for the right reasons)
+                <br>
+                <small>November 21 @ SymfonyCon Amsterdam 2019</small>
+            </a></li>
+            <li class="widget__item"><a class="widget__link" href="/talks/2019-codemotion-symfony-loves-k8s/">
+                Symfony ❤︎ Kubernetes: dynamic feature-review environments
+                <br>
+                <small>October 24 @ Codemotion Milan 2019</small>
+            </a></li>
+            <li class="widget__item"><a class="widget__link" href="/talks/2019-sfday-symfony-loves-k8s/">
+                Symfony ❤︎ Kubernetes: dynamic feature-review environments
+                <br>
+                <small>October 18 @ SFDay</small>
+            </a></li>
+            <li class="widget__item"><a class="widget__link" href="/talks/2019-pugmi-k8s-loves-php/">
+                Kubernetes ❤ PHP
+                <br>
+                <small>May 15 @ PUG MI</small>
+            </a></li>
+        </ul>
+    </div>
 </div>
+
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment" title="Continuous deployment">Continuous deployment</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration" title="Continuous integration">Continuous integration</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/database" title="Database">Database</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/docker" title="Docker">Docker</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine" title="Doctrine">Doctrine</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab" title="Gitlab">Gitlab</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes" title="Kubernetes">Kubernetes</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/mysql" title="Mysql">Mysql</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/oop" title="Oop">Oop</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/open-source" title="Open source">Open source</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit" title="Paraunit">Paraunit</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/php" title="Php">Php</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions" title="Pretty package versions">Pretty package versions</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing" title="Software testing">Software testing</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/symfony" title="Symfony">Symfony</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/tdd" title="Tdd">Tdd</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment/" title="Continuous deployment">Continuous deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration/" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine/" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab/" title="GitLab">GitLab</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes/" title="Kubernetes">Kubernetes</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/oop/" title="OOP">OOP</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/open-source/" title="Open Source">Open Source</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/paraunit/" title="Paraunit">Paraunit</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/php/" title="PHP">PHP</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/pretty-package-versions/" title="Pretty Package Versions">Pretty Package Versions</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/software-testing/" title="Software Testing">Software Testing</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/symfony/" title="Symfony">Symfony</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/tdd/" title="TDD">TDD</a>
 	</div>
 </div>
 <div class="widget-social widget">
@@ -349,28 +322,30 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 	<div class="widget-social__content widget__content">
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="Twitter" rel="noopener noreferrer" href="https://twitter.com/AlessandroLai" target="_blank">
-				<svg class="widget-social__link-icon icon-twitter" viewBox="0 0 384 312" width="24" height="24" fill="#fff"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
+				<svg class="widget-social__link-icon icon icon-twitter" width="24" height="24" viewBox="0 0 384 312"><path d="m384 36.9c-14.1 6.3-29.3 10.5-45.2 12.4 16.3-9.7 28.8-25.2 34.6-43.6-15.2 9-32.1 15.6-50 19.1-14.4-15.2-34.9-24.8-57.5-24.8-43.5 0-78.8 35.3-78.8 78.8 0 6.2.7 12.2 2 17.9-65.5-3.3-123.5-34.6-162.4-82.3-6.7 11.6-10.6 25.2-10.6 39.6 0 27.3 13.9 51.4 35 65.6-12.9-.4-25.1-4-35.7-9.9v1c0 38.2 27.2 70 63.2 77.2-6.6 1.8-13.6 2.8-20.8 2.8-5.1 0-10-.5-14.8-1.4 10 31.3 39.1 54.1 73.6 54.7-27 21.1-60.9 33.7-97.8 33.7-6.4 0-12.6-.4-18.8-1.1 34.9 22.4 76.3 35.4 120.8 35.4 144.9 0 224.1-120 224.1-224.1 0-3.4-.1-6.8-.2-10.2 15.4-11.1 28.7-25 39.3-40.8z"/></svg>
 				<span>Twitter</span>
 			</a>
 		</div>
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="LinkedIn" rel="noopener noreferrer" href="https://linkedin.com/in/alessandro-lai-09440922" target="_blank">
-				<svg class="widget-social__link-icon icon-linkedin" viewBox="0 0 352 352" width="24" height="24" fill="#fff"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
+				<svg class="widget-social__link-icon icon icon-linkedin" width="24" height="24" viewBox="0 0 352 352"><path d="M0,40v272c0,21.9,18.1,40,40,40h272c21.9,0,40-18.1,40-40V40c0-21.9-18.1-40-40-40H40C18.1,0,0,18.1,0,40z M312,32 c4.6,0,8,3.4,8,8v272c0,4.6-3.4,8-8,8H40c-4.6,0-8-3.4-8-8V40c0-4.6,3.4-8,8-8H312z M59.5,87c0,15.2,12.3,27.5,27.5,27.5 c15.2,0,27.5-12.3,27.5-27.5c0-15.2-12.3-27.5-27.5-27.5C71.8,59.5,59.5,71.8,59.5,87z M187,157h-1v-21h-45v152h47v-75 c0-19.8,3.9-39,28.5-39c24.2,0,24.5,22.4,24.5,40v74h47v-83.5c0-40.9-8.7-72-56.5-72C208.5,132.5,193.3,145.1,187,157z M64,288h47.5 V136H64V288z"/></svg>
 				<span>LinkedIn</span>
 			</a>
 		</div>
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="GitHub" rel="noopener noreferrer" href="https://github.com/Jean85" target="_blank">
-				<svg class="widget-social__link-icon icon-github" viewBox="0 0 384 374" width="24" height="24" fill="#fff"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
+				<svg class="widget-social__link-icon icon icon-github" width="24" height="24" viewBox="0 0 384 374"><path d="m192 0c-106.1 0-192 85.8-192 191.7 0 84.7 55 156.6 131.3 181.9 9.6 1.8 13.1-4.2 13.1-9.2 0-4.6-.2-16.6-.3-32.6-53.4 11.6-64.7-25.7-64.7-25.7-8.7-22.1-21.3-28-21.3-28-17.4-11.9 1.3-11.6 1.3-11.6 19.3 1.4 29.4 19.8 29.4 19.8 17.1 29.3 44.9 20.8 55.9 15.9 1.7-12.4 6.7-20.8 12.2-25.6-42.6-4.8-87.5-21.3-87.5-94.8 0-20.9 7.5-38 19.8-51.4-2-4.9-8.6-24.3 1.9-50.7 0 0 16.1-5.2 52.8 19.7 15.3-4.2 31.7-6.4 48.1-6.5 16.3.1 32.7 2.2 48.1 6.5 36.7-24.8 52.8-19.7 52.8-19.7 10.5 26.4 3.9 45.9 1.9 50.7 12.3 13.4 19.7 30.5 19.7 51.4 0 73.7-44.9 89.9-87.7 94.6 6.9 5.9 13 17.6 13 35.5 0 25.6-.2 46.3-.2 52.6 0 5.1 3.5 11.1 13.2 9.2 76.2-25.5 131.2-97.3 131.2-182 0-105.9-86-191.7-192-191.7z"/></svg>
 				<span>GitHub</span>
 			</a>
 		</div>
 		<div class="widget-social__item widget__item">
 			<a class="widget-social__link widget__link btn" title="GitLab" rel="noopener noreferrer" href="https://gitlab.com/Alessandro.Lai" target="_blank">
-				<svg class="widget-social__link-icon icon-gitlab" viewBox="0 0 265 265" width="24" height="24" fill="#fff"><path d="M128.075 236.075l47.104-144.97H80.97l47.104 144.97z M14.956 91.104L.642 135.16a9.752 9.752 0 0 0 3.542 10.903l123.891 90.012-113.12-144.97z M14.956 91.105H80.97L52.601 3.79c-1.46-4.493-7.816-4.492-9.275 0l-28.37 87.315z M241.194 91.104l14.314 44.056a9.752 9.752 0 0 1-3.543 10.903l-123.89 90.012 113.119-144.97z M241.194 91.105h-66.015l28.37-87.315c1.46-4.493 7.816-4.492 9.275 0l28.37 87.315z"/></svg>
+				<svg class="widget-social__link-icon icon icon-gitlab" width="24" height="24" viewBox="0 0 265 265"><path d="M128.075 236.075l47.104-144.97H80.97l47.104 144.97z M14.956 91.104L.642 135.16a9.752 9.752 0 0 0 3.542 10.903l123.891 90.012-113.12-144.97z M14.956 91.105H80.97L52.601 3.79c-1.46-4.493-7.816-4.492-9.275 0l-28.37 87.315z M241.194 91.104l14.314 44.056a9.752 9.752 0 0 1-3.543 10.903l-123.89 90.012 113.119-144.97z M241.194 91.105h-66.015l28.37-87.315c1.46-4.493 7.816-4.492 9.275 0l28.37 87.315z"/></svg>
 				<span>GitLab</span>
 			</a>
 		</div>
+
+		
 	</div>
 </div>
 </aside>
@@ -385,5 +360,6 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 	</div>
 </footer>
 	</div>
-<script async defer src="/js/menu.js"></script></body>
+<script async defer src="/js/menu.js"></script>
+</body>
 </html>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Talks on Alessandro Lai</title>
+    <link>https://alessandrolai.dev/categories/talks/</link>
+    <description>Recent content in Talks on Alessandro Lai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Code reviews -  How-to, do &amp; dont&#39;s</title>
+      <link>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</link>
+      <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony ❤︎ Kubernetes: dynamic feature-review environments</title>
+      <link>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony ❤︎ Kubernetes: dynamic feature-review environments</title>
+      <link>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</link>
+      <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</link>
+      <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Kubernetes ❤ PHP</title>
+      <link>https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/</link>
+      <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</link>
+      <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
+      <link>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</link>
+      <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</link>
+      <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
+      <link>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bug hunting with Git Bisect</title>
+      <link>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</link>
+      <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>A (small) Hexagonal architecture inside a Symfony application</title>
+      <link>https://alessandrolai.dev/talks/2016-facile-it-small-hexagonal-architecture-symfony/</link>
+      <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2016-facile-it-small-hexagonal-architecture-symfony/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</link>
+      <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

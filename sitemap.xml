@@ -1,437 +1,419 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/1.1.0/</loc>
+    <loc>https://alessandrolai.dev/</loc>
     <lastmod>2020-04-03T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/1.0.1/</loc>
+    <loc>https://alessandrolai.dev/categories/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/open-source/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/paraunit/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.1.0/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/categories/releases/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.0.1/</loc>
     <lastmod>2020-03-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/1.0.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.0.0/</loc>
     <lastmod>2020-03-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/1.0.0-beta2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.0.0-beta2/</loc>
     <lastmod>2020-02-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2020-01-facile-it-code-review/</loc>
+    <loc>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2019-symfonycon-event-sourcing/</loc>
+    <loc>https://alessandrolai.dev/categories/talks/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/</loc>
+    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</loc>
     <lastmod>2019-11-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2019-codemotion-symfony-loves-k8s/</loc>
+    <loc>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</loc>
     <lastmod>2019-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2019-sfday-symfony-loves-k8s/</loc>
+    <loc>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</loc>
     <lastmod>2019-10-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2019-pugmi-k8s-loves-php/</loc>
+    <loc>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/1.0.0-beta1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.0.0-beta1/</loc>
     <lastmod>2019-04-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2019-cloudconf-k8s-loves-php/</loc>
+    <loc>https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/</loc>
     <lastmod>2019-03-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2018-symfonyday-event-sourcing/</loc>
+    <loc>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2018-symfonyday-symfony-docker/</loc>
+    <loc>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</loc>
     <lastmod>2018-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2018-pugmi-symfony-docker/</loc>
+    <loc>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</loc>
     <lastmod>2018-09-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.2.0/</loc>
+    <loc>https://alessandrolai.dev/tags/pretty-package-versions/</loc>
     <lastmod>2018-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.12.3/</loc>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.2.0/</loc>
+    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.12.3/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.12.2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.12.2/</loc>
     <lastmod>2018-05-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2018-phpday-event-sourcing/</loc>
+    <loc>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</loc>
     <lastmod>2018-05-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.12.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.12.1/</loc>
     <lastmod>2018-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.12.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.12.0/</loc>
     <lastmod>2018-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</loc>
+    <loc>https://alessandrolai.dev/tags/continuous-deployment/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.1.0/</loc>
+    <loc>https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/continuous-integration/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/docker/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/gitlab/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/kubernetes/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/posts/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/categories/republished/</loc>
+    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.1.0/</loc>
     <lastmod>2018-01-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2018-pugmi-event-sourcing/</loc>
+    <loc>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</loc>
     <lastmod>2018-01-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.11.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.11.0/</loc>
     <lastmod>2017-12-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.3/</loc>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.0.3/</loc>
     <lastmod>2017-11-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.10.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.10.1/</loc>
     <lastmod>2017-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/posts/phpunit-upgrade-namespace/</loc>
+    <loc>https://alessandrolai.dev/posts/phpunit-upgrade-namespace/</loc>
     <lastmod>2017-09-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.10.0/</loc>
+    <loc>https://alessandrolai.dev/tags/php/</loc>
+    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/software-testing/</loc>
+    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.10.0/</loc>
     <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.2/</loc>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.0.2/</loc>
     <lastmod>2017-09-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.1/</loc>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.0.1/</loc>
     <lastmod>2017-07-06T00:01:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.9.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.9.1/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.9.2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.9.2/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/pretty-package-versions/1.0.0/</loc>
+    <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.0.0/</loc>
     <lastmod>2017-07-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.9.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.9.0/</loc>
     <lastmod>2017-07-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/posts/visual-debt-typehints/</loc>
+    <loc>https://alessandrolai.dev/tags/oop/</loc>
     <lastmod>2017-05-31T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.8.2/</loc>
+    <loc>https://alessandrolai.dev/posts/visual-debt-typehints/</loc>
+    <lastmod>2017-05-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.8.2/</loc>
     <lastmod>2017-01-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.8.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.8.1/</loc>
     <lastmod>2017-01-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.8.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.8.0/</loc>
     <lastmod>2017-01-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.7.4/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.7.4/</loc>
     <lastmod>2017-01-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.7.3/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.7.3/</loc>
     <lastmod>2016-12-30T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.7.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.7.1/</loc>
     <lastmod>2016-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.7.2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.7.2/</loc>
     <lastmod>2016-12-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.7.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.7.0/</loc>
     <lastmod>2016-12-12T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.6.2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.6.2/</loc>
     <lastmod>2016-10-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2016-nomadphp-bug-hunting-git-bisect/</loc>
+    <loc>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</loc>
     <lastmod>2016-08-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.6.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.6.1/</loc>
     <lastmod>2016-06-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/posts/how-php-7-tdd-helped-me-sleep-better/</loc>
+    <loc>https://alessandrolai.dev/posts/how-php-7-tdd-helped-me-sleep-better/</loc>
     <lastmod>2016-06-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.6.0/</loc>
+    <loc>https://alessandrolai.dev/tags/tdd/</loc>
+    <lastmod>2016-06-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.6.0/</loc>
     <lastmod>2016-03-20T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2016-facile-it-small-hexagonal-architecture-symfony/</loc>
+    <loc>https://alessandrolai.dev/talks/2016-facile-it-small-hexagonal-architecture-symfony/</loc>
     <lastmod>2016-03-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.5.0/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.5.0/</loc>
     <lastmod>2015-12-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.4.4/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.4.4/</loc>
     <lastmod>2015-11-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.4.3/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.4.3/</loc>
     <lastmod>2015-11-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.4.2/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.4.2/</loc>
     <lastmod>2015-10-19T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2015-symfonyday-paraunit/</loc>
+    <loc>https://alessandrolai.dev/tags/database/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/posts/paraunit/</loc>
+    <loc>https://alessandrolai.dev/tags/doctrine/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/talks/2015-pugmi-paraunit/</loc>
+    <loc>https://alessandrolai.dev/tags/mysql/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/posts/paraunit/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/symfony/</loc>
+    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</loc>
     <lastmod>2015-09-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/releases/paraunit/0.4.1/</loc>
+    <loc>https://alessandrolai.dev/releases/paraunit/0.4.1/</loc>
     <lastmod>2015-09-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://jean85.github.io/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/continuous-deployment/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/continuous-integration/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/database/</loc>
-    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/docker/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/doctrine/</loc>
-    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/gitlab/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/kubernetes/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/mysql/</loc>
-    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/oop/</loc>
-    <lastmod>2017-05-31T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/open-source/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/paraunit/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/php/</loc>
-    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/posts/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/pretty-package-versions/</loc>
-    <lastmod>2018-06-13T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/releases/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/categories/releases/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/categories/republished/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/software-testing/</loc>
-    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/symfony/</loc>
-    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/talks/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/tags/tdd/</loc>
-    <lastmod>2016-06-07T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://jean85.github.io/who-am-i/</loc>
+    <loc>https://alessandrolai.dev/who-am-i/</loc>
   </url>
   
 </urlset>
