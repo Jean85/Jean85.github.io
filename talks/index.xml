@@ -6,10 +6,19 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alessandrolai.dev/talks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes for PHP developers</title>
+      <link>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Code reviews -  How-to, do &amp; dont&#39;s</title>

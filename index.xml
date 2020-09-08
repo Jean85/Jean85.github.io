@@ -6,10 +6,19 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 08 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kubernetes for PHP developers</title>
+      <link>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</link>
+      <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Paraunit 1.1.0: PHPUnit 9.1 and internal refactor</title>

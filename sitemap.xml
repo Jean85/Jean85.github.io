@@ -4,12 +4,27 @@
   
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2020-04-03T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</loc>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/categories/talks/</loc>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/talks/</loc>
+    <lastmod>2020-09-08T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -59,16 +74,6 @@
   
   <url>
     <loc>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/categories/talks/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/talks/</loc>
     <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
