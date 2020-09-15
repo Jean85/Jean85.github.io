@@ -6,10 +6,28 @@
     <description>Recent content in Paraunit on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paraunit 1.2.0: PHP 8 &amp; PHPUnit 9.3 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/1.2.0/</link>
+      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/1.2.0/</guid>
+      <description>&lt;p&gt;This release contains only support for newer versions of PHP &amp;amp; PHPUnit; due to PHPUnit 9.3 requiring a new major version of &lt;code&gt;phpunit/php-code-coverage&lt;/code&gt;, I&amp;rsquo;m forced to drop support to all PHPUnit versions below 9.3. Usage of Paraunit is unchanged.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paraunit 1.1.1: PostgreSQL retry support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/1.1.1/</link>
+      <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/1.1.1/</guid>
+      <description>&lt;p&gt;This small path adds detection for deadlocks during test execution when using PostgreSQL, thanks to an external contributor.&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Paraunit 1.1.0: PHPUnit 9.1 and internal refactor</title>
