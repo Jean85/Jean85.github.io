@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>My Symfony functional testing toolbox - Alessandro Lai - SFDay 2020</title>
+    <meta name="description" content="My Symfony functional testing toolbox">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="css/fixes.css">
+    <link rel="stylesheet" href="lib/css/highlight-js/monokai-sublime.css">
+    <!-- FontAwesome -->
+    <script defer src="lib/font/fontawesome-free-5.11.2-web/js/all.js"></script>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <img id="logo-engineering" src="img/logo_engineering.png"
+         style="height: 12%; position: absolute; bottom: 10px; left: 10px;">
+    <div class="slides">
+        <section id="title">
+            <h1>My Symfony functional testing toolbox</h1>
+            <p>
+                <a href="https://alessandrolai.dev/">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a><br>
+            </p>
+            <small>
+                <p>
+                    <a href="https://2020.sfday.it/talks.html#alessandro-lai">SFDay 2020</a> - November 20th 2020,
+                    online
+                </p>
+                <p class="smaller">
+                    <a href="https://joind.in/talk/19e53">https://joind.in/talk/19e53</a>
+                </p>
+            </small>
+        </section>
+
+        <section id="intro">
+            <section>
+                <h3>Who am I?</h3>
+                <img src="img/github_avatar.jpg" class="avatar stretch">
+                <div style="float: right">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            Lead developer @ <img src="img/logo_engineering_full.png"
+                                                style="background: none; height: 1.6em; box-shadow: none; vertical-align: middle; margin-bottom: 0; margin-top: -0.8em">
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-users"></i></span>
+                            PHP UG Milan Coordinator
+                        </li>
+                        <li>
+                            <span class="fa-li fa-layers">
+                                <i class="fas fa-certificate"></i>
+                                <i class="fas fa-inverse fa-check" data-fa-transform="shrink-8"></i>
+                            </span>
+                            PHP-FIG Secretary
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <a href="https://alessandrolai.dev/talks/2015-symfonyday-paraunit/">
+                    <img src="img/sfday_2015.jpg" class="stretch" alt="Alessandro @ SFDay 2015" />
+                    <small>SFDay 2015 - Reggio Emilia</small>
+                </a>
+            </section>
+            <section>
+                <h3>Slow test suites</h3>
+                <p>If a build / test suite takes more than 10 minutes to run, it's worthless.</p>
+            </section>
+            <section>
+                <a href="https://alessandrolai.dev/slides/2015-09-paraunit-pugmi/#/comparazione-prestazioni">
+                    <img src="img/paraunit-slide.png" height="80%" alt="Paraunit performace slide @ SFDay 2015" />
+                </a>
+            </section>
+            <section>
+                <h3>The testing pyramid</h3>
+                <div class="pyramid fragment" style="width: 30%">E2E</div>
+                <div class="pyramid fragment" style="width: 60%">Functional tests</div>
+                <div class="pyramid fragment" style="width: 90%">Unit tests</div>
+            </section>
+            <section>
+                <h3>...and what was going wrong</h3>
+                <div class="pyramid" style="font-size: smaller; background-color: rgba(120, 120, 120, 0.2); color: rgba(200, 200, 200, 0.8); text-decoration: line-through; width: 20%">E2E</div>
+                <div class="pyramid" style="width: 90%">Functional tests</div>
+                <div class="pyramid" style="font-size: smaller; width: 20%">Unit tests</div>
+            </section>
+            <section>
+                <h3>My pyramid foundation</h3>
+                <div class="pyramid" style="width: 40%">Functional tests</div>
+                <div class="pyramid" style="width: 60%">Unit tests</div>
+                <div class="pyramid fragment" style="width: 90%">Static code analysis</div>
+            </section>
+            <section>
+                <h3>Static code analysis</h3>
+                <table class="stretch">
+                    <tr>
+                        <td width="50%" style="text-align: center">
+                            <a href="https://phpstan.org">
+                                <img src="img/phpstan.png" alt="The PHPStan website">
+                                https://phpstan.org
+                            </a>
+                        </td>
+                        <td width="50%" style="text-align: center">
+                            <a href="https://psalm.dev">
+                                <img src="img/psalm.png" alt="The Psalm website">
+                                https://psalm.dev
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Speed up your tests</h2>
+            </section>
+            <section>
+                <h3>Parallelization & isolation</h3>
+                <p>When you ran multiple tests on the same DB at the same time, you run intro troubles...</p>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/facile-it/paraunit-testcase">
+                            <code>facile-it/paraunit-testcase</code>
+                        </a>
+                        <small class="fragment" style="vertical-align: middle">(deprecated)</small>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/dmaicher/doctrine-test-bundle">
+                            <code>dama/doctrine-test-bundle</code>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Kernel caching</h3>
+                <p><code>facile-it/paraunit-testcase</code> was built on top of something else...</p>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/liip/LiipFunctionalTestBundle/">
+                            <code>liip/functional-test-bundle</code>
+                        </a>
+                        <small class="fragment" style="vertical-align: middle">(forked)</small>
+                        <pre><code>class MyTest extends WebTestCase
+{
+    public function test(): void
+    {
+        $this->getContainer()->get('...');
+    }
+}</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/facile-it/symfony-functional-testcase">
+                            <code>facile-it/symfony-functional-testcase</code>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Good fixtures hygiene</h2>
+            </section>
+            <section>
+                <h3>DB vendor is part of your system</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-database"></i></span>
+                        It's not worth it to change DB vendor only for tests
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Validation of entities</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check-double"></i></span>
+                        I used strong validation before persistence
+                        <br>in multiple projects
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        Strict validation ensures that data is good
+                        <br>once it reaches the DB 
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Good fixtures lead to good tests</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-users-cog"></i></span>
+                        Fixtures should resemble real data<br>
+                        <small>AKA don't put invalid data in your entities</small>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-tools"></i></span>
+                        Build <code>*FixtureBuilder</code> utility classes to create fixtures in known valid states
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-dice"></i></span>
+                        Randomized fixtures are good<br>
+                        <small>(use Faker or similar libraries)</small>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Fixture belong outside of <code>src/</code></h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-toolbox"></i></span>
+                        Fixtures are testing tools, not production code
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fab fa-github"></i></span>
+                        <a href="https://github.com/maglnet/ComposerRequireChecker"><code>maglnet/composer-require-checker</code></a>
+                        <br>will report them as failures 
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Using the tools</h2>
+            </section>
+            <section>
+                <h3>No reload, no cleanup required</h3>
+                <pre><code>public function testDeleteFoo(): void
+{
+    // ...
+    $client->request('DELETE', '/api/foo/123');
+
+    $this->assertNull($fooRepo->find(123));
+    // no cleanup or fixture reload required!
+}
+
+public function testPutFoo(): void
+{
+    // ...
+    $client->request('PUT', '/api/foo/132', $payload);
+    // ...
+}
+                </code></pre>
+            </section>
+            <section>
+                <h3>Getting services from the container</h3>
+                <pre><code>/**
+ * @template T of object
+ * @param class-string&lt;T&gt; $serviceId
+ *
+ * @return T
+ */
+protected function getService(string $serviceId): object
+{
+    $service = $this->getContainer()->get($serviceId);
+    $this->assertInstanceOf($serviceId, $service);
+
+    return $service;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Testing a service directly</h3>
+                <pre><code>public function testFindLatestReturnsOnlyOneResult(): void
+{
+    $repository = $this->getService(FooRepository::class);
+
+    $result = $repository->findLatest();
+
+    $this->assertCount(1, $result);
+    $this->assertContainsOnlyInstancesOf(Foo::class, $result);
+}</code></pre>
+            </section>
+            <section>
+                <h3>Testing entity validation (1/2)</h3>
+                <pre class="stretch"><code class="fragment ">protected function assertIsValid(object $entity): void
+{
+    $validator = $this->getContainer()->get('validator');
+    $result = $validator->validate($entity);
+
+    $this->assertCount(0, $result, 'Validation failed: ' . $result);
+}
+                    
+protected function assertValidationFailsAtPath(string $path, object $entity): void
+{
+    $violationList = $this->getContainer()->get('validator')->validate($entity);
+    foreach ($violationList as $violation) {
+        if ($violation->getPropertyPath() === $path) {
+            $this->increaseAssertionCount();
+    
+            return;
+        }
+    }
+    $this->fail('No violation found at path ' . $path);
+}</code></pre>
+            </section>
+            <section>
+                <h3>Testing entity validation (2/2)</h3>
+                <pre class="stretch"><code>public function testNewFooIsValid(): void
+{
+    $this->assertIsValid(new Foo('baz'));
+}
+                    
+/** @dataProvider invalidDataProvider */
+public function testFooIsInvalid(Foo $foo, string $errorPath): void
+{
+    $this->assertValidationFailsAtPath($errorPath, $foo);
+}
+                    
+public function testFooIsInvalidWithWrongBar(): void
+{
+    $foo = new Foo();
+    $this->assertIsValid($foo);
+
+    $foo->setBar('invalid');
+
+    $this->assertValidationFailsAtPath('bar', $foo);
+}</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Pitfalls</h2>
+            </section>
+            <section>
+                <h3>Doctrine Test Bundle limitations</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-house-damage"></i></span>
+                        Commands with implicit commits break it (<code>TRUNCATE</code> or any schema change)
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-ghost"></i></span>
+                        No logs nor after-test DB inspections<br>
+                        <small>(but invalid queries still crash)</small>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-frown-open"></i></span>
+                        Last resort: force transaction commit <br>
+                        <pre><code class="php">\DAMA\DoctrineTestBundle\Doctrine\DBAL\StaticDriver::commit()</code></pre>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-lock"></i></span>
+                        Tests can fail due to concurrency & DB locks<br>
+                        <small>(but Paraunit retries those)</small>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Data providers are a strange place...</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-hourglass-start"></i></span>
+                        PHPUnit's data providers are executed ahead of time
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-house-damage"></i></span>
+                        Do not interact with the entity manager there
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>All containers are not the same...</h3>
+                <pre><code>public function test(): void
+{
+    $client = self::createClient();
+                    
+    $this->assertNotSame(
+        $this->getContainer(), 
+        $client->getContainer(),
+        "Those are not the services you're looking for..."
+    );
+}</code></pre>
+            </section>
+            <section>
+                <h3>...so you may want the right one</h3>
+                <pre class="stretch"><code>protected function getService(
+    string $serviceId,
+    KernelBrowser $client = null
+): object 
+{
+    return $this->getContainer($client)->get($serviceId);
+}
+
+protected function getContainer(KernelBrowser $client = null): ContainerInterface
+{
+    if ($client) {
+        $clientContainer = $client->getContainer();
+
+        return $clientContainer->get('test.service_container');
+    }
+
+    return parent::getContainer();
+}</code></pre>
+            </section>
+        </section>
+        <section id="ending">
+            <section>
+                <h2>Thanks!</h2>
+                <p>
+                    Please rate my talk on Joind.in:
+                </p>
+                <img class="stretch" src="img/joindin-qr.png" alt="Joind.in link: https://joind.in/talk/19e53">
+                <p>
+                    <a href="https://joind.in/talk/19e53">https://joind.in/talk/19e53</a>
+                </p>
+            </section>
+            <section>
+                <h3>Contacts</h3>
+                <div style="font-size: smaller">
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-globe"></i></span>
+                            <a href="https://alessandrolai.dev">https://alessandrolai.dev</a>
+                            <small style="vertical-align: middle">(slides & prev talks here!)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a href="mailto:alessandro.lai85@gmail.com">alessandro.lai85@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>
+                            <small style="vertical-align: middle">(we are hiring!)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                    </ul>
+                </div>
+                <div style="margin-top: 1em;">
+                    <h2 class="fragment">Questions?</h2>                 
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true,
+        keyboard: {
+            38: 'prev', // go to the prev slide/fragment when the UP key is pressed
+            40: 'next', // go to the next slide/fragment when the DOWN key is pressed
+        },
+        dependencies: [
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/highlight/highlight.js', async: true}
+        ]
+    });
+</script>
+</body>
+</html>
