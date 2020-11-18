@@ -105,6 +105,11 @@
                 <div class="pyramid fragment" style="width: 30%">E2E</div>
                 <div class="pyramid fragment" style="width: 60%">Functional tests</div>
                 <div class="pyramid fragment" style="width: 90%">Unit tests</div>
+                <small>
+                    <a href="https://martinfowler.com/articles/practical-test-pyramid.html">
+                        https://martinfowler.com/articles/practical-test-pyramid.html
+                    </a>
+                </small>
             </section>
             <section>
                 <h3>...and what was going wrong</h3>
@@ -231,7 +236,11 @@
                     <li class="fragment">
                         <span class="fa-li"><i class="fas fa-dice"></i></span>
                         Randomized fixtures are good<br>
-                        <small>(use Faker or similar libraries)</small>
+                        <small>
+                            (use Faker or something else, since
+                            <a href="https://marmelab.com/blog/2020/10/21/sunsetting-faker.html">
+                                it got retired...</a>)
+                        </small>
                     </li>
                 </ul>
             </section>
@@ -268,7 +277,7 @@
 public function testPutFoo(): void
 {
     // ...
-    $client->request('PUT', '/api/foo/132', $payload);
+    $client->request('PUT', '/api/foo/123', $payload);
     // ...
 }
                 </code></pre>
@@ -288,6 +297,11 @@ protected function getService(string $serviceId): object
 
     return $service;
 }</code></pre>
+                <small>
+                    <a class="fragment" href="https://blog.jetbrains.com/phpstorm/2020/07/phpstan-and-psalm-support-coming-to-phpstorm/">
+                        PHPStan and Psalm Support Coming to PhpStorm Soon - JetBrains' Blog
+                    </a>
+                </small>
             </section>
             <section>
                 <h3>Testing a service directly</h3>
