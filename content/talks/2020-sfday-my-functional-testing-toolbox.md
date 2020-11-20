@@ -6,6 +6,6 @@ conferenceUrl: https://2020.sfday.it/talks.html#alessandro-lai
 location: Online
 slides: 2020-11-symfony-functional-testing-toolbox
 language: en
-joindin: 19e53
+joindin: '19e53'
 categories: ["Talks"]
 ---
