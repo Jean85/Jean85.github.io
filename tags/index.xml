@@ -6,7 +6,7 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>Open Source</title>
       <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/tags/open-source/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pretty Package Versions</title>
+      <link>https://alessandrolai.dev/tags/pretty-package-versions/</link>
+      <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/tags/pretty-package-versions/</guid>
       <description></description>
     </item>
     
@@ -26,15 +35,6 @@
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/tags/paraunit/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Pretty Package Versions</title>
-      <link>https://alessandrolai.dev/tags/pretty-package-versions/</link>
-      <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alessandrolai.dev/tags/pretty-package-versions/</guid>
       <description></description>
     </item>
     
