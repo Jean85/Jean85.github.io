@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://alessandrolai.dev/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-<meta property="og:updated_time" content="2021-01-14T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-01-20T00:00:00+00:00" />
 
 	<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
@@ -92,6 +92,25 @@
 	<article class="list__item post">
 	<header class="list__header">
 		<h3 class="list__title post__title ">
+			<a href="/releases/paraunit/0.8.1/" rel="bookmark">
+			Paraunit 0.8.1: fixed regression with Symfony
+			</a>
+		</h3>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-01-25T00:00:00Z">January 25, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.8.2">Paraunit 0.8.1</a> has been released to fix a small regression that happens when running functional tests in a Symfony project.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/paraunit/0.8.1/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h3 class="list__title post__title ">
 			<a href="/releases/paraunit/0.8.0/" rel="bookmark">
 			Paraunit 0.8: PHAR continuous delivery
 			</a>
@@ -166,25 +185,6 @@ With this release I added the continuous integration: at each Git tag, the Travi
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/paraunit/0.7.1/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h3 class="list__title post__title ">
-			<a href="/releases/paraunit/0.7.2/" rel="bookmark">
-			Paraunit 0.7.2: coverage in text format
-			</a>
-		</h3>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2016-12-28T00:00:00Z">December 28, 2016</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.7.2">Paraunit 0.7.2</a> has just been released with a minor fix: colored output has been disabled from text coverage output to console, since it may cause incompatibilities. I will think of a way to re-enable it if possible in later releases.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.7.2/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -208,11 +208,11 @@ With this release I added the continuous integration: at each Git tag, the Travi
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/talks/2021-pugmi-my-functional-testing-toolbox/">My Symfony functional testing toolbox</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.0/">Pretty Package Versions 2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/talks/2020-sfday-my-functional-testing-toolbox/">My Symfony functional testing toolbox</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.2.0/">Paraunit 1.2.0: PHP 8 &amp; PHPUnit 9.3 support</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/1.5.1/">Pretty Package Versions 1.5.1</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2020-phpday-k8s-for-php-developers/">Kubernetes for PHP developers</a></li>
 		</ul>
 	</div>
 </div>
@@ -220,6 +220,11 @@ With this release I added the continuous integration: at each Git tag, the Travi
     <h4 class="widget__title">Recent Talks</h4>
     <div class="widget__content">
         <ul class="widget__list">
+            <li class="widget__item"><a class="widget__link" href="/talks/2021-pugmi-my-functional-testing-toolbox/">
+                My Symfony functional testing toolbox
+                <br>
+                <small>January 20 @ PUG Milano</small>
+            </a></li>
             <li class="widget__item"><a class="widget__link" href="/talks/2020-sfday-my-functional-testing-toolbox/">
                 My Symfony functional testing toolbox
                 <br>
@@ -239,11 +244,6 @@ With this release I added the continuous integration: at each Git tag, the Travi
                 Adding Event Sourcing to an existing PHP project (for the right reasons)
                 <br>
                 <small>November 21 @ SymfonyCon Amsterdam 2019</small>
-            </a></li>
-            <li class="widget__item"><a class="widget__link" href="/talks/2019-codemotion-symfony-loves-k8s/">
-                Symfony ❤︎ Kubernetes: dynamic feature-review environments
-                <br>
-                <small>October 24 @ Codemotion Milan 2019</small>
             </a></li>
         </ul>
     </div>

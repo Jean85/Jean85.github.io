@@ -6,10 +6,19 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alessandrolai.dev/talks/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>My Symfony functional testing toolbox</title>
+      <link>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</link>
+      <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>My Symfony functional testing toolbox</title>
