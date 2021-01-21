@@ -23,14 +23,6 @@
 {{ end }}
 
 <p>
-    <a target="_blank" href="/slides/{{ .Params.slides }}/">
-        {{ with .Params.language }}
-        <img src="/images/{{ . }}.svg.webp" alt="Language: {{ . }}" style="vertical-align: middle" />
-        {{ end }}
-        Slides available
-    </a>
-
-    <br />
     Talk presented at
     {{ with .Params.conferenceUrl }}
     <a href="{{ . }}" target="_blank">
@@ -38,12 +30,18 @@
         {{ .Params.conference }} ({{ .Params.location }})
         {{ with .Params.conferenceUrl }}
     </a>
+    <br />
     {{ end }}
+
+    <a target="_blank" href="/slides/{{ .Params.slides }}/">
+        {{ with .Params.language }}
+        <img src="/images/{{ . }}.svg.webp" alt="Language: {{ . }}" style="vertical-align: middle" />
+        {{ end }}
+        Slides available
+    </a>
 
     {{ with .Params.joindin }}
     <br />
     See talk comments on <a href="https://joind.in/talk/{{ . }}" target="_blank">Joind.in</a>.
     {{ end }}
-
-    {{ .Summary }}
 </p>
