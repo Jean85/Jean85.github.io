@@ -13,7 +13,7 @@
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</guid>
-      <description>&lt;p&gt;This is the italian version of a talk that I did &lt;a href=&#34;../2020-sfday-my-functional-testing-toolbox&#34;&gt;two months before at SFDay 2020&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;This is the italian version of a talk that I did &lt;a href=&#34;https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/&#34;&gt;two months before at SFDay 2020&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@
       <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/</guid>
-      <description></description>
+      <description>&lt;p&gt;When testing the PHP side of a Symfony application, tests are normally split into unit and functional: the former do not need anything in addition to some proficiency, due to their small size and isolated execution; the latter instead are more complex, slower and sometimes more brittle, because they use more components, and they involve the framework and the libraries used to build the app.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -59,7 +59,8 @@
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</guid>
-      <description></description>
+      <description>&lt;p&gt;Docker has slowly won the hearth of many developers as a good, flexible and reliable tool to build local environments for web apps, but containers in production were still a myth for a long time.&lt;/p&gt;
+&lt;p&gt;Now, with the advent of Kubernetes (k8s), deploying (PHP) applications with containers is the new shiny tool, but the huge amount of new concepts and technologies scares a lot of people away.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -150,7 +151,8 @@
       <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;Watch the video of this talk for free on &lt;a href=&#34;https://symfonycasts.com/screencast/symfonycon2019/adding-event-sourcing-to-an-existing-php-project-for-the-right-reasons&#34;&gt;SymfonyCasts&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo;, have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -159,7 +161,7 @@
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;This is a replica of &lt;a href=&#34;https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/&#34;&gt;the talk&lt;/a&gt; that I did the week before at SFDay 2019, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -168,7 +170,7 @@
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</guid>
-      <description></description>
+      <description>&lt;p&gt;Docker has been a part of our development environments for long as of now. But its usage in production had not followed the same adoption curve, and it&amp;rsquo;s instead rising only in the last years, mainly due to Kubernetes.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -177,7 +179,7 @@
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;This is a replica of &lt;a href=&#34;https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/&#34;&gt;the talk&lt;/a&gt; that I did two months before at CloudConf 2019, followed by a live coding demonstration&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -204,7 +206,8 @@
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</guid>
-      <description></description>
+      <description>&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo; (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;
+&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -213,7 +216,8 @@
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</guid>
-      <description></description>
+      <description>&lt;p&gt;Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.&lt;/p&gt;
+&lt;p&gt;Il passaggio però all&amp;rsquo;ambiente di produzione è stato molto meno &amp;ldquo;&amp;ldquo;virale&amp;rdquo;&amp;rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -222,7 +226,7 @@
       <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;This is a test of &lt;a href=&#34;https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/&#34;&gt;the talk&lt;/a&gt; that I did the next month at SymfonyDay 2018, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -258,7 +262,8 @@
       <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</guid>
-      <description></description>
+      <description>&lt;p&gt;“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;
+&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -304,7 +309,7 @@ After, I decided to start migrating a previous, internal project of mine to the 
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;This is a test of a talk that I did &lt;a href=&#34;https://alessandrolai.dev/talks/2018-phpday-event-sourcing/&#34;&gt;on May at phphday 2018&lt;/a&gt; and also &lt;a href=&#34;https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/&#34;&gt;the next October in italian at SymfonyDay 2018&lt;/a&gt;, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -513,7 +518,8 @@ launched.&lt;/p&gt;</description>
       <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</guid>
-      <description></description>
+      <description>&lt;p&gt;Bugs are introduced in our code almost everyday, one way or another, even if we do our best to avoid it.&lt;/p&gt;
+&lt;p&gt;Often, we need to identify where a bug originated to fix it, but we have to sift through a long history of commits to do that. Git comes to the rescue!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -600,7 +606,8 @@ it working soon and release it in 0.7.&lt;/p&gt;</description>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</guid>
-      <description></description>
+      <description>&lt;p&gt;Ogni sviluppatore vorrebbe lavorare con una suite di test sempre più grande e con una coverage sempre più alta del proprio codice; ma una suite che impiega troppo tempo a completarsi diventa controproducente.&lt;/p&gt;
+&lt;p&gt;La soluzione normalmente proposta è quella di eseguire più test in parallelo, ed esistono già alcuni strumenti che lo permettono.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -619,7 +626,7 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
       <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</guid>
-      <description></description>
+      <description>&lt;p&gt;&lt;em&gt;This is a test of &lt;a href=&#34;https://alessandrolai.dev/talks/2015-symfonyday-paraunit/&#34;&gt;the talk&lt;/a&gt; that I did the next month at SymfonyDay 2015, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

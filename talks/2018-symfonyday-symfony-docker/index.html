@@ -8,7 +8,8 @@
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
 		<meta property="og:title" content="Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.
+Il passaggio però all&rsquo;ambiente di produzione è stato molto meno &ldquo;&ldquo;virale&rdquo;&rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
@@ -16,10 +17,11 @@
 <meta property="article:modified_time" content="2018-10-19T00:00:00+00:00" />
 
 		<meta itemprop="name" content="Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione">
-<meta itemprop="description" content="">
+<meta itemprop="description" content="Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.
+Il passaggio però all&rsquo;ambiente di produzione è stato molto meno &ldquo;&ldquo;virale&rdquo;&rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container.">
 <meta itemprop="datePublished" content="2018-10-19T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2018-10-19T00:00:00+00:00" />
-<meta itemprop="wordCount" content="0">
+<meta itemprop="wordCount" content="144">
 <meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 
@@ -30,7 +32,8 @@
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.
+Il passaggio però all&rsquo;ambiente di produzione è stato molto meno &ldquo;&ldquo;virale&rdquo;&rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -132,8 +135,8 @@
         SymfonyDay 2018 (Verona)
         
     </a>
-    <br />
     
+    <br />
 
     <a target="_blank" href="/slides/2018-10-symfony-docker-symfonyday/">
         
@@ -148,7 +151,9 @@
     
 </p>
 
-			
+			<p>Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.</p>
+<p>Il passaggio però all&rsquo;ambiente di produzione è stato molto meno &ldquo;&ldquo;virale&rdquo;&rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container.</p>
+<p>In questo talk vedremo un flusso di continuous integration &amp; delivery che ho perfezionato nell&rsquo;ultimo anno su diverse applicazioni Symfony: partendo dal comune uso di Docker Compose in locale, ho sfruttato la stessa configurazione nell&rsquo;ambiente di build per amalgamare al meglio le immagini Docker e le configurazioni, sfruttando diversi accorgimenti ed ottimizzazioni per poi arrivare alle immagini pronte per la produzione; infine vedremo un breve accenno di come ho utilizzato queste immagini sul cluster Kubernetes di produzione.</p>
 		</div>
 	</article>
 </main>
