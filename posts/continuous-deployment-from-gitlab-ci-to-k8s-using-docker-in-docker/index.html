@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 	<title>Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker" />
+		<meta property="og:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker" />
 <meta property="og:description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
 After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!" />
 <meta property="og:type" content="article" />
@@ -16,37 +16,52 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <meta property="article:published_time" content="2018-02-06T00:00:00+00:00" />
 <meta property="article:modified_time" content="2018-02-06T00:00:00+00:00" />
 
-	<meta name="twitter:card" content="summary_large_image"/>
+		<meta itemprop="name" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker">
+<meta itemprop="description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
+After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!">
+<meta itemprop="datePublished" content="2018-02-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2018-02-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="3799">
+<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+
+
+
+<meta itemprop="keywords" content="Continuous integration,Continuous deployment,Docker,GitLab,Kubernetes," />
+
+		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker"/>
 <meta name="twitter:description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
 After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!"/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-    <div class="container">
-        <a class="logo flex" href="/" title="Alessandro Lai" rel="home">
-        
-        <div>
-            <img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
-        </div>
-        
-        <div class="logo__text">
-            <div class="logo__title">Alessandro Lai</div>
-            <div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
-        </div>
-        </a>
-        
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Alessandro Lai" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/logo-alessandro-lai.jpg">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Alessandro Lai</div>
+					<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+				</div>
+		</a>
+	</div>
+		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
@@ -83,22 +98,29 @@ After, I decided to start migrating a previous, internal project of mine to the 
 	</ul>
 </nav>
 
-    </div>
+	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
 <main class="main" role="main">
-	<article class="post">
-		<header class="post__header">
-			<h1 class="post__title">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</h1>
-			<div class="post__meta meta">
+    <article class="post">
+        <header class="post__header">
+            <h1 class="post__title">Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</h1>
+            <div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
 	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-02-06T00:00:00Z">February 06, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
 	</span>
 </div></div>
-		</header>
+        </header>
+        <div class="content clearfix">
+            <blockquote>
+                <p>
+                    This post was originally published on the
+                    <a href="https://engineering.facile.it/blog/eng/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" target="_blank">Facile.it Engineering blog</a>.
+                </p>
+            </blockquote>
+        </div>
 <div class="post__toc toc">
 	<div class="toc__title">Page content</div>
 	<div class="toc__menu">
@@ -130,7 +152,7 @@ After, I decided to start migrating a previous, internal project of mine to the 
 	</div>
 </div>
 <div class="content post__content clearfix">
-			<p>In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt <strong>GitLab CI</strong> for the build, since we use GitLab CE for our Git repositories; I then created a <strong>continuous deployment pipeline</strong> for the staging environment, directly to a <strong>Kubernetes cluster</strong>, leveraging <strong>Docker Compose</strong> to make the configuration easier.</p>
+            <p>In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt <strong>GitLab CI</strong> for the build, since we use GitLab CE for our Git repositories; I then created a <strong>continuous deployment pipeline</strong> for the staging environment, directly to a <strong>Kubernetes cluster</strong>, leveraging <strong>Docker Compose</strong> to make the configuration easier.</p>
 <p>After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, <strong>doing a rolling deployment with Kubernetes is surprisingly easy</strong>!</p>
 <p>A few days ago David Négrier‏ (<a href="https://twitter.com/david_negrier">@david_negrier</a>) published a blog posts about his way of doing continuous deployment from GitLab CI:</p>
 <!-- raw HTML omitted -->
@@ -147,17 +169,17 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <p>Let&rsquo;s dive into the configuration details! For now, in the code examples, I will omit any piece that is needed for the deployment part; we will see that later.</p>
 <h2 id="the-gitlab-ciyml-configuration-file">The <code>.gitlab-ci.yml</code> configuration file</h2>
 <p>The <a href="https://docs.gitlab.com/ee/ci/">GitLab CI</a> is configurable just by adding a <code>.gitlab-ci.yml</code> file to the root of your project. The configuration for this first part looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">image</span>: gitlab.facile.it/facile/my-project/docker-compose:<span style="color:#ae81ff">1.2</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">image</span>: <span style="color:#ae81ff">gitlab.facile.it/facile/my-project/docker-compose:1.2</span>
 
-<span style="color:#66d9ef">services</span>:
-- <span style="color:#66d9ef">name</span>: docker:<span style="color:#ae81ff">17.12.0</span>-dind
-  <span style="color:#66d9ef">alias</span>: docker
-  <span style="color:#66d9ef">command</span>: [<span style="color:#e6db74">&#34;--registry-mirror&#34;</span>, <span style="color:#e6db74">&#34;https://registry-mirror.facile.it&#34;</span>]
+<span style="color:#f92672">services</span>:
+- <span style="color:#f92672">name</span>: <span style="color:#ae81ff">docker:17.12.0-dind</span>
+  <span style="color:#f92672">alias</span>: <span style="color:#ae81ff">docker</span>
+  <span style="color:#f92672">command</span>: [<span style="color:#e6db74">&#34;--registry-mirror&#34;</span>, <span style="color:#e6db74">&#34;https://registry-mirror.facile.it&#34;</span>]
 
-<span style="color:#66d9ef">variables</span>:
-  <span style="color:#66d9ef">GIT_DEPTH</span>: <span style="color:#e6db74">&#34;1&#34;</span>
-  <span style="color:#66d9ef">DOCKER_DRIVER</span>: <span style="color:#e6db74">&#34;overlay2&#34;</span>
-  <span style="color:#66d9ef">DOCKER_HOST</span>: <span style="color:#e6db74">&#34;tcp://docker:2375&#34;</span>
+<span style="color:#f92672">variables</span>:
+  <span style="color:#f92672">GIT_DEPTH</span>: <span style="color:#e6db74">&#34;1&#34;</span>
+  <span style="color:#f92672">DOCKER_DRIVER</span>: <span style="color:#e6db74">&#34;overlay2&#34;</span>
+  <span style="color:#f92672">DOCKER_HOST</span>: <span style="color:#e6db74">&#34;tcp://docker:2375&#34;</span>
 </code></pre></div><p>The <code>services</code> section allows me to declare a Docker container that will be spun up by GitLab CI each time and that will host the Docker daemon that I will use. Here resides <strong>the main difference</strong> between David&rsquo;s and my approach: in his case, he is using the host&rsquo;s machine Docker daemon, in my case I&rsquo;m using an isolated daemon, <strong>a real Docker-in-Docker approach</strong>.</p>
 <p>The combination of the <code>alias: docker</code> setting and the <code>DOCKER_HOST</code> environment variable points our job to the D-in-D daemon socket; the <code>--registry-mirror</code> option let the daemon use our internal registry mirror to speed up pulling official images; last but not least, the <code>DOCKER_DRIVER</code> uses the <code>overlay2</code> filesystem for the Docker build, which is <strong>faster and less space consuming</strong> (I suggest you to use that on your local Linux machines too!).</p>
 <blockquote>
@@ -181,14 +203,14 @@ After, I decided to start migrating a previous, internal project of mine to the 
 </span><span style="color:#ae81ff"></span>    <span style="color:#f92672">&amp;&amp;</span> chmod +x /usr/local/bin/kubectl<span style="color:#960050;background-color:#1e0010">
 </span></code></pre></div><h2 id="pipeline-setup-and-docker-compose-configuration">Pipeline setup and Docker Compose configuration</h2>
 <p>The next part of my configuration looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">stages</span>:
-  - Build
-  - Test
-  - Cleanup
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">stages</span>:
+  - <span style="color:#ae81ff">Build</span>
+  - <span style="color:#ae81ff">Test</span>
+  - <span style="color:#ae81ff">Cleanup</span>
 
-<span style="color:#66d9ef">before_script</span>:
-  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
-  - cp docker-compose.yml.gitlab docker-compose.override.yml
+<span style="color:#f92672">before_script</span>:
+  - <span style="color:#ae81ff">docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY</span>
+  - <span style="color:#ae81ff">cp docker-compose.yml.gitlab docker-compose.override.yml</span>
 </code></pre></div><p>In here I configured the sequence of <strong>stages</strong> in the pipeline, and I configured a <code>before_script</code> section to be executed before each job. The first instruction <strong>logs into the private Docker registry</strong> that GitLab gives us along any project (if enabled), in which I decided to store my Docker images.</p>
 <blockquote>
 <p>GitLab CI jobs automatically have the <code>$CI_JOB_TOKEN</code> and <code>$CI_REGISTRY</code> environment variables populated to easily do that: the first one is a fresh unique token, which is <a href="https://docs.gitlab.com/ee/user/project/new_ci_build_permissions_model.html#job-token">generated for each job</a>; the second one is the URL of the registry associated with the current project; see the <a href="https://docs.gitlab.com/ce/ci/variables/README.html">GitLab CI documentation</a> for more details.</p>
@@ -201,26 +223,26 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <li><code>docker-compose.yml.gitlab</code> is an override file that I use <strong>only during the build</strong>, so that&rsquo;s why we need that <code>cp</code> instruction.</li>
 </ul>
 <p>I will show you just the last file, which looks like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#39;3.2&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3.2&#39;</span>
 
-<span style="color:#66d9ef">services</span>:
-  <span style="color:#66d9ef">php</span>:
-    <span style="color:#66d9ef">image</span>: ${CI_IMAGE_COMMIT_TAG}
-    <span style="color:#66d9ef">build</span>:
-      <span style="color:#66d9ef">dockerfile</span>: docker/development/php-ci/Dockerfile
-      <span style="color:#66d9ef">context</span>: .
-      <span style="color:#66d9ef">cache_from</span>:
-        - ${CI_IMAGE_BRANCH_TAG}
-  <span style="color:#66d9ef">php-cache</span>:
-    <span style="color:#66d9ef">image</span>: ${CI_IMAGE_BRANCH_TAG}
+<span style="color:#f92672">services</span>:
+  <span style="color:#f92672">php</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">${CI_IMAGE_COMMIT_TAG}</span>
+    <span style="color:#f92672">build</span>:
+      <span style="color:#f92672">dockerfile</span>: <span style="color:#ae81ff">docker/development/php-ci/Dockerfile</span>
+      <span style="color:#f92672">context</span>: <span style="color:#ae81ff">.</span>
+      <span style="color:#f92672">cache_from</span>:
+        - <span style="color:#ae81ff">${CI_IMAGE_BRANCH_TAG}</span>
+  <span style="color:#f92672">php-cache</span>:
+    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">${CI_IMAGE_BRANCH_TAG}</span>
 </code></pre></div><p>I declared in my <code>php</code> service both the <code>image</code> and <code>build</code> sections, so I&rsquo;m able to use this definition in all my jobs, <strong>both for building and executing</strong>. I&rsquo;m also able to move the <code>Dockerfile</code>s inside a dedicated directory, thanks to the usage of the <code>dockerfile</code> and <code>context</code> options with different paths.</p>
 <p>It&rsquo;s also very important to use <code>version: '3.2'</code>, because it&rsquo;s needed to use the <code>cache_from</code> option: since we do not have any cache in the daemon, I <strong>tag the image twice</strong>, once with the <strong>commit hash</strong> and once with the <strong>branch name</strong>; in this way I can pull the <code>php-cache</code> service with the branch tag as a cache from the previous build.</p>
 <p>As you can see I&rsquo;m using <strong>environment variables</strong> to define the image names. I do that in the GitLab CI configuration so I can <strong>define them only once</strong> and use them everywhere:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">variables</span>:
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">variables</span>:
     <span style="color:#75715e"># ...</span>
-    <span style="color:#66d9ef">CI_IMAGE_NAME</span>: facile/my-project/php-ci
-    <span style="color:#66d9ef">CI_IMAGE_COMMIT_TAG</span>: $CI_REGISTRY/$CI_IMAGE_NAME:$CI_COMMIT_SHA
-    <span style="color:#66d9ef">CI_IMAGE_BRANCH_TAG</span>: $CI_REGISTRY/$CI_IMAGE_NAME:$CI_COMMIT_REF_SLUG
+    <span style="color:#f92672">CI_IMAGE_NAME</span>: <span style="color:#ae81ff">facile/my-project/php-ci</span>
+    <span style="color:#f92672">CI_IMAGE_COMMIT_TAG</span>: <span style="color:#ae81ff">$CI_REGISTRY/$CI_IMAGE_NAME:$CI_COMMIT_SHA</span>
+    <span style="color:#f92672">CI_IMAGE_BRANCH_TAG</span>: <span style="color:#ae81ff">$CI_REGISTRY/$CI_IMAGE_NAME:$CI_COMMIT_REF_SLUG</span>
 </code></pre></div><p>I still leverage GitLab&rsquo;s <code>$CI_REGISTRY</code> variable to compose the names, so basically my image names will be:</p>
 <ul>
 <li><code>gitlab.facile.it/facile/my-project/php-ci:79aef00e3893a39102ffc394bf96782e57adb956</code></li>
@@ -255,13 +277,13 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <p>Remember, <strong>that layer with the source code will change every time</strong>, since you&rsquo;ve obviously just committed something new!</p>
 <h2 id="the-jobs-definitions">The jobs definitions</h2>
 <p>At this point we just need to define the jobs! The <strong>build job</strong> is defined like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">build-image</span>:
-  <span style="color:#66d9ef">stage</span>: Build CI
-  <span style="color:#66d9ef">script</span>:
-    - docker-compose pull --ignore-pull-failures php-cache
-    - docker-compose build php
-    - docker tag $CI_IMAGE_COMMIT_TAG $CI_IMAGE_BRANCH_TAG
-    - docker-compose push php php-cache
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">build-image</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Build CI</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">docker-compose pull --ignore-pull-failures php-cache</span>
+    - <span style="color:#ae81ff">docker-compose build php</span>
+    - <span style="color:#ae81ff">docker tag $CI_IMAGE_COMMIT_TAG $CI_IMAGE_BRANCH_TAG</span>
+    - <span style="color:#ae81ff">docker-compose push php php-cache</span>
 </code></pre></div><ul>
 <li><strong>pull</strong> the branch image as <strong>cache</strong> (<code>--ignore-pull-failures</code> avoids failures on the first commit of a branch);</li>
 <li><strong>build</strong> the image with the commit tag;</li>
@@ -269,22 +291,22 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <li><strong>push</strong> both back into the registry.</li>
 </ul>
 <p>Then we can pass onto the <strong>test stage</strong>. If I need multiple services, like for functional tests, I do it like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">test-coverage</span>:
-  <span style="color:#66d9ef">stage</span>: Test
-  <span style="color:#66d9ef">coverage</span>: <span style="color:#e6db74">&#39;/^\s*Lines:\s*\d+.\d+\%/&#39;</span>
-  <span style="color:#66d9ef">script</span>:
-    - docker-compose pull --parallel php mysql
-    - docker-compose run --rm php vendor/bin/phing ci
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">test-coverage</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Test</span>
+  <span style="color:#f92672">coverage</span>: <span style="color:#e6db74">&#39;/^\s*Lines:\s*\d+.\d+\%/&#39;</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">docker-compose pull --parallel php mysql</span>
+    - <span style="color:#ae81ff">docker-compose run --rm php vendor/bin/phing ci</span>
 </code></pre></div><ul>
 <li><strong>pull</strong> all the needed images with the <code>--parallel</code> option to speed up;</li>
 <li><strong>run</strong> the needed task; in my case I use <code>phing</code> (a <a href="https://packagist.org/packages/phing/phing">PHP porting of Ant</a>) inside the container to call everything with a single command;</li>
 <li>The <code>coverage</code> options contains a regex that picks up the coverage percentage from PHPUnit&rsquo;s <code>--coverage-text</code> option.</li>
 </ul>
 <p>If instead I need to execute just simple tasks, without external services, I can skip the <code>pull</code> command completely:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">phpstan</span>:
-  <span style="color:#66d9ef">stage</span>: Test
-  <span style="color:#66d9ef">script</span>:
-    - docker-compose run --rm --no-deps php phing phpstan_check
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">phpstan</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Test</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">docker-compose run --rm --no-deps php phing phpstan_check</span>
 </code></pre></div><p>This is possible because I need just one image which will be pulled implicitly by Docker Compose, so the <code>--parallel</code> option is useless here; I also have to remember to use <code>--no-deps</code> to avoid pulling linked services, if for example my base configuration defines a dependency to other containers (like the database).</p>
 <h2 id="the-scary-part-deleting-docker-images">The scary part: deleting Docker images</h2>
 <p>Up until now, it was all straightforward and easy; the difficult part comes with the last stage, the <strong>cleanup</strong>.</p>
@@ -308,14 +330,14 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <li><strong>delete</strong> the image (finally!)</li>
 </ul>
 <p>The GitLab CI job is defined like this:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">delete-ci-image</span>:
-  <span style="color:#66d9ef">stage</span>: Cleanup
-  <span style="color:#66d9ef">when</span>: always
-  <span style="color:#66d9ef">script</span>:
-    - bin/docker-util/dummy-tag.sh $IMAGE
-    - TOKEN=$(bin/docker-util/get-registry-token.sh $IMAGE)
-    - MANIFEST=$(bin/docker-util/get-manifest.sh $IMAGE $TOKEN)
-    - bin/docker-util/delete-image.sh $IMAGE $MANIFEST $TOKEN
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">delete-ci-image</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Cleanup</span>
+  <span style="color:#f92672">when</span>: <span style="color:#ae81ff">always</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">bin/docker-util/dummy-tag.sh $IMAGE</span>
+    - <span style="color:#ae81ff">TOKEN=$(bin/docker-util/get-registry-token.sh $IMAGE)</span>
+    - <span style="color:#ae81ff">MANIFEST=$(bin/docker-util/get-manifest.sh $IMAGE $TOKEN)</span>
+    - <span style="color:#ae81ff">bin/docker-util/delete-image.sh $IMAGE $MANIFEST $TOKEN</span>
 </code></pre></div><p><code>when: always</code> is needed to run the job even if the build fails. The other steps are conveniently stored inside bash scripts, for reusability.</p>
 <h3 id="pushing-a-dummy-image">Pushing a dummy image</h3>
 <p>The script that pushes the dummy image, <code>dummy-tag.sh</code>, accepts as a single argument the full Docker image name complete with tag:</p>
@@ -326,7 +348,7 @@ mkdir -p $DIR
 
 <span style="color:#75715e"># generate a file containing a random string</span>
 head /dev/urandom | tr -dc A-Za-z0-9 | head -c <span style="color:#ae81ff">13</span> ; echo <span style="color:#e6db74">&#39;&#39;</span> &gt; <span style="color:#e6db74">${</span>DIR<span style="color:#e6db74">}</span>/dummyfile 
-<span style="color:#75715e"># generate the dummy image with only that one file</span> 
+<span style="color:#75715e"># generate the dummy image with only that one file </span>
 echo <span style="color:#e6db74">&#34;FROM scratch&#34;</span> &gt; <span style="color:#e6db74">${</span>DIR<span style="color:#e6db74">}</span>/Dockerfile
 echo <span style="color:#e6db74">&#34;ADD dummyfile .&#34;</span> &gt;&gt; <span style="color:#e6db74">${</span>DIR<span style="color:#e6db74">}</span>/Dockerfile
 <span style="color:#75715e"># build and push it</span>
@@ -408,31 +430,31 @@ curl <span style="color:#e6db74">&#34;https://</span>$REGISTRY<span style="color
 <li>build the prod image with the specific <code>prod-$CI_COMMIT_SHA</code> commit tag;</li>
 <li>push it back to the registry.</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">build-prod-images</span>:
-  <span style="color:#66d9ef">stage</span>: Build prod
-  <span style="color:#66d9ef">cache</span>:
-    <span style="color:#66d9ef">paths</span>:
-    - node_modules/
-  <span style="color:#66d9ef">script</span>:
-    - docker-compose pull --ignore-pull-failures fpm-prod
-    - docker-compose build fpm-prod
-    - docker-compose push fpm-prod
-  <span style="color:#66d9ef">only</span>: <span style="color:#75715e">&amp;deployable-branches</span>
-    - master
-    - an-other-deployable-branch
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">build-prod-images</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Build prod</span>
+  <span style="color:#f92672">cache</span>:
+    <span style="color:#f92672">paths</span>:
+    - <span style="color:#ae81ff">node_modules/</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">docker-compose pull --ignore-pull-failures fpm-prod</span>
+    - <span style="color:#ae81ff">docker-compose build fpm-prod</span>
+    - <span style="color:#ae81ff">docker-compose push fpm-prod</span>
+  <span style="color:#f92672">only</span>: <span style="color:#75715e">&amp;deployable-branches</span>
+    - <span style="color:#ae81ff">master</span>
+    - <span style="color:#ae81ff">an-other-deployable-branch</span>
 </code></pre></div><p>Note that <strong>I&rsquo;m not pushing the generic <code>prod</code> tag for now</strong>, I&rsquo;m waiting to have a successful deployment first. This job can also be duplicated if you need to build multiple images with each deployment.</p>
 <p>The other notable part of this job definition is the <code>only</code> directive. It&rsquo;s obviously needed to make the job <a href="https://docs.gitlab.com/ce/ci/yaml/README.html#only-and-except-simplified">run only on certain branches</a>, but the interesting part is the appended <code>&amp;deployable-branches</code> string: it&rsquo;s a <strong>YAML anchor</strong>. I&rsquo;m basically bookmarking the array values for the <code>only</code> directive, so I can reuse them in the next CD jobs.</p>
 <h2 id="the-deploy">The deploy</h2>
 <p>Finally, we can deploy our application to the Kubernetes cluster!</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">deploy</span>:
-  <span style="color:#66d9ef">stage</span>: Deploy
-  <span style="color:#66d9ef">environment</span>:
-    <span style="color:#66d9ef">name</span>: prod
-    <span style="color:#66d9ef">url</span>: https://my-project.facile.it/
-  <span style="color:#66d9ef">script</span>:
-    - kubectl set image deployment/my-project php-container=<span style="color:#e6db74">&#34;${PROD_IMAGE_PHP_COMMIT_TAG}&#34;</span>
-    - kubectl rollout status deployment/my-project
-  <span style="color:#66d9ef">only</span>: <span style="color:#75715e">*deployable-branches</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">deploy</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Deploy</span>
+  <span style="color:#f92672">environment</span>:
+    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">prod</span>
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://my-project.facile.it/</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">kubectl set image deployment/my-project php-container=&#34;${PROD_IMAGE_PHP_COMMIT_TAG}&#34;</span>
+    - <span style="color:#ae81ff">kubectl rollout status deployment/my-project</span>
+  <span style="color:#f92672">only</span>: <span style="color:#75715e">*deployable-branches</span>
 </code></pre></div><p>Using the <strong>YAML anchor reference</strong> <code>*deployable-branches</code> (yes, they use a pointer-like syntax) I reuse the previous values, so if I decide to deploy a new, particular branch, I don&rsquo;t have to specify it in every deploy-related job, and risk forgetting one (yes, it happened to me).</p>
 <p>Here we are <strong>finally using <code>kubectl</code> to do the deploy</strong>!</p>
 <blockquote>
@@ -450,11 +472,11 @@ deployment &quot;my-application&quot; successfully rolled out
 </code></pre><p>The <code>environment</code> option enable the usage of the <a href="https://docs.gitlab.com/ce/ci/environments.html">GitLab Environments</a>, so my deploys are tracked.</p>
 <h2 id="the-cleanup-after-the-deploy">The cleanup after the deploy</h2>
 <p>As for the CI build, we will have to clean up older images after successfully deploying the application:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">delete-old-prod-image</span>:
-  <span style="color:#66d9ef">stage</span>: Cleanup
-  <span style="color:#66d9ef">script</span>:
-    - bin/docker-util/delete-old-prod-image.sh $PROD_IMAGE_PHP_GENERIC_TAG $PROD_IMAGE_PHP_COMMIT_TAG
-  <span style="color:#66d9ef">only</span>: <span style="color:#75715e">*deployable-branches</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">delete-old-prod-image</span>:
+  <span style="color:#f92672">stage</span>: <span style="color:#ae81ff">Cleanup</span>
+  <span style="color:#f92672">script</span>:
+    - <span style="color:#ae81ff">bin/docker-util/delete-old-prod-image.sh $PROD_IMAGE_PHP_GENERIC_TAG $PROD_IMAGE_PHP_COMMIT_TAG</span>
+  <span style="color:#f92672">only</span>: <span style="color:#75715e">*deployable-branches</span>
 </code></pre></div><p>I use the <code>*deployable-branches</code> here too, and a bash script to wrap everything in one file; the script will require two arguments (the generic and the commit-specific tag) and will execute this sequence of operations:</p>
 <ul>
 <li>retrieve a JWT token for the registry, as before;</li>
@@ -489,9 +511,8 @@ bin/docker-util/delete-image.sh <span style="color:#e6db74">${</span>OLD_IMAGE<s
 <h1 id="conclusions">Conclusions</h1>
 <p>I hope that this (long) blog post will help people with this list of tips and tricks, and help save some time; many of the things that I wrote about here are not properly documented, so I learned them by trial and error and exercising some google-fu. I just hope that the GitLab registry will soon implement some easier and automatic way to do the cleanup, so all this hassle will be reduced to just a couple of YAML configuration lines.</p>
 
-		</div>
-		<footer class="post__footer">
-			
+        </div>
+        
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
@@ -512,8 +533,7 @@ bin/docker-util/delete-image.sh <span style="color:#e6db74">${</span>OLD_IMAGE<s
 		</li>
 	</ul>
 </div>
-		</footer>
-	</article>
+    </article>
 </main>
 
 <div class="authorbox clearfix">
@@ -528,11 +548,11 @@ bin/docker-util/delete-image.sh <span style="color:#e6db74">${</span>OLD_IMAGE<s
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/posts/phpunit-upgrade-namespace/" rel="prev">
-			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">How to gradually upgrade toward PHPUnit 6 with namespaced classes</p>
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/phpunit-upgrade-namespace/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">How to gradually upgrade toward PHPUnit 6 with namespaced classes</p>
 		</a>
 	</div>
 </nav>
@@ -540,12 +560,12 @@ bin/docker-util/delete-image.sh <span style="color:#e6db74">${</span>OLD_IMAGE<s
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://alessandrolai.dev/" />
+		<input type="hidden" name="sites" value="https://alessandrolai.dev/"/>
 	</form>
 </div>
 <div class="widget-recent widget">

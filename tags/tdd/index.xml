@@ -6,11 +6,7 @@
     <description>Recent content in TDD on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 07 Jun 2016 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://alessandrolai.dev/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 07 Jun 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/tdd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How PHP 7 &amp; TDD helped me sleep better</title>
       <link>https://alessandrolai.dev/posts/how-php-7-tdd-helped-me-sleep-better/</link>

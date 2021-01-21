@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 	<title>Why type hints and interfaces are not visual debt - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Why type hints and interfaces are not visual debt" />
+		<meta property="og:title" content="Why type hints and interfaces are not visual debt" />
 <meta property="og:description" content="A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
 After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading). After that, the author of the video was dragged into the conversation, and it blew up into a big tweetstorm in the following few hours." />
 <meta property="og:type" content="article" />
@@ -16,37 +16,52 @@ After asking references about this, someone alluded to this very short video: &l
 <meta property="article:published_time" content="2017-05-31T00:00:00+00:00" />
 <meta property="article:modified_time" content="2017-05-31T00:00:00+00:00" />
 
-	<meta name="twitter:card" content="summary_large_image"/>
+		<meta itemprop="name" content="Why type hints and interfaces are not visual debt">
+<meta itemprop="description" content="A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
+After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading). After that, the author of the video was dragged into the conversation, and it blew up into a big tweetstorm in the following few hours.">
+<meta itemprop="datePublished" content="2017-05-31T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2017-05-31T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2193">
+<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+
+
+
+<meta itemprop="keywords" content="PHP,OOP,Software testing," />
+
+		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Why type hints and interfaces are not visual debt"/>
 <meta name="twitter:description" content="A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
 After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading). After that, the author of the video was dragged into the conversation, and it blew up into a big tweetstorm in the following few hours."/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-    <div class="container">
-        <a class="logo flex" href="/" title="Alessandro Lai" rel="home">
-        
-        <div>
-            <img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
-        </div>
-        
-        <div class="logo__text">
-            <div class="logo__title">Alessandro Lai</div>
-            <div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
-        </div>
-        </a>
-        
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Alessandro Lai" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/logo-alessandro-lai.jpg">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Alessandro Lai</div>
+					<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+				</div>
+		</a>
+	</div>
+		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
@@ -83,9 +98,8 @@ After asking references about this, someone alluded to this very short video: &l
 	</ul>
 </nav>
 
-    </div>
+	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -121,26 +135,26 @@ After asking references about this, someone alluded to this very short video: &l
 <p>In this blog post I would like to explain myself and the reasons behind my arguments, recounting them.</p>
 <h2 id="scalar-type-hints-as-safeguards">Scalar type hints as safeguards</h2>
 <p>In the video, the example had all along this class:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Event implements EventInterface
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Event</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">EventInterface</span>
 {
-    protected $events = [];
+    <span style="color:#66d9ef">protected</span> $events <span style="color:#f92672">=</span> [];
     
-    public function listen(string $name, callable $handler): void
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">string</span> $name, <span style="color:#a6e22e">callable</span> $handler)<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span>
     {
-        $this-&gt;events[$name][] = $handler;
+        $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">events</span>[$name][] <span style="color:#f92672">=</span> $handler;
     }
 
-    public function fire(string $name): bool
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fire</span>(<span style="color:#a6e22e">string</span> $name)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span>
     {
-        if (! array_key_exists($name, $this-&gt;events)) {
-            return false;
+        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span> <span style="color:#a6e22e">array_key_exists</span>($name, $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">events</span>)) {
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
         }
         
-        foreach($this-&gt;events[$name] as $event) {
+        <span style="color:#66d9ef">foreach</span>($this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">events</span>[$name] <span style="color:#66d9ef">as</span> $event) {
             $event();
         }
 
-        return true;
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
     }
 }
 </code></pre></div><p>The author suggests to remove all type hints, since the code should still work and you could get rid of a lot of additional, not needed complications. I disagree completely with this.</p>
@@ -152,11 +166,11 @@ After asking references about this, someone alluded to this very short video: &l
 </ul>
 <h2 id="type-hints-and-interfaces-as-contracts">Type hints and interfaces as contracts</h2>
 <p>In the video, it was suggested to also get rid of the interface:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">interface EventInterface
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">EventInterface</span>
 {
-    public function listen(string $name, callable $handler): void;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">listen</span>(<span style="color:#a6e22e">string</span> $name, <span style="color:#a6e22e">callable</span> $handler)<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span>;
 
-    public function fire(string $name): bool;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">fire</span>(<span style="color:#a6e22e">string</span> $name)<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span>;
 }
 </code></pre></div><p>I agree that <strong>an interface should be written only if needed</strong>, like if you want to write multiple concrete implementation of it with different inheritance hierarchy. But this doesn&rsquo;t mean that we will not have any interface at all: we still have the concrete implementation.</p>
 <p>That is not the same of having a pure interface, but we will still be able to determine a <strong>contract</strong>, a list of method signatures that tells us what that object will accept as valid method calls. This kind of contracts are a must in object oriented programming, because they dictate how your object will interconnect, communicate and cooperate, and they are especially useful in combination with stricter type hints and <strong>unit testing</strong>.</p>
@@ -164,30 +178,30 @@ After asking references about this, someone alluded to this very short video: &l
 <p>How type hints would help us in this case? If we would have to mock the <code>EventInterface</code> (or the concrete class, it&rsquo;s unimportant here), having the return type hints for example would help us in <strong>writing good mocks</strong>, and not wrong ones.</p>
 <p>But how? Nearly every mocking library creates a mock extending at runtime the original class, since the mock needs to pass every check and type hint as if it was the original class; this means that it can&rsquo;t change the method signature, hence preserving the original return type hint.</p>
 <p>This will translate in errors and test failures if we would write a mock that doesn&rsquo;t return the proper type, like in this example:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Person
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
 {
-    public function shout(): bool
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shout</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">bool</span>
     {
-        $event = new Event();
-        if ($event-&gt;fire(&#39;shout&#39;)) {
-            // someone was listening!
-            return true;
+        $event <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>();
+        <span style="color:#66d9ef">if</span> ($event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fire</span>(<span style="color:#e6db74">&#39;shout&#39;</span>)) {
+            <span style="color:#75715e">// someone was listening!
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
         }
-        // ...
-    }
+        <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>    }
 }
 
-class PersonTest extends PHPUnit\Framework\TestCase
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PersonTest</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">PHPUnit\Framework\TestCase</span>
 {
-    public function testShout()
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">testShout</span>()
     {
-        $event = $this-&gt;prophesize(EventInterface::class);
-        $event-&gt;fire(&#39;shout&#39;)
-            -&gt;shouldBeCalled();
-        // ...
-        
-        $person = new Person();
-        $person-&gt;shout();
+        $event <span style="color:#f92672">=</span> $this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">prophesize</span>(<span style="color:#a6e22e">EventInterface</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+        $event<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fire</span>(<span style="color:#e6db74">&#39;shout&#39;</span>)
+            <span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">shouldBeCalled</span>();
+        <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>        
+        $person <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Person</span>();
+        $person<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">shout</span>();
     }
 }
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">$ phpunit
@@ -198,42 +212,42 @@ TypeError: Return value of Double<span style="color:#ae81ff">\E</span>ventInterf
 <p>This means that having complete type hints in your interfaces and method signatures only <strong>makes your code more cohesive and your unit test more robust</strong>; this kind of enforcing helps a lot also with refactoring, since changing a method&rsquo;s signature would cause failures in all the related tests that include a mock of that interface, as it could become inconsistent and unreliable after this change.</p>
 <h2 id="use-interfaces-as-behavior-checks">Use interfaces as behavior checks</h2>
 <p>One of the counter example that popped up during the discussion on Twitter was this one:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Fireman
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Fireman</span>
 {
-    // ...
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">putOutFire</span>(<span style="color:#a6e22e">Fireman</span> $fireman);
 }
 
-class Building
-{
-    public function putOutFire(Fireman $fireman);
-}
-
-$building-&gt;putOutFire(new StrongAndAblePerson()); // type error!
-</code></pre></div><p>This was cited to show how sometimes type hints can be a hindrance more that something helpful in your code: why a strong, capable person shouldn&rsquo;t be able to put out a fire? Who&rsquo;s the <code>Building</code> class to decide that? Are we maybe violating the Single Responsibility Principle?</p>
+$building<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">putOutFire</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">StrongAndAblePerson</span>()); <span style="color:#75715e">// type error!
+</span></code></pre></div><p>This was cited to show how sometimes type hints can be a hindrance more that something helpful in your code: why a strong, capable person shouldn&rsquo;t be able to put out a fire? Who&rsquo;s the <code>Building</code> class to decide that? Are we maybe violating the Single Responsibility Principle?</p>
 <p>I think that this is misguided for a simple reason: it was <strong>wrong to check against a concrete implementation</strong> instead of an interface; and that&rsquo;s not evident because, in my opinion, the example was <strong>cut too short</strong>.</p>
 <p>Let&rsquo;s speculate on the content of the <code>putOutFire()</code> method:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Building
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>
 {
-    public function putOutFire(Fireman $fireman)
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">putOutFire</span>(<span style="color:#a6e22e">Fireman</span> $fireman)
     {
-        $fireman-&gt;wearProtectiveGear();
-        $fireman-&gt;shootWaterAtFlames();
+        $fireman<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">wearProtectiveGear</span>();
+        $fireman<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">shootWaterAtFlames</span>();
     }
 }
 </code></pre></div><p>Why we have a type hint in the <code>putOutFire()</code> method? Surely because we want to rely on some method that a <code>Fireman</code> instance would give to us in the method body (i.e. the <code>wearProtectiveGear()</code> and <code>shootWaterAtFlames()</code>); if we remove the type hint, we would have no guarantees that those methods exists on the argument, and we would have to either use a <code>method_exists()</code> call twice (oh, the horror!) or expose our <code>Building</code> class to a possible fatal error.</p>
 <p>To take the example further, we can make the <code>StrongAndAblePerson</code> capable of put out a fire if we <strong>extract the needed methods in an interface</strong>, defining a contract of what our <code>putOutFire()</code> needs to know and use:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">interface TrainedFireFighter
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TrainedFireFighter</span>
 {
-    public function wearProtectiveGear(): void;
-    public function shootWaterAtFlames(): void;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">wearProtectiveGear</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span>;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">shootWaterAtFlames</span>()<span style="color:#f92672">:</span> <span style="color:#a6e22e">void</span>;
 }
 
-class StrongAndAblePerson implements TrainedFireFighter { ... }
-class Fireman implements TrainedFireFighter { ... }
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">StrongAndAblePerson</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">TrainedFireFighter</span> { <span style="color:#f92672">...</span> }
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Fireman</span> <span style="color:#66d9ef">implements</span> <span style="color:#a6e22e">TrainedFireFighter</span> { <span style="color:#f92672">...</span> }
 </code></pre></div><p>&hellip; now we can have the <code>putOutFire()</code> method with a broader type hint, that would accept both a <code>Fireman</code> and any other class that implements the <code>TrainedFireFighter</code> interface:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Building
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Building</span>
 {
-    public function putOutFire(TrainedFireFighter $firefighter)
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">putOutFire</span>(<span style="color:#a6e22e">TrainedFireFighter</span> $firefighter)
 }
 </code></pre></div><h2 id="the-final-keyword">The final keyword</h2>
 <p>The only point of the video which I find relatable is the remark on the <code>final</code> keyword.</p>
@@ -243,7 +257,7 @@ class Fireman implements TrainedFireFighter { ... }
 <h2 id="a-practical-example">A practical example</h2>
 <p>I would like to conclude this blog post with a practical example. I maintain <a href="https://github.com/facile-it/paraunit/">facile-it/paraunit</a>, a parallelization tool that works on top of PHPUnit. In the past few days I was working on supporting PHPUnit v6, and that lead to bumping the minimum PHP supported version of the package to 7.0: <a href="https://github.com/facile-it/paraunit/pull/93">https://github.com/facile-it/paraunit/pull/93</a>.</p>
 <p>Since previously the minimum supported version was PHP 5.3, I took the opportunity to go over the whole codebase and clean it up, using all the new language features that I could now take for granted: <code>::class</code> shortcuts, array short syntax, but more importantly the aforementioned <strong>scalar and return type hints</strong>.</p>
-<p>This is the perfect example to show that adding those type hints on already working code made a <strong>non-trivial difference</strong> even if I wasn&rsquo;t changing the objects&rsquo; behavior, and it forced me to fix some of this stuff:</p>
+<p>This is the perfect example to show that adding those type hints on already working code made a <strong>non-trivial difference</strong> even if I wasn&rsquo;t changing the objects' behavior, and it forced me to fix some of this stuff:</p>
 <ul>
 <li>it forced me <a href="https://github.com/facile-it/paraunit/pull/93/files#diff-049f05e192bb0dcb9cf59ad2bbd43ceaR79">to define more explicitly a default behavior</a>, since a <code>null</code> was no longer accepted in place of a string</li>
 <li>this also lead me to <a href="https://github.com/facile-it/paraunit/pull/93/commits/6aa9286256ed47c7b4500b990e030588b18b7770">write an additional test</a> for an uncovered, very common case</li>
@@ -291,17 +305,17 @@ class Fireman implements TrainedFireFighter { ... }
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="prev">
-			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">How PHP 7 &amp; TDD helped me sleep better</p>
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">How PHP 7 &amp; TDD helped me sleep better</p>
 		</a>
 	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/posts/phpunit-upgrade-namespace/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
-			<p class="post-nav__post-title">How to gradually upgrade toward PHPUnit 6 with namespaced classes</p>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/phpunit-upgrade-namespace/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">How to gradually upgrade toward PHPUnit 6 with namespaced classes</p>
 		</a>
 	</div>
 </nav>
@@ -309,12 +323,12 @@ class Fireman implements TrainedFireFighter { ... }
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://alessandrolai.dev/" />
+		<input type="hidden" name="sites" value="https://alessandrolai.dev/"/>
 	</form>
 </div>
 <div class="widget-recent widget">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 	<title>Paraunit 0.6.1 - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Paraunit 0.6.1" />
+		<meta property="og:title" content="Paraunit 0.6.1" />
 <meta property="og:description" content="Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint,
 to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it
 this summer." />
@@ -17,7 +17,20 @@ this summer." />
 <meta property="article:published_time" content="2016-06-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2016-06-10T00:00:00+00:00" />
 
-	<meta name="twitter:card" content="summary_large_image"/>
+		<meta itemprop="name" content="Paraunit 0.6.1">
+<meta itemprop="description" content="Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint,
+to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it
+this summer.">
+<meta itemprop="datePublished" content="2016-06-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2016-06-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="199">
+<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+
+
+
+<meta itemprop="keywords" content="Paraunit,Open Source," />
+
+		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Paraunit 0.6.1"/>
@@ -25,30 +38,33 @@ this summer." />
 to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it
 this summer."/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-    <div class="container">
-        <a class="logo flex" href="/" title="Alessandro Lai" rel="home">
-        
-        <div>
-            <img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
-        </div>
-        
-        <div class="logo__text">
-            <div class="logo__title">Alessandro Lai</div>
-            <div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
-        </div>
-        </a>
-        
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Alessandro Lai" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/logo-alessandro-lai.jpg">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Alessandro Lai</div>
+					<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+				</div>
+		</a>
+	</div>
+		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
@@ -85,9 +101,8 @@ this summer."/>
 	</ul>
 </nav>
 
-    </div>
+	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -134,7 +149,8 @@ starting from the PHP 7.0 image</li>
 <li>CONTRIBUTING.md file has been added, with instructions for coding style and usage of Docker images for development</li>
 </ul>
 		</div>
-		
+		<footer class="post__footer">
+			
 <div class="post__tags tags clearfix">
 	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
 	<ul class="tags__list">
@@ -146,6 +162,7 @@ starting from the PHP 7.0 image</li>
 		</li>
 	</ul>
 </div>
+		</footer>
 	</article>
 </main>
 
@@ -161,17 +178,17 @@ starting from the PHP 7.0 image</li>
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--prev">
-		<a class="post-nav__link" href="/releases/paraunit/0.6.0/" rel="prev">
-			<span class="post-nav__caption">«&thinsp;Previous</span>
-			<p class="post-nav__post-title">Paraunit 0.6</p>
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/releases/paraunit/0.6.0/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Paraunit 0.6</p>
 		</a>
 	</div>
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/releases/paraunit/0.6.2/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
-			<p class="post-nav__post-title">Paraunit 0.6.2</p>
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/releases/paraunit/0.6.2/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">Paraunit 0.6.2</p>
 		</a>
 	</div>
 </nav>
@@ -179,12 +196,12 @@ starting from the PHP 7.0 image</li>
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://alessandrolai.dev/" />
+		<input type="hidden" name="sites" value="https://alessandrolai.dev/"/>
 	</form>
 </div>
 <div class="widget-recent widget">

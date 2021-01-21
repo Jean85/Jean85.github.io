@@ -6,11 +6,7 @@
     <description>Recent content in GitLab on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://alessandrolai.dev/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker</title>
       <link>https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</link>

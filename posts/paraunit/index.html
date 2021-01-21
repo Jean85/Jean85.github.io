@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en-us">
+<html class="no-js" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
 	<title>Paraunit: test paralleli, Doctrine e le fixture - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-	<meta property="og:title" content="Paraunit: test paralleli, Doctrine e le fixture" />
+		<meta property="og:title" content="Paraunit: test paralleli, Doctrine e le fixture" />
 <meta property="og:description" content="Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate." />
 <meta property="og:type" content="article" />
@@ -16,37 +16,52 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 <meta property="article:published_time" content="2015-10-09T00:00:00+00:00" />
 <meta property="article:modified_time" content="2015-10-09T00:00:00+00:00" />
 
-	<meta name="twitter:card" content="summary_large_image"/>
+		<meta itemprop="name" content="Paraunit: test paralleli, Doctrine e le fixture">
+<meta itemprop="description" content="Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
+I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.">
+<meta itemprop="datePublished" content="2015-10-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2015-10-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1618">
+<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+
+
+
+<meta itemprop="keywords" content="Software Testing,PHP,Database,Open Source,Symfony,Doctrine,MySQL," />
+
+		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 <meta name="twitter:title" content="Paraunit: test paralleli, Doctrine e le fixture"/>
 <meta name="twitter:description" content="Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate."/>
 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">
+
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
+
 	<link rel="shortcut icon" href="/favicon.ico">
 		
 </head>
 <body class="body">
 	<div class="container container--outer">
 		<header class="header">
-    <div class="container">
-        <a class="logo flex" href="/" title="Alessandro Lai" rel="home">
-        
-        <div>
-            <img class="logo__img" alt="Logo" src="/images/logo-alessandro-lai.jpg" />
-        </div>
-        
-        <div class="logo__text">
-            <div class="logo__title">Alessandro Lai</div>
-            <div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
-        </div>
-        </a>
-        
+	<div class="container header__container">
+		
+	<div class="logo logo--mixed">
+		<a class="logo__link" href="/" title="Alessandro Lai" rel="home">
+			<div class="logo__item logo__imagebox">
+					<img class="logo__img" src="/images/logo-alessandro-lai.jpg">
+				</div><div class="logo__item logo__text">
+					<div class="logo__title">Alessandro Lai</div>
+					<div class="logo__tagline">Personal site, blog, slide storage, rant box</div>
+				</div>
+		</a>
+	</div>
+		
 <nav class="menu">
 	<button class="menu__btn" aria-haspopup="true" aria-expanded="false" tabindex="0">
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
@@ -83,9 +98,8 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 	</ul>
 </nav>
 
-    </div>
+	</div>
 </header>
-
 		<div class="wrapper flex">
 			<div class="primary">
 			
@@ -105,18 +119,18 @@ I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Dr
 <p>L&rsquo;aumento della quantità di test però porta alla crescita (direttamente proporzionale) del <strong>tempo necessario</strong> ad eseguire i test stessi.
 Nel caso dei <strong>test unitari</strong> questo aumento è spesso trascurabile, poiché <strong>si limitano a caricare una singola classe</strong> e ad analizzarne il comportamento in completo isolamento, terminando la loro esecuzione nel giro di <strong>pochi millisecondi</strong>.</p>
 <p>Quando invece parliamo di <strong>test funzionali</strong>, il tempo di esecuzione non è più così limitato: vengono caricate <strong>molte più classi</strong>, spesso viene coinvolto anche il <strong>database</strong>, deve essere messa alla prova l&rsquo;interazione tra molti elementi; il tutto porta a test la cui durata è talvolta di <strong>quasi un secondo</strong>.</p>
-<p>Leggendo libri e blog sull&rsquo;argomento, e con l&rsquo;esperienza personale, ho imparato che c'è una <strong>soglia critica</strong> che rappresenta il limite ideale oltre il quale una test suite diventa troppo lenta, e questa soglia è di <strong>circa dieci minuti</strong>.</p>
+<p>Leggendo libri e blog sull&rsquo;argomento, e con l&rsquo;esperienza personale, ho imparato che c&rsquo;è una <strong>soglia critica</strong> che rappresenta il limite ideale oltre il quale una test suite diventa troppo lenta, e questa soglia è di <strong>circa dieci minuti</strong>.</p>
 <p>Ma perché proprio dieci minuti? Il motivo è molto semplice, e pratico: in dieci minuti, il programmatore può fare una pausa, prendersi un caffè o decidere di discutere brevemente una questione tecnica con un collega, e al suo ritorno troverà la suite completata e potrà procedere col lavoro. In caso contrario, possono succedere due cose:</p>
 <ul>
 <li>il programmatore <strong>rimane a fissare lo schermo</strong> mentre i test si eseguono, dando ragione ai detrattori dei test che affermano che fare TDD è una perdita di tempo;</li>
 <li>si <strong>smette di eseguire la test suite</strong>, o per lo meno di farla eseguire per intero.</li>
 </ul>
 <p>La seconda opzione può sembrare fattibile: si fanno girare solo i <strong>test strettamente necessari</strong> mentre si sviluppa, quelli che vengono scritti in quel momento o che coprono la parte di codice che si sta modificando, per poi eseguire il commit del proprio codice senza far girare l&rsquo;intera suite.</p>
-<p>In realtà <strong>questo approccio fa perdere valore ai test</strong> stessi, perché i test sono codice che non andrà mai in produzione, e che quindi può dare valore ai nostri progetti solo se viene eseguito ogni volta. Inoltre questo approccio nasconde <strong>una trappola</strong>, dato che i test, per essere davvero efficaci, vanno eseguiti tutti ogni volta: la loro forza sta proprio nell&rsquo;<strong>individuare gli effetti collaterali</strong> imprevisti delle nostre modifiche, i bug che possono presentarsi in punti inaspettati e apparentemente lontani del nostro progetto.</p>
+<p>In realtà <strong>questo approccio fa perdere valore ai test</strong> stessi, perché i test sono codice che non andrà mai in produzione, e che quindi può dare valore ai nostri progetti solo se viene eseguito ogni volta. Inoltre questo approccio nasconde <strong>una trappola</strong>, dato che i test, per essere davvero efficaci, vanno eseguiti tutti ogni volta: la loro forza sta proprio nell'<strong>individuare gli effetti collaterali</strong> imprevisti delle nostre modifiche, i bug che possono presentarsi in punti inaspettati e apparentemente lontani del nostro progetto.</p>
 <h4 id="esecuzione-parallela-dei-test">Esecuzione parallela dei test</h4>
 <p>In Facile.it lavoro in un progetto basato su Symfony2 e Doctrine e mi sono trovato proprio davanti a questa problematica: avevamo una <strong>suite di test che stava crescendo</strong> a ritmo sostenuto e che a volte impiegava ad eseguirsi, tra build di preparazione ed esecuzione vera e propria, anche 25 minuti.</p>
 <p>Dopo aver ottimizzato le prestazioni del nostro ambiente di sviluppo (passando da Vagrant a Docker, ma questa è un&rsquo;altra storia), ci siamo resi conto di aver bisogno di una soluzione più drastica al nostro problema, e abbiamo pensato di <strong>eseguire in parallelo i nostri test</strong> per sfruttare al meglio le risorse hardware e ridurre così i tempi di esecuzione.</p>
-<p>Dopo un po&rsquo; di ricerche, abbiamo individuato alcuni tool esistenti che permettevano questo approccio:</p>
+<p>Dopo un po' di ricerche, abbiamo individuato alcuni tool esistenti che permettevano questo approccio:</p>
 <ul>
 <li><a href="https://github.com/brianium/paratest">brianium/paratest</a></li>
 <li><a href="https://github.com/liuggio/fastest">liuggio/fastest</a></li>
@@ -132,7 +146,7 @@ Nel caso dei <strong>test unitari</strong> questo aumento è spesso trascurabile
 <li>i test hanno una <strong>rapidità di esecuzione</strong> superiore a quella di un utilizzatore umano.</li>
 </ul>
 <p>Tutti questi motivi contribuiscono a creare situazioni in cui <strong>si verificano dei <a href="https://it.wikipedia.org/wiki/Deadlock">deadlock</a></strong> e che il nostro database può risolvere solo bloccando uno dei due tentativi di accesso ai dati, facendo così fallire il test corrispondente.</p>
-<p>Un altro problema che può verificarsi è l&rsquo;<strong>alterazione dei dati</strong>: quando due test vengono eseguiti in contemporanea, uno dei due può modificare il database e, così facendo, può far mancare i giusti dati di partenza ad un altro test che si sta avviando nello stesso istante.</p>
+<p>Un altro problema che può verificarsi è l'<strong>alterazione dei dati</strong>: quando due test vengono eseguiti in contemporanea, uno dei due può modificare il database e, così facendo, può far mancare i giusti dati di partenza ad un altro test che si sta avviando nello stesso istante.</p>
 <p>Purtroppo <strong>Paratest non offre una soluzione</strong> a questo genere di problemi, mentre Fastest propone come approccio la creazione di un database di test differente per ogni core del proprio processore, per poi eseguire tanti test in parallelo quanti sono i database a disposizione.</p>
 <p>Sfortunatamente anche questo approccio non ci ha soddisfatto, in quanto la costruzione del nostro database di test era piuttosto lenta (avevamo molte migration da eseguire e altrettante fixture da caricare ogni volta) e rischiavamo di guadagnare tempo da una parte per perderlo dall&rsquo;altra, inoltre, avevamo avuto <strong>un&rsquo;idea nuova</strong>.</p>
 <h3 id="facile-itparaunit">facile-it/paraunit</h3>
@@ -231,11 +245,11 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 	</div>
 </div>
 
-<nav class="post-nav flex">
-	<div class="post-nav__item post-nav__item--next">
-		<a class="post-nav__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="next">
-			<span class="post-nav__caption">Next&thinsp;»</span>
-			<p class="post-nav__post-title">How PHP 7 &amp; TDD helped me sleep better</p>
+<nav class="pager flex">
+	<div class="pager__item pager__item--next">
+		<a class="pager__link" href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="next">
+			<span class="pager__subtitle">Next&thinsp;»</span>
+			<p class="pager__title">How PHP 7 &amp; TDD helped me sleep better</p>
 		</a>
 	</div>
 </nav>
@@ -243,12 +257,12 @@ Tra gli sviluppi futuri spero di poter realizzare:</p>
 
 			</div>
 			<aside class="sidebar"><div class="widget-search widget">
-	<form class="widget-search__form" role="search" method="get" action="https://google.com/search">
+	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
-			<input class="widget-search__field" type="search" placeholder="SEARCH..." value="" name="q" aria-label="SEARCH...">
+			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">
 		</label>
 		<input class="widget-search__submit" type="submit" value="Search">
-		<input type="hidden" name="sitesearch" value="https://alessandrolai.dev/" />
+		<input type="hidden" name="sites" value="https://alessandrolai.dev/"/>
 	</form>
 </div>
 <div class="widget-recent widget">
