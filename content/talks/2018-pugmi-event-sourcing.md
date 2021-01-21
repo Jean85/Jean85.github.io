@@ -9,3 +9,5 @@ language: en
 youtube: f31gHqKG-0A
 categories: ["Talks"]
 ---
+*This is a test of a talk that I did [on May at phphday 2018]({{< ref 2018-phpday-event-sourcing >}}) and also [the next October in italian at SymfonyDay 2018]({{< ref "2018-symfonyday-event-sourcing" >}}), where there's video recording available.*
+<!--more-->

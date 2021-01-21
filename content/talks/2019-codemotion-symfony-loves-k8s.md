@@ -8,3 +8,5 @@ slides: 2019-10-symfony-loves-k8s-codemotion
 language: en
 categories: ["Talks"]
 ---
+*This is a replica of [the talk]({{< ref "2019-sfday-symfony-loves-k8s" >}}) that I did the week before at SFDay 2019, where there's video recording available.*
+<!--more-->
