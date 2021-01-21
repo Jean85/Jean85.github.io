@@ -12,11 +12,12 @@ theme = "mainroad"
   avatar = "images/avatar-alessandro-lai.jpg"
 
 [Params]
-  logo = "images/logo-alessandro-lai.jpg"
-  subtitle = "Personal site, blog, slide storage, rant box"
-  description = "Alessandro Lai's personal site, blog, slide storage, rant box"
+  #logo = "images/logo-alessandro-lai.jpg"
+  #subtitle = "Personal site, blog, slide storage, rant box"
+  #description = "Alessandro Lai's personal site, blog, slide storage, rant box"
   #copyright = "John Doe" # copyright holder, otherwise will use site title
   opengraph = true
+  schema = true # Enable Schema
   images = ["images/avatar-alessandro-lai-square.jpg"] # for OpenGraph
   twitter_cards = true
   readmore = true
@@ -33,11 +34,16 @@ theme = "mainroad"
   #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   customCSS = ["css/pr-66-fixes.css"] # Include custom CSS files
 
+[Params.logo]
+  image = "images/logo-alessandro-lai.jpg" # Logo image. Path relative to "static"
+  title = "Alessandro Lai" # Logo title, otherwise will use site title
+  subtitle = "Personal site, blog, slide storage, rant box"
+
 [Params.sidebar]
   home = "right" # Configure layout for home page
   list = "right"  # Configure layout for list pages
   single = "right" # Configure layout for single pages
-  widgets = ["search", "recent", "recent_talks", "taglist", "social"]
+  widgets = ["ddg-search", "recent", "recent_talks", "taglist", "social"]
 
 [Params.widgets]
   talks_recent_num = 5 # Set the number of talks in the "Recent talks" widget
@@ -46,9 +52,9 @@ theme = "mainroad"
 
 [Params.widgets.social]
   twitter = "AlessandroLai"
+  linkedin = "alessandro-lai-09440922"
   github = "Jean85"
   gitlab = "Alessandro.Lai"
-  linkedin = "alessandro-lai-09440922"
 
 [taxonomies]
   tag = "tags"
