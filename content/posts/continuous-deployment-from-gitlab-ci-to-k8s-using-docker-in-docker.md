@@ -4,9 +4,9 @@ draft: false
 categories: [Republished]
 tags: [Continuous integration, Continuous deployment, Docker, GitLab, Kubernetes]
 title: "Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker"
-type: "post"
 languageCode: "en-EN"
 toc: true
+
 republished:
   facile: https://engineering.facile.it/blog/eng/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/
 ---
