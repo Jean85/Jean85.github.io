@@ -14,7 +14,7 @@ theme = "mainroad"
 [Params]
   #logo = "images/logo-alessandro-lai.jpg"
   #subtitle = "Personal site, blog, slide storage, rant box"
-  #description = "Alessandro Lai's personal site, blog, slide storage, rant box"
+  description = "Alessandro Lai's personal site, blog, slide storage, rant box"
   #copyright = "John Doe" # copyright holder, otherwise will use site title
   opengraph = true
   schema = true # Enable Schema
