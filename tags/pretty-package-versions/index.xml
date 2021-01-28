@@ -6,7 +6,16 @@
     <description>Recent content in Pretty Package Versions on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/pretty-package-versions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/pretty-package-versions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.1</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.1/</link>
+      <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.1/</guid>
+      <description>&lt;p&gt;This small patch handles replaced and provided packages, so that consumers of this library can handle bad requests gracefully.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 2.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.0/</link>
