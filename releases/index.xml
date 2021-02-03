@@ -6,7 +6,16 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 03 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.2</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.2/</link>
+      <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.2/</guid>
+      <description>&lt;p&gt;This small patch handles a couple of new bugs that got discovered through &lt;a href=&#34;https://github.com/getsentry/sentry-symfony/issues/435&#34;&gt;an issue on `sentry-symfony&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 2.0.1</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.1/</link>
