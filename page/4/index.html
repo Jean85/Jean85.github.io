@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://alessandrolai.dev/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-<meta property="og:updated_time" content="2021-02-03T00:00:00+00:00" />
+<meta property="og:updated_time" content="2021-02-04T00:00:00+00:00" />
 
 		<meta itemprop="name" content="Alessandro Lai">
 <meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
@@ -95,6 +95,26 @@
 			
 <main class="main list" role="main">
 	<article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/releases/paraunit/1.0.0/" rel="bookmark">
+			Paraunit 1.0.0: the stable release
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2020-03-11T00:00:00Z">March 11, 2020</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>Today I decided to release <code>facile-it/paraunit</code> <code>1.0.0</code>! In reality the package was pretty stable and widely used at Facile.it for a long time, but right now I wanted to step forward and declare it officially stable.</p>
+<p>The main reason behind this is that I&rsquo;m currently working <a href="https://github.com/facile-it/paraunit/pull/149">on PHPUnit 9 support</a>, and this will force me to release a new minor that will drop support for previous PHPUnit version altogether. This decision was in reality forced onto me due to the fact that PHUnit 9 drops support for the <code>--printer</code> CLI option and the relative extension point, which Paraunit was using as a way to extract test results.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/paraunit/1.0.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
 			<a href="/releases/paraunit/1.0.0-beta2/" rel="bookmark">
@@ -239,64 +259,6 @@
 		<p><em>This is a replica of <a href="https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/">the talk</a> that I did the week before at SFDay 2019, where there&rsquo;s video recording available.</em></p>
 	</div>
 </article>
-<article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/talks/2019-sfday-symfony-loves-k8s/" rel="bookmark">
-			Symfony ❤︎ Kubernetes: dynamic feature-review environments
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-10-18T00:00:00Z">October 18, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
-    <iframe src="https://www.youtube-nocookie.com/embed/CfbqEnrKxN0"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            width="560" height="349"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-    </iframe>
-</div>
-
-
-
-
-<p>
-    Talk presented at
-    
-    <a href="https://2019.sfday.it/talks.html" target="_blank">
-        
-        SFDay 2019 (Verona)
-        
-    </a>
-    
-    <br />
-
-    <a target="_blank" href="/slides/2019-10-symfony-loves-k8s-sfday/">
-        
-        <img src="/images/en.svg.webp" alt="Language: en" style="vertical-align: middle" />
-        
-        Slides available
-    </a>
-
-    
-    <br />
-    See talk comments on <a href="https://joind.in/talk/910a4" target="_blank">Joind.in</a>.
-    
-</p>
-
-		<p>Docker has been a part of our development environments for long as of now. But its usage in production had not followed the same adoption curve, and it&rsquo;s instead rising only in the last years, mainly due to Kubernetes.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/talks/2019-sfday-symfony-loves-k8s/">Read more…</a>
-	</div>
-</article>
 
 </main>
 
@@ -320,11 +282,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/1.6.0/">Pretty Package Versions 1.6.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.2/">Pretty Package Versions 2.0.2</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.1/">Pretty Package Versions 2.0.1</a></li>
 			<li class="widget__item"><a class="widget__link" href="/talks/2021-pugmi-my-functional-testing-toolbox/">My Symfony functional testing toolbox</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.0/">Pretty Package Versions 2.0</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2020-sfday-my-functional-testing-toolbox/">My Symfony functional testing toolbox</a></li>
 		</ul>
 	</div>
 </div>
