@@ -6,7 +6,16 @@
     <description>Recent content in Pretty Package Versions on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/pretty-package-versions/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/pretty-package-versions/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.3</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.3/</link>
+      <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.3/</guid>
+      <description>&lt;p&gt;This last small patch publishes a new constant to make the &amp;ldquo;no reference&amp;rdquo; text available to end users.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 1.6.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.6.0/</link>
