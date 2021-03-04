@@ -6,7 +6,16 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminable Loop Command 1.1.0</title>
+      <link>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</link>
+      <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</guid>
+      <description>&lt;p&gt;This is just a small upgrade of a very stable package, that adds support for PHP 8 and Symfony 5.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 1.6.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.6.0/</link>
@@ -207,6 +216,16 @@
       
       <guid>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a replica of &lt;a href=&#34;https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/&#34;&gt;the talk&lt;/a&gt; that I did two months before at CloudConf 2019, followed by a live coding demonstration&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Terminable Loop Command 1.0</title>
+      <link>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</link>
+      <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</guid>
+      <description>This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.
+This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.</description>
     </item>
     
     <item>

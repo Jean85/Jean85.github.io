@@ -4,17 +4,42 @@
   
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/categories/releases/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/terminable-loop-command/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</loc>
+    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -24,21 +49,6 @@
   
   <url>
     <loc>https://alessandrolai.dev/releases/pretty-package-versions/1.6.0/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2021-02-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/tags/</loc>
     <lastmod>2021-02-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -160,6 +170,11 @@
   <url>
     <loc>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</loc>
     <lastmod>2019-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</loc>
+    <lastmod>2019-05-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
