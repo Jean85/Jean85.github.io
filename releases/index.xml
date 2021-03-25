@@ -6,7 +6,16 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 1.2.1: allow jean85/pretty-package-versions v2</title>
+      <link>https://alessandrolai.dev/releases/paraunit/1.2.1/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/1.2.1/</guid>
+      <description>&lt;p&gt;This small patch is just to allow a dependency bump for end users.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Terminable Loop Command 1.1.0</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</link>

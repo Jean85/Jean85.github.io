@@ -4,32 +4,42 @@
   
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/tags/paraunit/</loc>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://alessandrolai.dev/releases/paraunit/1.2.1/</loc>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://alessandrolai.dev/tags/</loc>
-    <lastmod>2021-03-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-03-25T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -90,11 +100,6 @@
   <url>
     <loc>https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/</loc>
     <lastmod>2020-11-20T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://alessandrolai.dev/tags/paraunit/</loc>
-    <lastmod>2020-09-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>

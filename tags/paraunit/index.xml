@@ -6,7 +6,16 @@
     <description>Recent content in Paraunit on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 15 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 1.2.1: allow jean85/pretty-package-versions v2</title>
+      <link>https://alessandrolai.dev/releases/paraunit/1.2.1/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/1.2.1/</guid>
+      <description>&lt;p&gt;This small patch is just to allow a dependency bump for end users.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Paraunit 1.2.0: PHP 8 &amp; PHPUnit 9.3 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.2.0/</link>
