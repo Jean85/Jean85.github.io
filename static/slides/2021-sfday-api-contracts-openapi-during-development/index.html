@@ -1,0 +1,586 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>API contracts - Leveraging OpenAPI during API development - Alessandro Lai</title>
+    <meta name="description" content="{{ Descrizione }}">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/facile-engineering.css" id="theme">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section id="title" data-background-image="img/theme/bg-cover.svg">
+            <h1 style="white-space: nowrap">API contracts</h1>
+            <h3>
+                Leveraging OpenAPI<br/>
+                during API development
+            </h3>
+            <p>
+                <a target="_blank" href="https://alessandrolai.dev/">Alessandro Lai</a> / <a target="_blank" href="http://twitter.com/AlessandroLai">@AlessandroLai</a><br>
+            </p>
+            <small>
+                <p>
+                    <a target="_blank" href="https://2021.sfday.it/">sfday @ 127.0.0.1</a> - May 13th 2021,
+                    Online
+                </p>
+                <p class="smaller">
+                    <a target="_blank" href="https://joind.in/talk/39cea">https://joind.in/talk/39cea</a>
+                </p>
+            </small>
+        </section>
+
+        <section id="intro">
+            <section>
+                <h2>Who am I?</h2>
+                <img src="img/github_avatar.jpg" class="avatar" width="30%">
+                <div style="float: right; padding-top: 2em">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            Team lead developer @ Facile.it
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a target="_blank" href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a target="_blank" href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-users"></i></span>
+                            PHP UG Milan Coordinator
+                        </li>
+                        <li>
+                            <span class="fa-li">
+                                <i class="fas fa-certificate"></i>
+                            </span>
+                            PHP-FIG Secretary
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section>
+            <section>
+                <h3>APIs: the language of web apps</h3>
+                <p>
+                    APIs are the "common language" of web development
+                </p>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span>
+                        Frontend to backend
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span>
+                        Mobile to backend
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span>
+                        Between different applications <br>
+                        <small>(microservices)</small>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-arrow-alt-circle-right"></i></span>
+                        Between different companies <br>
+                        <small>(SaaS, API monetization...)</small>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Working between projects</h3>
+                <p>
+                    If you don't have a monorepo, you'll need a way to describe <br/>
+                    what your APIs does and how it does it
+                </p>
+            </section>
+            <section>
+                <h3>Design by contract &trade;</h3>
+                <blockquote style="width: 100%; font-size: smaller">
+                    Design by contract is an approach for designing software. <br/>
+                    <span class="fragment">
+                        [...]<br/> 
+                        software designers should define <b>formal, precise and verifiable<br/>
+                        interface specifications</b> for software components,
+                    </span>
+                    <br/>
+                    <span class="fragment">
+                        [...]<br/>
+                        all client components that invoke <br/>
+                        an operation on a server component will meet the preconditions
+                    </span>
+                    <br/>
+                    <span class="fragment">
+                        [...]<br/>
+                        [Otherwise] the inverse approach is taken, meaning that the server component <br/>
+                        tests that all relevant preconditions hold true.
+                    </span>
+                </blockquote>
+                <small>From <a target="_blank" href="https://en.wikipedia.org/wiki/Design_by_contract">Wikipedia</a></small>
+                <p class="fragment">Which language to use? Which format?</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>OpenAPI 3</h3>
+                <img class="stretch" src="img/openapi3.png" alt="OpenAPI specification heading" /><br/>
+                <small><a target="_blank" href="https://swagger.io/specification/">OpenAPI specification</a></small>
+            </section>
+            <section>
+                <h3>OpenAPI (the old Swagger)</h3>
+                <img class="stretch" src="img/swagger_ui.png" alt="Swagger UI" />
+                <small><a target="_blank" href="https://swagger.io/tools/swagger-ui/">Swagger UI</a></small>
+            </section>
+            <section>
+                <h3>Beware, here be YAML</h3>
+                <pre class="stretch"><code>openapi: 3.0.3
+info:
+  title: Test API for Facile.it
+  version: '1.0'
+  description: Description of the APIs
+  contact:
+    name: Alessandro Lai
+servers:
+  - url: 'https://openapi.facile.it'
+    description: Prod
+paths:
+  /api/test:
+    get:
+      summary: Get the test information
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  # ...</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <div class="stretch">
+                    <h3>StopLight (Studio)</h3>
+                    <img src="img/stoplight-studio.png" alt="OpenAPI specification heading" style="float: left; width: 55%"/>
+                    <ul class="fa-ul">
+                        <li class="fragment" style="margin: 1em 0">
+                            <span class="fa-li"><i class="fas fa-plus-square"></i></span>
+                            Prism<br/>
+                            <small>
+                                <i class="fab fa-github"></i>
+                                <a target="_blank" href="https://github.com/stoplightio/prism">https://github.com/stoplightio/prism</a>
+                                <br/>
+                                Mock server
+                            </small>
+                        </li>
+                        <li class="fragment">
+                            <span class="fa-li"><i class="fas fa-plus-square"></i></span>
+                            Spectral<br/>
+                            <small>
+                                <i class="fab fa-github"></i>
+                                <a target="_blank" href="https://github.com/stoplightio/spectral">https://github.com/stoplightio/spectral</a>
+                                <br/>
+                                OpenAPI spec validation
+                            </small>
+                        </li>
+                    </ul>
+                </div>
+                <small><a target="_blank" href="https://swagger.io/specification/">https://stoplight.io/studio/</a></small>
+            </section>
+            <section>
+                <h2>Live demo!</h2>
+            </section>
+            <section>
+                <h3>Credits to this guy...</h3>
+                <img src="img/phil-sturgeon.png" alt="Phil Sturgeon Twitter profile" style="float:left; width: 40%"/>
+                <ul class="fa-ul" style="padding: 0.5em">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-fire"></i></span>
+                        Core team of <a target="_blank" href="https://codeigniter.com/">CodeIgniter</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-fire"></i></span>
+                        <a target="_blank" href="https://pyrocms.com/">PyroCMS</a> founder
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-podcast"></i></span>
+                        <a target="_blank" href="https://phptownhall.com/">PHP Town Hall</a> podcast host 
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fab fa-php"></i></span>
+                        <a target="_blank" href="https://phptherightway.com/">PHP The Right Way</a> core contributor 
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-book"></i></span>
+                        Author of <a target="_blank" href="https://apisyouwonthate.com/books/build-apis-you-wont-hate">"API you won't hate"</a> 
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-briefcase"></i></span>
+                        ... and now works at <a target="_blank" href="https://stoplight.io">Stoplight.io</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>OpenApi.tools</h3>
+                <p>
+                    <a target="_blank" href="https://openapi.tools">
+                        <img class="stretch" src="img/openapi-tools.png" alt="Openapi.tools site screenshot" style="display: block"/>
+                    </a>
+                </p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>The "documentation" pitfall</h3>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-exchange-alt"></i></span>
+                            How do we synchronize code & spec?
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-hourglass-end"></i></span>
+                            What's stopping us from making the spec outdated?
+                        </li>
+                        <li class="fragment">
+                            <span class="fa-li"><i class="fas fa-comment"></i></span>
+                            Just committing your OpenAPI Spec is not enough:<br/>
+                            it's the same as having too many comments in the code
+                        </li>
+                    </ul>
+            </section>
+            <section data-transition="fade">
+                <h3>The "magic" approach</h3>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/nelmio/NelmioApiDocBundle">NelmioApiDocBundle</a>
+                <pre class="stretch"><code>/**
+ * List the rewards of the specified user.
+ *
+ * This call takes into account all confirmed awards, but not pending or refused awards.
+ *
+ * @Route("/api/{user}/rewards", methods={"GET"})
+ * @SWG\Response(
+ *     response=200,
+ *     description="Returns the rewards of an user",
+ *     @SWG\Schema(
+ *         type="array",
+ *         @SWG\Items(ref=@Model(type=Reward::class, groups={"full"}))
+ *     )
+ * )
+ * @SWG\Parameter(name="order", in="query", type="string", description="The field used to order rewards")
+ * @SWG\Tag(name="rewards")
+ * @Security(name="Bearer")
+ */
+public function fetchUserRewardsAction(User $user)
+{
+                </code></pre>
+            </section>
+            <section data-transition="fade">
+                <h3>The "magic" approach</h3>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/nelmio/NelmioApiDocBundle">NelmioApiDocBundle</a>
+                <p class="stretch" style="font-size: 2em; padding-top: 1.5em">
+                    <span class="grey-block">OA Spec</span>
+                    <i class="fas fa-angle-double-left fragment"></i>
+                    <span class="grey-block">Code</span>
+                </p>
+                <p class="fragment">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <b>DANGEROUS:</b><br/>
+                    code changes can accidentally alter the API contract!</p>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>
+                    A better approach:<br/>
+                    involving the spec in the code
+                </h3>
+                <p class="stretch" style="font-size: 2em; padding-top: 1.5em">
+                    <span class="grey-block">OA Spec</span>
+                    <i class="fas fa-angle-double-right"></i>
+                    <span class="grey-block">Code</span>
+                </p>
+            </section>
+            <section>
+                <h3>The validator</h3>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/thephpleague/openapi-psr7-validator">thephpleague/openapi-psr7-validator</a>
+                <pre class="composer-require"><code>composer require league/openapi-psr7-validator</code></pre>
+                <img src="img/psr7-validator.png" alt="OpenAPI Spec + PSR-7 message = Valid">
+            </section>
+            <section>
+                <h3>Http Foundation VS PSR-7</h3>
+                If you use Flex, the new <code>psr7-pack</code>
+                    (see
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/symfony/recipes/pull/911">symfony/recipes#911</a>)
+                <pre class="bash"><code>composer require psr7-pack
+# same as
+composer require symfony/psr-http-message-bridge nyholm/psr7</code></pre>
+                <pre><code class="stretch yaml">services:
+  Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory:
+    autowire: true
+    autoconfigure: true</code></pre>
+                <h5>OR</h5>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/sensiolabs/SensioFrameworkExtraBundle">sensio/framework-extra-bundle</a> < 6.0
+                <pre><code>sensio_framework_extra:
+   psr_message:
+      enabled: true</code></pre>
+            </section>
+            <section>
+                <h3>Symfony service definition</h3>
+                <pre><code class="php">$validatorBuilder = (new \League\OpenAPIValidation\PSR7\ValidatorBuilder)
+    ->setCache(new Psr16(...))
+    ->fromYamlFile($yamlFile);
+
+$validatorBuilder->getServerRequestValidator();
+$validatorBuilder->getResponseValidator();</code></pre>
+                <pre class="fragment"><code class="stretch yaml">services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  League\OpenAPIValidation\PSR7\ValidatorBuilder:
+    calls:
+      - ['fromYamlFile', ['%kernel.project_dir%/openapi.yaml']]
+      # cache pool from framework.cache.pools
+      - ['setCache', ['@cache.openapivalidator']]
+ 
+  League\OpenAPIValidation\PSR7\RequestValidator:
+    factory:
+    - '@League\OpenAPIValidation\PSR7\ValidatorBuilder'
+    - 'getRequestValidator'</code></pre>
+            </section>
+            <section>
+                <h3>Using the validator in tests (1/2)</h3>
+                <pre class="stretch"><code>class OpenApiClient extends KernelBrowser
+{
+    protected function doRequest($request): Response
+    {
+        if ($this->validateRequest) {
+            $psr7request = $this->psrHttpFactory->createRequest($request);
+            $this->requestValidator->validate($psr7request);
+        }                    
+
+        $pathFinder = new PathFinder(
+            $this->responseValidator->getSchema(),
+            $request->getUri(),
+            $request->getMethod()
+        );
+
+        $matchingOperations = $pathFinder->search();
+        if (count($matchingOperations) !== 1) {
+            throw new \RuntimeException(
+                "Unexpected number of matches for {$request->getUri()}: " .
+                count($matchingOperations)
+            );
+        } // ...</code></pre>
+            </section>
+            <section>
+                <h3>Using the validator in tests (2/2)</h3>
+                <pre class="php"><code>        // (continue)
+
+        try {
+            $this->responseValidator->validate(
+                $matchingOperations[0], 
+                $this->psrHttpFactory->createResponse($response)
+            );
+        } catch (\... $exception) {
+            // You should catch and decorate the exceptions 
+            // to make the failures "prettier"
+        }
+
+        return $response;
+    }</code></pre>
+            </section>
+            <section>
+                <h3>Using the spec in production!</h3>
+                <pre class="stretch php"><code>&lt;?php
+
+declare(strict_types=1);
+
+use League\OpenAPIValidation\PSR7\RequestValidator as Psr7RequestValidator;
+use Symfony\Bridge\PsrHttpMessage\Factory\PsrHttpFactory;
+use Symfony\Component\HttpKernel\Event\ControllerEvent;
+
+class RequestValidatorEventListener
+{
+    public function __construct(
+        private PsrHttpFactory $psrHttpFactory,
+        private RequestValidator $requestValidator,
+    ) {}
+
+    public function onKernelController(ControllerEvent $event): void
+    {
+        $psr7request = $this->psrHttpFactory->createRequest($event->getRequest());
+
+        $this->requestValidator->validate($psr7request);
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Using validation errors as responses</h3>
+                <pre class="stretch"><code>&lt;?php
+
+use League\OpenAPIValidation\PSR7\Exception\ValidationFailed;
+use Symfony\Component\HttpFoundation\JsonResponse;
+
+class ErrorEventListener
+{
+    public function onKernelException(ExceptionEvent $event): void
+    {
+        // ...
+        $event->setResponse(
+            $this->createFromThrowable($event->getThrowable())
+        );
+    }
+
+    private function createFromThrowable(\Throwable $error): JsonResponse
+    {
+        if ($error instanceof ValidationFailed) {
+            return new JsonResponse([/* ... */], Response::HTTP_BAD_REQUEST);
+        }
+        // ...
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>A suggestion: API Problem</h3>
+                <a href="https://tools.ietf.org/html/rfc7807">RFC 7808 - Problem Details for HTTP APIs</a>
+                <pre class="http"><code>HTTP/1.1 403 Forbidden
+Content-Type: application/problem+json
+Content-Language: en
+
+{
+    "type": "https://example.com/probs/out-of-credit",
+    "title": "You do not have enough credit.",
+    "detail": "Your current balance is 30, but that costs 50.",
+    "instance": "/account/12345/msgs/abc",
+    // arbitrary extended properties:
+    "balance": 30,
+    "accounts": ["/account/12345", "/account/67890"]
+}</code></pre>
+            </section>
+            <section>
+                <h3>PHP API Problem</h3>
+                <i class="fab fa-github"></i>
+                <a target="_blank" href="https://github.com/Crell/ApiProblem">crell/api-problem</a>
+                <pre class="composer-require"><code>composer require crell/api-problem</code></pre>
+            <pre class="stretch"><code>use Crell\ApiProblem\ApiProblem;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Response;
+
+$problem = new ApiProblem("You do not have enough credit.", "http://example.com/probs/out-of-credit");
+// Defined properties in the API have their own setter methods.
+$problem
+  ->setDetail("Your current balance is 30, but that costs 50.")
+  ->setInstance("http://example.net/account/12345/msgs/abc");
+$problem['balance'] = 30;
+$problem['accounts'] = [
+  "http://example.net/account/12345",
+  "http://example.net/account/67890"
+];
+
+return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code></pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Pitfalls and limitations</h3>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-toolbox"></i></span>
+                        Tools are constraints<br/>
+                        <small>Penetration of new OAS version support is not immediate</small>
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-history"></i></span>
+                        Versioning issues are still there to be handled<br/>
+                        <small>... but you could leverage OAS to make it less painful</small>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section id="ending">
+            <section>
+                <h2>Thanks!</h2>
+                <p>
+                    Please rate my talk on Joind.in: <a target="_blank" href="https://joind.in/talk/39cea">https://joind.in/talk/39cea</a>
+                </p>
+                <img class="stretch" src="img/joindin-qr.png" alt="Joind.in link: https://joind.in/talk/39cea">
+                <aside class="notes">
+                    45:00
+                </aside>
+            </section>
+            <section>
+                <h2 style="margin-bottom: 2em">Questions?</h2>
+                <h4>Contacts</h4>
+                <div style="font-size: smaller">
+                    <ul class="fa-ul">               
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            <a target="_blank" href="https://alessandrolai.dev">https://alessandrolai.dev</a>
+                            <small style="vertical-align: middle">(slides & other talks here)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a target="_blank" href="mailto:alessandro.lai85@gmail.com">alessandro.lai85@gmail.com</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span>
+                            <a target="_blank" href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>
+                            <small style="vertical-align: middle">(we are hiring!)</small>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a target="_blank" href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a target="_blank" href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        width: 1160,
+        height: 720,
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+            RevealHighlight,
+            RevealNotes,
+            RevealZoom
+        ]
+    });
+</script>
+</body>
+</html>
