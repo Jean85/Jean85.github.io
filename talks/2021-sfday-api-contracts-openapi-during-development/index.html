@@ -4,24 +4,36 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>PHP - Alessandro Lai</title>
+	<title>API contracts: Leveraging OpenAPI during API development - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="PHP" />
-<meta property="og:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://alessandrolai.dev/tags/php/" />
+		<meta property="og:title" content="API contracts: Leveraging OpenAPI during API development" />
+<meta property="og:description" content="Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.
+Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-<meta property="og:updated_time" content="2017-09-12T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-05-13T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-13T00:00:00+00:00" />
 
-		<meta itemprop="name" content="PHP">
-<meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+		<meta itemprop="name" content="API contracts: Leveraging OpenAPI during API development">
+<meta itemprop="description" content="Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.
+Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?">
+<meta itemprop="datePublished" content="2021-05-13T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-13T00:00:00+00:00" />
+<meta itemprop="wordCount" content="111">
+<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+
+
+
+<meta itemprop="keywords" content="" />
 
 		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
-<meta name="twitter:title" content="PHP"/>
-<meta name="twitter:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box"/>
+<meta name="twitter:title" content="API contracts: Leveraging OpenAPI during API development"/>
+<meta name="twitter:description" content="Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.
+Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -30,7 +42,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
-	<link rel="alternate" type="application/rss+xml" href="/tags/php/index.xml" title="Alessandro Lai">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -92,98 +103,75 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">PHP</h1>
-	</header><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/phpunit-upgrade-namespace/" rel="bookmark">
-			How to gradually upgrade toward PHPUnit 6 with namespaced classes
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Talk: API contracts: Leveraging OpenAPI during API development</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-12T00:00:00Z">September 12, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-05-13T00:00:00Z">May 13, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
-This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/phpunit-upgrade-namespace/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/visual-debt-typehints/" rel="bookmark">
-			Why type hints and interfaces are not visual debt
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-05-31T00:00:00Z">May 31, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
-After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading). After that, the author of the video was dragged into the conversation, and it blew up into a big tweetstorm in the following few hours.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/visual-debt-typehints/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="bookmark">
-			How PHP 7 &amp; TDD helped me sleep better
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2016-06-07T00:00:00Z">June 07, 2016</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
-Maybe we fear only one thing more than that: being interrupted.
-While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.
-My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/how-php-7-tdd-helped-me-sleep-better/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/paraunit/" rel="bookmark">
-			Paraunit: test paralleli, Doctrine e le fixture
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2015-10-09T00:00:00Z">October 09, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
-I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/paraunit/">Read more…</a>
-	</div>
-</article>
+		</header><div class="content post__content clearfix">
+			
+
+
+
+<p>
+    Talk presented at
+    
+    <a href="https://2021.sfday.it/" target="_blank">
+        
+        SFDay @ 127.0.0.1 (Online)
+        
+    </a>
+    
+    <br />
+
+    <a target="_blank" href="/slides/2021-sfday-api-contracts-openapi-during-development/">
+        
+        <img src="/images/it.svg.webp" alt="Language: it" style="vertical-align: middle" />
+        
+        Slides available
+    </a>
+
+    
+    <br />
+    See talk comments on <a href="https://joind.in/talk/39cea" target="_blank">Joind.in</a>.
+    
+</p>
+
+			<p>Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.</p>
+<p>Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?</p>
+<p>Lo standard OpenAPI (precedentemente conosciuto come Swagger) è un ottimo strumento formale per descrivere le proprie API, ma va usato in maniera attenta. Ci sono diversi modi per utilizzarlo e diversi strumenti dedicati per Symfony, ed in questo talk vedremo un approccio che ci permetterà di tenere il nostro documento OpenAPI al centro del nostro progetto e del nostro flusso di sviluppo.</p>
+		</div>
+	</article>
 </main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Alessandro Lai</span>
+	</div>
+	<div class="authorbox__description">
+		Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/talks/2021-pugmi-my-functional-testing-toolbox/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">My Symfony functional testing toolbox</p>
+		</a>
+	</div>
+</nav>
 
 
 			</div>
-			
-<aside class="sidebar"><div class="widget-search widget">
+			<aside class="sidebar"><div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
 			<input class="widget-search__field" type="search" placeholder="SEARCH…" value="" name="q" aria-label="SEARCH…">

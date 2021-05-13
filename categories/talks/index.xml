@@ -6,7 +6,17 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 13 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>API contracts: Leveraging OpenAPI during API development</title>
+      <link>https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/</link>
+      <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/</guid>
+      <description>&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;
+&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>My Symfony functional testing toolbox</title>
       <link>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</link>
