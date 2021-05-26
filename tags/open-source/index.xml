@@ -6,7 +6,16 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.4</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.4/</link>
+      <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.4/</guid>
+      <description>&lt;p&gt;This last small patch had to be rushed out due to &lt;a href=&#34;https://github.com/composer/composer/pull/9816/files&#34;&gt;a deprecation in Composer 2.0.14&lt;/a&gt;. This was triggering failures downstream, like in the Sentry SDK CI.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Paraunit 1.2.1: allow jean85/pretty-package-versions v2</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.2.1/</link>
