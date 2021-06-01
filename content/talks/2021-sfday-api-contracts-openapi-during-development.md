@@ -7,6 +7,7 @@ location: Online
 slides: 2021-sfday-api-contracts-openapi-during-development
 language: it
 joindin: '39cea'
+youtube: aSPv8tIDMBY
 categories: ["Talks"]
 ---
 Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti. 

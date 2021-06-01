@@ -7,6 +7,7 @@ location: Online
 slides: 2020-10-k8s-php-developers-phpday
 language: en
 joindin: b0b64
+youtube: _AGDHuK7kvI
 categories: ["Talks"]
 ---
 Docker has slowly won the hearth of many developers as a good, flexible and reliable tool to build local environments for web apps, but containers in production were still a myth for a long time. 
