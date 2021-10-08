@@ -6,7 +6,16 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.5</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/</link>
+      <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/</guid>
+      <description>&lt;p&gt;This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 2.0.4</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.4/</link>

@@ -4,36 +4,33 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Adding Event Sourcing to an existing PHP project (for the right reasons) - Alessandro Lai</title>
+	<title>Pretty Package Versions 2.0.5 - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Adding Event Sourcing to an existing PHP project (for the right reasons)" />
-<meta property="og:description" content="“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.
-However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity." />
+		<meta property="og:title" content="Pretty Package Versions 2.0.5" />
+<meta property="og:description" content="This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/talks/2018-phpday-event-sourcing/" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-<meta property="article:published_time" content="2018-05-12T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-05-12T00:00:00+00:00" />
+<meta property="article:published_time" content="2021-10-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-10-08T00:00:00+00:00" />
 
-		<meta itemprop="name" content="Adding Event Sourcing to an existing PHP project (for the right reasons)">
-<meta itemprop="description" content="“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.
-However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.">
-<meta itemprop="datePublished" content="2018-05-12T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-05-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="172">
+		<meta itemprop="name" content="Pretty Package Versions 2.0.5">
+<meta itemprop="description" content="This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!">
+<meta itemprop="datePublished" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-10-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="74">
 <meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="Pretty Package Versions,Open Source," />
 
 		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
-<meta name="twitter:title" content="Adding Event Sourcing to an existing PHP project (for the right reasons)"/>
-<meta name="twitter:description" content="“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.
-However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity."/>
+<meta name="twitter:title" content="Pretty Package Versions 2.0.5"/>
+<meta name="twitter:description" content="This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!"/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -106,56 +103,47 @@ However, most of these deal with the problem starting from an utopian assumption
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Talk: Adding Event Sourcing to an existing PHP project (for the right reasons)</h1>
+			<h1 class="post__title">Pretty Package Versions 2.0.5</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-05-12T00:00:00Z">May 12, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2021-10-08T00:00:00Z">October 08, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
-		</header><div class="content post__content clearfix">
-			
-<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
-    <iframe src="https://www.youtube-nocookie.com/embed/H2MdGBfJtQA"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            width="560" height="349"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-    </iframe>
-</div>
-
-
-
-
-<p>
-    Talk presented at
-    
-    <a href="https://2018.phpday.it/talks.html#alessandro-lai" target="_blank">
-        
-        PHPDay 2018 (Verona)
-        
-    </a>
-    
-    <br />
-
-    <a target="_blank" href="/slides/2018-05-event-sourcing-phpday/">
-        
-        <img src="/images/en.svg.webp" alt="Language: en" style="vertical-align: middle" />
-        
-        Slides available
-    </a>
-
-    
-    <br />
-    See talk comments on <a href="https://joind.in/talk/87e9e" target="_blank">Joind.in</a>.
-    
-</p>
-
-			<p>“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.</p>
-<p>However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.</p>
-<p>But the reality greatly differs: projects are born from small and simple prototypes, and they accumulate complexity only with time and the growth and evolution of specifications and features.</p>
-<p>This talk is a case history in which I will tell you (with little theory and a lot of practical examples) how we decided to add event sourcing to an already existing project (without eradicating the rest or rewriting it), to solve a specific problem (reporting and its historization) for which this methodology proved to be the perfect solution.</p>
+		</header>
+		<div class="content clearfix">
+            <blockquote>
+                <p>
+                    This is a republished tag announcement for <code>jean85/pretty-package-versions</code>.
+                    You can find the release <a href="https://github.com/jean85/pretty-package-versions/releases/tag/2.0.4" target="_blank">here</a>.
+                </p>
+    		</blockquote>
+        </div><div class="content post__content clearfix">
+			<p>This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!</p>
+<p>Below the full changelog:</p>
+<h3 id="added">Added</h3>
+<ul>
+<li>PHP 8.1 support verified</li>
+<li>Added the <code>Version::NO_VERSION_TEXT</code> constant to retrieve the string used when no version is available (#41)</li>
+</ul>
+<h3 id="fixed">Fixed</h3>
+<ul>
+<li>Handle with <code>Version::NO_VERSION_TEXT</code> constant when no version is available due to replaced package (#41)</li>
+</ul>
 		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/pretty-package-versions/" rel="tag">Pretty Package Versions</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a>
+		</li>
+	</ul>
+</div>
+		</footer>
 	</article>
 </main>
 
@@ -173,15 +161,9 @@ However, most of these deal with the problem starting from an utopian assumption
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/talks/2018-pugmi-event-sourcing/" rel="prev">
+		<a class="pager__link" href="/releases/pretty-package-versions/2.0.4/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Adding Event Sourcing to an existing PHP project (for the right reasons)</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/talks/2018-pugmi-symfony-docker/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</p>
+			<p class="pager__title">Pretty Package Versions 2.0.4</p>
 		</a>
 	</div>
 </nav>
