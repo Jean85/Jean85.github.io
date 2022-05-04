@@ -6,7 +6,18 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Come sfruttare OpenAPI durante lo sviluppo di un API in PHP</title>
+      <link>https://alessandrolai.dev/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/</link>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Questa è la replica di &lt;a href=&#34;https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/&#34;&gt;una presentazione&lt;/a&gt; che ho svolto l&amp;rsquo;anno precedente online al SymfonyDay 2021, anch&amp;rsquo;essa registrata&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;
+&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Pretty Package Versions 2.0.5</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/</link>
