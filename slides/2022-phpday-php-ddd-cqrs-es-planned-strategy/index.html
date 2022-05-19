@@ -1,0 +1,1121 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>PHP + ES + CQRS + DDD = ? - A planned strategy</title>
+    <meta name="description" content="PHP + ES + CQRS + DDD = ? An integrated strategy">
+    <meta name="author" content="Alessandro Lai">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/facile-engineering.css" id="theme">
+    <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/monokai-sublime.min.css">
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section id="title" data-background-image="img/theme/bg-cover.svg">
+            <h1>PHP + ES + CQRS + DDD = ?</h1>
+            <h2>An integrated strategy</h2>
+            <p>
+                <a href="https://alessandrolai.dev/">Alessandro Lai</a> / <a href="http://twitter.com/AlessandroLai">@AlessandroLai</a><br>
+            </p>
+            <small>
+                PHPDay - May 20th 2022,
+                Verona - <a href="https://joind.in/talk/3dab6">https://joind.in/talk/3dab6</a>
+            </small>
+        </section>
+
+        <section id="intro">
+            <section>
+                <h2>Who am I?</h2>
+                <img src="img/github_avatar.jpg" class="avatar" width="30%">
+                <div style="float: right; padding-top: 2em">
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
+                            Engineering manager @ Facile.it
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github"></i></span>
+                            <a target="_blank" href="https://github.com/Jean85">@Jean85</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                            <a target="_blank" href="https://twitter.com/AlessandroLai">@AlessandroLai</a>
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-users"></i></span>
+                            PHP UG Milan Coordinator
+                        </li>
+                        <li>
+                            <span class="fa-li">
+                                <i class="fas fa-certificate"></i>
+                            </span>
+                            PHP-FIG Secretary
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section data-background-color="white">
+                <img src="img/team_roster.svg" alt="Payments team roster" />
+            </section>
+        </section>
+
+        <section id="section-base-concepts">
+            <section style="text-align: left">
+                <ol class="sections-list">
+                    <li class="current">Base concepts</li>
+                    <li>Our starting point</li>
+                    <li>The tools</li>
+                    <li>The migration strategy</li>
+                    <li>Conclusions</li>
+                </ol>
+            </section>
+
+            <section data-background="img/hands-coding.png">
+                <h3 style="color: white; margin-top: 7em; text-align: left">
+                    Normally, <br>
+                    we reach immediately to code...
+                </h3>
+            </section>
+            <section data-background="img/domain-and-devs_1.png">
+            </section>
+            <section>
+                <h3>Common approaches</h3>
+                <p>We focused the problem, now how do we solve it?</p>
+                <img
+                        class="r-stretch"
+                        src="img/which-approach.png"
+                        alt="We start with Domains expert and Developers"
+                />
+                <p>"The context is King"</p>
+                <small><i>A.Brandolini</i></small>
+            </section>
+            <section>
+                <h3>Data-oriented development</h3>
+                <div>
+                    <p>⛔ Cons</p>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-cogs"></i></span>
+                            Not suitable for complex problems
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-project-diagram"></i></span>
+                            Difficult to evolve
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-wrench"></i></span>
+                            Not very expressive
+                        </li>
+                    </ul>
+                    <p>✅ Pro</p>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-shipping-fast"></i></span>
+                            Fast
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-couch"></i></span>
+                            Minimal effort
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-laptop-code"></i></span>
+                            Proven development mode
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>Business-oriented development</h3>
+                <div>
+                    <p>⛔ Cons</p>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-hourglass-start"></i></span>
+                            More effort upfront
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check-double"></i></span>
+                            Not suitable for simple problems
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-user-ninja"></i></span>
+                            Needs discipline
+                        </li>
+                    </ul>
+                    <p>✅ Pro</p>
+                    <ul class="fa-ul">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-cogs"></i></span>
+                            Suitable for complex problems
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-people-arrows"></i></span>
+                            More expressive
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-expand-arrows-alt"></i></span>
+                            More flexible
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section>
+                <h3>The evolution of DDD - CQRS - CQRS/ES</h3>
+                <img
+                        class="stretch"
+                        style="margin: 0"
+                        src="img/timeline.jpg"
+                        alt="We start with Domains expert and Developers"
+                />
+                <br/>
+                <small>
+                    Credits:
+                    <a href="https://eventmodeling.org/about/">
+                        https://eventmodeling.org/about/history.jpg
+                    </a>
+                </small>
+            </section>
+            <section>
+                <h3>The workshop</h3>
+                <table>
+                    <tr>
+                        <td style="text-align: center; vertical-align: top">
+                            <img src="img/marco.png" alt="Marco Heimeshoff"/>
+                            <br>
+                            <br><br>
+                            <small>
+                            </small>
+                        </td>
+                        <td>
+                            <ul class="fa-ul" style="margin-top: 1em">
+                                <li style="margin-bottom: 1em">
+                                    <span class="fa-li"><i class="fas fa-chalkboard-teacher"></i></span>
+                                    <a href="https://www.avanscoperta.it/it/training/domain-models-in-practice-ddd-cqrs-event-sourcing/">
+                                        Domain Models in practice:<br>
+                                        DDD, CQRS & Event Sourcing
+                                    </a>
+                                </li>
+                                <li>
+                                    <span class="fa-li"><i class="fab fa-twitter"></i></span>
+                                    <a href="https://twitter.com/Heimeshoff">
+                                        @Heimeshoff
+                                    </a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Domain Driven Design</h3>
+                <aside class="notes">Domain Expert 👉🏽 Ubiquitous language 👈🏽 Developer</aside>
+                <img
+                        src="img/ddd.png"
+                        alt="DDD simplified"
+                />
+            </section>
+
+            <section>
+                <h3>Domain Driven Design + CQRS </h3>
+                <aside class="notes">Write / Read path <br>Commands as Business concepts</aside>
+                <img
+                        src="img/cqrs.png"
+                        alt="CQRS simplified"
+                />
+            </section>
+
+
+            <section>
+                <h3>Domain Driven Design + CQRS/ES </h3>
+                <aside class="notes">Events as Business concepts and unique source of truth</aside>
+                <img
+                        src="img/cqrs_es.png"
+                        alt="CQRS/ES simplified"
+                />
+            </section>
+
+            <section>
+                <h3>The goal! ⚽️</h3>
+                <ul class="fa-ul">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-map-marked-alt"></i></span>
+                        New capacity to explore the Domain
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-search-dollar"></i></span>
+                        New opportunities for Business & Devs
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-exclamation-triangle"></i></span>
+                        The true and unique
+                        <span style="text-decoration: underline;">invariant rules</span>
+                        are in the
+                        <span style="text-decoration: underline;">business</span>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-chart-line"></i></span>
+                        Leverage the tech to produce business value
+                    </li>
+                </ul>
+            </section>
+
+        </section>
+
+        <section id="section-starting-point">
+            <section style="text-align: left">
+                <ol class="sections-list">
+                    <li>Base concepts</li>
+                    <li class="current">Our starting point</li>
+                    <li>The tools</li>
+                    <li>The migration strategy</li>
+                    <li>Conclusions</li>
+                </ol>
+            </section>
+            <section>
+                <h3>Scenario</h3>
+                <p>Adding a new payment method to our payments service provider</p>
+                <div class="graph">
+                    <span>Product (aggregate root)</span>
+                    <div>
+                        <i class="fas fa-angle-down"></i> 1..n
+                        <span>Orders</span>
+                        <i class="fas fa-angle-down"></i> 0..n
+                        <span>Payment type A</span>
+                        <span class="fragment fade-up">NEW: PHPayment 🐘</span>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="section-tools">
+            <section style="text-align: left">
+                <ol class="sections-list">
+                    <li>Base concepts</li>
+                    <li>Our starting point</li>
+                    <li class="current">The tools</li>
+                    <li>The migration strategy</li>
+                    <li>Conclusions</li>
+                </ol>
+            </section>
+            <section>
+                <h3>The DDD "onion" / layers</h3>
+                <img
+                        class="r-stretch"
+                        src="img/layers.png"
+                        width="47%"
+                        alt="DDD layers"
+                />
+                <div>
+                    <small>
+                        Cfr. "Implementing Domain-Driven Design" - V.Vernon (the so-called "Red Book")<br/>
+                        Figure 4.3, page 124
+                    </small>
+                </div>
+                <aside class="notes">
+                        "Nothing in an inner circle can know anything at all about
+                        something in an outer circle.<br>
+                        That includes functions, classes, variables, or any other named software entity."<br>
+                        Robert C. Martin
+                    <ul>
+                        <li>1. aggregati e logica dominio</li>
+                        <li>2. usano gli aggregati e transizioni</li>
+                        <li>3. UI, TEST, INFRASTRUCTURE</li>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <h3>Presentation: API</h3>
+                <h5>Open API + Stoplight</h5>
+                <img
+                        style="float: left"
+                        width="47%"
+                        src="img/stoplight-ui.png"
+                        alt="Stoplight"
+                />
+                <ul class="fa-ul" style="margin: 2em 1em">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-tools"></i></span>
+                        <a href="https://stoplight.io/studio/">Stoplight Studio</a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-check-double"></i></span>
+                        <a href="https://github.com/thephpleague/openapi-psr7-validator">
+                            Openapi PSR7 Validator
+                        </a>
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-scroll"></i></span>
+                        <a href="https://swagger.io/specification/" target="_blank">
+                            OpenAPI 3.0 Specs
+                        </a>
+                    </li>
+                </ul>
+                <small style="display: block; clear: both">
+                    Rif.
+                    <a target="_blank"
+                       href="https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/">
+                        API contracts: Leveraging OpenAPI during API development - A.Lai
+                    </a>
+                </small>
+                <aside class="notes">
+                    <ul>
+                        <ul>
+                            <li>design by contract (rif. slide ale maggio 2021)</li>
+                            <li>Openapi PSR7/validator per request in prod, response in test</li>
+                            <li>OpenAPI 3.0 - cebe/php-openapi (1.6)</li>
+                            <li>3.1: tipi multipli - nullable</li>
+                        </ul>
+                    </ul>
+                </aside>
+            </section>
+            <section>
+                <aside class="notes">
+                    <ul>
+                        <li>ClassSelector nostra</li>
+                        <li>No schizzinosi</li>
+                        <li>Enforcing ADR</li>
+                        <li>must not depend</li>
+                        <li>must extends/implements</li>
+                    </ul>
+                </aside>
+                <h3>Enforcing the "onion"</h3>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/carlosas/phpat">
+                    PHP AT
+                </a>
+                <pre><code class="stretch language-php">class CoreArchitectureTest extends ArchitectureTest
+{
+    public function testCoreDomainDependencies(): Rule
+    {
+        return $this->newRule
+          ->classesThat(Selector::haveClassName('Facile\Domain\*'))
+
+          ->canOnlyDependOn()
+
+          ->classesThat(Selector::haveClassName('Facile\Domain\*'))
+          ->classesThat(Selector::haveClassName(\Webmozart\Assert::class))
+          ->classesThat(Selector::haveClassName(\Ramsey\Uuid\UuidInterface::class))
+
+          ->build();
+    }
+}</code></pre>
+            </section>
+            <section>
+
+                <h3>EventSauce</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <a href="https://eventsauce.io/">
+                                <img src="img/eventsauce.svg" alt="EventSauce logo" style="width: 4em; display: block"/>
+                            </a>
+                        </td>
+                        <td style="vertical-align: middle">
+                            <ol>
+                                <li>Focused on event sourcing</li>
+                                <li>Pragmatic library</li>
+                                <li>Extensible by design</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </table>
+                <pre><code class="language-bash">composer require eventsauce/eventsauce</code></pre>
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/eventsaucephp/eventsauce">
+                    https://github.com/eventsaucephp/eventsauce
+                </a>
+            </section>
+            <section>
+                <h3>Aggregate Root ID</h3>
+                <pre><code class="language-php">
+namespace EventSauce\EventSourcing;
+
+interface AggregateRootId
+{
+    public function toString(): string;
+
+    public static function fromString(string $aggregateRootId): self;
+}
+            </code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root ID - UUID</h3>
+                <pre class="php stretch"><code class="language-php">namespace Facile\Domain\Model;
+use EventSauce\EventSourcing\AggregateRootId;
+
+abstract class AbstractAggregateRootId implements AggregateRootId
+{
+    private function __construct(private UuidInterface $uuid){}
+    
+    public static function create(): static
+    {
+        return new static(Uuid::uuid4());
+    }
+    
+    public function toString(): string
+    {
+        return $this->uuid->toString();
+    }
+    
+    public static function fromString(string $aggregateRootId): static
+    {
+        return new static(Uuid::fromString($aggregateRootId));
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root ID - Product ID</h3>
+                <pre class="php"><code class="language-php">namespace Facile\Domain\Model;
+
+final class ProductId extends AbstractAggregateRootId
+{
+}</code></pre>
+            </section>
+            <section>
+                <h3>Event</h3>
+                <pre class="php"><code class="language-php">namespace EventSauce\EventSourcing\Serialization;
+
+interface SerializablePayload
+{
+    public function toPayload(): array;
+    
+    public static function fromPayload(array $payload): self;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Event - Product Created (1/2)</h3>
+                <pre class="stretch"><code class="language-php">
+namespace Facile\Domain\Events;
+                    
+final class ProductCreated implements SerializablePayload
+{
+    private function __construct(
+        private ProductId $productId,
+        private \DateTimeImmutable $creationDate
+    ) {
+    }
+    
+    public static function create(ProductId $productId): self
+    {
+        $creationDate = new \DateTimeImmutable();
+        
+        return new self($productId, $creationDate);
+    }
+
+    // next slide...
+}
+            </code></pre>
+            </section>
+            <section>
+                <h3>Event - Product Created (2/2)</h3>
+                <pre class="php stretch"><code class="language-php">
+final class ProductCreated implements SerializablePayload
+{
+    // ...previous slide                    
+
+    public function toPayload(): array
+    {
+        return [
+            'productId' => $this->productId->toString(),
+            'creationDate' => $this->creationDate->format(\DATE_ATOM),
+        ];
+    }
+
+    public static function fromPayload(array $payload): self
+    {
+        return new self(
+            ProductId::fromString($payload['productId']),
+            \DateTimeImmutable::createFromFormat(\DATE_ATOM, $payload['creationDate'])
+        );
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root</h3>
+                <pre><code class="php">namespace EventSauce\EventSourcing;
+
+interface AggregateRoot
+{
+    public function aggregateRootId(): AggregateRootId;
+    
+    public function aggregateRootVersion(): int;
+    
+    public function releaseEvents(): array;
+    
+    public static function reconstituteFromEvents(
+        AggregateRootId $aggregateRootId,
+        Generator $events
+    ): static;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Product</h3>
+                <pre><code class="language-php">namespace Facile\Domain\Model;
+
+use EventSauce\EventSourcing\AggregateRoot;
+use EventSauce\EventSourcing\AggregateRootBehaviour;
+
+final class Product implements AggregateRoot
+{
+    use AggregateRootBehaviour;
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Creation</h3>
+                <pre><code class="language-php">final class Product implements AggregateRoot
+{
+    use AggregateRootBehaviour;
+    
+    public static function create(ProductId $productId): self
+    {
+        $product = new self($productId);
+        $productCreated = ProductCreated::create($productId);
+        $product->recordThat($productCreated);
+        
+        return $product;
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Trait</h3>
+                <pre class="php stretch"><code class="language-php">namespace EventSauce\EventSourcing;
+
+trait AggregateRootBehaviour
+{
+    // ...
+    
+    private AggregateRootId $aggregateRootId;
+    
+    private function __construct(AggregateRootId $aggregateRootId)
+    {
+        $this->aggregateRootId = $aggregateRootId;
+    }
+    
+    protected function recordThat(object $event): void
+    {
+        $this->apply($event);
+        $this->recordedEvents[] = $event;
+    }
+
+    // ...
+}
+            </code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Applying events</h3>
+                <pre><code class="language-php">namespace EventSauce\EventSourcing;
+
+trait AggregateAlwaysAppliesEvents
+{
+    private int $aggregateRootVersion = 0;
+    
+    protected function apply(object $event): void
+    {
+        $parts = explode('\\', get_class($event));
+
+        $this->{'apply' . end($parts)}($event);
+
+        ++$this->aggregateRootVersion;
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Applying events</h3>
+                <pre><code class="php stretch">namespace Facile\Domain\Model;
+
+final class Product implements AggregateRoot
+{
+    // ...
+    
+    private ?\DateTimeImmutable $creationDate = null;
+    
+    public function applyProductCreated(ProductCreated $productCreated): void
+    {
+        $this->creationDate = $productCreated->getCreationDate();
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root - Reconstitution</h3>
+                <pre class="php stretch"><code class="language-php">namespace EventSauce\EventSourcing;
+
+trait AggregateRootBehaviour
+{
+    // ...
+
+    public static function reconstituteFromEvents(
+        AggregateRootId $aggregateRootId,
+        Generator $events
+    ): static
+    {
+        $aggregateRoot = new static($aggregateRootId);
+        
+        foreach ($events as $event) {
+          $aggregateRoot->apply($event);
+        }
+        // ...
+    
+        return $aggregateRoot;
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root Repository</h3>
+                <pre class="php"><code class="language-php">namespace EventSauce\EventSourcing;
+
+interface AggregateRootRepository
+{
+    public function retrieve(AggregateRootId $aggregateRootId): object;
+    
+    public function persist(object $aggregateRoot): void;
+    
+    // ...
+}</code></pre>
+            </section>
+            <section>
+                <h3>Product Repository</h3>
+                <pre><code class="php">namespace Facile\Infrastructure\Repository;
+
+use EventSauce\EventSourcing\EventSourcedAggregateRootRepository;
+
+final class ProductRepository extends EventSourcedAggregateRootRepository
+{
+}</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root Repository (1/2)</h3>
+                <pre class="php stretch"><code class="language-php">namespace EventSauce\EventSourcing;
+
+class EventSourcedAggregateRootRepository implements AggregateRootRepository
+{
+    public function __construct(
+        string $aggregateRootClassName,
+        MessageRepository $messageRepository,
+        MessageDispatcher $dispatcher = null,
+        // ...
+    ) {
+        // ...
+        $this->dispatcher = $dispatcher ?: new SynchronousMessageDispatcher();
+    }
+
+    public function retrieve(AggregateRootId $aggregateRootId): object
+    {
+        $className = $this->aggregateRootClassName;
+        $events = $this->retrieveAllEvents($aggregateRootId);
+        
+        return $className::reconstituteFromEvents($aggregateRootId, $events);
+    }
+
+    // next slide...</code></pre>
+            </section>
+            <section>
+                <h3>Aggregate Root Repository (2/2)</h3>
+                <pre class="php stretch"><code class="language-php">    // ...previous slide
+    public function persist(object $aggregateRoot): void
+    {
+        // ...
+        $this->persistEvents(
+            $aggregateRoot->aggregateRootId(),
+            $aggregateRoot->aggregateRootVersion(),
+            ...$aggregateRoot->releaseEvents()
+        );
+    }
+    
+    public function persistEvents(AggregateRootId $id, int $version, object ...$events): void
+    {
+        $messages = array_map(function (object $event) {
+            // Events are transformed into messages
+        }, $events);
+        
+        $this->messageRepository->persist(...$messages);
+        $this->dispatcher->dispatch(...$messages);
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Doctrine2 Message Repository</h3>
+                <pre><code class="language-shell">composer require eventsauce/message-repository-for-doctrine-v2</code></pre>
+                <pre><code class="language-sql">  CREATE TABLE IF NOT EXISTS `your_table_name` (
+
+    `event_id`          BINARY(16) NOT NULL,
+    `aggregate_root_id` BINARY(16) NOT NULL,
+    `version`           int(20) unsigned NULL,
+    `payload`           varchar(16001) NOT NULL,
+
+    PRIMARY KEY (`event_id`),
+
+    KEY                  (`aggregate_root_id`),
+    KEY `reconstitution` (`aggregate_root_id`, `version` ASC)
+  )
+
+  DEFAULT CHARACTER SET utf8mb4
+  COLLATE utf8mb4_general_ci ENGINE=InnoDB;</code></pre>
+            </section>
+            <section>
+                <h3>Serialized Payload</h3>
+                <pre class=""><code class="language-json">  {
+    "headers": {
+       "__aggregate_root_id": "b62a84f8-72f0-11ec-90d6-0242ac120003",
+       "__aggregate_root_type": "facile.domain.model.product",
+       "__aggregate_root_version": 1,
+       "__event_type": "facile.domain.events.product_created",
+       "__time_of_recording": "2022-02-08 09:44:36.407236+0000",
+       "__aggregate_root_id_type": "facile.domain.model.product_id",
+       "__event_id": "24b38b08-9042-4035-bbff-6bd75295e1b9"
+    },
+    "payload": {
+       "productId": "b62a84f8-72f0-11ec-90d6-0242ac120003",
+       "creationDate": "2022-02-08T10:44:36+01:00"
+    }
+  }</code></pre>
+            </section>
+            <section>
+                <h3>EventSauce Lifecycle</h3>
+                <pre><code class="language-php">
+    $product = $productRepository->retrieve($aggregateRootId);
+    
+    $product->addOrder($command);
+    
+    $productRepository->persist($product);
+            </code></pre>
+            </section>
+            <section>
+                <h3>EventSauce Lifecycle</h3>
+                <pre class="php stretch"><code class="language-php">namespace Facile\Domain\Model;
+
+class Product implements AggregateRoot
+{
+    // ...
+
+    public function addOrder(AddOrderCommand $command): void
+    {
+        if (null !== $this->order) {
+            throw new \DomainException('Order already present');
+        }
+        
+        $orderAdded = OrderAdded::create($command);
+        $this->recordThat($orderAdded);
+    }
+
+    public function applyOrderAdded(OrderAdded $orderAdded): void
+    {
+        $this->order = new Order($orderAdded->getOrderId(), $orderAdded->getMoney());
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Message Consumer</h3>
+                <pre class=""><code class="language-php">use EventSauce\EventSourcing\MessageConsumer;
+
+class OrdersReadModel implements MessageConsumer
+{
+    public function handle(Message $message)
+    {
+        $aggregateRootId = $message->aggregateRootId();
+        $event = $message->event();
+    
+        if ($event instanceof OrderAdded){
+            # Instantiates a custom entity and persist it
+        }
+    }
+}</code></pre>
+            </section>
+        </section>
+
+        <section id="section-migration-strategy">
+            <section style="text-align: left">
+                <ol class="sections-list">
+                    <li>Base concepts</li>
+                    <li>Our starting point</li>
+                    <li>The tools</li>
+                    <li class="current">The migration strategy</li>
+                    <li>Conclusions</li>
+                </ol>
+            </section>
+            <section>
+                <h3>Green field vs running project</h3>
+                All this is great for a new project...<br>
+                <div class="fragment">
+                    ...but what can we do in a running project?
+                    <img src="img/changing_wheels.webp"/>
+                </div>
+            </section>
+            <section>
+                <h3>Root-first or Leaf first?</h3>
+                <div class="stretch graph">
+                    <span class="fragment" data-fragment-index="2">Product (root)</span>
+                    <div class="fragment" data-fragment-index="3">
+                        <i class="fas fa-angle-down"></i> 1..n
+                        <span>Orders</span>
+                        <i class="fas fa-angle-down"></i> 0..n
+                    </div>
+                    <span class="fragment" data-fragment-index="1">NEW: PHPayment 🐘</span>
+                </div>
+                <aside class="notes">
+                    <ol>
+                        <li>incomplete event picture</li>
+                        <li>leaf first: no aggregate root id</li>
+                        <li>root first: hole in the middle</li>
+                    </ol>
+                </aside>
+            </section>
+            <section>
+                <h3>The breakthrough</h3>
+                <img src="img/multiple-sources-of-lies.jpeg" class="stretch"/>
+                <br>
+                <small>
+                    "You have a single source of truth,
+                    or multiple sources of lies"
+                </small>
+                <small>
+                    (source: RT from
+                    <i class="fab fa-twitter"></i>
+                    <a href="https://twitter.com/jennplusplus/status/1486188335269920771">@mipsytipsy</a>)
+                </small>
+            </section>
+            <section>
+                <h3>The great workshop take-away</h3>
+                <ul class="fa-ul" style="margin-top: 1em">
+                    <li>
+                        <span class="fa-li"><i class="fas fa-database"></i></span>
+                        DB transactions to save data atomically
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-sync"></i></span>
+                        Sync between legacy tables and event store
+                    </li>
+                    <li>
+                        <span class="fa-li"><i class="fas fa-clock"></i></span>
+                        Only downside: migrating will take longer
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Generating events on-the-fly</h3>
+                <pre class="stretch">
+<code class="language-php">
+class ProductRepository 
+    extends EventSourcedAggregateRootRepository 
+    implements ProductRepositoryInterface
+{
+    public function retrieve(AggregateRootId $id): object
+    {
+        $product = parent::retrieve($id);
+
+        if ($product === null) {
+            $doctrineProduct = $this->doctrineRepository->find($id);
+
+            $product = Product::reconstituteFromEvents(
+                $this->eventGenerator->generateFrom($doctrineProduct)
+            );
+        }
+
+        return $product;
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>Maintain the Doctrine tables (1/2)</h3>
+                <pre class="stretch">
+<code class="language-php">final class Prodotto implements AggregateRoot
+{
+    // ...
+
+    public function reservePHPayment(ReservePayment $command): void
+    {
+        if (/* ... */) {
+            // domain logic & validation...
+        }
+
+        $event = new PHPaymentReservationCreated(/* ... */);
+
+        // add the event to the aggregate
+        $this->recordThat($event);
+
+        // register the same stuff in the Doctrine entity
+        $this->getDoctrineProduct()->addNewReservation($event)
+    }
+
+    // ...
+}</code></pre>
+            </section>
+            <section>
+                <h3>Maintain the Doctrine tables (2/2)</h3>
+                <pre class="stretch">
+<code class="language-php">class ReservePHPaymentHandler implements MessageHandlerInterface
+{
+    public function __invoke(ReservePHPayment $command): void
+    {
+        $id = $command->getRootId();
+        // retrieve both the aggregate and the Doctrine entity
+        $product = $this->productRepository->retrieve($id);
+
+        // invoke the domain logic
+        $product->reservePHPayment($command);
+
+        // atomic flush due to single DB connection
+        $this->doctrineRepository->beginTransaction();
+
+        $this->productRepository->persist($product);
+        $this->doctrineRepository->flush();
+
+        $this->doctrineRepository->commit();
+    }
+}</code></pre>
+            </section>
+            <section>
+                <h3>How to iterate</h3>
+                <pre class="php stretch">
+<code class="language-php">class ProductRepository 
+    extends EventSourcedAggregateRootRepository 
+    implements ProductRepositoryInterface
+{
+    public function retrieve(AggregateRootId $id): object
+    {
+        $product = parent::retrieve($id);
+    
+        if ($this->eventsAreOutdated($product)) {
+            $this->purgeEvents($id);
+            $product = null;
+        }
+
+        if ($product === null) {
+            // ...
+        }
+
+        return $product;
+    }
+    // ...
+}</code></pre>
+            </section>
+        </section>
+        <section id="section-conclusions">
+            <section style="text-align: left">
+                <ol class="sections-list">
+                    <li>Base concepts</li>
+                    <li>Our starting point</li>
+                    <li>The tools</li>
+                    <li>The migration strategy</li>
+                    <li class="current">Conclusions</li>
+                </ol>
+            </section>
+            <section>
+                <h3>Advantages</h3>
+                <ul class="fa-ul">
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-shipping-fast"></i></span>
+                        Fast iterations
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-ninja"></i></span>
+                        Gain confidence iteratively
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-cogs"></i></span>
+                        Leverage ES & DDD immediately
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-database"></i></span>
+                        Old code still works
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-hourglass-half"></i></span>
+                        No fixed deadlines
+                    </li>
+                    <li class="fragment">
+                        <span class="fa-li"><i class="fas fa-user-tie"></i></span>
+                        Still deliver business value
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h3>Disadvantages / pitfalls</h3>
+                <ol>
+                    <li>It may take a long time</li>
+                    <li class="fragment">...can you tell us more?</li>
+                </ol>
+                <div class="fragment">
+                    <h2>Thanks!</h2>
+                    <p>
+                        Please rate my talk on Joind.in: <a href="https://joind.in/talk/3dab6">https://joind.in/talk/3dab6</a>
+                    </p>
+                    <img class="stretch"
+                         src="img/joindin-qr.png"
+                         alt="Joind.in link: https://joind.in/talk/3dab6"
+                    />
+                    <h1 class="fragment">Questions?</h1>
+                </div>
+            </section>
+            <!--            <section>-->
+            <!--                <h2 style="margin-bottom: 2em">Questions?</h2>-->
+            <!--                <h4>Contacts</h4>-->
+            <!--                <div style="font-size: smaller">-->
+            <!--                    <ul class="fa-ul">               -->
+            <!--                        <li>-->
+            <!--                            <span class="fa-li"><i class="fas fa-desktop"></i></span>-->
+            <!--                            <a target="_blank" href="https://alessandrolai.dev">https://alessandrolai.dev</a>-->
+            <!--                            <small style="vertical-align: middle">(slides & other talks here)</small>-->
+            <!--                        </li>-->
+            <!--                        <li>-->
+            <!--                            <span class="fa-li"><i class="fas fa-envelope"></i></span>-->
+            <!--                            <a target="_blank" href="mailto:alessandro.lai85@gmail.com">alessandro.lai85@gmail.com</a>-->
+            <!--                        </li>-->
+            <!--                        <li>-->
+            <!--                            <span class="fa-li"><i class="fas fa-envelope"></i></span>-->
+            <!--                            <a target="_blank" href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>-->
+            <!--                            <small style="vertical-align: middle">(we are hiring!)</small>-->
+            <!--                        </li>-->
+            <!--                        <li>-->
+            <!--                            <span class="fa-li"><i class="fab fa-github"></i></span>-->
+            <!--                            <a target="_blank" href="https://github.com/Jean85">@Jean85</a>-->
+            <!--                        </li>-->
+            <!--                        <li>-->
+            <!--                            <span class="fa-li"><i class="fab fa-twitter"></i></span>-->
+            <!--                            <a target="_blank" href="https://twitter.com/AlessandroLai">@AlessandroLai</a>-->
+            <!--                        </li>-->
+            <!--                    </ul>-->
+            <!--                </div>-->
+            <!--            </section>-->
+        </section>
+    </div>
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+
+        width: 1280,
+        height: 720,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [
+            RevealMarkdown,
+            RevealNotes,
+            RevealZoom
+        ]
+    });
+</script>
+</body>
+</html>
