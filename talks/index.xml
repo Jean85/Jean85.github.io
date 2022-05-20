@@ -6,7 +6,16 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PHP &#43; ES &#43; CQRS &#43; DDD = ? - A planned strategy</title>
+      <link>https://alessandrolai.dev/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/</guid>
+      <description>&lt;p&gt;DDD, CQRS, Event Sourcing have generated a lot of buzz in recent years, but they seem an unattainable target for the everyday, long running projects we work on. The required amount of knowledge seems unbearable, halting the delivery of business value is not an option, and sticking with the &amp;ldquo;known ways&amp;rdquo; of development seems like a safer bet. In reality, all those approaches have so much in common underneath that applying all of them together makes them collimate toward cleaner and suppler code, with a compound effect on the benefits and a reduced overall cost of implementation.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Come sfruttare OpenAPI durante lo sviluppo di un API in PHP</title>
       <link>https://alessandrolai.dev/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/</link>
