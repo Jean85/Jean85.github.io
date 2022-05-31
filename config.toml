@@ -8,7 +8,7 @@ theme = "mainroad"
 
 [Author] # Used in authorbox
   name = "Alessandro Lai"
-  bio = "Lead project developer at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes."
+  bio = "Engineering Manager at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes."
   avatar = "images/avatar-alessandro-lai.jpg"
 
 [Params]
