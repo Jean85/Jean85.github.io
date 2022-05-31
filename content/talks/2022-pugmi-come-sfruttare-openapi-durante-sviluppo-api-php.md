@@ -5,6 +5,7 @@ conference: PUGMI
 conferenceUrl: https://www.meetup.com/it-IT/MilanoPHP/events/284647096/
 location: Facile.it - Milano / Online
 slides: 2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php
+youtube: 7M5Nox8mE4M
 language: it
 categories: ["Talks"]
 ---
