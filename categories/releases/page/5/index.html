@@ -12,7 +12,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://alessandrolai.dev/categories/releases/" />
 <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-<meta property="og:updated_time" content="2021-10-08T00:00:00+00:00" />
+<meta property="og:updated_time" content="2022-06-15T00:00:00+00:00" />
 
 		<meta itemprop="name" content="Releases">
 <meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
@@ -98,6 +98,26 @@
 	</header><article class="list__item post">
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/releases/terminable-loop-command/1.0.0/" rel="bookmark">
+			Terminable Loop Command 1.0
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2019-05-06T00:00:00Z">May 06, 2019</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		This is the first release of this package! It&rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.
+This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/terminable-loop-command/1.0.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/releases/paraunit/1.0.0-beta1/" rel="bookmark">
 			Paraunit 1.0.0-beta1: the first approach to a stable release
 			</a>
@@ -171,25 +191,6 @@
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/paraunit/0.12.2/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.12.1/" rel="bookmark">
-			Paraunit 0.12.1: a small fix
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-04-05T00:00:00Z">April 05, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the <code>--text</code> and <code>--text-summary</code> options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a <a href="https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560">PR to the Symfony Docs</a> too!</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.12.1/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -214,11 +215,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/1.3.0/">Paraunit 1.3.0: new chunk size feature, Symfony 6 support</a></li>
 			<li class="widget__item"><a class="widget__link" href="/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/">PHP &#43; ES &#43; CQRS &#43; DDD = ? - A planned strategy</a></li>
 			<li class="widget__item"><a class="widget__link" href="/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/">Come sfruttare OpenAPI durante lo sviluppo di un API in PHP</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.5/">Pretty Package Versions 2.0.5</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/pretty-package-versions/2.0.4/">Pretty Package Versions 2.0.4</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2021-sfday-api-contracts-openapi-during-development/">API contracts: Leveraging OpenAPI during API development</a></li>
 		</ul>
 	</div>
 </div>
