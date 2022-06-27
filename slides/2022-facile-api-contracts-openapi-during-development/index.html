@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Come sfruttare OpenAPI durante lo sviluppo di un API in PHP - Alessandro Lai</title>
-    <meta name="description" content="Slides per il meetup PUGMI di aprile 2022">
+    <title>API contracts - Leveraging OpenAPI during API development - Alessandro Lai</title>
+    <meta name="description" content="Slides for the SFDay@127.0.0.1 2021 talk">
     <meta name="author" content="Alessandro Lai">
 
     <link rel="stylesheet" href="dist/reset.css">
@@ -13,43 +13,42 @@
     <link rel="stylesheet" href="dist/theme/facile-engineering.css" id="theme">
     <link type="image/x-icon" rel="shortcut icon" href="img/favicon.ico"/>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-
     <!-- Theme used for syntax highlighted code -->
-    <link rel="stylesheet" href="plugin/highlight/monokai-sublime.min.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
         <section id="title" data-background-image="img/theme/bg-cover.svg">
-            <h1>API Contracts</h1>
-            <h3>Leveraging OpenAPI during API development</h3>
+            <h1 style="white-space: nowrap">API contracts</h1>
+            <h3>
+                Leveraging OpenAPI<br/>
+                during API development
+            </h3>
             <p>
                 <a target="_blank" href="https://alessandrolai.dev/">Alessandro Lai</a> / <a target="_blank" href="http://twitter.com/AlessandroLai">@AlessandroLai</a><br>
             </p>
             <small>
                 <p>
-                    <a target="_blank" href="https://www.eventbrite.com/e/biglietti-facileit-hiring-night-356245468787">Facile.it Hiring Night</a> - June 30th 2022,<br>
-                    Copernico Milano Centrale - Sala Library
+                    <a target="_blank" href="https://2021.sfday.it/">sfday @ 127.0.0.1</a> - May 13th 2021,
+                    Online
+                </p>
+                <p class="smaller">
+                    <a target="_blank" href="https://joind.in/talk/39cea">https://joind.in/talk/39cea</a>
                 </p>
             </small>
         </section>
 
         <section id="intro">
             <section>
-                <h2>Chi sono?</h2>
+                <h2>Who am I?</h2>
                 <img src="img/github_avatar.jpg" class="avatar" width="30%">
                 <div style="float: right; padding-top: 2em">
                     <ul class="fa-ul">
                         <li><span class="fa-li"><i class="fas fa-user"></i></span>Alessandro Lai</li>
                         <li>
                             <span class="fa-li"><i class="fas fa-desktop"></i></span>
-                            Engineering Manager
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-desktop"></i></span>
-                            Software Engineer @ Facile.it since 2014
+                            Team lead developer @ Facile.it
                         </li>
                         <li>
                             <span class="fa-li"><i class="fab fa-github"></i></span>
@@ -61,7 +60,7 @@
                         </li>
                         <li>
                             <span class="fa-li"><i class="fas fa-users"></i></span>
-                            PUGMI Coordinator
+                            PHP UG Milan Coordinator
                         </li>
                         <li>
                             <span class="fa-li">
@@ -142,12 +141,12 @@
             </section>
             <section>
                 <h3>OpenAPI (the old Swagger)</h3>
-                <img class="stretch" src="img/swagger_ui.png" alt="Swagger UI" /><br/>
+                <img class="stretch" src="img/swagger_ui.png" alt="Swagger UI" />
                 <small><a target="_blank" href="https://swagger.io/tools/swagger-ui/">Swagger UI</a></small>
             </section>
             <section>
                 <h3>Beware, here be YAML</h3>
-                <pre class="stretch yaml"><code>openapi: 3.0.3
+                <pre class="stretch"><code>openapi: 3.0.3
 info:
   title: Test API for Facile.it
   version: '1.0'
@@ -239,7 +238,7 @@ paths:
                 <h3>OpenApi.tools</h3>
                 <p>
                     <a target="_blank" href="https://openapi.tools">
-                        <img class="stretch" src="img/openapi-tools.png" alt="Openapi.tools site screenshot" style="display: block; margin: 0 auto"/>
+                        <img class="stretch" src="img/openapi-tools.png" alt="Openapi.tools site screenshot" style="display: block"/>
                     </a>
                 </p>
             </section>
@@ -267,7 +266,7 @@ paths:
                 <h3>The "magic" approach</h3>
                 <i class="fab fa-github"></i>
                 <a target="_blank" href="https://github.com/nelmio/NelmioApiDocBundle">NelmioApiDocBundle</a>
-                <pre class="stretch php"><code>/**
+                <pre class="stretch"><code>/**
  * List the rewards of the specified user.
  *
  * This call takes into account all confirmed awards, but not pending or refused awards.
@@ -289,7 +288,7 @@ public function fetchUserRewardsAction(User $user)
 {
                 </code></pre>
             </section>
-            <section>
+            <section data-transition="fade">
                 <h3>The "magic" approach</h3>
                 <i class="fab fa-github"></i>
                 <a target="_blank" href="https://github.com/nelmio/NelmioApiDocBundle">NelmioApiDocBundle</a>
@@ -499,9 +498,11 @@ $problem = new ApiProblem("You do not have enough credit.", "http://example.com/
 $problem
   ->setDetail("Your current balance is 30, but that costs 50.")
   ->setInstance("http://example.net/account/12345/msgs/abc");
-// Additional properties can be used with array access
 $problem['balance'] = 30;
-$problem['accounts'] = ["http://example.net/account/12345", "http://example.net/account/67890"];
+$problem['accounts'] = [
+  "http://example.net/account/12345",
+  "http://example.net/account/67890"
+];
 
 return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code></pre>
             </section>
@@ -526,10 +527,19 @@ return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code>
 
         <section id="ending">
             <section>
-                <h2>Grazie per l'attenzione!</h2>
-                <h3 style="margin-bottom: 2em">Domande?</h3>
-                <h4>Contatti</h4>
-                <div style="font-size: smaller; padding-left: 7em">
+                <h2>Thanks!</h2>
+                <p>
+                    Please rate my talk on Joind.in: <a target="_blank" href="https://joind.in/talk/39cea">https://joind.in/talk/39cea</a>
+                </p>
+                <img class="stretch" src="img/joindin-qr.png" alt="Joind.in link: https://joind.in/talk/39cea">
+                <aside class="notes">
+                    45:00
+                </aside>
+            </section>
+            <section>
+                <h2 style="margin-bottom: 2em">Questions?</h2>
+                <h4>Contacts</h4>
+                <div style="font-size: smaller">
                     <ul class="fa-ul">               
                         <li>
                             <span class="fa-li"><i class="fas fa-desktop"></i></span>
@@ -543,6 +553,7 @@ return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code>
                         <li>
                             <span class="fa-li"><i class="fas fa-envelope"></i></span>
                             <a target="_blank" href="mailto:alessandro.lai@facile.it">alessandro.lai@facile.it</a>
+                            <small style="vertical-align: middle">(we are hiring!)</small>
                         </li>
                         <li>
                             <span class="fa-li"><i class="fab fa-github"></i></span>
@@ -561,7 +572,7 @@ return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code>
 
 <script src="dist/reveal.js"></script>
 <script src="plugin/notes/notes.js"></script>
-<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
 <script src="plugin/zoom/zoom.js"></script>
 <script>
     // More info about initialization & config:
@@ -569,11 +580,11 @@ return new JsonResponse($problem->asArray(), Response::HTTP_BAD_REQUEST);</code>
     // - https://revealjs.com/config/
     Reveal.initialize({
         hash: true,
-        width: 1280,
+        width: 1160,
         height: 720,
         // Learn about plugins: https://revealjs.com/plugins/
         plugins: [
-            RevealMarkdown,
+            RevealHighlight,
             RevealNotes,
             RevealZoom
         ]
