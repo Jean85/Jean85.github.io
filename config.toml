@@ -55,6 +55,7 @@ theme = "mainroad"
   linkedin = "alessandro-lai-09440922"
   github = "Jean85"
   gitlab = "Alessandro.Lai"
+  mastodon = "https://phpc.social/@alessandrolai" 
 
 [taxonomies]
   tag = "tags"
