@@ -6,7 +6,30 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CTO Luch - Dual Career Ladder</title>
+      <link>https://alessandrolai.dev/talks/2023-cto-lunch-dual-career-ladder/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2023-cto-lunch-dual-career-ladder/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Luch, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Dual Career Ladder: come strutturarla al meglio tenendo conto di responsabilità, retribuzione, spazio e ruolo? E come evitare i principali rischi, come quello del burnout dei manager?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>CTO Show - Leading a team smarter than you</title>
+      <link>https://alessandrolai.dev/talks/2022-cto-show-leading-a-team-smarter-than-you/</link>
+      <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2022-cto-show-leading-a-team-smarter-than-you/</guid>
+      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Show, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;
+&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;p&gt;Ti è mai capitato di dover guidare un team di persone senza avere le competenze tecniche necessarie?
+O magari di dover gestire un progetto su un linguaggio di programmazione che proprio non conosci?&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>PHP &#43; ES &#43; CQRS &#43; DDD = ? - A planned strategy</title>
       <link>https://alessandrolai.dev/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/</link>
