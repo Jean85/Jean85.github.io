@@ -23,22 +23,24 @@
 {{ end }}
 
 <p>
-    Talk presented at
     {{ with .Params.conferenceUrl }}
+    Talk presented at
     <a href="{{ . }}" target="_blank">
         {{ end }}
         {{ .Params.conference }} ({{ .Params.location }})
         {{ with .Params.conferenceUrl }}
     </a>
-    {{ end }}
     <br />
+    {{ end }}
 
-    <a target="_blank" href="/slides/{{ .Params.slides }}/">
-        {{ with .Params.language }}
-        <img src="/images/{{ . }}.svg.webp" alt="Language: {{ . }}" style="vertical-align: middle" />
-        {{ end }}
+    {{ with .Params.slides }}
+    <a target="_blank" href="/slides/{{ . }}/">
+        <img src="/images/{{ $.Params.language }}.svg.webp" alt="Language: {{ $.Params.language }}" style="vertical-align: middle" />
         Slides available
     </a>
+    {{ else }}
+    <img src="/images/{{ .Params.language }}.svg.webp" alt="Language: {{ .Params.language }}" style="vertical-align: middle" />
+    {{ end }}
 
     {{ with .Params.joindin }}
     <br />
