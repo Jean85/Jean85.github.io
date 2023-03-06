@@ -6,7 +6,18 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.0.0/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/2.0.0/</guid>
+      <description>&lt;p&gt;This new major version has seen its inception a long time ago, on &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/162&#34;&gt;October 2021&lt;/a&gt;, and it went to sleep for a long time, since PHPUnit development was doing the same. After &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/172&#34;&gt;some additional attempts&lt;/a&gt;, I was finally able to complete this alongside the long-awaited release of PHPUnit 10.&lt;/p&gt;
+&lt;p&gt;All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that &lt;code&gt;enum&lt;/code&gt;s are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the &lt;code&gt;--pass-through&lt;/code&gt; option as a viable alternative.
+The full changelog is small, the changes for the end user are small, but the code changes are a lot!&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>CTO Luch - Dual Career Ladder</title>
       <link>https://alessandrolai.dev/talks/2023-cto-lunch-dual-career-ladder/</link>
