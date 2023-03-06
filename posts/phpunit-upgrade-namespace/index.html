@@ -11,23 +11,16 @@
 <meta property="og:description" content="In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
 This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/posts/phpunit-upgrade-namespace/" />
-<meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+<meta property="og:url" content="https://alessandrolai.dev/posts/phpunit-upgrade-namespace/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2017-09-12T00:00:00+00:00" />
 <meta property="article:modified_time" content="2017-09-12T00:00:00+00:00" />
 
 		<meta itemprop="name" content="How to gradually upgrade toward PHPUnit 6 with namespaced classes">
 <meta itemprop="description" content="In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
-This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.">
-<meta itemprop="datePublished" content="2017-09-12T00:00:00+00:00" />
+This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured."><meta itemprop="datePublished" content="2017-09-12T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2017-09-12T00:00:00+00:00" />
-<meta itemprop="wordCount" content="1303">
-<meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-
-
-
+<meta itemprop="wordCount" content="1303"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 <meta itemprop="keywords" content="PHP,Software testing," />
-
 		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
@@ -128,30 +121,30 @@ This means that any usage of those classes in your project needs to be updated. 
 <p>To start with, you have to find all the <strong>usages of PHPUnit classes</strong> in your project: a simple search for every occurrence of the string <code>PHPUnit_</code> should be enough at the beginning. You should know that, in some recent versions previous to 6, PHPUnit delivers a <strong>forward compatibility</strong> layer; this means that some of the most extended classes in the library are present also in the namespaced version, so they can be used before upgrading to the fully namespaced version.</p>
 <p>If you want to update a simple project, where the only usage of PHPUnit classes is to create tests, you are very lucky. You need to require at <strong>minimum PHPUnit 4.8.35 or 5.4.3</strong>, which includes the FC class <code>PHPUnit\Framework\TestCase</code> as an alias for <code>\PHPUnit_Framework_TestCase</code>.</p>
 <p>You should choose the <strong>newest version as possible</strong>, and that depends on which minimum version of PHP you want to support: if you work with (at least) PHP 5.6, you can use PHPUnit 5, otherwise you&rsquo;re forced to use version 4.8.35. If you&rsquo;re working on a (open source) library that needs to support both, you can do this in your <code>composer.json</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;require-dev&#34;</span>: {
-    <span style="color:#f92672">&#34;phpunit/phpunit&#34;</span>: <span style="color:#e6db74">&#34;^4.8.35|^5.4.0&#34;</span>  
-  }
-}
-</code></pre></div><p>In this way you can use both, and Composer will choose the most updated one, depending on which PHP version you are using; this is <strong>pretty useful for testing with a CI tool</strong> like Travis, since you should run your tests at least on the lowest and highest versions of PHP that you want to support.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;require-dev&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;phpunit/phpunit&#34;</span>: <span style="color:#e6db74">&#34;^4.8.35|^5.4.0&#34;</span>  
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>In this way you can use both, and Composer will choose the most updated one, depending on which PHP version you are using; this is <strong>pretty useful for testing with a CI tool</strong> like Travis, since you should run your tests at least on the lowest and highest versions of PHP that you want to support.</p>
 <p>Once you have required and installed the right version, the only modification that you need to do in your code is this one:</p>
 <p>Before:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">\PHPUnit_Framework_TestCase</span>
-{
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><p>After:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
-
-<span style="color:#66d9ef">use</span> <span style="color:#a6e22e">PHPUnit\Framework\TestCase</span>;
-
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">TestCase</span>
-{
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>}
-</code></pre></div><h3 id="deprecations-of-phpunit-4">Deprecations of PHPUnit 4</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">\PHPUnit_Framework_TestCase</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>After:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">use</span> <span style="color:#a6e22e">PHPUnit\Framework\TestCase</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTest</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">TestCase</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><h3 id="deprecations-of-phpunit-4">Deprecations of PHPUnit 4</h3>
 <p>Depending on your codebase, you may be forced to do one last step: your tests may be <strong>using deprecated methods from PHPUnit 4</strong>, so you will need to fix those. Those issues are pretty easy to be found and fixed, because they will make your test fail when executed with PHPUnit 5. The full list of changes that may impact you are in the <a href="https://github.com/sebastianbergmann/phpunit/blob/5.7/ChangeLog-5.0.md#500---2015-10-02">changelog for version 5.0.0</a>, but the most notable ones are:</p>
 <ul>
 <li>you need to declare a whitelist in your <code>phpunit.xml</code> configuration file to collect tests coverage</li>
@@ -166,48 +159,48 @@ This means that any usage of those classes in your project needs to be updated. 
 <li><code>\PHPUnit_Framework_TestSuite</code></li>
 </ul>
 <p>&hellip; then your only requirement is to <strong>use at least PHPUnit 5.7.21</strong>. This means that you have to drop support to any PHP version older than 5.6, if you still support it (and you should!).</p>
-<p>If, instead, you implement a <code>\PHPUnit_Framework_TestListener</code>, that may be a little trickier. The FC layer for that class is <strong>problematic</strong>, since it&rsquo;s an interface that has a lot of types applied to the methods' arguments; this, combined with the fact that in PHP you cannot change the type of an argument when extending (see <a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)">covariance and contravariance</a>), means that the FC class is nearly useless: <strong>you cannot be compatible with both</strong> <code>\PHPUnit_Framework_TestListener</code> and <code>\PHPUnit\Framework\TestListener</code> with the same class.</p>
+<p>If, instead, you implement a <code>\PHPUnit_Framework_TestListener</code>, that may be a little trickier. The FC layer for that class is <strong>problematic</strong>, since it&rsquo;s an interface that has a lot of types applied to the methods&rsquo; arguments; this, combined with the fact that in PHP you cannot change the type of an argument when extending (see <a href="https://en.wikipedia.org/wiki/Covariance_and_contravariance_(computer_science)">covariance and contravariance</a>), means that the FC class is nearly useless: <strong>you cannot be compatible with both</strong> <code>\PHPUnit_Framework_TestListener</code> and <code>\PHPUnit\Framework\TestListener</code> with the same class.</p>
 <p>If you are working on a <strong>single project</strong>, you may just restrict the supported PHPUnit version and jump to the newest one while upgrading the listener too. But if you are working on a library, and you do not want to apply that restriction to your end users, it gets a little complicated.</p>
 <p>In my case, while upgrading <code>facile-it/paraunit</code>, I preferred <a href="https://github.com/facile-it/paraunit/issues/54#issuecomment-302906556">jumping from supporting 4.x/5.x directly to 6.x</a>; Paraunit works directly on top of PHPUnit, and it works the same before and after this update (apart from new features), so <strong>dropping the old versions altogether</strong> seemed a good enough approach for me.</p>
 <p>In other cases, the listener is just provided as an additional help of the main library, so <strong>forcing the end user</strong> to update his version of PHPUnit alongside with our library could be <strong>too harsh</strong> or slow down the adoption of the new release. I tried doing this on <a href="https://github.com/FriendsOfSymfony/FOSHttpCache/pull/365">with a pull reques on <code>friendsofsymfony/http-cache</code></a>, where I had to solve this specific issue. The <strong>only feasible solution</strong> that I&rsquo;ve found is this <a href="https://github.com/symfony/phpunit-bridge/blob/3c0efb8609a32890a767bbbd39198a0e92572694/SymfonyTestsListener.php#L19">specific snippet of code</a>, that it was used in <code>symfony/phpunit-bridge</code> to overcome the same problem:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (
-    <span style="color:#a6e22e">class_exists</span>(<span style="color:#e6db74">&#39;PHPUnit_Runner_Version&#39;</span>) 
-    <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">version_compare</span>(<span style="color:#a6e22e">\PHPUnit_Runner_Version</span><span style="color:#f92672">::</span><span style="color:#a6e22e">id</span>(), <span style="color:#e6db74">&#39;6.0.0&#39;</span>, <span style="color:#e6db74">&#39;&lt;&#39;</span>)
-) {
-    <span style="color:#a6e22e">class_alias</span>(<span style="color:#e6db74">&#39;Legacy\MyTestListener&#39;</span>, <span style="color:#e6db74">&#39;MyTestListener&#39;</span>);
-<span style="color:#75715e">// Using an early return instead of a else does not work 
-</span><span style="color:#75715e">// when using the PHPUnit phar due to some weird PHP behavior 
-</span><span style="color:#75715e">// (the class gets defined without executing the code before it 
-</span><span style="color:#75715e">// and so the definition is not properly conditional)
-</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
-    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTestListener</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">BaseTestListener</span>
-    {
-        <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>    }
-}
-</code></pre></div><p>This approach is based on writing two versions of the listener, one (inside a <code>legacy</code> subfolder) which implements the old interface, the other that implements the new, namespaced one. With the above snippet, PHP is tricked into loading the right one, after checking if the loaded version of PHPUnit is lower than 6.0. In this way <strong>the end user can ignore the difference between the two classes</strong>, use only the new class name and go on, since they will be switched in a hidden and automatic way.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">class_exists</span>(<span style="color:#e6db74">&#39;PHPUnit_Runner_Version&#39;</span>) 
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">version_compare</span>(<span style="color:#a6e22e">\PHPUnit_Runner_Version</span><span style="color:#f92672">::</span><span style="color:#a6e22e">id</span>(), <span style="color:#e6db74">&#39;6.0.0&#39;</span>, <span style="color:#e6db74">&#39;&lt;&#39;</span>)
+</span></span><span style="display:flex;"><span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">class_alias</span>(<span style="color:#e6db74">&#39;Legacy\MyTestListener&#39;</span>, <span style="color:#e6db74">&#39;MyTestListener&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Using an early return instead of a else does not work 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// when using the PHPUnit phar due to some weird PHP behavior 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// (the class gets defined without executing the code before it 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// and so the definition is not properly conditional)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyTestListener</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">BaseTestListener</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This approach is based on writing two versions of the listener, one (inside a <code>legacy</code> subfolder) which implements the old interface, the other that implements the new, namespaced one. With the above snippet, PHP is tricked into loading the right one, after checking if the loaded version of PHPUnit is lower than 6.0. In this way <strong>the end user can ignore the difference between the two classes</strong>, use only the new class name and go on, since they will be switched in a hidden and automatic way.
 Once support for the old PHP and PHPUnit versions is dropped, this trick can be dropped too.</p>
 <h2 id="the-next-step-from-5-to-6">The next step: from 5 to 6</h2>
 <p>Once all this migration is completed, and all the tests are green under all needed conditions, we can plan for the next step, <strong>upgrading to PHPUnit 6</strong>. In reality, this step depends on a bigger, previous step: <strong>migrate to PHP 7</strong>, because lower versions are no longer supported with PHPUnit 6.</p>
 <p>When your project is ready for PHP 7, you can require the installation of PHPUnit 6; if you are working on a library that wants to support PHP 5.6 too, you can use the same trick as above in your <code>composer.json</code>:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;require-dev&#34;</span>: {
-    <span style="color:#f92672">&#34;phpunit/phpunit&#34;</span>: <span style="color:#e6db74">&#34;^5.4.0|^6.0&#34;</span>  
-  }
-}
-</code></pre></div><p>&hellip; so you&rsquo;ll be using PHPUnit 5 under PHP 5.6, and 6 with PHP 7.0+. As before, you need to check that your tests are still passing, and avoid using any functionality that is deprecated in PHPUnit 5. You can find the full list in the <a href="https://github.com/sebastianbergmann/phpunit/blob/6.0/ChangeLog-6.0.md#600---2017-02-03">PHPUnit changelog for 6.0.0</a>, but the most notable are:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;require-dev&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;phpunit/phpunit&#34;</span>: <span style="color:#e6db74">&#34;^5.4.0|^6.0&#34;</span>  
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>&hellip; so you&rsquo;ll be using PHPUnit 5 under PHP 5.6, and 6 with PHP 7.0+. As before, you need to check that your tests are still passing, and avoid using any functionality that is deprecated in PHPUnit 5. You can find the full list in the <a href="https://github.com/sebastianbergmann/phpunit/blob/6.0/ChangeLog-6.0.md#600---2017-02-03">PHPUnit changelog for 6.0.0</a>, but the most notable are:</p>
 <ul>
 <li><code>getMock()</code> must be replaced with <code>createMock()</code></li>
 <li>usages of <code>getMockWithoutInvokingTheOriginalConstructor()</code> are no longer needed, it&rsquo;s the default behavior now</li>
 <li>if you intervene on global variables, it&rsquo;s better to enable the <code>--globals-backup</code> option, to save and restore them between tests (previously it was the default behavior)</li>
 <li><code>setExpectedException()</code> must be replaced:</li>
 </ul>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">// before
-</span><span style="color:#75715e"></span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setExpectedException</span>(<span style="color:#a6e22e">Exception</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>, $message);
-<span style="color:#75715e">// after
-</span><span style="color:#75715e"></span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">expectException</span>(<span style="color:#a6e22e">Exception</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
-$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">expectExceptionMessage</span>($message);
-</code></pre></div><p>And that&rsquo;s all! I hope to make you save enough time and migraines with this little guide. Happy coding!</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#75715e">// before
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setExpectedException</span>(<span style="color:#a6e22e">Exception</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>, $message);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// after
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">expectException</span>(<span style="color:#a6e22e">Exception</span><span style="color:#f92672">::</span><span style="color:#a6e22e">class</span>);
+</span></span><span style="display:flex;"><span>$this<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">expectExceptionMessage</span>($message);
+</span></span></code></pre></div><p>And that&rsquo;s all! I hope to make you save enough time and migraines with this little guide. Happy coding!</p>
 
         </div>
         

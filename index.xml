@@ -423,21 +423,21 @@ This package contains a shell script and an abstract Symfony Console Command cla
     </item>
     
     <item>
-      <title>Paraunit 0.12.1: a small fix</title>
-      <link>https://alessandrolai.dev/releases/paraunit/0.12.1/</link>
-      <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://alessandrolai.dev/releases/paraunit/0.12.1/</guid>
-      <description>&lt;p&gt;I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the &lt;code&gt;--text&lt;/code&gt; and &lt;code&gt;--text-summary&lt;/code&gt; options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a &lt;a href=&#34;https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560&#34;&gt;PR to the Symfony Docs&lt;/a&gt; too!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Paraunit 0.12: PHPUnit 7 support and coverage text summary option</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.12.0/</link>
       <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/releases/paraunit/0.12.0/</guid>
       <description>&lt;p&gt;With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&amp;rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Paraunit 0.12.1: a small fix</title>
+      <link>https://alessandrolai.dev/releases/paraunit/0.12.1/</link>
+      <pubDate>Thu, 05 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/0.12.1/</guid>
+      <description>&lt;p&gt;I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the &lt;code&gt;--text&lt;/code&gt; and &lt;code&gt;--text-summary&lt;/code&gt; options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a &lt;a href=&#34;https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560&#34;&gt;PR to the Symfony Docs&lt;/a&gt; too!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -538,7 +538,7 @@ This means that any usage of those classes in your project needs to be updated. 
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
       
       <guid>https://alessandrolai.dev/releases/paraunit/0.9.1/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.1&#34;&gt;Paraunit 0.9.1&lt;/a&gt; has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&#39; package to do it, but it didn&amp;rsquo;t provide that feature, and he was adamant about not implementing it in the future.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.1&#34;&gt;Paraunit 0.9.1&lt;/a&gt; has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&amp;rsquo; package to do it, but it didn&amp;rsquo;t provide that feature, and he was adamant about not implementing it in the future.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -757,16 +757,6 @@ it working soon and release it in 0.7.&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
-      <link>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</link>
-      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
-      <guid>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</guid>
-      <description>&lt;p&gt;Ogni sviluppatore vorrebbe lavorare con una suite di test sempre più grande e con una coverage sempre più alta del proprio codice; ma una suite che impiega troppo tempo a completarsi diventa controproducente.&lt;/p&gt;
-&lt;p&gt;La soluzione normalmente proposta è quella di eseguire più test in parallelo, ed esistono già alcuni strumenti che lo permettono.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Paraunit: test paralleli, Doctrine e le fixture</title>
       <link>https://alessandrolai.dev/posts/paraunit/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
@@ -774,6 +764,16 @@ it working soon and release it in 0.7.&lt;/p&gt;</description>
       <guid>https://alessandrolai.dev/posts/paraunit/</guid>
       <description>Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
 I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&amp;rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&amp;rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&amp;rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.</description>
+    </item>
+    
+    <item>
+      <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
+      <link>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</link>
+      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</guid>
+      <description>&lt;p&gt;Ogni sviluppatore vorrebbe lavorare con una suite di test sempre più grande e con una coverage sempre più alta del proprio codice; ma una suite che impiega troppo tempo a completarsi diventa controproducente.&lt;/p&gt;
+&lt;p&gt;La soluzione normalmente proposta è quella di eseguire più test in parallelo, ed esistono già alcuni strumenti che lo permettono.&lt;/p&gt;</description>
     </item>
     
     <item>
