@@ -65,18 +65,22 @@ theme = "mainroad"
   name = "Home"
   weight = 1
   identifier = "home"
+  pageRef = "/"
   url = "/"
 [[menu.main]]
   name = "Who am I"
   weight = 2
   identifier = "who-am-i"
+  pageRef = "who-am-i"
   url = "/who-am-i/"
 [[menu.main]]
   name = "Blog"
   weight = 10
   identifier = "posts"
+  pageRef = "/posts"
   url = "/posts/"
 [[menu.main]]
   name = "Talks"
+  pageRef = "/talks"
   weight = 20
   url = "/talks/"
