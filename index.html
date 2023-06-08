@@ -95,6 +95,26 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/releases/doctrine-mysql-come-back/2.0.0/" rel="bookmark">
+			DoctrineMySQLComeBack 2.0.0: DBAL 3 support
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-06-08T00:00:00Z">June 08, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		The facile-it/doctrine-mysql-come-back was written long time ago by my colleague Luca Boeri, in an attempt to solve the infamous &ldquo;MySQL server has gone away&rdquo; error, and similar issues. It&rsquo;s a simple Doctrine DBAL driver wrapper that catches relevant exceptions from the driver and attempts to reconnect to the database; this is pretty useful if your PHP script is doing something else between queries, and an aggressive timeout from the database truncates the connection in the meantime, due to the prolonged inactivity.
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/doctrine-mysql-come-back/2.0.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/releases/paraunit/2.2.0/" rel="bookmark">
 			Paraunit 2.2.0: add Cobertura coverage report format
 			</a>
@@ -173,55 +193,11 @@ The full changelog is small, the changes for the end user are small, but the cod
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/paraunit/2.0.0/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/talks/2023-cto-lunch-dual-career-ladder/" rel="bookmark">
-			CTO Luch - Dual Career Ladder
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2022-12-21T00:00:00Z">December 21, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-
-
-
-<p>
-    
-    Talk presented at
-    <a href="https://www.ctopodcast.it/episode/dual-career-ladder-cto-lunch-089" target="_blank">
-        
-        CTO Show (Online)
-        
-    </a>
-    <br />
-    
-
-    
-    <img src="/images/it.svg.webp" alt="Language: it" style="vertical-align: middle" />
-    
-
-    
-</p>
-
-		<p><em>Questa è una puntata del podcast CTO Luch, condotto da Alex Pagnoni, a cui sono stato invitato.</em>
-<!-- raw HTML omitted --></p>
-<p>Dual Career Ladder: come strutturarla al meglio tenendo conto di responsabilità, retribuzione, spazio e ruolo? E come evitare i principali rischi, come quello del burnout dei manager?</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/talks/2023-cto-lunch-dual-career-ladder/">Read more…</a>
-	</div>
 </article>
-
 </main>
 
 <div class="pagination">
-	<span class="pagination__item pagination__item--current">1/17</span>
+	<span class="pagination__item pagination__item--current">1/18</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/2/">»</a>
 </div>
 
@@ -240,11 +216,11 @@ The full changelog is small, the changes for the end user are small, but the cod
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/releases/doctrine-mysql-come-back/2.0.0/">DoctrineMySQLComeBack 2.0.0: DBAL 3 support</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.2.0/">Paraunit 2.2.0: add Cobertura coverage report format</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.1.0/">Paraunit 2.1.0: add --sort=random option</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/terminable-loop-command/1.2.0/">Terminable Loop Command 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.0.0/">Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2023-cto-lunch-dual-career-ladder/">CTO Luch - Dual Career Ladder</a></li>
 		</ul>
 	</div>
 </div>
@@ -289,6 +265,7 @@ The full changelog is small, the changes for the end user are small, but the cod
 		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine/" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrinemysqlcomeback/" title="DoctrineMySQLComeBack">DoctrineMySQLComeBack</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab/" title="GitLab">GitLab</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes/" title="Kubernetes">Kubernetes</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>

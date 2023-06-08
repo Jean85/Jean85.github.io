@@ -96,6 +96,26 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/releases/paraunit/0.10.1/" rel="bookmark">
+			Paraunit 0.10.1: report deprecations
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-10-19T00:00:00Z">October 19, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>With this release, Paraunit replaces the suggestion of <code>facile-it/paraunit-testcase</code> with <code>dama/doctrine-test-bundle</code>; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/paraunit/0.10.1/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/releases/paraunit/0.10.0/" rel="bookmark">
 			Paraunit 0.10: small fixes and improvements
 			</a>
@@ -172,26 +192,6 @@
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/paraunit/0.9.1/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.9.2/" rel="bookmark">
-			Paraunit 0.9.2 and 0.8.3: missing dependencies
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-07-06T00:00:00Z">July 06, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p><a href="https://github.com/facile-it/paraunit/releases/tag/0.9.2">Paraunit 0.9.2</a> and <a href="https://github.com/facile-it/paraunit/releases/tag/0.8.3">Paraunit 0.8.3</a> has been released to fix a nasty little bug that I got reported to me: two dependencies were missing and the CI missed that due to the fact that both were required by dev dependencies.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.9.2/">Read more…</a>
-	</div>
 </article>
 </main>
 
@@ -217,11 +217,11 @@
 	<h4 class="widget__title">Recent Posts</h4>
 	<div class="widget__content">
 		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/releases/doctrine-mysql-come-back/2.0.0/">DoctrineMySQLComeBack 2.0.0: DBAL 3 support</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.2.0/">Paraunit 2.2.0: add Cobertura coverage report format</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.1.0/">Paraunit 2.1.0: add --sort=random option</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/terminable-loop-command/1.2.0/">Terminable Loop Command 1.2.0</a></li>
 			<li class="widget__item"><a class="widget__link" href="/releases/paraunit/2.0.0/">Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor</a></li>
-			<li class="widget__item"><a class="widget__link" href="/talks/2023-cto-lunch-dual-career-ladder/">CTO Luch - Dual Career Ladder</a></li>
 		</ul>
 	</div>
 </div>
@@ -266,6 +266,7 @@
 		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine/" title="Doctrine">Doctrine</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/doctrinemysqlcomeback/" title="DoctrineMySQLComeBack">DoctrineMySQLComeBack</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/gitlab/" title="GitLab">GitLab</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/kubernetes/" title="Kubernetes">Kubernetes</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/mysql/" title="MySQL">MySQL</a>
