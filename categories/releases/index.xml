@@ -6,7 +6,16 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminable Loop Command 1.2.1</title>
+      <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</link>
+      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</guid>
+      <description>&lt;p&gt;This small new patch was needed because we discovered that PHP official Docker images override the &lt;code&gt;STOPSIGNAL&lt;/code&gt; directive, using &lt;code&gt;SIGQUIT&lt;/code&gt; instead of &lt;code&gt;SIGTERM&lt;/code&gt; when shutting down a container. Thanks to Gabriele Colombera for providing the PR.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>DoctrineMySQLComeBack 2.0.0: DBAL 3 support</title>
       <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.0/</link>

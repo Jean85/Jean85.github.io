@@ -4,21 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Posts - Alessandro Lai</title>
+	<title>Terminable Loop Command 1.2.1 - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Posts" />
-<meta property="og:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://alessandrolai.dev/posts/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+		<meta property="og:title" content="Terminable Loop Command 1.2.1" />
+<meta property="og:description" content="This small new patch was needed because we discovered that PHP official Docker images override the STOPSIGNAL directive, using SIGQUIT instead of SIGTERM when shutting down a container. Thanks to Gabriele Colombera for providing the PR." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/><meta property="article:section" content="releases" />
+<meta property="article:published_time" content="2023-08-23T00:00:00+00:00" />
+<meta property="article:modified_time" content="2023-08-23T00:00:00+00:00" />
 
-		<meta itemprop="name" content="Posts">
-<meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+		<meta itemprop="name" content="Terminable Loop Command 1.2.1">
+<meta itemprop="description" content="This small new patch was needed because we discovered that PHP official Docker images override the STOPSIGNAL directive, using SIGQUIT instead of SIGTERM when shutting down a container. Thanks to Gabriele Colombera for providing the PR."><meta itemprop="datePublished" content="2023-08-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2023-08-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="57"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+<meta itemprop="keywords" content="Terminable Loop Command,Open Source," />
 		<meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
 
-<meta name="twitter:title" content="Posts"/>
-<meta name="twitter:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box"/>
+<meta name="twitter:title" content="Terminable Loop Command 1.2.1"/>
+<meta name="twitter:description" content="This small new patch was needed because we discovered that PHP official Docker images override the STOPSIGNAL directive, using SIGQUIT instead of SIGTERM when shutting down a container. Thanks to Gabriele Colombera for providing the PR."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -27,7 +32,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
-	<link rel="alternate" type="application/rss+xml" href="/posts/index.xml" title="Alessandro Lai">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -67,7 +71,7 @@
 				
 			</a>
 		</li>
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/posts/">
 				
 				<span class="menu__text">Blog</span>
@@ -89,123 +93,71 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<header class="main__header">
-		<h1 class="main__title">Posts</h1>
-	</header><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" rel="bookmark">
-			Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Terminable Loop Command 1.2.1</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2018-02-06T00:00:00Z">February 06, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2023-08-23T00:00:00Z">August 23, 2023</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
-After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/phpunit-upgrade-namespace/" rel="bookmark">
-			How to gradually upgrade toward PHPUnit 6 with namespaced classes
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-12T00:00:00Z">September 12, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
-This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/phpunit-upgrade-namespace/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/visual-debt-typehints/" rel="bookmark">
-			Why type hints and interfaces are not visual debt
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-05-31T00:00:00Z">May 31, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		A few days ago I stumbled on a strange tweet that was highlighting a controversy about scalar type hints.
-After asking references about this, someone alluded to this very short video: &ldquo;PHP Bits: Visual Debt&rdquo; (it&rsquo;s only 3 minutes, please watch it before continue reading). After that, the author of the video was dragged into the conversation, and it blew up into a big tweetstorm in the following few hours.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/visual-debt-typehints/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/how-php-7-tdd-helped-me-sleep-better/" rel="bookmark">
-			How PHP 7 &amp; TDD helped me sleep better
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2016-06-07T00:00:00Z">June 07, 2016</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		The enemies of programming As many of you will agree with me, sleep deprivation is the enemy of programming.
-Maybe we fear only one thing more than that: being interrupted.
-While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on&hellip; fatigue and interruptions are the main enemies of those in this line of work.
-My experience On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/how-php-7-tdd-helped-me-sleep-better/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/paraunit/" rel="bookmark">
-			Paraunit: test paralleli, Doctrine e le fixture
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2015-10-09T00:00:00Z">October 09, 2015</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		Questo articolo è la sintesi di un talk presentato al SymfonyDay 2015; potete trovare le slide qui.
-I test e la loro durata Sviluppare applicazioni scrivendo test e facendo Test Driven Development è un&rsquo;ottima pratica, e dà parecchie soddisfazioni. Con l&rsquo;andare del tempo, si fa crescere la suite di test del proprio progetto, cercando di aumentarne la copertura e l&rsquo;efficacia e si scrivono nuovi test corrispondenti alle nuove funzionalità che vengono man mano sviluppate.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/paraunit/">Read more…</a>
-	</div>
-</article>
+		</header>
+		<div class="content clearfix">
+            <blockquote>
+                <p>
+                    This is a republished tag announcement for <code>facile-it/terminable-loop-command</code>.
+                    You can find the release <a href="https://github.com/facile-it/terminable-loop-command/releases/tag/1.2.1" target="_blank">here</a>.
+                </p>
+    		</blockquote>
+        </div><div class="content post__content clearfix">
+			<p>This small new patch was needed because we discovered that PHP official Docker images override the <code>STOPSIGNAL</code> directive, using <code>SIGQUIT</code> instead of <code>SIGTERM</code> when shutting down a container. Thanks to Gabriele Colombera for providing the PR.</p>
+<p>This is the full changelog:</p>
+<ul>
+<li>Adds support for SIGQUIT signal (needed to support php-fpm-alpine docker images which overrides STOPSIGNAL (<a href="https://github.com/docker-library/php/blob/master/8.2/alpine3.18/fpm/Dockerfile#L259">Official Dockerfile</a>))</li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/terminable-loop-command/" rel="tag">Terminable Loop Command</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
 </main>
+
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Alessandro Lai</span>
+	</div>
+	<div class="authorbox__description">
+		Engineering Manager at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+	</div>
+</div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/releases/doctrine-mysql-come-back/2.0.0/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">DoctrineMySQLComeBack 2.0.0: DBAL 3 support</p>
+		</a>
+	</div>
+</nav>
 
 
 			</div>
-			
-<aside class="sidebar">
+			<aside class="sidebar">
 <div class="widget-search widget">
 	<form class="widget-search__form" role="search" method="get" action="https://duckduckgo.com/">
 		<label>
