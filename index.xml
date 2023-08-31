@@ -6,7 +6,16 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.2.1: report PHPUnit errors</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.2.1/</link>
+      <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/2.2.1/</guid>
+      <description>&lt;p&gt;I discovered this bug while trying to upgrade a work project to PHPUnit 10. The issue was caused by an empty data provider.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Terminable Loop Command 1.2.1</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</link>
