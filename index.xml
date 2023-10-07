@@ -6,7 +6,16 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Aug 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.2.2: PHPUnit 10.4 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.2.2/</link>
+      <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://alessandrolai.dev/releases/paraunit/2.2.2/</guid>
+      <description>&lt;p&gt;This is a small patch to smooth the compatibility with the new release of PHPUnit, 10.4. Previous versions would still work fine, but I took the time to fix all the tests (that were broken due to reliance on &lt;code&gt;@internal&lt;/code&gt; code such as PHPUnit events) and to add support for the new CLI options regarding the errors baseline.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Paraunit 2.2.1: report PHPUnit errors</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.1/</link>
