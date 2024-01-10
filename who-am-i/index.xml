@@ -5,6 +5,7 @@
     <link>https://alessandrolai.dev/who-am-i/</link>
     <description>Recent content in Who am I on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://alessandrolai.dev/who-am-i/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <atom:link href="https://alessandrolai.dev/who-am-i/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

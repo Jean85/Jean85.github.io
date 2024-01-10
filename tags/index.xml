@@ -6,168 +6,133 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Open Source</title>
       <link>https://alessandrolai.dev/tags/open-source/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/open-source/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Paraunit</title>
       <link>https://alessandrolai.dev/tags/paraunit/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/paraunit/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Terminable Loop Command</title>
       <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/terminable-loop-command/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>DoctrineMySQLComeBack</title>
       <link>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</link>
       <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pretty Package Versions</title>
       <link>https://alessandrolai.dev/tags/pretty-package-versions/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/pretty-package-versions/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Continuous deployment</title>
       <link>https://alessandrolai.dev/tags/continuous-deployment/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/continuous-deployment/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Continuous integration</title>
       <link>https://alessandrolai.dev/tags/continuous-integration/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/continuous-integration/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Docker</title>
       <link>https://alessandrolai.dev/tags/docker/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/docker/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GitLab</title>
       <link>https://alessandrolai.dev/tags/gitlab/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/gitlab/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Kubernetes</title>
       <link>https://alessandrolai.dev/tags/kubernetes/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/kubernetes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PHP</title>
       <link>https://alessandrolai.dev/tags/php/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/php/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Software Testing</title>
       <link>https://alessandrolai.dev/tags/software-testing/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/software-testing/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OOP</title>
       <link>https://alessandrolai.dev/tags/oop/</link>
       <pubDate>Wed, 31 May 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/oop/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TDD</title>
       <link>https://alessandrolai.dev/tags/tdd/</link>
       <pubDate>Tue, 07 Jun 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/tdd/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Database</title>
       <link>https://alessandrolai.dev/tags/database/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/database/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Doctrine</title>
       <link>https://alessandrolai.dev/tags/doctrine/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/doctrine/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>MySQL</title>
       <link>https://alessandrolai.dev/tags/mysql/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/mysql/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Symfony</title>
       <link>https://alessandrolai.dev/tags/symfony/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/tags/symfony/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

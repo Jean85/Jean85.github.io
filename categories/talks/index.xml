@@ -6,228 +6,168 @@
     <description>Recent content in Talks on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://alessandrolai.dev/categories/talks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CTO Luch - Dual Career Ladder</title>
       <link>https://alessandrolai.dev/talks/2023-cto-lunch-dual-career-ladder/</link>
       <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2023-cto-lunch-dual-career-ladder/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Luch, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;Dual Career Ladder: come strutturarla al meglio tenendo conto di responsabilità, retribuzione, spazio e ruolo? E come evitare i principali rischi, come quello del burnout dei manager?&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Luch, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;Dual Career Ladder: come strutturarla al meglio tenendo conto di responsabilità, retribuzione, spazio e ruolo? E come evitare i principali rischi, come quello del burnout dei manager?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>CTO Show - Leading a team smarter than you</title>
       <link>https://alessandrolai.dev/talks/2022-cto-show-leading-a-team-smarter-than-you/</link>
       <pubDate>Wed, 21 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2022-cto-show-leading-a-team-smarter-than-you/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Show, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;
-&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;p&gt;Ti è mai capitato di dover guidare un team di persone senza avere le competenze tecniche necessarie?
-O magari di dover gestire un progetto su un linguaggio di programmazione che proprio non conosci?&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Questa è una puntata del podcast CTO Show, condotto da Alex Pagnoni, a cui sono stato invitato.&lt;/em&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;p&gt;Ti è mai capitato di dover guidare un team di persone senza avere le competenze tecniche necessarie?&#xA;O magari di dover gestire un progetto su un linguaggio di programmazione che proprio non conosci?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PHP &#43; ES &#43; CQRS &#43; DDD = ? - A planned strategy</title>
       <link>https://alessandrolai.dev/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2022-phpday-php-ddd-cqrs-es-planned-strategy/</guid>
       <description>&lt;p&gt;DDD, CQRS, Event Sourcing have generated a lot of buzz in recent years, but they seem an unattainable target for the everyday, long running projects we work on. The required amount of knowledge seems unbearable, halting the delivery of business value is not an option, and sticking with the &amp;ldquo;known ways&amp;rdquo; of development seems like a safer bet. In reality, all those approaches have so much in common underneath that applying all of them together makes them collimate toward cleaner and suppler code, with a compound effect on the benefits and a reduced overall cost of implementation.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Come sfruttare OpenAPI durante lo sviluppo di un API in PHP</title>
       <link>https://alessandrolai.dev/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Questa è la replica di &lt;a href=&#34;https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/&#34;&gt;una presentazione&lt;/a&gt; che ho svolto l&amp;rsquo;anno precedente online al SymfonyDay 2021, anch&amp;rsquo;essa registrata&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;
-&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Questa è la replica di &lt;a href=&#34;https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/&#34;&gt;una presentazione&lt;/a&gt; che ho svolto l&amp;rsquo;anno precedente online al SymfonyDay 2021, anch&amp;rsquo;essa registrata&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;&#xA;&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>API contracts: Leveraging OpenAPI during API development</title>
       <link>https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/</link>
       <pubDate>Thu, 13 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/</guid>
-      <description>&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;
-&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
+      <description>&lt;p&gt;Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.&lt;/p&gt;&#xA;&lt;p&gt;Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>My Symfony functional testing toolbox</title>
       <link>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</link>
       <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2021-pugmi-my-functional-testing-toolbox/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is the italian version of a talk that I did &lt;a href=&#34;https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/&#34;&gt;two months before at SFDay 2020&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>My Symfony functional testing toolbox</title>
       <link>https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/</link>
       <pubDate>Fri, 20 Nov 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2020-sfday-my-functional-testing-toolbox/</guid>
       <description>&lt;p&gt;When testing the PHP side of a Symfony application, tests are normally split into unit and functional: the former do not need anything in addition to some proficiency, due to their small size and isolated execution; the latter instead are more complex, slower and sometimes more brittle, because they use more components, and they involve the framework and the libraries used to build the app.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Kubernetes for PHP developers</title>
       <link>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</link>
       <pubDate>Tue, 08 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2020-phpday-k8s-for-php-developers/</guid>
-      <description>&lt;p&gt;Docker has slowly won the hearth of many developers as a good, flexible and reliable tool to build local environments for web apps, but containers in production were still a myth for a long time.&lt;/p&gt;
-&lt;p&gt;Now, with the advent of Kubernetes (k8s), deploying (PHP) applications with containers is the new shiny tool, but the huge amount of new concepts and technologies scares a lot of people away.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Docker has slowly won the hearth of many developers as a good, flexible and reliable tool to build local environments for web apps, but containers in production were still a myth for a long time.&lt;/p&gt;&#xA;&lt;p&gt;Now, with the advent of Kubernetes (k8s), deploying (PHP) applications with containers is the new shiny tool, but the huge amount of new concepts and technologies scares a lot of people away.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Code reviews -  How-to, do &amp; dont&#39;s</title>
       <link>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</link>
       <pubDate>Fri, 10 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2020-01-facile-it-code-review/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
       <link>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</link>
       <pubDate>Thu, 21 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2019-symfonycon-event-sourcing/</guid>
-      <description>&lt;p&gt;&lt;em&gt;Watch the video of this talk for free on &lt;a href=&#34;https://symfonycasts.com/screencast/symfonycon2019/adding-event-sourcing-to-an-existing-php-project-for-the-right-reasons&#34;&gt;SymfonyCasts&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo;, have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;em&gt;Watch the video of this talk for free on &lt;a href=&#34;https://symfonycasts.com/screencast/symfonycon2019/adding-event-sourcing-to-an-existing-php-project-for-the-right-reasons&#34;&gt;SymfonyCasts&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo;, have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Symfony ❤︎ Kubernetes: dynamic feature-review environments</title>
       <link>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2019-codemotion-symfony-loves-k8s/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a replica of &lt;a href=&#34;https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/&#34;&gt;the talk&lt;/a&gt; that I did the week before at SFDay 2019, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Symfony ❤︎ Kubernetes: dynamic feature-review environments</title>
       <link>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</link>
       <pubDate>Fri, 18 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2019-sfday-symfony-loves-k8s/</guid>
       <description>&lt;p&gt;Docker has been a part of our development environments for long as of now. But its usage in production had not followed the same adoption curve, and it&amp;rsquo;s instead rising only in the last years, mainly due to Kubernetes.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Kubernetes ❤ PHP</title>
       <link>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</link>
       <pubDate>Wed, 15 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2019-pugmi-k8s-loves-php/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a replica of &lt;a href=&#34;https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/&#34;&gt;the talk&lt;/a&gt; that I did two months before at CloudConf 2019, followed by a live coding demonstration&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Kubernetes ❤ PHP</title>
       <link>https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/</link>
       <pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2019-cloudconf-k8s-loves-php/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
       <link>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/</guid>
-      <description>&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo; (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;
-&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&amp;ldquo;Event Sourcing&amp;rdquo;, along with &amp;ldquo;CQRS&amp;rdquo; (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;&#xA;&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
       <link>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</link>
       <pubDate>Fri, 19 Oct 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/</guid>
-      <description>&lt;p&gt;Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.&lt;/p&gt;
-&lt;p&gt;Il passaggio però all&amp;rsquo;ambiente di produzione è stato molto meno &amp;ldquo;&amp;ldquo;virale&amp;rdquo;&amp;rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Docker è una tecnologia che ormai ha preso largamente piede negli ambienti di sviluppo di applicazioni web: da anni ormai è una alternativa superiore alle classiche macchine virtuali, molto più avide di risorse hardware.&lt;/p&gt;&#xA;&lt;p&gt;Il passaggio però all&amp;rsquo;ambiente di produzione è stato molto meno &amp;ldquo;&amp;ldquo;virale&amp;rdquo;&amp;rdquo; e si fatica ancora a trovare risorse e consigli su come portare la propria applicazione in produzione usando Docker e i container.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Symfony &#43; Docker, dall&#39;ambiente di sviluppo alla produzione</title>
       <link>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</link>
       <pubDate>Thu, 20 Sep 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2018-pugmi-symfony-docker/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a test of &lt;a href=&#34;https://alessandrolai.dev/talks/2018-symfonyday-symfony-docker/&#34;&gt;the talk&lt;/a&gt; that I did the next month at SymfonyDay 2018, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
       <link>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</link>
       <pubDate>Sat, 12 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2018-phpday-event-sourcing/</guid>
-      <description>&lt;p&gt;“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;
-&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
+      <description>&lt;p&gt;“Event Sourcing”, along with “CQRS” (Command Query Responsibility Segregation), have recently become trending terms, and now there is so much theory, blog posts and talks about them.&lt;/p&gt;&#xA;&lt;p&gt;However, most of these deal with the problem starting from an utopian assumption: having to write a project from scratch (greenfield), but at the same time with a high domain complexity right from the start, enough to justify the use of a complex technique like event sourcing and CQRS, which carry a fair amount of inherent complexity.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Adding Event Sourcing to an existing PHP project (for the right reasons)</title>
       <link>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</link>
       <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2018-pugmi-event-sourcing/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a test of a talk that I did &lt;a href=&#34;https://alessandrolai.dev/talks/2018-phpday-event-sourcing/&#34;&gt;on May at phphday 2018&lt;/a&gt; and also &lt;a href=&#34;https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/&#34;&gt;the next October in italian at SymfonyDay 2018&lt;/a&gt;, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Bug hunting with Git Bisect</title>
       <link>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</link>
       <pubDate>Thu, 18 Aug 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2016-nomadphp-bug-hunting-git-bisect/</guid>
-      <description>&lt;p&gt;Bugs are introduced in our code almost everyday, one way or another, even if we do our best to avoid it.&lt;/p&gt;
-&lt;p&gt;Often, we need to identify where a bug originated to fix it, but we have to sift through a long history of commits to do that. Git comes to the rescue!&lt;/p&gt;</description>
+      <description>&lt;p&gt;Bugs are introduced in our code almost everyday, one way or another, even if we do our best to avoid it.&lt;/p&gt;&#xA;&lt;p&gt;Often, we need to identify where a bug originated to fix it, but we have to sift through a long history of commits to do that. Git comes to the rescue!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>A (small) Hexagonal architecture inside a Symfony application</title>
       <link>https://alessandrolai.dev/talks/2016-facile-it-small-hexagonal-architecture-symfony/</link>
       <pubDate>Fri, 18 Mar 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2016-facile-it-small-hexagonal-architecture-symfony/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
       <link>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</guid>
-      <description>&lt;p&gt;Ogni sviluppatore vorrebbe lavorare con una suite di test sempre più grande e con una coverage sempre più alta del proprio codice; ma una suite che impiega troppo tempo a completarsi diventa controproducente.&lt;/p&gt;
-&lt;p&gt;La soluzione normalmente proposta è quella di eseguire più test in parallelo, ed esistono già alcuni strumenti che lo permettono.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ogni sviluppatore vorrebbe lavorare con una suite di test sempre più grande e con una coverage sempre più alta del proprio codice; ma una suite che impiega troppo tempo a completarsi diventa controproducente.&lt;/p&gt;&#xA;&lt;p&gt;La soluzione normalmente proposta è quella di eseguire più test in parallelo, ed esistono già alcuni strumenti che lo permettono.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit: Test paralleli, Doctrine e le fixture</title>
       <link>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</link>
       <pubDate>Thu, 24 Sep 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</guid>
       <description>&lt;p&gt;&lt;em&gt;This is a test of &lt;a href=&#34;https://alessandrolai.dev/talks/2015-symfonyday-paraunit/&#34;&gt;the talk&lt;/a&gt; that I did the next month at SymfonyDay 2015, where there&amp;rsquo;s video recording available.&lt;/em&gt;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

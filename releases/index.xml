@@ -6,591 +6,448 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Paraunit 2.2.2: PHPUnit 10.4 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.2/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.2.2/</guid>
       <description>&lt;p&gt;This is a small patch to smooth the compatibility with the new release of PHPUnit, 10.4. Previous versions would still work fine, but I took the time to fix all the tests (that were broken due to reliance on &lt;code&gt;@internal&lt;/code&gt; code such as PHPUnit events) and to add support for the new CLI options regarding the errors baseline.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 2.2.3: Symfony 7 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.3/</link>
       <pubDate>Fri, 06 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.2.3/</guid>
       <description>&lt;p&gt;This another small patch is to allow using Paraunit with Symfony 7, which was released just yesterday. The &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/220&#34;&gt;related PR&lt;/a&gt; needed just to fix a couple of return types. Paraunit should work flawlessly with PHP 8.3 too, which was released a couple of day prior, but I had to revert the additional CI job because &lt;a href=&#34;https://github.com/facile-it/paraunit/actions/runs/7044811698/job/19173277683&#34;&gt;Prophecy is not ready yet&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 2.2.1: report PHPUnit errors</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.1/</link>
       <pubDate>Wed, 30 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.2.1/</guid>
       <description>&lt;p&gt;I discovered this bug while trying to upgrade a work project to PHPUnit 10. The issue was caused by an empty data provider.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Terminable Loop Command 1.2.1</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</guid>
       <description>&lt;p&gt;This small new patch was needed because we discovered that PHP official Docker images override the &lt;code&gt;STOPSIGNAL&lt;/code&gt; directive, using &lt;code&gt;SIGQUIT&lt;/code&gt; instead of &lt;code&gt;SIGTERM&lt;/code&gt; when shutting down a container. Thanks to Gabriele Colombera for providing the PR.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>DoctrineMySQLComeBack 2.0.0: DBAL 3 support</title>
       <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.0/</link>
       <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.0/</guid>
       <description>The facile-it/doctrine-mysql-come-back was written long time ago by my colleague Luca Boeri, in an attempt to solve the infamous &amp;ldquo;MySQL server has gone away&amp;rdquo; error, and similar issues. It&amp;rsquo;s a simple Doctrine DBAL driver wrapper that catches relevant exceptions from the driver and attempts to reconnect to the database; this is pretty useful if your PHP script is doing something else between queries, and an aggressive timeout from the database truncates the connection in the meantime, due to the prolonged inactivity.</description>
     </item>
-    
     <item>
       <title>Paraunit 2.2.0: add Cobertura coverage report format</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.0/</link>
       <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.2.0/</guid>
       <description>&lt;p&gt;This new minor versions adds support for the Cobertura coverage report, which is supported by many services and tool, with GitLab as a prominent one.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 2.1.0: add --sort=random option</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.1.0/</link>
       <pubDate>Wed, 03 May 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.1.0/</guid>
       <description>&lt;p&gt;This new minor versions adds a new, small feature to support one small sorting option, the random one. This is useful to mix test execution, if you&amp;rsquo;re encountering deadlocks and performance bottlenecks due to the concentration of certain tests in some areas of your test suite.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Terminable Loop Command 1.2.0</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.0/</link>
       <pubDate>Mon, 03 Apr 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.2.0/</guid>
       <description>&lt;p&gt;This new minor release is a maintenance one, which drops support for older (and EOLed) PHP &amp;amp; Symfony versions; this allowed me to bump all the development dependencies and streamline the CI flow.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.0.0/</link>
       <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/2.0.0/</guid>
-      <description>&lt;p&gt;This new major version has seen its inception a long time ago, on &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/162&#34;&gt;October 2021&lt;/a&gt;, and it went to sleep for a long time, since PHPUnit development was doing the same. After &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/172&#34;&gt;some additional attempts&lt;/a&gt;, I was finally able to complete this alongside the long-awaited release of PHPUnit 10.&lt;/p&gt;
-&lt;p&gt;All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that &lt;code&gt;enum&lt;/code&gt;s are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the &lt;code&gt;--pass-through&lt;/code&gt; option as a viable alternative.
-The full changelog is small, the changes for the end user are small, but the code changes are a lot!&lt;/p&gt;</description>
+      <description>&lt;p&gt;This new major version has seen its inception a long time ago, on &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/162&#34;&gt;October 2021&lt;/a&gt;, and it went to sleep for a long time, since PHPUnit development was doing the same. After &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/172&#34;&gt;some additional attempts&lt;/a&gt;, I was finally able to complete this alongside the long-awaited release of PHPUnit 10.&lt;/p&gt;&#xA;&lt;p&gt;All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that &lt;code&gt;enum&lt;/code&gt;s are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the &lt;code&gt;--pass-through&lt;/code&gt; option as a viable alternative.&#xA;The full changelog is small, the changes for the end user are small, but the code changes are a lot!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.3.0: new chunk size feature, Symfony 6 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.3.0/</link>
       <pubDate>Wed, 15 Jun 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.3.0/</guid>
-      <description>&lt;p&gt;This new minor release comes after more than a year since the last tag.&lt;/p&gt;
-&lt;p&gt;It actually comes with a couple of new interesting features, one of which is a new behavior for tests parallelization. The new &lt;code&gt;--chunk-size&lt;/code&gt; option, when set at a value higher that &lt;code&gt;1&lt;/code&gt;, will execute more than one test class per single process, making the execution faster for test suites where the class setup is expensive.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This new minor release comes after more than a year since the last tag.&lt;/p&gt;&#xA;&lt;p&gt;It actually comes with a couple of new interesting features, one of which is a new behavior for tests parallelization. The new &lt;code&gt;--chunk-size&lt;/code&gt; option, when set at a value higher that &lt;code&gt;1&lt;/code&gt;, will execute more than one test class per single process, making the execution faster for test suites where the class setup is expensive.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0.5</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/</link>
       <pubDate>Fri, 08 Oct 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.5/</guid>
       <description>&lt;p&gt;This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0.4</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.4/</link>
       <pubDate>Wed, 26 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.4/</guid>
       <description>&lt;p&gt;This last small patch had to be rushed out due to &lt;a href=&#34;https://github.com/composer/composer/pull/9816/files&#34;&gt;a deprecation in Composer 2.0.14&lt;/a&gt;. This was triggering failures downstream, like in the Sentry SDK CI.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.2.1: allow jean85/pretty-package-versions v2</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.2.1/</link>
       <pubDate>Thu, 25 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.2.1/</guid>
       <description>&lt;p&gt;This small patch is just to allow a dependency bump for end users.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Terminable Loop Command 1.1.0</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</link>
       <pubDate>Thu, 04 Mar 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.1.0/</guid>
       <description>&lt;p&gt;This is just a small upgrade of a very stable package, that adds support for PHP 8 and Symfony 5.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0.3</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.3/</link>
       <pubDate>Mon, 22 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.3/</guid>
       <description>&lt;p&gt;This last small patch publishes a new constant to make the &amp;ldquo;no reference&amp;rdquo; text available to end users.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.6.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.6.0/</link>
       <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.6.0/</guid>
       <description>&lt;p&gt;This small patch adds a small FC (forward compatibility) layer to the 1.x series, by adding the new methods introduced in the 2.0 release. This should ease the support for both major versions at the same time.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0.2</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.2/</link>
       <pubDate>Wed, 03 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.2/</guid>
       <description>&lt;p&gt;This small patch handles a couple of new bugs that got discovered through &lt;a href=&#34;https://github.com/getsentry/sentry-symfony/issues/435&#34;&gt;an issue on `sentry-symfony&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0.1</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.1/</link>
       <pubDate>Thu, 28 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.1/</guid>
       <description>&lt;p&gt;This small patch handles replaced and provided packages, so that consumers of this library can handle bad requests gracefully.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 2.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.0/</link>
       <pubDate>Thu, 14 Jan 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.0/</guid>
-      <description>&lt;p&gt;This new major release of this package was long awaited by me, since it&amp;rsquo;s a comeback of the 1.3 release, that was rolled back. Now, after more than 22 million downloads and the stable release of Composer 2, it&amp;rsquo;s time to use it!&lt;/p&gt;
-&lt;p&gt;The breaking changes are reduced to a minimum to allow a smoother upgrade path; if you use this package in a library, you&amp;rsquo;re encouraged to require it with a constraint of &lt;code&gt;^1.5 || ^2.0&lt;/code&gt;, to obtain all the functionalities without constraining your end users to upgrade immediately to Composer 2.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This new major release of this package was long awaited by me, since it&amp;rsquo;s a comeback of the 1.3 release, that was rolled back. Now, after more than 22 million downloads and the stable release of Composer 2, it&amp;rsquo;s time to use it!&lt;/p&gt;&#xA;&lt;p&gt;The breaking changes are reduced to a minimum to allow a smoother upgrade path; if you use this package in a library, you&amp;rsquo;re encouraged to require it with a constraint of &lt;code&gt;^1.5 || ^2.0&lt;/code&gt;, to obtain all the functionalities without constraining your end users to upgrade immediately to Composer 2.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.2.0: PHP 8 &amp; PHPUnit 9.3 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.2.0/</link>
       <pubDate>Tue, 15 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.2.0/</guid>
       <description>&lt;p&gt;This release contains only support for newer versions of PHP &amp;amp; PHPUnit; due to PHPUnit 9.3 requiring a new major version of &lt;code&gt;phpunit/php-code-coverage&lt;/code&gt;, I&amp;rsquo;m forced to drop support to all PHPUnit versions below 9.3. Usage of Paraunit is unchanged.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.5.1</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.5.1/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.5.1/</guid>
       <description>&lt;p&gt;This small patch adds support for the upcoming PHP 8.0 release.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.1.1: PostgreSQL retry support</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.1.1/</link>
       <pubDate>Wed, 06 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.1.1/</guid>
       <description>&lt;p&gt;This small path adds detection for deadlocks during test execution when using PostgreSQL, thanks to an external contributor.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.4.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.4.0/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.4.0/</guid>
       <description>&lt;p&gt;This version attempts to support Composer 2 directly, by dropping dependencies and using the Composer 2 API directly.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.5.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.5.0/</link>
       <pubDate>Tue, 28 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.5.0/</guid>
       <description>&lt;p&gt;This release is intended to change the future release plan of this package. Please require the package with &lt;code&gt;^1.5 || ^2.0&lt;/code&gt; to ensure full functionalities and future Composer 2 compatibility.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.3.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.3.0/</link>
       <pubDate>Fri, 24 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.3.0/</guid>
       <description>&lt;p&gt;Thanks to the work of the Composer maintainers, &lt;code&gt;ocramius/package-versions&lt;/code&gt; has been forked to backport support back to PHP 7.0, while maintaining Composer 2 compatiblity. This new version leverages this fork.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.1.0: PHPUnit 9.1 and internal refactor</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.1.0/</link>
       <pubDate>Fri, 03 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.1.0/</guid>
       <description>&lt;p&gt;As reported &lt;a href=&#34;https://alessandrolai.dev/news/release/1.0.1&#34;&gt;in the previous release&lt;/a&gt;, I was working on &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/149&#34;&gt;supporting PHPUnit 9&lt;/a&gt;. Today, PHPUnit 9.1 was released, and so I&amp;rsquo;ve released Paraunit 1.1.0, which supports &lt;em&gt;only&lt;/em&gt; PHPUnit 9.1 and forward: this is due to the fact that the &lt;code&gt;--printer&lt;/code&gt; option got deprecated, so I have to switch approach to have a working solution for the foreseeable future. In this case, I switched to using &lt;code&gt;TestHook&lt;/code&gt;, and opted for a small refactor of how Paraunit fetches PHPUnit test results.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.0.1: two small fixes</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.0.1/</link>
       <pubDate>Mon, 23 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.0.1/</guid>
       <description>&lt;p&gt;While I&amp;rsquo;m actively working on a big refactor toward &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/149&#34;&gt;supporting PHPUnit 9&lt;/a&gt;, I&amp;rsquo;ve found two small fixes that have to be released as the first stable patch since the 1.0 release.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.0.0: the stable release</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.0.0/</link>
       <pubDate>Wed, 11 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.0.0/</guid>
-      <description>&lt;p&gt;Today I decided to release &lt;code&gt;facile-it/paraunit&lt;/code&gt; &lt;code&gt;1.0.0&lt;/code&gt;! In reality the package was pretty stable and widely used at Facile.it for a long time, but right now I wanted to step forward and declare it officially stable.&lt;/p&gt;
-&lt;p&gt;The main reason behind this is that I&amp;rsquo;m currently working &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/149&#34;&gt;on PHPUnit 9 support&lt;/a&gt;, and this will force me to release a new minor that will drop support for previous PHPUnit version altogether. This decision was in reality forced onto me due to the fact that PHUnit 9 drops support for the &lt;code&gt;--printer&lt;/code&gt; CLI option and the relative extension point, which Paraunit was using as a way to extract test results.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Today I decided to release &lt;code&gt;facile-it/paraunit&lt;/code&gt; &lt;code&gt;1.0.0&lt;/code&gt;! In reality the package was pretty stable and widely used at Facile.it for a long time, but right now I wanted to step forward and declare it officially stable.&lt;/p&gt;&#xA;&lt;p&gt;The main reason behind this is that I&amp;rsquo;m currently working &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/149&#34;&gt;on PHPUnit 9 support&lt;/a&gt;, and this will force me to release a new minor that will drop support for previous PHPUnit version altogether. This decision was in reality forced onto me due to the fact that PHUnit 9 drops support for the &lt;code&gt;--printer&lt;/code&gt; CLI option and the relative extension point, which Paraunit was using as a way to extract test results.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 1.0.0-beta2: Pcov support</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.0.0-beta2/</link>
       <pubDate>Wed, 26 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.0.0-beta2/</guid>
       <description>&lt;p&gt;I returned to develop some more on Paraunit in the last months, initially to add a few new compatibilities (PHP 7.4, Symfony 5), but then I spent some time to add support for Pcov as a coverage driver.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Terminable Loop Command 1.0</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</link>
       <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</guid>
-      <description>This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.
-This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.</description>
+      <description>This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.&#xA;This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.</description>
     </item>
-    
     <item>
       <title>Paraunit 1.0.0-beta1: the first approach to a stable release</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.0.0-beta1/</link>
       <pubDate>Mon, 08 Apr 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/1.0.0-beta1/</guid>
       <description>&lt;p&gt;After a long hiatus, I decided to start working in the first stable release of Paraunit; the package is good and running smoothly for years, so we no longer have any reason to delay the 1.0 further. This will also be the occasion to force some static analysis onto the codebase.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.2.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.2.0/</link>
       <pubDate>Wed, 13 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.2.0/</guid>
       <description>&lt;p&gt;Another minor version bump, another new feature!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.12.3: allow phpunit/php-file-iterator 2</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.12.3/</link>
       <pubDate>Fri, 01 Jun 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.12.3/</guid>
       <description>&lt;p&gt;Today I released a new small patch for Paraunit, fixing the support for a hidden dependency (&lt;code&gt;phpunit/php-file-iterator&lt;/code&gt;) which broke Paraunit with its 2.0 release.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.12.2: two more fixes</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.12.2/</link>
       <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.12.2/</guid>
       <description>&lt;p&gt;Today I released a new small patch for Paraunit, fixing an output bug and intercepting a new king of retryable exception.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.12.1: a small fix</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.12.1/</link>
       <pubDate>Thu, 05 Apr 2018 12:50:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.12.1/</guid>
       <description>&lt;p&gt;I had to release a fast fix for a problem introduced in the 0.12 release, due to the new behavior of the &lt;code&gt;--text&lt;/code&gt; and &lt;code&gt;--text-summary&lt;/code&gt; options. At first, it seemed that having an option with an optional argument was impossible, but I was able to do that anyway, and it spured a &lt;a href=&#34;https://github.com/symfony/symfony-docs/pull/9560https://github.com/symfony/symfony-docs/pull/9560&#34;&gt;PR to the Symfony Docs&lt;/a&gt; too!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.12: PHPUnit 7 support and coverage text summary option</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.12.0/</link>
       <pubDate>Thu, 05 Apr 2018 12:01:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.12.0/</guid>
       <description>&lt;p&gt;With this release, I had to do some under-the-hood changes, but we finally support PHPUnit 7; to do that I had to bump the minimum PHP required version to 7.1. I&amp;rsquo;ve also added a better support for text coverage report, adding the possibility of obtaining just the summary report.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.1.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.1.0/</link>
       <pubDate>Sun, 21 Jan 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.1.0/</guid>
       <description>&lt;p&gt;This time around we have a minor version bump, due to a new feature!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.11: add Symfony 4 support, some refactoring and a fix</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.11.0/</link>
       <pubDate>Wed, 13 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.11.0/</guid>
       <description>&lt;p&gt;This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more &lt;code&gt;symfony/yaml&lt;/code&gt;) and support for Symfony 4 has been added; also, a small bug has been fixed.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.0.3</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.0.3/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.0.3/</guid>
       <description>&lt;p&gt;Another bump is needed to the sub-package constraint. Also, a known issue with Composer has been discovered.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.10.1: report deprecations</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.10.1/</link>
       <pubDate>Thu, 19 Oct 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.10.1/</guid>
       <description>&lt;p&gt;With this release, Paraunit replaces the suggestion of &lt;code&gt;facile-it/paraunit-testcase&lt;/code&gt; with &lt;code&gt;dama/doctrine-test-bundle&lt;/code&gt;; also there&amp;rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.10: small fixes and improvements</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.10.0/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.10.0/</guid>
       <description>&lt;p&gt;With this release, I&amp;rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&amp;rsquo;ve fixed the &lt;code&gt;--debug&lt;/code&gt; option and the &lt;code&gt;--text-to-console&lt;/code&gt; coverage output. Also, now the logo is optional, and at the end of each line it&amp;rsquo;s printed a partial count of executed tests.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.0.2</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.0.2/</link>
       <pubDate>Wed, 06 Sep 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.0.2/</guid>
       <description>&lt;p&gt;Another small issue solved with a small patch, and PHP 7.2 support comes along!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.0.1</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.0.1/</link>
       <pubDate>Thu, 06 Jul 2017 00:01:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.0.1/</guid>
       <description>&lt;p&gt;Same day of the first release, a small patch follows!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.9.1: a small fix in the header</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.9.1/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.9.1/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.1&#34;&gt;Paraunit 0.9.1&lt;/a&gt; has been released with a really small improvement: I wnated to show a pretty, short version string in the header, when launching Paraunit. I recently started using Ocramius&amp;rsquo; package to do it, but it didn&amp;rsquo;t provide that feature, and he was adamant about not implementing it in the future.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.9.2 and 0.8.3: missing dependencies</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.9.2/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.9.2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9.2&#34;&gt;Paraunit 0.9.2&lt;/a&gt; and &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.3&#34;&gt;Paraunit 0.8.3&lt;/a&gt; has been released to fix a nasty little bug that I got reported to me: two dependencies were missing and the CI missed that due to the fact that both were required by dev dependencies.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Pretty Package Versions 1.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/1.0.0/</link>
       <pubDate>Thu, 06 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/1.0.0/</guid>
       <description>&lt;p&gt;This is the first release of this package!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.9: PHP 7, PHPUnit 6 and the pipelines</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.9.0/</link>
       <pubDate>Wed, 05 Jul 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.9.0/</guid>
       <description>&lt;p&gt;After a long time and a lot of work, &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.9&#34;&gt;Paraunit 0.9&lt;/a&gt; has been released. This release is a big step ahead: now Paraunit runs with &lt;strong&gt;PHPUnit 6&lt;/strong&gt;, and support to older versions is dropped; this also means that the &lt;strong&gt;minimum supported PHP version is now 7.0&lt;/strong&gt;, and the minimum version of the &lt;strong&gt;Symfony components is bumped to 2.7&lt;/strong&gt;, since older versions are out of support since may.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.8.2: avoid failures due to warnings</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.8.2/</link>
       <pubDate>Thu, 26 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.8.2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.2&#34;&gt;Paraunit 0.8.2&lt;/a&gt; has been released to fix an issued caused by an unwanted overwrite of the &lt;code&gt;write()&lt;/code&gt; method in the &lt;code&gt;LogWriter&lt;/code&gt; class.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.8.1: fixed regression with Symfony</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.8.1/</link>
       <pubDate>Wed, 25 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.8.1/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8.2&#34;&gt;Paraunit 0.8.1&lt;/a&gt; has been released to fix a small regression that happens when running functional tests in a Symfony project.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.8: PHAR continuous delivery</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.8.0/</link>
       <pubDate>Tue, 24 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.8.0/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8&#34;&gt;Paraunit 0.8&lt;/a&gt; has been released!
-With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&amp;rsquo;s PHAR. Thanks to &lt;a href=&#34;https://andreas.heigl.org/2017/01/19/encrypt-a-build-result-automaticaly/&#34;&gt;Andreas Heigl&lt;/a&gt; that made this not only possible, but very straightforward to implement.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.8&#34;&gt;Paraunit 0.8&lt;/a&gt; has been released!&#xA;With this release I added the continuous integration: at each Git tag, the Travis build prepares, signs and uploads to the GitHub releases page Paraunit&amp;rsquo;s PHAR. Thanks to &lt;a href=&#34;https://andreas.heigl.org/2017/01/19/encrypt-a-build-result-automaticaly/&#34;&gt;Andreas Heigl&lt;/a&gt; that made this not only possible, but very straightforward to implement.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.7.4: PHAR release</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.7.4/</link>
       <pubDate>Wed, 11 Jan 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.7.4/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.4&#34;&gt;Paraunit 0.7.4&lt;/a&gt; has just been released. This patch version add a simple but very useful functionality, the string filtering of tests.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.7.3: PHAR release</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.7.3/</link>
       <pubDate>Fri, 30 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.7.3/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.4&#34;&gt;Paraunit 0.7.3&lt;/a&gt; has just been released, and from now on with a PHAR version too, GPG signed! You will always be able to download it from the &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/latest&#34;&gt;latest GitHub release page&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.7.1: coverage in text format</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.7.1/</link>
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.7.1/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.1&#34;&gt;Paraunit 0.7.1&lt;/a&gt; has just been released; this is just a minor release that adds a new useful feature: the &lt;strong&gt;text format&lt;/strong&gt; for the coverage. You can either use it on screen as an integration tool (see Jenkins, GitLab), or save it as a file. Since there is a small limitation in CLI options handling by the Symfony component, this feature is implemented through two separate options.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.7.2: coverage in text format</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.7.2/</link>
       <pubDate>Wed, 28 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.7.2/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7.2&#34;&gt;Paraunit 0.7.2&lt;/a&gt; has just been released with a minor fix: colored output has been disabled from text coverage output to console, since it may cause incompatibilities. I will think of a way to re-enable it if possible in later releases.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.7: test coverage in parallel</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.7.0/</link>
       <pubDate>Mon, 12 Dec 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.7.0/</guid>
-      <description>&lt;p&gt;Finally, &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7&#34;&gt;Paraunit 0.7&lt;/a&gt; has been released!
-This version includes the long awaited &lt;strong&gt;coverage feature&lt;/strong&gt;: now you can collect your test coverage running your tests
-in parallel!&lt;/p&gt;
-&lt;p&gt;Along with this new huge feature, here comes a lot of new fixes and changes: for example, now a lot of default PHPUnit
-options can be used and they will be passed along to the single PHPUnit processes that Paraunit spawns; also, now we
-&lt;strong&gt;officially support Windows&lt;/strong&gt;, and we added an &lt;a href=&#34;https://ci.appveyor.com/project/Jean85/paraunit&#34;&gt;Appveyor CI build&lt;/a&gt; to
-do that.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Finally, &lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/0.7&#34;&gt;Paraunit 0.7&lt;/a&gt; has been released!&#xA;This version includes the long awaited &lt;strong&gt;coverage feature&lt;/strong&gt;: now you can collect your test coverage running your tests&#xA;in parallel!&lt;/p&gt;&#xA;&lt;p&gt;Along with this new huge feature, here comes a lot of new fixes and changes: for example, now a lot of default PHPUnit&#xA;options can be used and they will be passed along to the single PHPUnit processes that Paraunit spawns; also, now we&#xA;&lt;strong&gt;officially support Windows&lt;/strong&gt;, and we added an &lt;a href=&#34;https://ci.appveyor.com/project/Jean85/paraunit&#34;&gt;Appveyor CI build&lt;/a&gt; to&#xA;do that.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.6.2</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.6.2/</link>
       <pubDate>Mon, 24 Oct 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.6.2/</guid>
-      <description>&lt;p&gt;Paraunit 0.6.2 has been released! This version include a fix in the choice of the dir for the partial test results, that
-caused issues while on non-Linux systems. Some minor fix are present too, and now Paraunit shows the right version when
-launched.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Paraunit 0.6.2 has been released! This version include a fix in the choice of the dir for the partial test results, that&#xA;caused issues while on non-Linux systems. Some minor fix are present too, and now Paraunit shows the right version when&#xA;launched.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.6.1</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.6.1/</link>
       <pubDate>Fri, 10 Jun 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.6.1/</guid>
-      <description>&lt;p&gt;Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint,
-to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it
-this summer.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Paraunit 0.6.1 has been released! The main improvement on the user side is the extension of the Symfony package constraint,&#xA;to allow the full 3.x series to be used with! The coverage feature is still in the works, I hope to release 0.7 with it&#xA;this summer.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.6</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.6.0/</link>
       <pubDate>Sun, 20 Mar 2016 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.6.0/</guid>
-      <description>&lt;p&gt;Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
-it working soon and release it in 0.7.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have&#xA;it working soon and release it in 0.7.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.5</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.5.0/</link>
       <pubDate>Tue, 08 Dec 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.5.0/</guid>
       <description>&lt;p&gt;Paraunit 0.5 has been released!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.4.4</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.4.4/</link>
       <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.4.4/</guid>
       <description>&lt;p&gt;Paraunit 0.4.4 has been released!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.4.3</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.4.3/</link>
       <pubDate>Wed, 04 Nov 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.4.3/</guid>
       <description>&lt;p&gt;Paraunit 0.4.3 has been released!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.4.2</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.4.2/</link>
       <pubDate>Mon, 19 Oct 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.4.2/</guid>
       <description>&lt;p&gt;Paraunit 0.4.2 has been released!&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Paraunit 0.4.1</title>
       <link>https://alessandrolai.dev/releases/paraunit/0.4.1/</link>
       <pubDate>Wed, 23 Sep 2015 00:00:00 +0000</pubDate>
-      
       <guid>https://alessandrolai.dev/releases/paraunit/0.4.1/</guid>
       <description>&lt;p&gt;Paraunit 0.4.1 has been released!&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

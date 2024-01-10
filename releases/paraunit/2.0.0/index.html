@@ -3,7 +3,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
@@ -12,21 +11,20 @@
 All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that enums are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the --pass-through option as a viable alternative.
 The full changelog is small, the changes for the end user are small, but the code changes are a lot!" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.0.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/><meta property="article:section" content="releases" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.0.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
 <meta property="article:published_time" content="2023-03-06T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-03-06T00:00:00+00:00" />
+
 
 		<meta itemprop="name" content="Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor">
 <meta itemprop="description" content="This new major version has seen its inception a long time ago, on October 2021, and it went to sleep for a long time, since PHPUnit development was doing the same. After some additional attempts, I was finally able to complete this alongside the long-awaited release of PHPUnit 10.
 All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that enums are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the --pass-through option as a viable alternative.
 The full changelog is small, the changes for the end user are small, but the code changes are a lot!"><meta itemprop="datePublished" content="2023-03-06T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2023-03-06T00:00:00+00:00" />
-<meta itemprop="wordCount" content="195"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
+<meta itemprop="wordCount" content="195"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
 <meta itemprop="keywords" content="Paraunit,Open Source," />
-		<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg"/>
-
-<meta name="twitter:title" content="Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor"/>
+		<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 2.0.0: PHPUnit 10 support and a big internal refactor"/>
 <meta name="twitter:description" content="This new major version has seen its inception a long time ago, on October 2021, and it went to sleep for a long time, since PHPUnit development was doing the same. After some additional attempts, I was finally able to complete this alongside the long-awaited release of PHPUnit 10.
 All the changes in PHPUnit allowed me to finally bump the minimum PHP version to 8.1 (so that enums are now usable!) and do a big refactoring of internals, changing and simplifying the way tests outcome are handled. Also, I took the occasion to clean up all the additional options that were hard-coded, and add the --pass-through option as a viable alternative.
 The full changelog is small, the changes for the end user are small, but the code changes are a lot!"/>
@@ -159,7 +157,7 @@ The full changelog is small, the changes for the end user are small, but the cod
 		<span class="authorbox__name">About Alessandro Lai</span>
 	</div>
 	<div class="authorbox__description">
-		Engineering Manager at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+		Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
 	</div>
 </div>
 
