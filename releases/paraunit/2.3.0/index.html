@@ -3,25 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Paraunit 0.11: add Symfony 4 support, some refactoring and a fix - Alessandro Lai</title>
+	<title>Paraunit 2.3.0: PHPUnit 11 support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Paraunit 0.11: add Symfony 4 support, some refactoring and a fix" />
-<meta property="og:description" content="This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed." />
+		<meta property="og:title" content="Paraunit 2.3.0: PHPUnit 11 support" />
+<meta property="og:description" content="On the same day of PHPUnit 11.0.0 release, I&rsquo;m able to release a minor version of Paraunit that supports it, and no code change was necessary! You may still be impacted by PHPUnit&rsquo;s breaking changes and require to adjust your tests accordingly, but Paraunit can be upgraded before with no hassle (provided that you have at least PHPUnit 10.5.4 already installed), since it&rsquo;s cross-compatible between the two major versions." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/0.11.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
-<meta property="article:published_time" content="2017-12-13T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-12-13T00:00:00+00:00" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.3.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
+<meta property="article:published_time" content="2024-02-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-02T00:00:00+00:00" />
 
 
-		<meta itemprop="name" content="Paraunit 0.11: add Symfony 4 support, some refactoring and a fix">
-<meta itemprop="description" content="This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed."><meta itemprop="datePublished" content="2017-12-13T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2017-12-13T00:00:00+00:00" />
-<meta itemprop="wordCount" content="101"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
+		<meta itemprop="name" content="Paraunit 2.3.0: PHPUnit 11 support">
+<meta itemprop="description" content="On the same day of PHPUnit 11.0.0 release, I&rsquo;m able to release a minor version of Paraunit that supports it, and no code change was necessary! You may still be impacted by PHPUnit&rsquo;s breaking changes and require to adjust your tests accordingly, but Paraunit can be upgraded before with no hassle (provided that you have at least PHPUnit 10.5.4 already installed), since it&rsquo;s cross-compatible between the two major versions."><meta itemprop="datePublished" content="2024-02-02T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-02-02T00:00:00+00:00" />
+<meta itemprop="wordCount" content="90"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
 <meta itemprop="keywords" content="Paraunit,Open Source," />
 		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 0.11: add Symfony 4 support, some refactoring and a fix"/>
-<meta name="twitter:description" content="This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more symfony/yaml) and support for Symfony 4 has been added; also, a small bug has been fixed."/>
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 2.3.0: PHPUnit 11 support"/>
+<meta name="twitter:description" content="On the same day of PHPUnit 11.0.0 release, I&rsquo;m able to release a minor version of Paraunit that supports it, and no code change was necessary! You may still be impacted by PHPUnit&rsquo;s breaking changes and require to adjust your tests accordingly, but Paraunit can be upgraded before with no hassle (provided that you have at least PHPUnit 10.5.4 already installed), since it&rsquo;s cross-compatible between the two major versions."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -94,10 +94,10 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.11: add Symfony 4 support, some refactoring and a fix</h1>
+			<h1 class="post__title">Paraunit 2.3.0: PHPUnit 11 support</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-12-13T00:00:00Z">December 13, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-02-02T00:00:00Z">February 02, 2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
 		</header>
@@ -105,29 +105,16 @@
             <blockquote>
                 <p>
                     This is a republished tag announcement for <code>facile-it/paraunit</code>.
-                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/0.11" target="_blank">here</a>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/2.3.0" target="_blank">here</a>.
                 </p>
     		</blockquote>
         </div><div class="content post__content clearfix">
-			<p>This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more <code>symfony/yaml</code>) and support for Symfony 4 has been added; also, a small bug has been fixed.</p>
-<p>Here&rsquo;s the full changelog:</p>
-<h3 id="added">Added</h3>
+			<p>On the same day of <a href="https://phpunit.de/announcements/phpunit-11.html">PHPUnit 11.0.0 release</a>, I&rsquo;m able to release a minor version of Paraunit that supports it, and <a href="https://github.com/facile-it/paraunit/pull/225">no code change was necessary</a>! You may still be impacted by PHPUnit&rsquo;s breaking changes and require to adjust your tests accordingly, but Paraunit can be upgraded before with no hassle (provided that you have at least PHPUnit 10.5.4 already installed), since it&rsquo;s cross-compatible between the two major versions.</p>
+<p>This is the full changelog</p>
+<h3 id="changes">Changes</h3>
 <ul>
-<li>Added support for Symfony 4</li>
-</ul>
-<h3 id="changed">Changed</h3>
-<ul>
-<li>Migrated the whole DI configuration from YAML to PHP</li>
-<li>Require at least jean85/pretty-package-versions 1.0.3 (see related <a href="https://github.com/Jean85/pretty-package-versions/issues/3">#3</a>)</li>
-</ul>
-<h3 id="fixed">Fixed</h3>
-<ul>
-<li>When a test class is retried, previous tests are no longer shown/counted toward executed tests (#109).</li>
-</ul>
-<h3 id="removed">Removed</h3>
-<ul>
-<li>Removed support for Symfony 2.7</li>
-<li>Removed dependency from <code>symfony/yaml</code></li>
+<li>Add support for PHPUnit 11 <a href="https://github.com/facile-it/paraunit/pull/225">#225</a></li>
+<li>Bump PHPUnit requirement to a minimum of 10.5.4 <a href="https://github.com/facile-it/paraunit/pull/227">#227</a></li>
 </ul>
 		</div>
 		<footer class="post__footer">
@@ -161,15 +148,9 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/releases/pretty-package-versions/1.0.3/" rel="prev">
+		<a class="pager__link" href="/releases/paraunit/2.2.2/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Pretty Package Versions 1.0.3</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/releases/pretty-package-versions/1.1.0/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Pretty Package Versions 1.1.0</p>
+			<p class="pager__title">Paraunit 2.2.2: PHPUnit 10.4 support</p>
 		</a>
 	</div>
 </nav>

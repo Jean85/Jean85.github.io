@@ -6,8 +6,15 @@
     <description>Recent content in Paraunit on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.3.0: PHPUnit 11 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.3.0/</link>
+      <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.3.0/</guid>
+      <description>&lt;p&gt;On the same day of &lt;a href=&#34;https://phpunit.de/announcements/phpunit-11.html&#34;&gt;PHPUnit 11.0.0 release&lt;/a&gt;, I&amp;rsquo;m able to release a minor version of Paraunit that supports it, and &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/225&#34;&gt;no code change was necessary&lt;/a&gt;! You may still be impacted by PHPUnit&amp;rsquo;s breaking changes and require to adjust your tests accordingly, but Paraunit can be upgraded before with no hassle (provided that you have at least PHPUnit 10.5.4 already installed), since it&amp;rsquo;s cross-compatible between the two major versions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.2.2: PHPUnit 10.4 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.2.2/</link>

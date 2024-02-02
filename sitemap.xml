@@ -3,30 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/paraunit/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.3.0/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/categories/releases/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2024-02-02T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.2.2/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.2.3/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2023-10-06T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/</loc>
     <lastmod>2023-10-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.2.1/</loc>
