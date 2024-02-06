@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.3.1: fix PHPUnit 11 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.3.1/</link>
+      <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.3.1/</guid>
+      <description>&lt;p&gt;I may have jumped the gun while releasing the PHPUnit 11 compat, and I didn&amp;rsquo;t check that the CI was actually installing it. Unfortunately there were multiple dependencies still conflicting with it, and Prophecy needed some PRs to be compatible. I filed them and used them in my CI, so that now the compatibility is checked.&lt;/p&gt;&#xA;&lt;p&gt;I needed to do multiple changes to make the CI green, but still no code changes was needed, only a widening of &lt;code&gt;composer.json&lt;/code&gt; constraints and some tests &amp;amp; CI fixes.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.0: PHPUnit 11 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.0/</link>

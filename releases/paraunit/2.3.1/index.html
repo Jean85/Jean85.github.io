@@ -3,28 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Paraunit 0.6 - Alessandro Lai</title>
+	<title>Paraunit 2.3.1: fix PHPUnit 11 support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Paraunit 0.6" />
-<meta property="og:description" content="Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
-it working soon and release it in 0.7." />
+		<meta property="og:title" content="Paraunit 2.3.1: fix PHPUnit 11 support" />
+<meta property="og:description" content="I may have jumped the gun while releasing the PHPUnit 11 compat, and I didn&rsquo;t check that the CI was actually installing it. Unfortunately there were multiple dependencies still conflicting with it, and Prophecy needed some PRs to be compatible. I filed them and used them in my CI, so that now the compatibility is checked.
+I needed to do multiple changes to make the CI green, but still no code changes was needed, only a widening of composer.json constraints and some tests &amp; CI fixes." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/0.6.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
-<meta property="article:published_time" content="2016-03-20T00:00:00+00:00" />
-<meta property="article:modified_time" content="2016-03-20T00:00:00+00:00" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.3.1/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
+<meta property="article:published_time" content="2024-02-06T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-02-06T00:00:00+00:00" />
 
 
-		<meta itemprop="name" content="Paraunit 0.6">
-<meta itemprop="description" content="Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
-it working soon and release it in 0.7."><meta itemprop="datePublished" content="2016-03-20T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2016-03-20T00:00:00+00:00" />
-<meta itemprop="wordCount" content="177"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
+		<meta itemprop="name" content="Paraunit 2.3.1: fix PHPUnit 11 support">
+<meta itemprop="description" content="I may have jumped the gun while releasing the PHPUnit 11 compat, and I didn&rsquo;t check that the CI was actually installing it. Unfortunately there were multiple dependencies still conflicting with it, and Prophecy needed some PRs to be compatible. I filed them and used them in my CI, so that now the compatibility is checked.
+I needed to do multiple changes to make the CI green, but still no code changes was needed, only a widening of composer.json constraints and some tests &amp; CI fixes."><meta itemprop="datePublished" content="2024-02-06T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-02-06T00:00:00+00:00" />
+<meta itemprop="wordCount" content="102"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
 <meta itemprop="keywords" content="Paraunit,Open Source," />
 		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 0.6"/>
-<meta name="twitter:description" content="Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
-it working soon and release it in 0.7."/>
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 2.3.1: fix PHPUnit 11 support"/>
+<meta name="twitter:description" content="I may have jumped the gun while releasing the PHPUnit 11 compat, and I didn&rsquo;t check that the CI was actually installing it. Unfortunately there were multiple dependencies still conflicting with it, and Prophecy needed some PRs to be compatible. I filed them and used them in my CI, so that now the compatibility is checked.
+I needed to do multiple changes to make the CI green, but still no code changes was needed, only a widening of composer.json constraints and some tests &amp; CI fixes."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -97,10 +97,10 @@ it working soon and release it in 0.7."/>
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.6</h1>
+			<h1 class="post__title">Paraunit 2.3.1: fix PHPUnit 11 support</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2016-03-20T00:00:00Z">March 20, 2016</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-02-06T00:00:00Z">February 06, 2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
 		</header>
@@ -108,34 +108,16 @@ it working soon and release it in 0.7."/>
             <blockquote>
                 <p>
                     This is a republished tag announcement for <code>facile-it/paraunit</code>.
-                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/0.6" target="_blank">here</a>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/2.3.1" target="_blank">here</a>.
                 </p>
     		</blockquote>
         </div><div class="content post__content clearfix">
-			<p>Paraunit 0.6 has been released! In the meantime, the coverage feature is being developed on its branch, I hope to have
-it working soon and release it in 0.7.</p>
-<p>Here&rsquo;s what&rsquo;s changed in 0.6:</p>
-<h3 id="changed">Changed</h3>
-<ul>
-<li>MASSIVE refactoring of the result output parsing (#31, #33) and the result printing (#37): now Paraunit fetches the
-tests&rsquo; results using PHPUnit&rsquo;s <code>--log-json</code> option (thanks to @taueres for the idea).
-This grants a lot of new features:
-<ul>
-<li>Parsing of tests results is more robust, it should never fail!</li>
-<li>Fatal errors or segfaults are now grouped as &ldquo;Abnormal termination&rdquo;</li>
-<li>When a test has an abnormal termination, the culpable test function is indicated</li>
-<li>Tests with abnormal termination are printed out in full output</li>
-<li>Tests executed in a test class that has a later abnormal termination are showed and counted in results anyhow</li>
-</ul>
-</li>
-<li>Added support for warnings, introduced in PHPUnit 5.1 (#30)</li>
-<li>Added support for risky outcomes</li>
-</ul>
+			<p>I may have jumped the gun while releasing the PHPUnit 11 compat, and I didn&rsquo;t check that the CI was actually installing it. Unfortunately there were multiple dependencies still conflicting with it, and Prophecy needed some PRs to be compatible. I filed them and used them in my CI, so that now the compatibility is checked.</p>
+<p>I needed to do multiple changes to make the CI green, but still no code changes was needed, only a widening of <code>composer.json</code> constraints and some tests &amp; CI fixes.</p>
+<p>This is the full changelog</p>
 <h3 id="fixed">Fixed</h3>
 <ul>
-<li>Removed <code>Container.php</code> file and <code>CompilerPass</code> class in favor of proper usage of Symfony&rsquo;s components</li>
-<li><code>paraunit</code> bin now uses the container directly</li>
-<li>FinalPrinter class splitted in 3 classes</li>
+<li>Fix support for PHPUnit 11, due to dependency conflicts <a href="https://github.com/facile-it/paraunit/pull/230">#230</a></li>
 </ul>
 		</div>
 		<footer class="post__footer">
@@ -169,15 +151,9 @@ This grants a lot of new features:
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/releases/paraunit/0.5.0/" rel="prev">
+		<a class="pager__link" href="/releases/paraunit/2.3.0/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Paraunit 0.5</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/releases/paraunit/0.6.1/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Paraunit 0.6.1</p>
+			<p class="pager__title">Paraunit 2.3.0: PHPUnit 11 support</p>
 		</a>
 	</div>
 </nav>
