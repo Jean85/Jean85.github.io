@@ -6,8 +6,15 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 06 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pretty Package Versions 2.0.6</title>
+      <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.6/</link>
+      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.0.6/</guid>
+      <description>&lt;p&gt;This last small patch comes after more than 2 years from the last one, as a proof that this is a pretty stable package. In this case, most of the changes are not user facing (CI tests, new code style rules), but there&amp;rsquo;s also some improvements in the packaging, with the exclusion of some files from the distributed version.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.1: fix PHPUnit 11 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.1/</link>
