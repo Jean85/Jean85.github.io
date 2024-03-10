@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DoctrineMySQLComeBack 3.0.0: DBAL 4 support</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.0/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.0/</guid>
+      <description>&lt;p&gt;The &lt;code&gt;facile-it/doctrine-mysql-come-back&lt;/code&gt; had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.&lt;/p&gt;&#xA;&lt;p&gt;May thanks to &lt;a href=&#34;https://github.com/oleg-andreyev&#34;&gt;@oleg-andreyev&lt;/a&gt; for doing the initial work and PR to kickstart this release.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Pretty Package Versions 2.0.6</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.0.6/</link>

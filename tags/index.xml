@@ -6,12 +6,19 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 08 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DoctrineMySQLComeBack</title>
+      <link>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</link>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Open Source</title>
       <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Fri, 08 Mar 2024 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 10 Mar 2024 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/open-source/</guid>
       <description></description>
     </item>
@@ -34,13 +41,6 @@
       <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
       <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/terminable-loop-command/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DoctrineMySQLComeBack</title>
-      <link>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</link>
-      <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</guid>
       <description></description>
     </item>
     <item>
