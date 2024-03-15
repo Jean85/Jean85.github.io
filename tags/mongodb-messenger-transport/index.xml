@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MongoDB Messenger Transport on Alessandro Lai</title>
+    <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
+    <description>Recent content in MongoDB Messenger Transport on Alessandro Lai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:01 +0000</lastBuildDate>
+    <atom:link href="https://alessandrolai.dev/tags/mongodb-messenger-transport/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB Messenger Transport 1.4.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.0/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:01 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.0/</guid>
+      <description>&lt;p&gt;This new minor should just add support for Symfony 7, but in reality it contains a lot of work. The CI for this library wasn&amp;rsquo;t active for a long time, so a lot of issues and deprecations where making it fail&amp;hellip;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.3.2</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.2/</link>
+      <pubDate>Mon, 16 May 2022 00:00:01 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.2/</guid>
+      <description>&lt;p&gt;This new patch adds support for Symfony 6.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.3.1</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.1/</link>
+      <pubDate>Mon, 07 Feb 2022 00:00:01 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.1/</guid>
+      <description>&lt;p&gt;This new patch unlocks the possibility of using the JSON serialization with this transport, because it fixes how headers are handled during serialization.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.3.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.0/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:01 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.3.0/</guid>
+      <description>&lt;p&gt;This new minor adds the &lt;code&gt;resettable&lt;/code&gt; option to the transport, so that you can disable it if you need to inspect the transport during tests. This is due to the fact that under Symfony 5.3, if a service implements the &lt;code&gt;ResetInterface&lt;/code&gt; (as our transport does), the &lt;code&gt;reset&lt;/code&gt; method  gets automatically invoked at kernel shutdown, which happens after using the Symfony test client (&lt;code&gt;KernelBrowser&lt;/code&gt;).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.2.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.2.0/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:01 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.2.0/</guid>
+      <description>&lt;p&gt;This other new minor, released on the same day of the previous one, was needed to release support for PHP 8, since it also required to drop support for PHP 7.2 at the same time. Having two separate releases allows end users to have a smoother upgrade path, and me the possibility to release patches in both minors if needed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.1.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.1.0/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.1.0/</guid>
+      <description>&lt;p&gt;This new, first minor of this package handles two issues coming from the upstream, Symfony Messenger package. In both cases the originating cause was the addition of the new &lt;code&gt;ErrorDetailsStamp&lt;/code&gt;, which will be the future way to store failure information in messages.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.0.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.0.0/</link>
+      <pubDate>Wed, 08 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.0.0/</guid>
+      <description>&lt;p&gt;This is the first, stable release of this library that I built on top of &lt;a href=&#34;https://github.com/facile-it/mongodb-bundle/&#34;&gt;&lt;code&gt;facile-it/mongodb-bundle&lt;/code&gt;&lt;/a&gt;, which allows to use the MongoDB connection provided by the bundle to be used as a Symfony Messenger transport. I build this because I needed the equivalent of the Doctrine transport to store failed messages on a project that didn&amp;rsquo;t use Doctrine, but our OSS MongoDB bundle.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
