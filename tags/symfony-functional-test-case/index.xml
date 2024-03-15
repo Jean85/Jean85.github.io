@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Symfony Functional Test Case on Alessandro Lai</title>
+    <link>https://alessandrolai.dev/tags/symfony-functional-test-case/</link>
+    <description>Recent content in Symfony Functional Test Case on Alessandro Lai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 15 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://alessandrolai.dev/tags/symfony-functional-test-case/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Symfony Functional test case 1.3.0</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.3.0/</link>
+      <pubDate>Fri, 15 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.3.0/</guid>
+      <description>&lt;p&gt;This small new release just adds support to Symfony 7; it was needed while doing the same work on the &lt;code&gt;facile-it/mongodb-messenger-transport&lt;/code&gt; package.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Symfony Functional test case 1.2.0</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.2.0/</link>
+      <pubDate>Wed, 19 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.2.0/</guid>
+      <description>&lt;p&gt;This small new release just adds support to Symfony 6.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Symfony Functional test case 1.1.2</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.2/</link>
+      <pubDate>Mon, 09 Aug 2021 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.2/</guid>
+      <description>&lt;p&gt;This small patch fixes an issue that arises in Symfony 5.3+, where the command tester fails with this error: &lt;code&gt;Cannot retrieve the container from a non-booted kernel.&lt;/code&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Symfony Functional test case 1.1.1</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.1/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.1/</guid>
+      <description>&lt;p&gt;This small patch fixes an issue that arises in Symfony 5.3, where the &lt;code&gt;getContainer&lt;/code&gt; method in the parent class was made non-static; the same issue was encountered and resolved &lt;a href=&#34;https://github.com/liip/LiipFunctionalTestBundle/issues/583&#34;&gt;in the upstream project&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Symfony Functional test case 1.1.0</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.0/</link>
+      <pubDate>Fri, 12 Mar 2021 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.1.0/</guid>
+      <description>&lt;p&gt;This new minor adds support for using the library with PHP 8.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Symfony Functional test case 1.0.0</title>
+      <link>https://alessandrolai.dev/releases/symfony-functional-testcase/1.0.0/</link>
+      <pubDate>Mon, 16 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/symfony-functional-testcase/1.0.0/</guid>
+      <description>&lt;p&gt;This is finally the stable release of this forked library, and it only bumps the PHP requirement to PHP 7.2, everything else is the same.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
