@@ -6,20 +6,27 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 15 Mar 2024 00:00:01 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source</title>
+      <link>https://alessandrolai.dev/tags/open-source/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminable Loop Command</title>
+      <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/terminable-loop-command/</guid>
+      <description></description>
+    </item>
     <item>
       <title>MongoDB Messenger Transport</title>
       <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
       <pubDate>Fri, 15 Mar 2024 00:00:01 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/mongodb-messenger-transport/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Open Source</title>
-      <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Fri, 15 Mar 2024 00:00:01 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/open-source/</guid>
       <description></description>
     </item>
     <item>
@@ -48,13 +55,6 @@
       <link>https://alessandrolai.dev/tags/paraunit/</link>
       <pubDate>Tue, 06 Feb 2024 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/paraunit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terminable Loop Command</title>
-      <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
-      <pubDate>Wed, 23 Aug 2023 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/terminable-loop-command/</guid>
       <description></description>
     </item>
     <item>

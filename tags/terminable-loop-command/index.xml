@@ -6,8 +6,15 @@
     <description>Recent content in Terminable Loop Command on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 23 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/terminable-loop-command/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Terminable Loop Command 1.2.2</title>
+      <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.2/</link>
+      <pubDate>Sun, 17 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.2.2/</guid>
+      <description>&lt;p&gt;This small new patch, released after nearly a year from the last one, just adds support for Symfony 7; it didn&amp;rsquo;t require any code change.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Terminable Loop Command 1.2.1</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</link>

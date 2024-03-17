@@ -3,27 +3,33 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/open-source/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/categories/releases/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/terminable-loop-command/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.2/</loc>
+    <lastmod>2024-03-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
     <lastmod>2024-03-15T00:00:01+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.0/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/</loc>
     <lastmod>2024-03-15T00:00:01+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/symfony-functional-test-case/</loc>
@@ -61,9 +67,6 @@
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.2.1/</loc>
     <lastmod>2023-08-30T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/terminable-loop-command/</loc>
-    <lastmod>2023-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.1/</loc>
     <lastmod>2023-08-23T00:00:00+00:00</lastmod>
