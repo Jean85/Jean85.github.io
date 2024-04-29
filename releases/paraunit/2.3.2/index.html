@@ -3,25 +3,25 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Paraunit 0.10.1: report deprecations - Alessandro Lai</title>
+	<title>Paraunit 2.3.2: fix files recap - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Paraunit 0.10.1: report deprecations" />
-<meta property="og:description" content="With this release, Paraunit replaces the suggestion of facile-it/paraunit-testcase with dama/doctrine-test-bundle; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge." />
+		<meta property="og:title" content="Paraunit 2.3.2: fix files recap" />
+<meta property="og:description" content="I noticed that, since Paraunit 2, the recap at the end of the execution got very long. This was due to an improper serialization of the logs, where the test name was treated as a generic Test value object instead of a specific TestMethod one, where the class name is shown split form the method name." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/0.10.1/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
-<meta property="article:published_time" content="2017-10-19T00:00:00+00:00" />
-<meta property="article:modified_time" content="2017-10-19T00:00:00+00:00" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.3.2/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
+<meta property="article:published_time" content="2024-04-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-04-29T00:00:00+00:00" />
 
 
-		<meta itemprop="name" content="Paraunit 0.10.1: report deprecations">
-<meta itemprop="description" content="With this release, Paraunit replaces the suggestion of facile-it/paraunit-testcase with dama/doctrine-test-bundle; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge."><meta itemprop="datePublished" content="2017-10-19T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2017-10-19T00:00:00+00:00" />
-<meta itemprop="wordCount" content="64"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
+		<meta itemprop="name" content="Paraunit 2.3.2: fix files recap">
+<meta itemprop="description" content="I noticed that, since Paraunit 2, the recap at the end of the execution got very long. This was due to an improper serialization of the logs, where the test name was treated as a generic Test value object instead of a specific TestMethod one, where the class name is shown split form the method name."><meta itemprop="datePublished" content="2024-04-29T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2024-04-29T00:00:00+00:00" />
+<meta itemprop="wordCount" content="147"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
 <meta itemprop="keywords" content="Paraunit,Open Source," />
 		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 0.10.1: report deprecations"/>
-<meta name="twitter:description" content="With this release, Paraunit replaces the suggestion of facile-it/paraunit-testcase with dama/doctrine-test-bundle; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge."/>
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 2.3.2: fix files recap"/>
+<meta name="twitter:description" content="I noticed that, since Paraunit 2, the recap at the end of the execution got very long. This was due to an improper serialization of the logs, where the test name was treated as a generic Test value object instead of a specific TestMethod one, where the class name is shown split form the method name."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -94,10 +94,10 @@
 <main class="main" role="main">
 	<article class="post">
 		<header class="post__header">
-			<h1 class="post__title">Paraunit 0.10.1: report deprecations</h1>
+			<h1 class="post__title">Paraunit 2.3.2: fix files recap</h1>
 			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-10-19T00:00:00Z">October 19, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2024-04-29T00:00:00Z">April 29, 2024</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
 		</header>
@@ -105,19 +105,17 @@
             <blockquote>
                 <p>
                     This is a republished tag announcement for <code>facile-it/paraunit</code>.
-                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/0.10.1" target="_blank">here</a>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/2.3.2" target="_blank">here</a>.
                 </p>
     		</blockquote>
         </div><div class="content post__content clearfix">
-			<p>With this release, Paraunit replaces the suggestion of <code>facile-it/paraunit-testcase</code> with <code>dama/doctrine-test-bundle</code>; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.</p>
-<p>Here&rsquo;s the full changelog:</p>
-<h3 id="added">Added</h3>
+			<p>I noticed that, since Paraunit 2, the recap at the end of the execution got very long. This was due to an improper serialization of the logs, where the test name was treated as a generic <code>Test</code> value object instead of a specific <code>TestMethod</code> one, where the class name is shown split form the method name.</p>
+<p>This had the unintended consequence of not deduplicating the list of files which are printed at the end of Paraunit&rsquo;s execution, so in case an error or failure was repeated many times (i.e. with a data provider) inside the same test class, the test recap would get very long.</p>
+<p>This patch includes a fix for this, and also a small addition that shows the PHPUnit version in use.</p>
+<p>This is the full changelog</p>
 <ul>
-<li>Add support for deprecation warnings found by <code>symfony/phpunit-bridge</code>: failures and tests output are now reported</li>
-</ul>
-<h3 id="changed">Changed</h3>
-<ul>
-<li>Start suggesting <code>dama/doctrine-test-bundle</code> instead of <code>facile-it/paraunit-testcase</code>, since it has been abandoned.</li>
+<li>Add PHPUnit version info <a href="https://github.com/facile-it/paraunit/pull/213">#213</a></li>
+<li>Deduplicate correctly the test files recap at the end of the execution <a href="https://github.com/facile-it/paraunit/pull/241">#241</a></li>
 </ul>
 		</div>
 		<footer class="post__footer">
@@ -151,15 +149,9 @@
 
 <nav class="pager flex">
 	<div class="pager__item pager__item--prev">
-		<a class="pager__link" href="/releases/paraunit/0.10.0/" rel="prev">
+		<a class="pager__link" href="/releases/terminable-loop-command/1.2.2/" rel="prev">
 			<span class="pager__subtitle">«&thinsp;Previous</span>
-			<p class="pager__title">Paraunit 0.10: small fixes and improvements</p>
-		</a>
-	</div>
-	<div class="pager__item pager__item--next">
-		<a class="pager__link" href="/releases/pretty-package-versions/1.0.3/" rel="next">
-			<span class="pager__subtitle">Next&thinsp;»</span>
-			<p class="pager__title">Pretty Package Versions 1.0.3</p>
+			<p class="pager__title">Terminable Loop Command 1.2.2</p>
 		</a>
 	</div>
 </nav>

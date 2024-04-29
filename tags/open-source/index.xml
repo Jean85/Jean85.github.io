@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 17 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.3.2: fix files recap</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.3.2/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.3.2/</guid>
+      <description>&lt;p&gt;I noticed that, since Paraunit 2, the recap at the end of the execution got very long. This was due to an improper serialization of the logs, where the test name was treated as a generic &lt;code&gt;Test&lt;/code&gt; value object instead of a specific &lt;code&gt;TestMethod&lt;/code&gt; one, where the class name is shown split form the method name.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Terminable Loop Command 1.2.2</title>
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.2/</link>
