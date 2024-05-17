@@ -6,8 +6,15 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 17 May 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Symfony Messenger: the sharpest tool in your PHP toolbox</title>
+      <link>https://alessandrolai.dev/talks/2024-phpday-symfony-messenger/</link>
+      <pubDate>Fri, 17 May 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/talks/2024-phpday-symfony-messenger/</guid>
+      <description>&lt;p&gt;The PHP ecosystem is very rich and mature, and offers you a lot of stable and widely used tools, frameworks and libraries. Symfony evolved long ago from a monolithic framework into a collection of very useful and reliable components, but one component in particular (in my opinion) really stands out: &lt;strong&gt;Symfony Messenger&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;In a single package, you have an easy way to dispatch messages and tasks to sync and async handling, with enough abstraction to support a variety of transports natively, and a long list of useful patterns already implemented and ready to be used out of the box.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.2: fix files recap</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.2/</link>
