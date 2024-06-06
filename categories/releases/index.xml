@@ -6,8 +6,15 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Jun 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.3.3: fix warning</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.3.3/</link>
+      <pubDate>Thu, 06 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.3.3/</guid>
+      <description>&lt;p&gt;I got a bug report saying that the Symfony PHPUnit Bridge 6.4.8 and 7.0.8 and higher made test runs with Paraunit fail due to a warning. At first I thought that the Symfony error handler was messing with PHPUnit&amp;rsquo;s again, but in reality it was just making explicit a warning that was already there for ages.&lt;/p&gt;&#xA;&lt;p&gt;This simple patch avoids generating that warning, and makes your CI green again!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.2: fix files recap</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.2/</link>
