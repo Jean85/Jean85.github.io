@@ -6,8 +6,15 @@
     <description>Recent content on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 06 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Aug 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.3.4: fix PHPUnit 11.3 compat</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.3.4/</link>
+      <pubDate>Wed, 07 Aug 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.3.4/</guid>
+      <description>&lt;p&gt;This small patch release is fully due to external contributions: thanks &lt;a href=&#34;https://github.com/kubawerlos&#34;&gt;@kubawerlos&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;He contributed two different patches, one to update the &lt;code&gt;.gitattributes&lt;/code&gt; exclusion list, the second to fix some constraint on some dependencies that where preventing PHPUnit 11.3 from being installed.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.3: fix warning</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.3/</link>

@@ -3,27 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/paraunit/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alessandrolai.dev/releases/paraunit/2.3.3/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.3.4/</loc>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2024-06-06T00:00:00+00:00</lastmod>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2024-08-07T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.3.3/</loc>
     <lastmod>2024-06-06T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/talks/2024-phpday-symfony-messenger/</loc>
