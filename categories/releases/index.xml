@@ -6,8 +6,15 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.4.0: add two new options</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.4.0/</link>
+      <pubDate>Wed, 25 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.4.0/</guid>
+      <description>&lt;p&gt;This new release comes thanks to a new contributor: thanks &lt;a href=&#34;https://github.com/raffaelecarelle&#34;&gt;@raffaelecarelle&lt;/a&gt;!&lt;/p&gt;&#xA;&lt;p&gt;He contributed the support of two native PHPUnit options with &lt;a href=&#34;https://github.com/facile-it/paraunit/pull/273&#34;&gt;a single pull request&lt;/a&gt;: &lt;code&gt;--exclude-testsuite&lt;/code&gt; and &lt;code&gt;--test-suffix&lt;/code&gt;. Both these options allow the user to filter and exclude tests from the execution.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.3.4: fix PHPUnit 11.3 compat</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.3.4/</link>
