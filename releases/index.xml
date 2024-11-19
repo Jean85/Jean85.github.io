@@ -16,6 +16,13 @@
       <description>&lt;p&gt;This small minor is just a refresh which bumps a couple of requirements to reduce the CI and maintenance footprint, alongside testing the package against the coming PHP 8.4.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Terminable Loop Command 1.2.3</title>
+      <link>https://alessandrolai.dev/releases/terminable-loop-command/1.2.3/</link>
+      <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.2.3/</guid>
+      <description>&lt;p&gt;This small new patch just adds support for PHP 8.4, with the resolution of one single deprecation.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Paraunit 1.3.1: fix option with chunked execution</title>
       <link>https://alessandrolai.dev/releases/paraunit/1.3.1/</link>
       <pubDate>Thu, 03 Oct 2024 00:00:00 +0000</pubDate>
