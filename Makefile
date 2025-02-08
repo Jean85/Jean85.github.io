@@ -1,6 +1,6 @@
-HUGO_VERSION=0.121.2
+HUGO_VERSION=0.143.1
 
-serve: #check-hugo
+serve: check-hugo
 	@bin/hugo server --buildDrafts --buildFuture
 
 deploy: check-hugo
@@ -16,10 +16,10 @@ check-hugo:
 	}
 
 setup-hugo:
-	mkdir -p /tmp/hugo-$(HUGO_VERSION)
-	curl -L https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_darwin-universal.tar.gz \
-		-o /tmp/hugo.tar.gz \
-	| tar -xvf /tmp/hugo.tar.gz -C /tmp/hugo-$(HUGO_VERSION)
-	cp -f /tmp/hugo-$(HUGO_VERSION)/hugo ./bin/hugo
-	rm -rf /tmp/hugo-$(HUGO_VERSION)
-	chmod +x ./bin/hugo
+	mkdir -p /tmp/hugo-$(HUGO_VERSION) \
+		&& curl -L https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_darwin-universal.tar.gz \
+			-o /tmp/hugo.tar.gz \
+		| tar -xvf /tmp/hugo.tar.gz -C /tmp/hugo-$(HUGO_VERSION) \
+		&& cp -f /tmp/hugo-$(HUGO_VERSION)/hugo ./bin/hugo \
+		&& rm -rf /tmp/hugo-$(HUGO_VERSION) \
+		&& chmod +x ./bin/hugo

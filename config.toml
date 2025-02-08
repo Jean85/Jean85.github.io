@@ -1,10 +1,12 @@
 baseURL = "https://alessandrolai.dev/"
 title = "Alessandro Lai"
 languageCode = "en-us"
-paginate = "5"
 theme = "mainroad"
 # disqusShortname = "" # Enable comments by entering your Disqus shortname
 # googleAnalytics = "UA-XXXXXXXX-X"       # Google Analytics UA number
+
+[Pagination]
+  pagerSize = "5"
 
 [Author] # Used in authorbox
   name = "Alessandro Lai"
