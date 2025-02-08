@@ -4,7 +4,7 @@
     <title>Tags on Alessandro Lai</title>
     <link>https://alessandrolai.dev/tags/</link>
     <description>Recent content in Tags on Alessandro Lai</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
@@ -58,14 +58,14 @@
       <description></description>
     </item>
     <item>
-      <title>Continuous deployment</title>
+      <title>Continuous Deployment</title>
       <link>https://alessandrolai.dev/tags/continuous-deployment/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/continuous-deployment/</guid>
       <description></description>
     </item>
     <item>
-      <title>Continuous integration</title>
+      <title>Continuous Integration</title>
       <link>https://alessandrolai.dev/tags/continuous-integration/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/continuous-integration/</guid>

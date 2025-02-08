@@ -6,25 +6,35 @@
 	<title>DoctrineMySQLComeBack 3.0.0: DBAL 4 support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support" />
-<meta property="og:description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
-May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
-<meta property="article:published_time" content="2024-03-10T00:00:00+00:00" />
-<meta property="article:modified_time" content="2024-03-10T00:00:00+00:00" />
+		<meta property="og:url" content="https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.0/">
+  <meta property="og:site_name" content="Alessandro Lai">
+  <meta property="og:title" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support">
+  <meta property="og:description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
+May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="releases">
+    <meta property="article:published_time" content="2024-03-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-03-10T00:00:00+00:00">
+    <meta property="article:tag" content="DoctrineMySQLComeBack">
+    <meta property="article:tag" content="Open Source">
+    <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
 
-
-		<meta itemprop="name" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support">
-<meta itemprop="description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
-May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release."><meta itemprop="datePublished" content="2024-03-10T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2024-03-10T00:00:00+00:00" />
-<meta itemprop="wordCount" content="113"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
-<meta itemprop="keywords" content="DoctrineMySQLComeBack,Open Source," />
-		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support"/>
-<meta name="twitter:description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
-May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release."/>
+		
+  <meta itemprop="name" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support">
+  <meta itemprop="description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
+May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release.">
+  <meta itemprop="datePublished" content="2024-03-10T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-03-10T00:00:00+00:00">
+  <meta itemprop="wordCount" content="113">
+  <meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
+  <meta itemprop="keywords" content="DoctrineMySQLComeBack,Open Source">
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
+  <meta name="twitter:title" content="DoctrineMySQLComeBack 3.0.0: DBAL 4 support">
+  <meta name="twitter:description" content="The facile-it/doctrine-mysql-come-back had a major release last year, and it included a lot of changes to support DBAL 3. Luckily, with DBAL 4, the amount of changes is a lot smaller, mainly signature changes. In short, all the changes done during the last major bump allowed us to not have to do much for this new release.
+May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this release.">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -144,15 +154,9 @@ May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this
 </main>
 
 <div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About Alessandro Lai</span>
-	</div>
-	<div class="authorbox__description">
-		Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
-	</div>
+	<p class="authorbox__warning">
+		<strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.
+	</p>
 </div>
 
 <nav class="pager flex">
@@ -230,8 +234,8 @@ May thanks to @oleg-andreyev for doing the initial work and PR to kickstart this
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment/" title="Continuous deployment">Continuous deployment</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration/" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment/" title="Continuous Deployment">Continuous Deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration/" title="Continuous Integration">Continuous Integration</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine/" title="Doctrine">Doctrine</a>

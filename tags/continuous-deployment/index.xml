@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Continuous deployment on Alessandro Lai</title>
+    <title>Continuous Deployment on Alessandro Lai</title>
     <link>https://alessandrolai.dev/tags/continuous-deployment/</link>
-    <description>Recent content in Continuous deployment on Alessandro Lai</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Continuous Deployment on Alessandro Lai</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 06 Feb 2018 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/continuous-deployment/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</link>
       <pubDate>Tue, 06 Feb 2018 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/</guid>
-      <description>In the last month, I&amp;rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.&#xA;After, I decided to start migrating a previous, internal project of mine to the same approach, since it&amp;rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!</description>
+      <description>&lt;p&gt;In the last month, I&amp;rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt &lt;strong&gt;GitLab CI&lt;/strong&gt; for the build, since we use GitLab CE for our Git repositories; I then created a &lt;strong&gt;continuous deployment pipeline&lt;/strong&gt; for the staging environment, directly to a &lt;strong&gt;Kubernetes cluster&lt;/strong&gt;, leveraging &lt;strong&gt;Docker Compose&lt;/strong&gt; to make the configuration easier.&lt;/p&gt;&#xA;&lt;p&gt;After, I decided to start migrating a previous, internal project of mine to the same approach, since it&amp;rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, &lt;strong&gt;doing a rolling deployment with Kubernetes is surprisingly easy&lt;/strong&gt;!&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

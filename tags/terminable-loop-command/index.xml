@@ -4,7 +4,7 @@
     <title>Terminable Loop Command on Alessandro Lai</title>
     <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
     <description>Recent content in Terminable Loop Command on Alessandro Lai</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/terminable-loop-command/index.xml" rel="self" type="application/rss+xml" />
@@ -48,7 +48,7 @@
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</link>
       <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</guid>
-      <description>This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.&#xA;This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.</description>
+      <description>&lt;p&gt;This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.&lt;/p&gt;&#xA;&lt;p&gt;This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, &lt;code&gt;supervisord&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

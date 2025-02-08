@@ -6,25 +6,38 @@
 	<title>Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
 	<meta name="description" content="">
-		<meta property="og:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker" />
-<meta property="og:description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
-After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2018-02-06T00:00:00+00:00" />
-<meta property="article:modified_time" content="2018-02-06T00:00:00+00:00" />
+		<meta property="og:url" content="https://alessandrolai.dev/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">
+  <meta property="og:site_name" content="Alessandro Lai">
+  <meta property="og:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker">
+  <meta property="og:description" content="In the last month, I’m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
+After, I decided to start migrating a previous, internal project of mine to the same approach, since it’s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2018-02-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2018-02-06T00:00:00+00:00">
+    <meta property="article:tag" content="Continuous Integration">
+    <meta property="article:tag" content="Continuous Deployment">
+    <meta property="article:tag" content="Docker">
+    <meta property="article:tag" content="GitLab">
+    <meta property="article:tag" content="Kubernetes">
+    <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
 
-
-		<meta itemprop="name" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker">
-<meta itemprop="description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
-After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!"><meta itemprop="datePublished" content="2018-02-06T00:00:00+00:00" />
-<meta itemprop="dateModified" content="2018-02-06T00:00:00+00:00" />
-<meta itemprop="wordCount" content="3815"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
-<meta itemprop="keywords" content="Continuous integration,Continuous deployment,Docker,GitLab,Kubernetes," />
-		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker"/>
-<meta name="twitter:description" content="In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
-After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!"/>
+		
+  <meta itemprop="name" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker">
+  <meta itemprop="description" content="In the last month, I’m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
+After, I decided to start migrating a previous, internal project of mine to the same approach, since it’s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!">
+  <meta itemprop="datePublished" content="2018-02-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2018-02-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="3815">
+  <meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
+  <meta itemprop="keywords" content="Continuous Integration,Continuous Deployment,Docker,GitLab,Kubernetes">
+		
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
+  <meta name="twitter:title" content="Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker">
+  <meta name="twitter:description" content="In the last month, I’m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt GitLab CI for the build, since we use GitLab CE for our Git repositories; I then created a continuous deployment pipeline for the staging environment, directly to a Kubernetes cluster, leveraging Docker Compose to make the configuration easier.
+After, I decided to start migrating a previous, internal project of mine to the same approach, since it’s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, doing a rolling deployment with Kubernetes is surprisingly easy!">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -178,8 +191,7 @@ After, I decided to start migrating a previous, internal project of mine to the 
 <p>My approach is a bit more <strong>robust</strong>, but it&rsquo;s overall <strong>slower</strong>, because each job is <strong>totally isolated</strong> (which is good), but on the downside it has no memory of previous builds, so no cache is available: we will have to <strong>pull from the registry each time</strong>.
 <!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<strong>2018-02-07 ERRATA</strong>: <a href="https://twitter.com/storresi">Stefano Torresi</a> (privately) and <a href="https://www.reddit.com/r/kubernetes/comments/7vomn5/continuous_deployment_from_gitlab_ci_to/dttzc28/">/u/veloxlector</a> (on Reddit) made me realize that my approach still requires a privileged runner, so that doesn&rsquo;t change with my approach; the privileged execution is <a href="https://github.com/docker-library/docs/blob/master/docker/README.md#start-a-daemon-instance">always required when doing Docker-in-Docker</a>. This reduces my security claims, but my main aim was isolation.</p>
-</blockquote>
+<strong>2018-02-07 ERRATA</strong>: <a href="https://twitter.com/storresi">Stefano Torresi</a> (privately) and <a href="https://www.reddit.com/r/kubernetes/comments/7vomn5/continuous_deployment_from_gitlab_ci_to/dttzc28/">/u/veloxlector</a> (on Reddit) made me realize that my approach still requires a privileged runner, so that doesn&rsquo;t change with my approach; the privileged execution is <a href="https://github.com/docker-library/docs/blob/master/docker/README.md#start-a-daemon-instance">always required when doing Docker-in-Docker</a>. This reduces my security claims, but my main aim was isolation.</p></blockquote>
 <p>The <code>GIT_DEPTH</code> option makes the project clone process in each job a bit faster, pulling only the current commit, not the whole Git history.</p>
 <p>The <code>image</code> option allows you to require a different base image in which to execute each job of the pipeline. In my case the image is pretty simple, because it&rsquo;s created from the base Docker image, and has in addition Docker Compose and <code>kubectl</code>, the <a href="https://kubernetes.io/docs/reference/kubectl/overview/">command line interface for Kubernetes</a>. My Dockerfile looks like this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-dockerfile" data-lang="dockerfile"><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> docker:17.12.0-ce</span><span style="color:#960050;background-color:#1e0010">
@@ -204,8 +216,7 @@ After, I decided to start migrating a previous, internal project of mine to the 
 </span></span><span style="display:flex;"><span>  - <span style="color:#ae81ff">cp docker-compose.yml.gitlab docker-compose.override.yml</span>
 </span></span></code></pre></div><p>In here I configured the sequence of <strong>stages</strong> in the pipeline, and I configured a <code>before_script</code> section to be executed before each job. The first instruction <strong>logs into the private Docker registry</strong> that GitLab gives us along any project (if enabled), in which I decided to store my Docker images.</p>
 <blockquote>
-<p>GitLab CI jobs automatically have the <code>$CI_JOB_TOKEN</code> and <code>$CI_REGISTRY</code> environment variables populated to easily do that: the first one is a fresh unique token, which is <a href="https://docs.gitlab.com/ee/user/project/new_ci_build_permissions_model.html#job-token">generated for each job</a>; the second one is the URL of the registry associated with the current project; see the <a href="https://docs.gitlab.com/ce/ci/variables/README.html">GitLab CI documentation</a> for more details.</p>
-</blockquote>
+<p>GitLab CI jobs automatically have the <code>$CI_JOB_TOKEN</code> and <code>$CI_REGISTRY</code> environment variables populated to easily do that: the first one is a fresh unique token, which is <a href="https://docs.gitlab.com/ee/user/project/new_ci_build_permissions_model.html#job-token">generated for each job</a>; the second one is the URL of the registry associated with the current project; see the <a href="https://docs.gitlab.com/ce/ci/variables/README.html">GitLab CI documentation</a> for more details.</p></blockquote>
 <p>The second instruction depends on <strong>how I organized my Docker Compose files</strong> to help me during development and in the pipeline too. I use 4 separated files:</p>
 <ul>
 <li><code>docker-compose.yml</code> is the base file, with the <strong>basic configuration</strong>.</li>
@@ -448,12 +459,10 @@ After, I decided to start migrating a previous, internal project of mine to the 
 </span></span></code></pre></div><p>Using the <strong>YAML anchor reference</strong> <code>*deployable-branches</code> (yes, they use a pointer-like syntax) I reuse the previous values, so if I decide to deploy a new, particular branch, I don&rsquo;t have to specify it in every deploy-related job, and risk forgetting one (yes, it happened to me).</p>
 <p>Here we are <strong>finally using <code>kubectl</code> to do the deploy</strong>!</p>
 <blockquote>
-<p>To authenticate into the cluster with <code>kubectl</code>, you normally have to create a YAML config in your home directory; luckily, in the GitLab CI you can take a shortcut enabling the <strong>Kubernetes integration</strong> <a href="https://docs.gitlab.com/ee/user/project/integrations/kubernetes.html">(see docs)</a>, so GitLab will login into the cluster using a <code>serviceaccount</code>, which is basically a <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">login for non-humans</a>. The integration will leverage environment variables to feed the configuration to <code>kubectl</code> automatically, so you just have to issue commands with it, it will just work.</p>
-</blockquote>
+<p>To authenticate into the cluster with <code>kubectl</code>, you normally have to create a YAML config in your home directory; luckily, in the GitLab CI you can take a shortcut enabling the <strong>Kubernetes integration</strong> <a href="https://docs.gitlab.com/ee/user/project/integrations/kubernetes.html">(see docs)</a>, so GitLab will login into the cluster using a <code>serviceaccount</code>, which is basically a <a href="https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/">login for non-humans</a>. The integration will leverage environment variables to feed the configuration to <code>kubectl</code> automatically, so you just have to issue commands with it, it will just work.</p></blockquote>
 <p>The deployment with <code>kubectl</code> is pretty straightforward: using the <code>kubectl set image</code> command we set a new image in our <a href="https://kubernetes.io/docs/concepts/workloads/controllers/deployment/">deployment configuration</a>; <strong>the cluster will detect that we specified a different image</strong> and it will automatically start a rolling deployment to substitute the available containers with the new, requested tag.</p>
 <blockquote>
-<p>Note that <strong>using a commit-specific tag is critical</strong> here, because otherwise the deployment will not be triggered; if you want to trigger a deploy without using specific tags, you will have to append the SHA digests of the image, with <code>image:tag@${SHA}</code>; this will obviously mean that you will have to retrieve it, which can be less practical.</p>
-</blockquote>
+<p>Note that <strong>using a commit-specific tag is critical</strong> here, because otherwise the deployment will not be triggered; if you want to trigger a deploy without using specific tags, you will have to append the SHA digests of the image, with <code>image:tag@${SHA}</code>; this will obviously mean that you will have to retrieve it, which can be less practical.</p></blockquote>
 <p>The next command, <code>kubectl rollout status</code>, watches the advancement of the deploy and exits with a status code that reflect the result of the rollout, so it&rsquo;s perfect to be called in a build:</p>
 <pre tabindex="0"><code>$ kubectl rollout status deployment/my-application
 Waiting for rollout to finish: 1 old replicas are pending termination...
@@ -527,15 +536,9 @@ deployment &#34;my-application&#34; successfully rolled out
 </main>
 
 <div class="authorbox clearfix">
-	<figure class="authorbox__avatar">
-		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
-	</figure>
-	<div class="authorbox__header">
-		<span class="authorbox__name">About Alessandro Lai</span>
-	</div>
-	<div class="authorbox__description">
-		Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
-	</div>
+	<p class="authorbox__warning">
+		<strong>WARNING:</strong> Authorbox is activated, but [Author] parameters are not specified.
+	</p>
 </div>
 
 <nav class="pager flex">
@@ -607,8 +610,8 @@ deployment &#34;my-application&#34; successfully rolled out
 <div class="widget-taglist widget">
 	<h4 class="widget__title">Tags</h4>
 	<div class="widget__content">
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment/" title="Continuous deployment">Continuous deployment</a>
-		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration/" title="Continuous integration">Continuous integration</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-deployment/" title="Continuous Deployment">Continuous Deployment</a>
+		<a class="widget-taglist__link widget__link btn" href="/tags/continuous-integration/" title="Continuous Integration">Continuous Integration</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/database/" title="Database">Database</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/docker/" title="Docker">Docker</a>
 		<a class="widget-taglist__link widget__link btn" href="/tags/doctrine/" title="Doctrine">Doctrine</a>

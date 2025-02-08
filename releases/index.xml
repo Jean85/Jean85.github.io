@@ -4,7 +4,7 @@
     <title>Releases on Alessandro Lai</title>
     <link>https://alessandrolai.dev/releases/</link>
     <description>Recent content in Releases on Alessandro Lai</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
@@ -153,7 +153,7 @@
       <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.0/</link>
       <pubDate>Thu, 08 Jun 2023 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.0/</guid>
-      <description>The facile-it/doctrine-mysql-come-back was written long time ago by my colleague Luca Boeri, in an attempt to solve the infamous &amp;ldquo;MySQL server has gone away&amp;rdquo; error, and similar issues. It&amp;rsquo;s a simple Doctrine DBAL driver wrapper that catches relevant exceptions from the driver and attempts to reconnect to the database; this is pretty useful if your PHP script is doing something else between queries, and an aggressive timeout from the database truncates the connection in the meantime, due to the prolonged inactivity.</description>
+      <description>&lt;p&gt;The &lt;code&gt;facile-it/doctrine-mysql-come-back&lt;/code&gt; was written long time ago by my colleague Luca Boeri, in an attempt to solve the infamous &amp;ldquo;MySQL server has gone away&amp;rdquo; error, and similar issues. It&amp;rsquo;s a simple Doctrine DBAL driver wrapper that catches relevant exceptions from the driver and attempts to reconnect to the database; this is pretty useful if your PHP script is doing something else between queries, and an aggressive timeout from the database truncates the connection in the meantime, due to the prolonged inactivity.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Paraunit 2.2.0: add Cobertura coverage report format</title>
@@ -398,7 +398,7 @@
       <link>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</link>
       <pubDate>Mon, 06 May 2019 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/terminable-loop-command/1.0.0/</guid>
-      <description>This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.&#xA;This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, supervisord.</description>
+      <description>&lt;p&gt;This is the first release of this package! It&amp;rsquo;s Shell+PHP combination to run Symfony console commands in loop under a daemon or Kubernetes, instead of using a long running process.&lt;/p&gt;&#xA;&lt;p&gt;This package contains a shell script and an abstract Symfony Console Command class; you need to write your command extending that class, and launch it through the shell script. Ideally, the script has to be used as a container entry point, and/or launched with a supervisor, like Docker Compose, Kubernetes, &lt;code&gt;supervisord&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Paraunit 1.0.0-beta1: the first approach to a stable release</title>
