@@ -12,10 +12,7 @@ republished:
 # The enemies of programming
 As many of you will agree with me, **sleep deprivation** is the enemy of programming.   
 Maybe we fear only one thing more than that: **being interrupted**.
-<p style="text-align: center;">
-    [![Why you shouldn't interrupt a programmer (by Jason Heeris)](/images/how-php-7-tdd-helped-me-sleep-better/interruption.png)](http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/)
-</p>
-
+[![Why you shouldn't interrupt a programmer (by Jason Heeris)](/images/how-php-7-tdd-helped-me-sleep-better/interruption.png)](http://heeris.id.au/2013/this-is-why-you-shouldnt-interrupt-a-programmer/)
 
 While writing code we have to think really hard, we use complex abstractions, we go through long business workflows and so on... fatigue and interruptions are the main enemies of those in this line of work.
 
@@ -23,9 +20,8 @@ While writing code we have to think really hard, we use complex abstractions, we
 On my day job, I do all this mental juggling on a pretty big project, which is based on PHP 5.5, Symfony 2.8, Doctrine etc.; luckily, in this project we use a good deal of **good practices**, and **automated software testing** is one of those. I actually switched to this job to learn about doing automatic testing, continuous integration and other best practices.
 
 Almost half a year ago **I became a dad**. It has been great, and you also get some unexpected perks! For example, my colleagues got me this gift for my son:
-<p style="text-align: center;">
-    ![A blue elePHPant!](/images/how-php-7-tdd-helped-me-sleep-better/blue-elephpant.jpg)
-</p>
+
+![A blue elePHPant!](/images/how-php-7-tdd-helped-me-sleep-better/blue-elephpant.jpg)
 
 So, we can say that his future is pretty clear... But don't say this to my wife! 
 
@@ -56,9 +52,8 @@ I then wrote some functional tests to assure that the **collaboration between my
 
 ## PHP 7: scalar and return types declarations
 The second good choice was **PHP 7**: among the reasons behind it as the language version of choice for this project were the [two main new features](http://php.net/manual/en/migration70.new-features.php) introduced: **scalar types** and **return type declarations**. 
-<p style="text-align: center;">
-    ![Return types, return types everywhere!](/images/how-php-7-tdd-helped-me-sleep-better/return-types-everywhere-meme.jpg)
-</p>
+
+![Return types, return types everywhere!](/images/how-php-7-tdd-helped-me-sleep-better/return-types-everywhere-meme.jpg)
 
 Before Facile.it, I worked as C++ developer, and oh boy! did I miss scalars and return types!
 

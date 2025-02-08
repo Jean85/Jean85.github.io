@@ -9,7 +9,6 @@ language: it
 categories: ["Talks"]
 ---
 *Questa è una puntata del podcast CTO Show, condotto da Alex Pagnoni, a cui sono stato invitato.*
-<br/>
                                                           
 Ti è mai capitato di dover guidare un team di persone senza avere le competenze tecniche necessarie?
 O magari di dover gestire un progetto su un linguaggio di programmazione che proprio non conosci?

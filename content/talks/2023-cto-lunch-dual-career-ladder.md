@@ -8,7 +8,6 @@ language: it
 categories: ["Talks"]
 ---
 *Questa è una puntata del podcast CTO Luch, condotto da Alex Pagnoni, a cui sono stato invitato.*
-<br/>
 
 Dual Career Ladder: come strutturarla al meglio tenendo conto di responsabilità, retribuzione, spazio e ruolo? E come evitare i principali rischi, come quello del burnout dei manager?
 <!--more-->
