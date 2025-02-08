@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.121.2">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alessandro Lai</title>
+	<title>Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
-		<meta property="og:title" content="Alessandro Lai" />
-<meta property="og:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://alessandrolai.dev/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
+	<meta name="description" content="">
+		<meta property="og:title" content="Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support" />
+<meta property="og:description" content="This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.5.0/" /><meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta property="article:section" content="releases" />
+<meta property="article:published_time" content="2025-02-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-02-08T00:00:00+00:00" />
 
 
-		<meta itemprop="name" content="Alessandro Lai">
-<meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+		<meta itemprop="name" content="Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support">
+<meta itemprop="description" content="This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases."><meta itemprop="datePublished" content="2025-02-08T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2025-02-08T00:00:00+00:00" />
+<meta itemprop="wordCount" content="70"><meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" />
+<meta itemprop="keywords" content="Paraunit,Open Source," />
 		<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Alessandro Lai"/>
-<meta name="twitter:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box"/>
+<meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg" /><meta name="twitter:title" content="Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support"/>
+<meta name="twitter:description" content="This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases."/>
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -26,7 +30,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
-	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Alessandro Lai">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -52,7 +55,7 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/">
 				
 				<span class="menu__text">Home</span>
@@ -88,116 +91,70 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/pretty-package-versions/1.0.3/" rel="bookmark">
-			Pretty Package Versions 1.0.3
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-11-30T00:00:00Z">November 30, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2025-02-08T00:00:00Z">February 08, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Another bump is needed to the sub-package constraint. Also, a known issue with Composer has been discovered.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/1.0.3/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.10.1/" rel="bookmark">
-			Paraunit 0.10.1: report deprecations
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-10-19T00:00:00Z">October 19, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>With this release, Paraunit replaces the suggestion of <code>facile-it/paraunit-testcase</code> with <code>dama/doctrine-test-bundle</code>; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.10.1/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/phpunit-upgrade-namespace/" rel="bookmark">
-			How to gradually upgrade toward PHPUnit 6 with namespaced classes
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-12T00:00:00Z">September 12, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		In the latest months I wrote multiple times, in different projects, code migrating PHPUnit toward major version 6. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: all classes got (finally!) namespaced.
-This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one use PHPUnit\Framework\TestCase line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, upgrading it in a single big jump may not be feasible or prudent, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/phpunit-upgrade-namespace/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.10.0/" rel="bookmark">
-			Paraunit 0.10: small fixes and improvements
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-06T00:00:00Z">September 06, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the <code>--debug</code> option and the <code>--text-to-console</code> coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.10.0/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/pretty-package-versions/1.0.2/" rel="bookmark">
-			Pretty Package Versions 1.0.2
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0C7 0 1 6 1 14s6 14 14 14 14-6 14-14S23 0 15 0zm0 25C9 25 4 20 4 14S9 3 15 3s11 5 11 11-5 11-11 11zm1-18h-2v8.4l6.8 4.4L22 18l-6-3.8V7z"/></svg><time class="meta__text" datetime="2017-09-06T00:00:00Z">September 06, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Another small issue solved with a small patch, and PHP 7.2 support comes along!</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/1.0.2/">Read more…</a>
-	</div>
-</article>
+		</header>
+		<div class="content clearfix">
+            <blockquote>
+                <p>
+                    This is a republished tag announcement for <code>facile-it/paraunit</code>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/2.5.0" target="_blank">here</a>.
+                </p>
+    		</blockquote>
+        </div><div class="content post__content clearfix">
+			<p>This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases.</p>
+<p>This is the full changelog</p>
+<h3 id="added">Added</h3>
+<ul>
+<li>Add PHPUnit 12 support <a href="https://github.com/facile-it/paraunit/pull/297">#297</a></li>
+<li>Add PHP 8.4 support <a href="https://github.com/facile-it/paraunit/pull/279">#279</a></li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M32 19c0 1-1 2-1 2L21 31s-1 1-2 1-2-1-2-1L2 16c-1-1-1.4-2-1.4-2S0 12.5 0 11V3C0 1.5.8.8.8.8S1.5 0 3 0h8c1.5 0 3 .6 3 .6S15 1 16 2l15 15s1 1 1 2zM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/paraunit/" rel="tag">Paraunit</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a>
+		</li>
+	</ul>
+</div>
+		</footer>
+	</article>
 </main>
 
-<div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/page/17/">«</a>
-	<span class="pagination__item pagination__item--current">18/24</span>
-	<a class="pagination__item pagination__item--next btn" href="/page/19/">»</a>
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Alessandro Lai</span>
+	</div>
+	<div class="authorbox__description">
+		Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+	</div>
 </div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/releases/pretty-package-versions/2.1.0/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">Pretty Package Versions 2.1.0</p>
+		</a>
+	</div>
+</nav>
+
 
 			</div>
 			<aside class="sidebar">

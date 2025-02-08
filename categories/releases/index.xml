@@ -6,8 +6,15 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 08 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/categories/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.5.0/</link>
+      <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.5.0/</guid>
+      <description>&lt;p&gt;This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Pretty Package Versions 2.1.0</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.1.0/</link>
