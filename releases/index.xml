@@ -6,8 +6,15 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 08 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Mar 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.6.0: hide deprecations by configuration</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.6.0/</link>
+      <pubDate>Tue, 04 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.6.0/</guid>
+      <description>&lt;p&gt;This new release includes the resolution of a &lt;a href=&#34;https://github.com/facile-it/paraunit/issues/224&#34;&gt;long-standing issue&lt;/a&gt;, which polluted Paraunit&amp;rsquo;s output when too many deprecations were detected. In this new version, Paraunit respects PHPUnit&amp;rsquo;s configuration, which by default does not show the full deprecation text.&lt;/p&gt;&#xA;&lt;p&gt;Deprecations are detected anyway, so you will still get yellow &lt;code&gt;D&lt;/code&gt;s and the list of affected tests when appropriate.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.5.0: PHPUnit 12 &amp; PHP 8.4 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.5.0/</link>
