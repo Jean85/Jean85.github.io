@@ -8,11 +8,6 @@ theme = "mainroad"
 [Pagination]
   pagerSize = "5"
 
-[Author] # Used in authorbox
-  name = "Alessandro Lai"
-  bio = "Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes."
-  avatar = "images/avatar-alessandro-lai.jpg"
-
 [Params]
   #logo = "images/logo-alessandro-lai.jpg"
   #subtitle = "Personal site, blog, slide storage, rant box"
@@ -35,6 +30,11 @@ theme = "mainroad"
   #mathjaxPath = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" # Specify MathJax path
   #mathjaxConfig = "TeX-AMS-MML_HTMLorMML" # Specify MathJax config
   customCSS = ["css/pr-66-fixes.css"] # Include custom CSS files
+
+[Params.Author] # Used in authorbox
+  name = "Alessandro Lai"
+  bio = "Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes."
+  Avatar = "images/avatar-alessandro-lai.jpg"
 
 [Params.logo]
   image = "images/logo-alessandro-lai.jpg" # Logo image. Path relative to "static"
