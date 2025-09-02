@@ -6,8 +6,22 @@
     <description>Recent content in Releases on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 Sep 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/releases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DoctrineMySQLComeBack 3.0.3: PHP 8.5 &amp; new MySQL timeout message</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.3/</link>
+      <pubDate>Tue, 02 Sep 2025 12:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.3/</guid>
+      <description>&lt;p&gt;This small patch includes the same fix that I released with 2.1.0, &lt;a href=&#34;https://github.com/facile-it/doctrine-mysql-come-back/issues/107&#34;&gt;a new timeout message that MySQL 8.0.24+ spits out under PHP 8.4&lt;/a&gt;. Many thanks to &lt;a href=&#34;https://github.com/ackermannd9&#34;&gt;@ackermannd&lt;/a&gt; for reporting it and helping me in the process. It is also now tested against PHP 8.5 (but it didn&amp;rsquo;t require any changes).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DoctrineMySQLComeBack 2.1.0: bump to PHP 8.1 and run with PHP 8.5</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.1.0/</link>
+      <pubDate>Tue, 02 Sep 2025 11:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.1.0/</guid>
+      <description>&lt;p&gt;This minor release includes a small refactoring that I did months ago (and didn&amp;rsquo;t release yet) where I bumped the minimum required PHP version to 8.1. This allowed me to do some clean up (mainly thanks to Rector) and fix multiple PHP deprecations.&#xA;Attached to this, I&amp;rsquo;ve also released a fix that intercepts &lt;a href=&#34;https://github.com/facile-it/doctrine-mysql-come-back/issues/107&#34;&gt;a new timeout message that MySQL 8.0.24+ spits out under PHP 8.4&lt;/a&gt;. Many thanks to &lt;a href=&#34;https://github.com/ackermannd9&#34;&gt;@ackermannd&lt;/a&gt; for reporting it and helping me in the process.&lt;/p&gt;&#xA;&lt;p&gt;It is also now tested against PHP 8.5 (but it didn&amp;rsquo;t require any changes).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.7.0: fix abnormal termination detection and add PHPUnit deprecation reporting</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.7.0/</link>
@@ -30,11 +44,32 @@
       <description>&lt;p&gt;This small new patch was required to fix the compatibility of the package with the newly released Symfony 7.3.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>DoctrineMySQLComeBack 2.0.2: resolve PHP 8.4 deprecations</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</link>
+      <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</guid>
+      <description>&lt;p&gt;This small patch just solves some deprecations that come in when running under PHP 8.4. Enjoy!&lt;/p&gt;&#xA;&lt;p&gt;PS: this is a re-tag after 2.0.1 since that tag was pointing to an old commit.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Resolve PHP 8.4 deprecation&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>Pretty Package Versions 2.1.1</title>
       <link>https://alessandrolai.dev/releases/pretty-package-versions/2.1.1/</link>
       <pubDate>Wed, 19 Mar 2025 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/pretty-package-versions/2.1.1/</guid>
       <description>&lt;p&gt;This small patch that includes handling of specific unstable tags (like RC, beta, etc.) and some minor housekeeping dev stuff, like bumping PHPStan to 2.0 and starting using Rector.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DoctrineMySQLComeBack 3.0.1: fix PHP 8.4 deprecations</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.2/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.2/</guid>
+      <description>&lt;p&gt;This small patch fixes all the PHP 8.4 deprecations, mainly due to implicit nullable arguments.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DoctrineMySQLComeBack 3.0.1: fix reconnection behavior with MySQLi and DBAL 4.2.3&#43;</title>
+      <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.1/</link>
+      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.1/</guid>
+      <description>&lt;p&gt;This small patch fixes a reconnection error that started happening only under recent DBAL drivers, and only with MySQLi drivers.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Paraunit 2.6.0: hide deprecations by configuration</title>
