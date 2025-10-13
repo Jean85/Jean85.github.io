@@ -44,11 +44,32 @@
       <description>&lt;p&gt;This small new patch was required to fix the compatibility of the package with the newly released Symfony 7.3.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>MongoDB Messenger Transport 1.6.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.6.0/</link>
+      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.6.0/</guid>
+      <description>&lt;p&gt;This new minor version adds support for the new major versions of the MongoDB extension &amp;amp; driver. This version include multiple method signature changes due to the introduction of more typed arguments and returns, and it will become mandatory for PHP 8.5+&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Support &lt;code&gt;ext-mongodb&lt;/code&gt; and &lt;code&gt;mongodb/mongodb&lt;/code&gt; v2&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.7.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.7.0/</link>
+      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.7.0/</guid>
+      <description>&lt;p&gt;This new minor version is a small refactoring, because it includes a couple for version bumps that allowed the introduction of Rector and PHPUnit 10. Particularly, PHP 8.1 is now the minimum required language version.&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Bump minimum requirement to:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;PHP 8.1+&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;ext-mongodb&lt;/code&gt; 1.12+&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;mongodb/mongodb&lt;/code&gt; 1.11+&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;symfony/framework-bundle&lt;/code&gt; 4.4.23+&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;Upgrade test suite to PHPUnit 10+&lt;/li&gt;&#xA;&lt;li&gt;Adopt Rector and update the codebase accordingly&lt;/li&gt;&#xA;&lt;li&gt;Improve config &amp;amp; serialization validation thanks to PHPStan v2 upgrade&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
       <title>DoctrineMySQLComeBack 2.0.2: resolve PHP 8.4 deprecations</title>
       <link>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</link>
       <pubDate>Tue, 22 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</guid>
       <description>&lt;p&gt;This small patch just solves some deprecations that come in when running under PHP 8.4. Enjoy!&lt;/p&gt;&#xA;&lt;p&gt;PS: this is a re-tag after 2.0.1 since that tag was pointing to an old commit.&lt;/p&gt;&#xA;&lt;p&gt;Here&amp;rsquo;s the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Resolve PHP 8.4 deprecation&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.5.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.5.0/</link>
+      <pubDate>Fri, 04 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.5.0/</guid>
+      <description>&lt;p&gt;This new minor version adds a new useful function, that allows publishing messages on MongoDB inside a transaction. This feature is implemented using a new Stamp that is attachable to the Envelope, the &lt;code&gt;MongoDBSessionStamp&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&#xA;[New feature] Add &lt;code&gt;MongoDBSessionStamp&lt;/code&gt; to publish using a MongoDB transaction, by carrying a &lt;code&gt;Session&lt;/code&gt; up to &lt;code&gt;\Facile\MongoDbMessenger\Transport\Connection::send&lt;/code&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pretty Package Versions 2.1.1</title>
@@ -84,6 +105,13 @@
       <pubDate>Sat, 08 Feb 2025 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/paraunit/2.5.0/</guid>
       <description>&lt;p&gt;This new release includes the official support to PHPUnit 12, which did not need any code changes, just some CI fixes and the common Composer constraint widening. The biggest amount of work came just from upgrading (and pulling the forks) from the Prophecy toolchain, to make the CI work without waiting for their releases.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MongoDB Messenger Transport 1.4.1</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.1/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.1/</guid>
+      <description>&lt;p&gt;This small new patch just tests against PHP 8.4 and removes new deprecations, namely the common implicit nullable arguments that arise often with this new language version.&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Add support to PHP 8.4 (by removing implicit nullable arguments deprecations)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Pretty Package Versions 2.1.0</title>

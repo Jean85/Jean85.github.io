@@ -102,6 +102,125 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/releases/symfony-functional-testcase/1.1.1/" rel="bookmark">
+			Symfony Functional test case 1.1.1
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-06-16T00:00:00Z">June 16, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This small patch fixes an issue that arises in Symfony 5.3, where the <code>getContainer</code> method in the parent class was made non-static; the same issue was encountered and resolved <a href="https://github.com/liip/LiipFunctionalTestBundle/issues/583">in the upstream project</a>.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/symfony-functional-testcase/1.1.1/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/releases/pretty-package-versions/2.0.4/" rel="bookmark">
+			Pretty Package Versions 2.0.4
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-05-26T00:00:00Z">May 26, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This last small patch had to be rushed out due to <a href="https://github.com/composer/composer/pull/9816/files">a deprecation in Composer 2.0.14</a>. This was triggering failures downstream, like in the Sentry SDK CI.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/2.0.4/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/talks/2021-sfday-api-contracts-openapi-during-development/" rel="bookmark">
+			API contracts: Leveraging OpenAPI during API development
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-05-13T00:00:00Z">May 13, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		
+<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
+    <iframe src="https://www.youtube-nocookie.com/embed/aSPv8tIDMBY"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            width="560" height="349"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+</div>
+
+
+
+
+<p>
+    
+    Talk presented at
+    <a href="https://2021.sfday.it/" target="_blank">
+        
+        SFDay @ 127.0.0.1 (Online)
+        
+    </a>
+    <br />
+    
+
+    
+    <a target="_blank" href="/slides/2021-sfday-api-contracts-openapi-during-development/">
+        <img src="/images/it.svg.webp" alt="Language: it" style="vertical-align: middle" />
+        Slides available
+    </a>
+    
+
+    
+    <br />
+    See talk comments on <a href="https://joind.in/talk/39cea" target="_blank">Joind.in</a>.
+    
+</p>
+
+		<p>Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.</p>
+<p>Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/talks/2021-sfday-api-contracts-openapi-during-development/">Read more…</a>
+	</div>
+</article>
+<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/releases/paraunit/1.2.1/" rel="bookmark">
+			Paraunit 1.2.1: allow jean85/pretty-package-versions v2
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-03-25T00:00:00Z">March 25, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This small patch is just to allow a dependency bump for end users.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/paraunit/1.2.1/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/releases/mongodb-messenger-transport/1.2.0/" rel="bookmark">
 			MongoDB Messenger Transport 1.2.0
 			</a>
@@ -118,92 +237,12 @@
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/mongodb-messenger-transport/1.2.0/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/mongodb-messenger-transport/1.1.0/" rel="bookmark">
-			MongoDB Messenger Transport 1.1.0
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-03-12T00:00:00Z">March 12, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This new, first minor of this package handles two issues coming from the upstream, Symfony Messenger package. In both cases the originating cause was the addition of the new <code>ErrorDetailsStamp</code>, which will be the future way to store failure information in messages.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/mongodb-messenger-transport/1.1.0/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/symfony-functional-testcase/1.1.0/" rel="bookmark">
-			Symfony Functional test case 1.1.0
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-03-12T00:00:00Z">March 12, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This new minor adds support for using the library with PHP 8.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/symfony-functional-testcase/1.1.0/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/terminable-loop-command/1.1.0/" rel="bookmark">
-			Terminable Loop Command 1.1.0
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-03-04T00:00:00Z">March 04, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This is just a small upgrade of a very stable package, that adds support for PHP 8 and Symfony 5.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/terminable-loop-command/1.1.0/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/pretty-package-versions/2.0.3/" rel="bookmark">
-			Pretty Package Versions 2.0.3
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-02-22T00:00:00Z">February 22, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This last small patch publishes a new constant to make the &ldquo;no reference&rdquo; text available to end users.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/2.0.3/">Read more…</a>
-	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/10/">«</a>
-	<span class="pagination__item pagination__item--current">11/26</span>
+	<span class="pagination__item pagination__item--current">11/27</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/12/">»</a>
 </div>
 

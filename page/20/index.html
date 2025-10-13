@@ -102,6 +102,122 @@
 	
 	<header class="list__header">
 		<h2 class="list__title post__title">
+			<a href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/" rel="bookmark">
+			Continuous deployment from GitLab CI to Kubernetes using Docker-in-Docker
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2018-02-06T00:00:00Z">February 06, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>In the last month, I&rsquo;m working on two different PHP projects here at Facile.it: in the first one, which is new and still in development, I decided to adopt <strong>GitLab CI</strong> for the build, since we use GitLab CE for our Git repositories; I then created a <strong>continuous deployment pipeline</strong> for the staging environment, directly to a <strong>Kubernetes cluster</strong>, leveraging <strong>Docker Compose</strong> to make the configuration easier.</p>
+<p>After, I decided to start migrating a previous, internal project of mine to the same approach, since it&rsquo;s currently in production with a dumb approach that provokes some downtime during deployments; on the contrary, <strong>doing a rolling deployment with Kubernetes is surprisingly easy</strong>!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/posts/continuous-deployment-from-gitlab-ci-to-k8s-using-docker-in-docker/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/releases/pretty-package-versions/1.1.0/" rel="bookmark">
+			Pretty Package Versions 1.1.0
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2018-01-21T00:00:00Z">January 21, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This time around we have a minor version bump, due to a new feature!</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/1.1.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/talks/2018-pugmi-event-sourcing/" rel="bookmark">
+			Adding Event Sourcing to an existing PHP project (for the right reasons)
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2018-01-10T00:00:00Z">January 10, 2018</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		
+<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
+    <iframe src="https://www.youtube-nocookie.com/embed/f31gHqKG-0A"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+            width="560" height="349"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+    </iframe>
+</div>
+
+
+
+
+<p>
+    
+    Talk presented at
+    <a href="https://www.meetup.com/it-IT/MilanoPHP/events/244650417/" target="_blank">
+        
+        PUG MI (Milano)
+        
+    </a>
+    <br />
+    
+
+    
+    <a target="_blank" href="/slides/2018-01-event-sourcing/">
+        <img src="/images/en.svg.webp" alt="Language: en" style="vertical-align: middle" />
+        Slides available
+    </a>
+    
+
+    
+</p>
+
+		<p><em>This is a test of a talk that I did <a href="https://alessandrolai.dev/talks/2018-phpday-event-sourcing/">on May at phphday 2018</a> and also <a href="https://alessandrolai.dev/talks/2018-symfonyday-event-sourcing/">the next October in italian at SymfonyDay 2018</a>, where there&rsquo;s video recording available.</em></p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/talks/2018-pugmi-event-sourcing/">Read more…</a>
+	</div>
+</article>
+<article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
+			<a href="/releases/paraunit/0.11.0/" rel="bookmark">
+			Paraunit 0.11: add Symfony 4 support, some refactoring and a fix
+			</a>
+		</h2>
+		<div class="list__meta meta">
+<div class="meta__item-datetime meta__item">
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2017-12-13T00:00:00Z">December 13, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	</span>
+</div></div>
+	</header>
+	<div class="content list__excerpt post__content clearfix">
+		<p>This releases has nothing big on the outside, but a lot of code rework under the hood. The DI has been completely migrated from YAML to PHP (so no more <code>symfony/yaml</code>) and support for Symfony 4 has been added; also, a small bug has been fixed.</p>
+	</div>
+	<div class="list__footer clearfix">
+		<a class="list__footer-readmore btn" href="/releases/paraunit/0.11.0/">Read more…</a>
+	</div>
+</article><article class="list__item post">
+	
+	<header class="list__header">
+		<h2 class="list__title post__title">
 			<a href="/releases/pretty-package-versions/1.0.3/" rel="bookmark">
 			Pretty Package Versions 1.0.3
 			</a>
@@ -118,93 +234,12 @@
 	<div class="list__footer clearfix">
 		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/1.0.3/">Read more…</a>
 	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.10.1/" rel="bookmark">
-			Paraunit 0.10.1: report deprecations
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2017-10-19T00:00:00Z">October 19, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>With this release, Paraunit replaces the suggestion of <code>facile-it/paraunit-testcase</code> with <code>dama/doctrine-test-bundle</code>; also there&rsquo;s a new feature that will report any test failure due to deprecation warnings catched by the Symfony PHPUnit Bridge.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.10.1/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/posts/phpunit-upgrade-namespace/" rel="bookmark">
-			How to gradually upgrade toward PHPUnit 6 with namespaced classes
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2017-09-12T00:00:00Z">September 12, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/republished/" rel="category">Republished</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>In the latest months I wrote multiple times, in different projects, code migrating <strong>PHPUnit</strong> toward major <strong>version 6</strong>. This upgrade is harder than the previous one, since in this version it was introduced a big breaking change: <strong>all classes got (finally!) namespaced</strong>.</p>
-<p>This means that any usage of those classes in your project needs to be updated. It may seem a simple find &amp; replace job, but since you need to introduce at least one <code>use PHPUnit\Framework\TestCase</code> line at the top of each one of your test classes, it&rsquo;s a boring and a little more than trivial task; also, <strong>upgrading it in a single big jump may not be feasible or prudent</strong>, especially in the case of open source or distributed libraries, where backward compatibility and support for old PHP versions must be ensured.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/posts/phpunit-upgrade-namespace/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/paraunit/0.10.0/" rel="bookmark">
-			Paraunit 0.10: small fixes and improvements
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2017-09-06T00:00:00Z">September 06, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>With this release, I&rsquo;m grouping a few fixes and improvements that I collected in the past month. Mainly, I&rsquo;ve fixed the <code>--debug</code> option and the <code>--text-to-console</code> coverage output. Also, now the logo is optional, and at the end of each line it&rsquo;s printed a partial count of executed tests.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/paraunit/0.10.0/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/pretty-package-versions/1.0.2/" rel="bookmark">
-			Pretty Package Versions 1.0.2
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2017-09-06T00:00:00Z">September 06, 2017</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>Another small issue solved with a small patch, and PHP 7.2 support comes along!</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/1.0.2/">Read more…</a>
-	</div>
 </article>
 </main>
 
 <div class="pagination">
 	<a class="pagination__item pagination__item--prev btn" href="/page/19/">«</a>
-	<span class="pagination__item pagination__item--current">20/26</span>
+	<span class="pagination__item pagination__item--current">20/27</span>
 	<a class="pagination__item pagination__item--next btn" href="/page/21/">»</a>
 </div>
 

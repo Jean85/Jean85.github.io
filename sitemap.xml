@@ -44,8 +44,20 @@
     <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.4/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
+    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.6.0/</loc>
+    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.7.0/</loc>
+    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</loc>
     <lastmod>2025-04-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.5.0/</loc>
+    <lastmod>2025-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/pretty-package-versions/</loc>
     <lastmod>2025-03-19T00:00:00+00:00</lastmod>
@@ -64,6 +76,9 @@
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.5.0/</loc>
     <lastmod>2025-02-08T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.1/</loc>
+    <lastmod>2024-12-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/pretty-package-versions/2.1.0/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
@@ -97,9 +112,6 @@
   </url><url>
     <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.2/</loc>
     <lastmod>2024-03-17T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
-    <lastmod>2024-03-15T00:00:01+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.4.0/</loc>
     <lastmod>2024-03-15T00:00:01+00:00</lastmod>
