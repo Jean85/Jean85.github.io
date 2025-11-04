@@ -6,8 +6,15 @@
     <description>Recent content in Paraunit on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.7.1: Symfony 8 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.7.1/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.7.1/</guid>
+      <description>&lt;p&gt;This small new patch was triggered by a PR from a new contributor, Kocal, thank you! The fixes needed to make Paraunit compatible with Symfony 8 was a single line change (plus some more in the unit tests), which is impressive since now we support 5 different major versions, all across from 4.4 (&lt;a href=&#34;https://symfony.com/releases/4.4&#34;&gt;which is EOL&lt;/a&gt;) up to 8.0!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.7.0: fix abnormal termination detection and add PHPUnit deprecation reporting</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.7.0/</link>

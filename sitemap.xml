@@ -3,10 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/open-source/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/paraunit/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.7.1/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/categories/releases/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2025-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</loc>
     <lastmod>2025-09-02T12:00:00+00:00</lastmod>
@@ -14,23 +32,8 @@
     <loc>https://alessandrolai.dev/releases/doctrine-mysql-come-back/3.0.3/</loc>
     <lastmod>2025-09-02T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/</loc>
-    <lastmod>2025-09-02T12:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.1.0/</loc>
     <lastmod>2025-09-02T11:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/paraunit/</loc>
-    <lastmod>2025-08-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.7.0/</loc>
     <lastmod>2025-08-23T00:00:00+00:00</lastmod>

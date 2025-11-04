@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
-	<meta name="generator" content="Hugo 0.143.1">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Alessandro Lai</title>
+	<title>Paraunit 2.7.1: Symfony 8 support - Alessandro Lai</title>
 	<script>(function(d,e){d[e]=d[e].replace("no-js","js");})(document.documentElement,"className");</script>
-	<meta name="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
-		<meta property="og:url" content="https://alessandrolai.dev/">
+	<meta name="description" content="">
+		<meta property="og:url" content="https://alessandrolai.dev/releases/paraunit/2.7.1/">
   <meta property="og:site_name" content="Alessandro Lai">
-  <meta property="og:title" content="Alessandro Lai">
-  <meta property="og:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+  <meta property="og:title" content="Paraunit 2.7.1: Symfony 8 support">
+  <meta property="og:description" content="This small new patch was triggered by a PR from a new contributor, Kocal, thank you! The fixes needed to make Paraunit compatible with Symfony 8 was a single line change (plus some more in the unit tests), which is impressive since now we support 5 different major versions, all across from 4.4 (which is EOL) up to 8.0!">
   <meta property="og:locale" content="en_us">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="releases">
+    <meta property="article:published_time" content="2025-11-04T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-11-04T00:00:00+00:00">
+    <meta property="article:tag" content="Paraunit">
+    <meta property="article:tag" content="Open Source">
     <meta property="og:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
 
 		
-  <meta itemprop="name" content="Alessandro Lai">
-  <meta itemprop="description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+  <meta itemprop="name" content="Paraunit 2.7.1: Symfony 8 support">
+  <meta itemprop="description" content="This small new patch was triggered by a PR from a new contributor, Kocal, thank you! The fixes needed to make Paraunit compatible with Symfony 8 was a single line change (plus some more in the unit tests), which is impressive since now we support 5 different major versions, all across from 4.4 (which is EOL) up to 8.0!">
   <meta itemprop="datePublished" content="2025-11-04T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-11-04T00:00:00+00:00">
+  <meta itemprop="wordCount" content="72">
   <meta itemprop="image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
+  <meta itemprop="keywords" content="Paraunit,Open Source">
 		
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://alessandrolai.dev/images/avatar-alessandro-lai-square.jpg">
-  <meta name="twitter:title" content="Alessandro Lai">
-  <meta name="twitter:description" content="Alessandro Lai&#39;s personal site, blog, slide storage, rant box">
+  <meta name="twitter:title" content="Paraunit 2.7.1: Symfony 8 support">
+  <meta name="twitter:description" content="This small new patch was triggered by a PR from a new contributor, Kocal, thank you! The fixes needed to make Paraunit compatible with Symfony 8 was a single line change (plus some more in the unit tests), which is impressive since now we support 5 different major versions, all across from 4.4 (which is EOL) up to 8.0!">
 
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -34,7 +40,6 @@
 
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/pr-66-fixes.css">
-	<link rel="alternate" type="application/rss+xml" href="/index.xml" title="Alessandro Lai">
 
 	<link rel="shortcut icon" href="/favicon.ico">
 		
@@ -61,7 +66,7 @@
 		<span class="menu__btn-title" tabindex="-1">Menu</span>
 	</button>
 	<ul class="menu__list">
-		<li class="menu__item menu__item--active">
+		<li class="menu__item">
 			<a class="menu__link" href="/">
 				
 				<span class="menu__text">Home</span>
@@ -97,152 +102,68 @@
 		<div class="wrapper flex">
 			<div class="primary">
 			
-<main class="main list" role="main">
-	<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/mongodb-messenger-transport/1.3.2/" rel="bookmark">
-			MongoDB Messenger Transport 1.3.2
-			</a>
-		</h2>
-		<div class="list__meta meta">
+<main class="main" role="main">
+	<article class="post">
+		<header class="post__header">
+			<h1 class="post__title">Paraunit 2.7.1: Symfony 8 support</h1>
+			<div class="post__meta meta">
 <div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-05-16T00:00:01Z">May 16, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
+	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2025-11-04T00:00:00Z">November 04, 2025</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
 	</span>
 </div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This new patch adds support for Symfony 6.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/mongodb-messenger-transport/1.3.2/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/" rel="bookmark">
-			Come sfruttare OpenAPI durante lo sviluppo di un API in PHP
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-05-04T00:00:00Z">May 04, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/talks/" rel="category">Talks</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		
-<div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0;">
-    <iframe src="https://www.youtube-nocookie.com/embed/7M5Nox8mE4M"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-            width="560" height="349"
-            frameborder="0"
-            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-    </iframe>
+		</header>
+		<div class="content clearfix">
+            <blockquote>
+                <p>
+                    This is a republished tag announcement for <code>facile-it/paraunit</code>.
+                    You can find the release <a href="https://github.com/facile-it/paraunit/releases/tag/2.7.1" target="_blank">here</a>.
+                </p>
+    		</blockquote>
+        </div><div class="content post__content clearfix">
+			<p>This small new patch was triggered by a PR from a new contributor, Kocal, thank you! The fixes needed to make Paraunit compatible with Symfony 8 was a single line change (plus some more in the unit tests), which is impressive since now we support 5 different major versions, all across from 4.4 (<a href="https://symfony.com/releases/4.4">which is EOL</a>) up to 8.0!</p>
+<p>This is the full changelog:</p>
+<ul>
+<li>Add support for Symfony 8 <a href="https://github.com/facile-it/paraunit/pull/344">#344</a>, thanks @Kocal</li>
+</ul>
+		</div>
+		<footer class="post__footer">
+			
+<div class="post__tags tags clearfix">
+	<svg class="tags__badge icon icon-tag" width="16" height="16" viewBox="0 0 32 32"><path d="M4 0h8s2 0 4 2l15 15s2 2 0 4L21 31s-2 2-4 0L2 16s-2-2-2-4V3s0-3 4-3m3 10a3 3 0 0 0 0-6 3 3 0 0 0 0 6"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/paraunit/" rel="tag">Paraunit</a>
+		</li>
+		<li class="tags__item">
+			<a class="tags__link btn" href="/tags/open-source/" rel="tag">Open Source</a>
+		</li>
+	</ul>
 </div>
-
-
-
-
-<p>
-    
-    Talk presented at
-    <a href="https://www.meetup.com/it-IT/MilanoPHP/events/284647096/" target="_blank">
-        
-        PUGMI (Facile.it - Milano / Online)
-        
-    </a>
-    <br />
-    
-
-    
-    <a target="_blank" href="/slides/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/">
-        <img src="/images/it.svg.webp" alt="Language: it" style="vertical-align: middle" />
-        Slides available
-    </a>
-    
-
-    
-</p>
-
-		<p><em>Questa è la replica di <a href="https://alessandrolai.dev/talks/2021-sfday-api-contracts-openapi-during-development/">una presentazione</a> che ho svolto l&rsquo;anno precedente online al SymfonyDay 2021, anch&rsquo;essa registrata</em></p>
-<p>Scrivere API è il pane quotidiano di noi sviluppatori web: ormai sono il tassello fondamentale che non manca mai, da colonna portante dei frontend a meccanismo di comunicazione indispensabile tra applicazioni differenti.</p>
-<p>Ma come possiamo semplificare lo sviluppo di una API e comunicare con l’esterno come questa API funziona?</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/talks/2022-pugmi-come-sfruttare-openapi-durante-sviluppo-api-php/">Read more…</a>
-	</div>
-</article>
-<article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/mongodb-messenger-transport/1.3.1/" rel="bookmark">
-			MongoDB Messenger Transport 1.3.1
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2022-02-07T00:00:01Z">February 07, 2022</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This new patch unlocks the possibility of using the JSON serialization with this transport, because it fixes how headers are handled during serialization.</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/mongodb-messenger-transport/1.3.1/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/pretty-package-versions/2.0.5/" rel="bookmark">
-			Pretty Package Versions 2.0.5
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-10-08T00:00:00Z">October 08, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This last small patch handles the same edge case as the previous one, for replaced packages. I also added a CI job to test against PHP 8.1, which is coming in less than 2 months!</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/pretty-package-versions/2.0.5/">Read more…</a>
-	</div>
-</article><article class="list__item post">
-	
-	<header class="list__header">
-		<h2 class="list__title post__title">
-			<a href="/releases/mongodb-messenger-transport/1.3.0/" rel="bookmark">
-			MongoDB Messenger Transport 1.3.0
-			</a>
-		</h2>
-		<div class="list__meta meta">
-<div class="meta__item-datetime meta__item">
-	<svg class="meta__icon icon icon-time" width="16" height="14" viewBox="0 0 30 28"><path d="M15 0a14 14 0 1 1 0 28 1 1 0 0 1 0-28m0 3a3 3 0 1 0 0 22 3 3 0 0 0 0-22m1 4h-2v8.4l6.8 4.4L22 18l-6-3.8z"/></svg><time class="meta__text" datetime="2021-08-12T00:00:01Z">August 12, 2021</time></div><div class="meta__item-categories meta__item"><svg class="meta__icon icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2 1 2h8v11H0V2z"/></svg><span class="meta__text"><a class="meta__link" href="/categories/releases/" rel="category">Releases</a>
-	</span>
-</div></div>
-	</header>
-	<div class="content list__excerpt post__content clearfix">
-		<p>This new minor adds the <code>resettable</code> option to the transport, so that you can disable it if you need to inspect the transport during tests. This is due to the fact that under Symfony 5.3, if a service implements the <code>ResetInterface</code> (as our transport does), the <code>reset</code> method  gets automatically invoked at kernel shutdown, which happens after using the Symfony test client (<code>KernelBrowser</code>).</p>
-	</div>
-	<div class="list__footer clearfix">
-		<a class="list__footer-readmore btn" href="/releases/mongodb-messenger-transport/1.3.0/">Read more…</a>
-	</div>
-</article>
+		</footer>
+	</article>
 </main>
 
-<div class="pagination">
-	<a class="pagination__item pagination__item--prev btn" href="/page/9/">«</a>
-	<span class="pagination__item pagination__item--current">10/27</span>
-	<a class="pagination__item pagination__item--next btn" href="/page/11/">»</a>
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="Alessandro Lai avatar" src="/images/avatar-alessandro-lai.jpg" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About Alessandro Lai</span>
+	</div>
+	<div class="authorbox__description">
+		Head of Platform at Facile.it, PHP-FIG secretary, PHP User Group Milano coordinator. Father, husband, computer science passionate, retired netgaming nerd. I love working with PHP, Symfony, Docker and Kubernetes.
+	</div>
 </div>
+
+<nav class="pager flex">
+	<div class="pager__item pager__item--prev">
+		<a class="pager__link" href="/releases/doctrine-mysql-come-back/3.0.3/" rel="prev">
+			<span class="pager__subtitle">«&thinsp;Previous</span>
+			<p class="pager__title">DoctrineMySQLComeBack 3.0.3: PHP 8.5 &amp; new MySQL timeout message</p>
+		</a>
+	</div>
+</nav>
+
 
 			</div>
 			<aside class="sidebar">
