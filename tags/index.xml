@@ -6,12 +6,19 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 05 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB Messenger Transport</title>
+      <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/mongodb-messenger-transport/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Open Source</title>
       <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Wed, 05 Nov 2025 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/open-source/</guid>
       <description></description>
     </item>
@@ -34,13 +41,6 @@
       <link>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</link>
       <pubDate>Tue, 02 Sep 2025 12:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>MongoDB Messenger Transport</title>
-      <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
-      <pubDate>Wed, 23 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/mongodb-messenger-transport/</guid>
       <description></description>
     </item>
     <item>

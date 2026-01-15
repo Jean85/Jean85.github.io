@@ -3,22 +3,28 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.8.0/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/</loc>
-    <lastmod>2025-11-05T00:00:00+00:00</lastmod>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/terminable-loop-command/</loc>
     <lastmod>2025-11-05T00:00:00+00:00</lastmod>
@@ -31,6 +37,9 @@
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.7.1/</loc>
     <lastmod>2025-11-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.7.0/</loc>
+    <lastmod>2025-10-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/doctrinemysqlcomeback/</loc>
     <lastmod>2025-09-02T12:00:00+00:00</lastmod>
@@ -50,13 +59,7 @@
     <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.4/</loc>
     <lastmod>2025-05-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.6.0/</loc>
-    <lastmod>2025-04-23T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.7.0/</loc>
     <lastmod>2025-04-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/doctrine-mysql-come-back/2.0.2/</loc>
