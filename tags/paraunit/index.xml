@@ -6,8 +6,15 @@
     <description>Recent content in Paraunit on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/paraunit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.8.0: PHPUnit 13 support</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.8.0/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.8.0/</guid>
+      <description>&lt;p&gt;With this new minor, we&amp;rsquo;re finally able to support the newly released PHPUnit 13 with Paraunit. This basically required no code changes apart from the &lt;code&gt;composer.json&lt;/code&gt; constraints and a couple of tests adjustments, as a testament of the reliable integration strategy that I chose when integrating with it.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.7.1: Symfony 8 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.7.1/</link>

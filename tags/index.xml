@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source</title>
+      <link>https://alessandrolai.dev/tags/open-source/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paraunit</title>
+      <link>https://alessandrolai.dev/tags/paraunit/</link>
+      <pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/paraunit/</guid>
+      <description></description>
+    </item>
     <item>
       <title>MongoDB Messenger Transport</title>
       <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
@@ -16,24 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Open Source</title>
-      <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/open-source/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Terminable Loop Command</title>
       <link>https://alessandrolai.dev/tags/terminable-loop-command/</link>
       <pubDate>Wed, 05 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/terminable-loop-command/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Paraunit</title>
-      <link>https://alessandrolai.dev/tags/paraunit/</link>
-      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/paraunit/</guid>
       <description></description>
     </item>
     <item>
