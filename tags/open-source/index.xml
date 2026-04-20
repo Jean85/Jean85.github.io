@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.9.0: coverage cache warmup</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.9.0/</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.9.0/</guid>
+      <description>&lt;p&gt;With this new minor, we&amp;rsquo;re adding a small performance improvement for test coverage, by running &lt;code&gt;phpunit --&lt;/code&gt; before running all tests. This small feature should reduce tests execution time and avoid race conditions when the first batch of tests runs (and find the cache not ready).&lt;/p&gt;&#xA;&lt;p&gt;Credits to Sebastian for pointing this out to me!&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.8.0: PHPUnit 13 support</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.8.0/</link>
