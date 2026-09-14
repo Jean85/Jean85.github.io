@@ -3,27 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2026-06-06T23:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/</loc>
-    <lastmod>2026-06-06T23:00:00+00:00</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
-    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/paraunit/</loc>
-    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alessandrolai.dev/releases/paraunit/2.11.0/</loc>
-    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.12.0/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2026-09-14T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/symfony-functional-test-case/</loc>
+    <lastmod>2026-06-06T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/symfony-functional-testcase/1.5.0/</loc>
+    <lastmod>2026-06-06T23:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/paraunit/2.11.0/</loc>
     <lastmod>2026-05-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/paraunit/2.10.0/</loc>
@@ -106,9 +115,6 @@
   </url><url>
     <loc>https://alessandrolai.dev/releases/terminable-loop-command/1.2.3/</loc>
     <lastmod>2024-11-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/symfony-functional-test-case/</loc>
-    <lastmod>2024-11-05T23:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/symfony-functional-testcase/1.4.0/</loc>
     <lastmod>2024-11-05T23:00:00+00:00</lastmod>
