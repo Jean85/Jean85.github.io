@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 14 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Paraunit 2.13.0: JSONL coverage format</title>
+      <link>https://alessandrolai.dev/releases/paraunit/2.13.0/</link>
+      <pubDate>Fri, 02 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/paraunit/2.13.0/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/facile-it/paraunit/releases/tag/2.13.0&#34;&gt;Paraunit 2.13.0&lt;/a&gt; has just been released with support for a new coverage report format: &lt;code&gt;--jsonl&lt;/code&gt;, which mirrors PHPUnit&amp;rsquo;s &lt;code&gt;--coverage-jsonl&lt;/code&gt; option. It writes &lt;code&gt;coverage.jsonl&lt;/code&gt; and &lt;code&gt;tests.jsonl&lt;/code&gt; files inside the specified directory and requires &lt;code&gt;phpunit/php-code-coverage&lt;/code&gt; 14.4 or newer.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.12.0: upgrade to PHPUnit 13.1</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.12.0/</link>
