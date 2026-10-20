@@ -6,8 +6,15 @@
     <description>Recent content in Open Source on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 02 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB Messenger Transport 1.9.0</title>
+      <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.9.0/</link>
+      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.9.0/</guid>
+      <description>&lt;p&gt;This new minor version drops support to unsupported Symfony versions, to ease the maintenance of the library. On top of this, a small external contribution is included to avoid a future deprecation.&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Drop support for Symfony below 5.4 (&lt;a href=&#34;https://github.com/facile-it/mongodb-messenger-transport/issues/78&#34;&gt;#78&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;li&gt;Switch to &lt;code&gt;Symfony\Component\DependencyInjection\Extension\Extension&lt;/code&gt; to avoid future deprecation (&lt;a href=&#34;https://github.com/facile-it/mongodb-messenger-transport/issues/105&#34;&gt;#105&lt;/a&gt;, thanks &lt;a href=&#34;https://github.com/DuaelFr&#34;&gt;@DuaelFr&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
     <item>
       <title>Paraunit 2.13.0: JSONL coverage format</title>
       <link>https://alessandrolai.dev/releases/paraunit/2.13.0/</link>
@@ -62,7 +69,7 @@
       <link>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.8.0/</link>
       <pubDate>Thu, 15 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.8.0/</guid>
-      <description>&lt;p&gt;This new minor version includes only a small change, allowing its use with Symfony 8. The only needed change is to allow the new major version (2.0) of the underlying bundle.&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Allow Symfony 8 (&lt;a href=&#34;https://github.com/facile-it/mongodb-messenger-transport/issues/49&#34;&gt;#49&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Date&#x9;Call count&#x9;Missing webhook?&#xA;2026-01-02&#x9;814&#x9;YES&#xA;2026-01-02&#x9;3574&#x9;NO&#xA;2026-01-03&#x9;322&#x9;YES&#xA;2026-01-03&#x9;1586&#x9;NO&#xA;2026-01-05&#x9;1163&#x9;YES&#xA;2026-01-05&#x9;5227&#x9;NO&#xA;2026-01-07&#x9;992&#x9;YES&#xA;2026-01-07&#x9;5121&#x9;NO&#xA;2026-01-08&#x9;1041&#x9;YES&#xA;2026-01-08&#x9;5272&#x9;NO&#xA;2026-01-09&#x9;909&#x9;YES&#xA;2026-01-09&#x9;5098&#x9;NO&#xA;2026-01-10&#x9;214&#x9;YES&#xA;2026-01-10&#x9;1944&#x9;NO&#xA;2026-01-12&#x9;1168&#x9;YES&#xA;2026-01-12&#x9;5689&#x9;NO&#xA;2026-01-13&#x9;1131&#x9;YES&#xA;2026-01-13&#x9;5281&#x9;NO&#xA;2026-01-14&#x9;978&#x9;YES&#xA;2026-01-14&#x9;4699&#x9;NO&lt;/p&gt;</description>
+      <description>&lt;p&gt;This new minor version includes only a small change, allowing its use with Symfony 8. The only needed change is to allow the new major version (2.0) of the underlying bundle.&lt;/p&gt;&#xA;&lt;p&gt;This is the full changelog:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Allow Symfony 8 (&lt;a href=&#34;https://github.com/facile-it/mongodb-messenger-transport/issues/49&#34;&gt;#49&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Terminable Loop Command 1.3.1</title>
