@@ -6,20 +6,34 @@
     <description>Recent content in Tags on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MongoDB Messenger Transport</title>
       <link>https://alessandrolai.dev/tags/mongodb-messenger-transport/</link>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/mongodb-messenger-transport/</guid>
       <description></description>
     </item>
     <item>
       <title>Open Source</title>
       <link>https://alessandrolai.dev/tags/open-source/</link>
-      <pubDate>Tue, 20 Oct 2026 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/open-source/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PHP</title>
+      <link>https://alessandrolai.dev/tags/php/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Symfony</title>
+      <link>https://alessandrolai.dev/tags/symfony/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/tags/symfony/</guid>
       <description></description>
     </item>
     <item>
@@ -93,13 +107,6 @@
       <description></description>
     </item>
     <item>
-      <title>PHP</title>
-      <link>https://alessandrolai.dev/tags/php/</link>
-      <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/php/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Software Testing</title>
       <link>https://alessandrolai.dev/tags/software-testing/</link>
       <pubDate>Tue, 12 Sep 2017 00:00:00 +0000</pubDate>
@@ -139,13 +146,6 @@
       <link>https://alessandrolai.dev/tags/mysql/</link>
       <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
       <guid>https://alessandrolai.dev/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Symfony</title>
-      <link>https://alessandrolai.dev/tags/symfony/</link>
-      <pubDate>Fri, 09 Oct 2015 00:00:00 +0000</pubDate>
-      <guid>https://alessandrolai.dev/tags/symfony/</guid>
       <description></description>
     </item>
   </channel>

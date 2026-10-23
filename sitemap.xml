@@ -3,27 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://alessandrolai.dev/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/posts/facile-it-messenger-mongodb-transport-adopted-by-symfony/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/mongodb-messenger-transport/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.9.0/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/open-source/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/php/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/categories/post/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/posts/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/symfony/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/tags/</loc>
+    <lastmod>2026-10-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://alessandrolai.dev/releases/mongodb-messenger-transport/1.9.0/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/releases/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/categories/releases/</loc>
-    <lastmod>2026-10-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/</loc>
     <lastmod>2026-10-20T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/paraunit/</loc>
@@ -383,9 +398,6 @@
     <loc>https://alessandrolai.dev/tags/kubernetes/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://alessandrolai.dev/posts/</loc>
-    <lastmod>2018-02-06T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://alessandrolai.dev/categories/republished/</loc>
     <lastmod>2018-02-06T00:00:00+00:00</lastmod>
   </url><url>
@@ -405,9 +417,6 @@
     <lastmod>2017-10-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/posts/phpunit-upgrade-namespace/</loc>
-    <lastmod>2017-09-12T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/php/</loc>
     <lastmod>2017-09-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/tags/software-testing/</loc>
@@ -510,9 +519,6 @@
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/talks/2015-symfonyday-paraunit/</loc>
-    <lastmod>2015-10-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://alessandrolai.dev/tags/symfony/</loc>
     <lastmod>2015-10-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://alessandrolai.dev/talks/2015-pugmi-paraunit/</loc>

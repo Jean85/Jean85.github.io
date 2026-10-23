@@ -6,8 +6,15 @@
     <description>Recent content in PHP on Alessandro Lai</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 23 Oct 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://alessandrolai.dev/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>facile-it/mongodb-messenger-transport adopted by Symfony in 8.2</title>
+      <link>https://alessandrolai.dev/posts/facile-it-messenger-mongodb-transport-adopted-by-symfony/</link>
+      <pubDate>Fri, 23 Oct 2026 00:00:00 +0000</pubDate>
+      <guid>https://alessandrolai.dev/posts/facile-it-messenger-mongodb-transport-adopted-by-symfony/</guid>
+      <description>&lt;p&gt;In the upcoming Symfony 8.2 release, there will be a new transport for Messenger, based on MongoDB, as announced in &lt;a href=&#34;https://symfony.com/blog/new-in-symfony-8-2-more-mongodb-integrations#mongodb-messenger-transport&#34;&gt;https://symfony.com/blog/new-in-symfony-8-2-more-mongodb-integrations#mongodb-messenger-transport&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;I personally contributed this feature, but in reality it&amp;rsquo;s not written from scratch: instead, Symfony adopted it from my open source project &lt;a href=&#34;https://github.com/facile-it/mongodb-messenger-transport&#34;&gt;facile-it/mongodb-messenger-transport&lt;/a&gt;. It got slightly transformed in the process, but I&amp;rsquo;m happy to see that that work led to this, and it will benefit from further contributions inside the whole Symfony ecosystem.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>How to gradually upgrade toward PHPUnit 6 with namespaced classes</title>
       <link>https://alessandrolai.dev/posts/phpunit-upgrade-namespace/</link>
